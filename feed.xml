@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>33bots — blogas apie renginių robotus</title>
+    <link>https://33bots.lt/blog.html</link>
+    <atom:link href="https://33bots.lt/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Straipsniai apie humanoidinių robotų nuomą renginiams Lietuvoje: kainos, scenarijai, sauga ir technologijos.</description>
+    <language>lt-lt</language>
+    <lastBuildDate>Mon, 27 Jul 2026 09:00:00 +0200</lastBuildDate>
+    <item>
+      <title>Kiek kainuoja humanoidinio roboto nuoma Lietuvoje? Kainos 2026</title>
+      <link>https://33bots.lt/blog-kiek-kainuoja-roboto-nuoma.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-kiek-kainuoja-roboto-nuoma.html</guid>
+      <description>Nuo ko priklauso roboto nuomos kaina, kas įeina į paketą ir kokių paslėptų mokesčių saugotis. Skaidrus vadovas organizatoriams.</description>
+      <category>Kainos · Paketai</category>
+      <pubDate>Tue, 10 Feb 2026 09:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>5 priežastys, kodėl jūsų renginiui reikia humanoidinio roboto</title>
+      <link>https://33bots.lt/blog-kodel-robotas-renginyje.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-kodel-robotas-renginyje.html</guid>
+      <description>Robotas renginyje nėra žaisliukas — tai rinkodaros sprendimas. Kaip humanoidas generuoja kontaktus, organinį pasiekiamumą ir lieka svečių atmintyje.</description>
+      <category>Renginiai · Strategija</category>
+      <pubDate>Sun, 18 Jan 2026 09:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams</title>
+      <link>https://33bots.lt/blog-unitree-g1-specifikacija.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-unitree-g1-specifikacija.html</guid>
+      <description>Unitree G1 techninė specifikacija: 132 cm, 35 kg, 43 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose.</description>
+      <category>Technologijos · Unitree G1</category>
+      <pubDate>Thu, 05 Mar 2026 09:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Robotas parodų stende — kaip paversti dėmesį kontaktais</title>
+      <link>https://33bots.lt/blog-robotas-parodu-stende.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-robotas-parodu-stende.html</guid>
+      <description>Praktinis vadovas, kaip humanoidinį robotą panaudoti parodų stende: vietos parinkimas, pasirodymų grafikas, kontaktų rinkimo mechanikos ir dažniausios klaidos.</description>
+      <category>Parodos · Kontaktų rinkimas</category>
+      <pubDate>Thu, 02 Apr 2026 09:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Kaip išsinuomoti humanoidinį robotą — pilnas vadovas 2026</title>
+      <link>https://33bots.lt/blog-kaip-issinuomoti-robota.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-kaip-issinuomoti-robota.html</guid>
+      <description>Žingsnis po žingsnio: nuo užklausos iki renginio dienos. Ką patikrinti renkantis nuomos įmonę, kokius klausimus užduoti ir kaip pasiruošti renginiui.</description>
+      <category>Vadovas · Nuoma</category>
+      <pubDate>Tue, 12 May 2026 09:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Renginio pramoga: robotas ar kitos galimybės? Palyginimas</title>
+      <link>https://33bots.lt/blog-robotas-ar-kitos-pramogos.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-robotas-ar-kitos-pramogos.html</guid>
+      <description>Robotas, fokusnininkas, VR zona, fotobūdelė ar gyva muzika — palyginimas pagal WOW efektą, soc. tinklų pasiekiamumą ir verslo vertę.</description>
+      <category>Pramogos · Palyginimas</category>
+      <pubDate>Mon, 08 Jun 2026 09:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Humanoidinis ar mobilus robotas renginiui — ką rinktis?</title>
+      <link>https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html</guid>
+      <description>Humanoidas, mobilus robotas ar interaktyvus kioskas? Palyginimas pagal poveikį svečiams, logistiką, kainą ir pritaikymo scenarijus renginiuose.</description>
+      <category>Robotų tipai</category>
+      <pubDate>Sat, 20 Jun 2026 09:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Roboto sauga renginyje — ką turi žinoti organizatorius</title>
+      <link>https://33bots.lt/blog-roboto-sauga-renginyje.html</link>
+      <guid isPermaLink="true">https://33bots.lt/blog-roboto-sauga-renginyje.html</guid>
+      <description>Jutikliai, saugos zona, draudimas ir operatoriaus vaidmuo. Praktinis saugos vadovas renginių organizatoriams, planuojantiems humanoidinį robotą.</description>
+      <category>Sauga · Organizatoriams</category>
+      <pubDate>Sat, 04 Jul 2026 09:00:00 +0200</pubDate>
+    </item>
+  </channel>
+</rss>
