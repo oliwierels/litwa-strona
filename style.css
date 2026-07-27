@@ -2165,5 +2165,21 @@ summary:focus-visible {
   line-height: 1.02;
   text-wrap: unset;
 }
-.hero--sub { min-height: auto; }
-.hero--sub .hero__content { padding-top: var(--s7); padding-bottom: var(--s6); }
+/* Be paveikslėlio hero užima visą plotį; su paveikslėliu — dvi skiltys (.hero--split) */
+.hero--sub {
+  min-height: auto;
+  grid-template-columns: 1fr;
+}
+.hero--sub .hero__content {
+  max-width: none;
+  padding-top: var(--s7);
+  padding-bottom: var(--s6);
+}
+/* Pilno pločio hero: platesnė įžanga, kad tekstas neatrodytų suspaustas */
+.hero--sub:not(.hero--split) .hero__sub { max-width: 720px; }
+.hero--split { grid-template-columns: 1fr 1fr; }
+.hero--split .hero__content { max-width: 620px; }
+@media (max-width: 768px) {
+  .hero--split { grid-template-columns: 1fr; }
+  .hero--split .hero__content { max-width: none; }
+}

@@ -179,6 +179,126 @@ CITY_DATA = {
               "prie ežero ir turizmo sektoriaus aktyvacijoms.",
         extra="Sodybose ir prie ežerų svarbiausia patikrinti elektros prieigą ir paviršių — mediniai "
               "pontonai ir netolygus grindinys pasirodymui netinka, todėl zoną parenkame kartu iš anksto."),
+    "visaginas": dict(
+        region="Utenos apskritis",
+        venues=["Visagino kultūros centras", "energetikos sektoriaus įmonių erdvės",
+                "miesto aikštės", "mokyklų salės", "Visagino pramonės parkas"],
+        intro="Visaginas — jauniausias Lietuvos miestas su technine, energetikos sektoriaus "
+              "bendruomene. Auditorija čia techniškai raštinga: apie robotą klausiama konkrečiai, "
+              "o ne tik fotografuojamasi.",
+        scene="Visagine robotas dažniausiai užsakomas energetikos ir pramonės įmonių renginiams, "
+              "miesto šventėms bei mokyklų technologijų dienoms.",
+        extra="Techninėje aplinkoje operatorius skiria daugiau laiko paaiškinimams — jutikliams, "
+              "valdymui, judėjimo principui. Tai dažnai vertinama labiau nei pats pasirodymas."),
+    "ukmerge": dict(
+        region="Vilniaus apskritis",
+        venues=["Ukmergės kultūros centras", "pramonės įmonių teritorijos", "miesto viešosios erdvės",
+                "mokyklų salės", "prekybos centrai"],
+        intro="Ukmergė yra patogioje vietoje tarp Vilniaus ir Panevėžio, todėl čia rengiami tiek "
+              "vietos bendruomenės, tiek regioninio masto renginiai.",
+        scene="Populiariausi formatai — įmonių šventės, miesto renginiai ir mokyklų bei gimnazijų "
+              "technologijų dienos.",
+        extra="Patogi vieta prie magistralės reiškia, kad renginiai Ukmergėje logistiškai paprasti — "
+              "bet kainai tai įtakos neturi, nes transportas visada įskaičiuotas."),
+    "plunge": dict(
+        region="Telšių apskritis",
+        venues=["Plungės kultūros centras", "Oginskių dvaro parko erdvės", "gamybos įmonių teritorijos",
+                "mokyklų salės", "miesto aikštės"],
+        intro="Plungė — Žemaitijos miestas su stipria kultūros tradicija ir gamybos sektoriumi. "
+              "Renginiai čia dažnai vyksta istorinėse erdvėse arba jų prieigose.",
+        scene="Dažniausi užsakymai — miesto šventės, gamybos įmonių renginiai ir kultūros programos, "
+              "kuriose robotas veikia kaip kontrastas tradicijai.",
+        extra="Istorinėse erdvėse pasirodymo zoną derinam su objekto administracija iš anksto — "
+              "robotui reikia lygaus paviršiaus, o senas grindinys ne visada tinka."),
+    "kretinga": dict(
+        region="Klaipėdos apskritis",
+        venues=["Kretingos kultūros centras", "dvaro ir muziejaus erdvės", "gamybos įmonių teritorijos",
+                "mokyklų salės", "miesto aikštės"],
+        intro="Kretinga yra pajūrio regiono dalis, todėl vasarą čia jaučiamas kurortinis ritmas, o "
+              "likusią metų dalį dominuoja vietos verslo ir bendruomenės renginiai.",
+        scene="Populiariausi scenarijai — miesto šventės, įmonių renginiai ir mokyklų programos. "
+              "Vasarą užsakymai dažnai derinami su Palanga tą patį savaitgalį.",
+        extra="Kadangi Kretinga netoli pajūrio, lauko renginiams verta numatyti atsarginį planą "
+              "vėjuotam ar lietingam orui."),
+    "silute": dict(
+        region="Klaipėdos apskritis",
+        venues=["Šilutės kultūros ir pramogų centras", "žemės ūkio verslo teritorijos",
+                "Nemuno deltos regiono renginių vietos", "mokyklų salės", "miesto aikštės"],
+        intro="Šilutė — Nemuno deltos krašto centras su žemės ūkio ir maisto pramonės verslu. "
+              "Renginių scena praktiška, orientuota į bendruomenę ir vietos įmones.",
+        scene="Dažniausi formatai — žemės ūkio ir maisto pramonės įmonių renginiai, miesto šventės ir "
+              "mokyklų technologijų dienos.",
+        extra="Regione dažnai renkamasi visos dienos nuoma, nes svečiai renkasi bangomis — tada "
+              "dirbame ciklais su trumpais pasirodymais kas valandą."),
+    "radviliskis": dict(
+        region="Šiaulių apskritis",
+        venues=["Radviliškio kultūros centras", "geležinkelio mazgo ir logistikos teritorijos",
+                "gamybos įmonių erdvės", "mokyklų salės", "miesto aikštės"],
+        intro="Radviliškis yra svarbus geležinkelio ir logistikos mazgas, todėl daug vietos renginių "
+              "susiję su transporto sektoriumi.",
+        scene="Populiariausi užsakymai — logistikos ir gamybos įmonių šventės, miesto renginiai bei "
+              "profesinio mokymo įstaigų karjeros dienos.",
+        extra="Transporto sektoriaus renginiuose robotas natūraliai įsilieja į automatizacijos temą — "
+              "tai dažnai naudojama įmonės komunikacijoje apie technologijas."),
+    "birstonas": dict(
+        region="Kauno apskritis",
+        venues=["SPA ir sveikatingumo kompleksų konferencijų salės", "kurorto viešbučiai",
+                "Nemuno kilpų regiono renginių vietos", "kurorto lauko erdvės", "restoranų terasos"],
+        intro="Birštonas — kompaktiškas kurortas, kuriame vyksta daug įmonių išvažiuojamųjų sesijų ir "
+              "nedidelių konferencijų. Erdvės čia jaukios, todėl robotas pastebimas iš karto.",
+        scene="Kurorte robotas dažniausiai reikalingas dviejų dienų įmonių renginiams, viešbučių "
+              "programoms ir vestuvėms prie Nemuno.",
+        extra="Dviejų dienų formatams siūlome paketą su tuo pačiu operatoriumi abiem dienoms — tai "
+              "pigiau ir paprasčiau nei du atskiri užsakymai."),
+    "elektrenai": dict(
+        region="Vilniaus apskritis",
+        venues=["Elektrėnų kultūros centras", "ledo arena", "energetikos sektoriaus įmonių erdvės",
+                "mokyklų salės", "miesto viešosios erdvės"],
+        intro="Elektrėnai — energetikos ir ledo ritulio miestas pusiaukelėje tarp Vilniaus ir Kauno. "
+              "Renginiai dažnai susiję su sporto arena arba energetikos sektoriumi.",
+        scene="Dažniausi scenarijai — sporto renginiai ir varžybų pertraukų programos, energetikos "
+              "įmonių šventės ir miesto renginiai.",
+        extra="Ledo arenoje robotas dirba prie tribūnų arba fanų zonoje, ne ant ledo — tam reikia "
+              "lygaus, neslidaus paviršiaus ir elektros prieigos."),
+    "anyksciai": dict(
+        region="Utenos apskritis",
+        venues=["Anykščių kultūros centras", "turizmo objektų ir pramogų parkų erdvės",
+                "viešbučių konferencijų salės", "miesto aikštės", "mokyklų salės"],
+        intro="Anykščiai — vienas stipriausių Lietuvos turizmo centrų, kur renginių sezonas ilgas, o "
+              "konkurencija dėl lankytojų dėmesio didelė.",
+        scene="Populiariausi užsakymai — turizmo objektų aktyvacijos, miesto šventės, įmonių "
+              "išvažiuojamieji renginiai ir vestuvės.",
+        extra="Turizmo objektams robotas veikia kaip sezoninis traukos taškas — dažnai užsakomas "
+              "savaitgaliams su pasirodymais ciklais visą dieną."),
+    "birzai": dict(
+        region="Panevėžio apskritis",
+        venues=["Biržų kultūros centras", "pilies ir dvaro prieigų erdvės", "alaus pramonės ir "
+                "gamybos įmonių teritorijos", "miesto aikštės", "mokyklų salės"],
+        intro="Biržai — šiaurės Lietuvos miestas su istoriniu paveldu ir tradicine pramone. Vietos "
+              "renginiai sutraukia didelę bendruomenės dalį.",
+        scene="Dažniausi formatai — miesto šventės, gamybos įmonių renginiai ir mokyklų programos.",
+        extra="Renginiams prie pilies ar dvaro zoną derinam iš anksto — svarbu lygus paviršius ir "
+              "elektros prieiga, o istorinėse teritorijose tai ne visada akivaizdu."),
+    "rokiskis": dict(
+        region="Panevėžio apskritis",
+        venues=["Rokiškio kultūros centras", "dvaro ir muziejaus erdvės", "maisto pramonės įmonių "
+                "teritorijos", "miesto aikštės", "mokyklų salės"],
+        intro="Rokiškis derina stiprią maisto pramonę su gyva kultūros scena — todėl čia vyksta ir "
+              "dideli įmonių vakarai, ir bendruomeniniai miesto renginiai.",
+        scene="Populiariausi užsakymai — maisto pramonės įmonių šventės, miesto renginiai ir mokyklų "
+              "technologijų dienos.",
+        extra="Didelėms darbuotojų šventėms rekomenduojame kelis trumpesnius pasirodymus vietoj vieno "
+              "ilgo — taip robotą pamato visos svečių bangos."),
+    "prienai": dict(
+        region="Kauno apskritis",
+        venues=["Prienų kultūros ir laisvalaikio centras", "Nemuno kilpų regiono renginių vietos",
+                "aviacijos ir sporto erdvės", "mokyklų salės", "miesto aikštės"],
+        intro="Prienai yra Nemuno kilpų regiono centras, populiarus tarp aktyvaus poilsio ir "
+              "išvažiuojamųjų renginių organizatorių.",
+        scene="Dažniausi scenarijai — įmonių išvažiuojamieji renginiai, miesto šventės, sporto "
+              "renginiai ir mokyklų programos.",
+        extra="Gamtoje ir sodybose svarbiausia elektros prieiga bei lygus paviršius — zoną parenkame "
+              "kartu iš anksto, kad renginio dieną nekiltų netikėtumų."),
 }
 
 
@@ -249,7 +369,7 @@ def build_city(slug, name, loc, gen):
     other_links = "\n".join(f'        <a href="{city_url(s)}">{n}</a>' for s, n, _, _ in other)
 
     html += f"""
-  <section class="hero hero--sub">
+  <section class="hero hero--sub hero--split">
     <div class="hero__content">
       <p class="hero__eyebrow">Robotų nuoma · {name} · {d['region']}</p>
       <h1 class="hero__title">Roboto nuoma<br />{loc} —<br /><em>Unitree G1.</em></h1>

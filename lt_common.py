@@ -72,6 +72,31 @@ def alternates(slug):
     return pairs
 
 
+CRITICAL_CSS = (
+    ":root{--bg:#000;--surface-2:#111;--text:#fff;--text-2:#a8a8a8;--text-3:#444;"
+    "--border-mid:#2c2c2c;--s4:20px;--s5:28px;--s8:64px}"
+    "*{box-sizing:border-box}"
+    "body{margin:0;background:#000;color:#fff;"
+    "font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;"
+    "-webkit-font-smoothing:antialiased}"
+    ".nav{position:fixed;top:0;left:0;right:0;z-index:100}"
+    ".nav__inner{max-width:1200px;margin:0 auto;padding:0 var(--s4);height:var(--s8);"
+    "display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}"
+    ".logo{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:#fff;text-decoration:none}"
+    ".hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;"
+    "max-width:1200px;margin:0 auto;padding:0 var(--s4);min-height:100svh}"
+    ".hero__content{padding:var(--s8) 0}"
+    ".hero__eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;"
+    "text-transform:uppercase;color:var(--text-3);margin:0 0 var(--s4)}"
+    ".hero__title{font-size:clamp(2.2rem,8vw,6.5rem);font-weight:800;line-height:.96;"
+    "letter-spacing:-.03em;margin:0 0 var(--s4)}"
+    ".hero__title em{font-style:normal;color:var(--text-2)}"
+    ".hero__sub{font-size:.975rem;line-height:1.7;color:var(--text-2);margin:0 0 var(--s5)}"
+    ".hero__robot-img{width:100%;height:auto;display:block}"
+    "@media(max-width:900px){.nav__links,.lang-switch{display:none}}"
+    "@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}}"
+)
+
 NAV_OFFER = [
     ("humanoidinio-roboto-nuoma.html", "Humanoidinio roboto nuoma"),
     ("robotas-renginiui.html", "Robotas renginiui"),
@@ -80,9 +105,19 @@ NAV_OFFER = [
     ("robotas-imones-sventei.html", "Įmonės šventės"),
     ("robotas-atidarymui.html", "Atidarymai ir pristatymai"),
     ("robotas-vestuvems.html", "Robotas vestuvėms"),
+    ("robotas-gimtadieniui.html", "Robotas gimtadieniui"),
+    ("robotas-komandos-formavimui.html", "Komandos formavimas"),
+    ("robotas-prekybos-centrui.html", "Prekybos centrai"),
+    ("robotas-mokyklai.html", "Mokykloms ir universitetams"),
+    ("robotas-sporto-renginiui.html", "Sporto renginiai"),
+    ("robotas-kaledinei-sventei.html", "Kalėdinės šventės"),
+    ("robotas-fotosesijai.html", "Fotosesijos ir filmavimai"),
+    ("unitree-g1-nuoma.html", "Unitree G1 nuoma"),
+    ("pramogos-renginiams.html", "Pramogos renginiams"),
 ]
 
 NAV_MAIN = [
+    ("robotu-nuoma.html", "Miestai"),
     ("video-realizacijos.html", "Vaizdo įrašai"),
     ("kainos.html", "Kainos"),
     ("apie-mus.html", "Apie mus"),
@@ -107,6 +142,18 @@ CITIES = [
     ("palanga", "Palanga", "Palangoje", "Palangos"),
     ("druskininkai", "Druskininkai", "Druskininkuose", "Druskininkų"),
     ("trakai", "Trakai", "Trakuose", "Trakų"),
+    ("visaginas", "Visaginas", "Visagine", "Visagino"),
+    ("ukmerge", "Ukmergė", "Ukmergėje", "Ukmergės"),
+    ("plunge", "Plungė", "Plungėje", "Plungės"),
+    ("kretinga", "Kretinga", "Kretingoje", "Kretingos"),
+    ("silute", "Šilutė", "Šilutėje", "Šilutės"),
+    ("radviliskis", "Radviliškis", "Radviliškyje", "Radviliškio"),
+    ("birstonas", "Birštonas", "Birštone", "Birštono"),
+    ("elektrenai", "Elektrėnai", "Elektrėnuose", "Elektrėnų"),
+    ("anyksciai", "Anykščiai", "Anykščiuose", "Anykščių"),
+    ("birzai", "Biržai", "Biržuose", "Biržų"),
+    ("rokiskis", "Rokiškis", "Rokiškyje", "Rokiškio"),
+    ("prienai", "Prienai", "Prienuose", "Prienų"),
 ]
 
 
@@ -197,12 +244,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script>history.scrollRestoration = 'manual';</script>{preload}
   <link rel="alternate" type="application/rss+xml" title="33bots — blogo RSS" href="{SITE}/feed.xml" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css?v={CSS_V}" />
+
+  <!-- Šriftas talpinamas lokaliai — jokių blokuojančių užklausų į trečiųjų šalių serverius -->
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts.css?v={CSS_V}" />
+
+  <!-- Kritinis CSS įterptas — pirmas ekranas piešiamas nelaukiant style.css -->
+  <style>{CRITICAL_CSS}</style>
+  <link rel="preload" href="style.css?v={CSS_V}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="style.css?v={CSS_V}" /></noscript>
+
   <link rel="preconnect" href="https://www.googletagmanager.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 {extra_head}</head>
 """
 

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """33bots.lt paslaugų (landing) puslapiai."""
+from lt_offers2 import PAGES2
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
                        footer, faq_section, faq_ld, organization_ld, video_section,
                        service_ld, write, CITIES, city_url)
@@ -498,7 +499,7 @@ def build_page(p):
     html += crumbs([("Pradžia", "index.html"), (p["crumb"], None)])
 
     html += f"""
-  <section class="hero hero--sub">
+  <section class="hero hero--sub hero--split">
     <div class="hero__content">
       <p class="hero__eyebrow">{p['eyebrow']}</p>
       <h1 class="hero__title">{p['h1']}</h1>
@@ -614,7 +615,7 @@ def build_page(p):
 
 
 def build():
-    for p in PAGES:
+    for p in PAGES + PAGES2:
         build_page(p)
 
 

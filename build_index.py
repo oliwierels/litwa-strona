@@ -1,8 +1,15 @@
 # -*- coding: utf-8 -*-
 """Pagrindinis 33bots.lt puslapis."""
+from lt_articles import ARTICLES as _A1
+from lt_articles2 import ARTICLES2 as _A2
+from build_offers import PAGES as _P1
+from lt_offers2 import PAGES2 as _P2
 from lt_common import (SITE, head, body_open, nav, contact_section, footer, faq_section,
                        faq_ld, organization_ld, website_ld, video_ld, video_section,
                        write, CITIES, city_url, service_ld)
+
+ARTICLES = _A1 + _A2
+OFFER_PAGES = _P1 + _P2
 
 FAQ = [
     ("Ar galiu išsinuomoti robotą, jei nemoku juo valdyti?",
@@ -39,6 +46,17 @@ FAQ = [
      "operatorius visą renginį ir nemokamas roboto ženklinimas. Dirbame su savo įranga — be tarpininkų, "
      "o mūsų projektai Lenkijoje buvo rodomi nacionalinėje televizijoje."),
 ]
+
+BLOG_CARDS = "\n".join(f"""      <div class="tile">
+        <div class="tile__top"><span class="tile__tag">{a['tag']}</span></div>
+        <h3 class="tile__title" style="font-size:1.1rem;">{a['title']}</h3>
+        <p class="tile__desc">{a['card']}</p>
+        <a href="{a['slug']}" class="tile__link">Skaityti straipsnį →</a>
+      </div>""" for a in ARTICLES[:8])
+
+OFFER_CHIPS = "\n".join(
+    f'        <a href="{p["slug"]}">{p["crumb"]}</a>' for p in OFFER_PAGES
+)
 
 CITY_CHIPS = "\n".join(
     f'        <a href="{city_url(s)}" class="tile__link" style="padding:8px 16px; background:var(--surface-2); '
@@ -501,63 +519,24 @@ def build():
       <h2 class="section-title">Žinios apie renginių<br />robotus</h2>
     </div>
     <div class="tiles tiles--blog">
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Kainos · Paketai</span></div>
-        <h3 class="tile__title">Kiek kainuoja humanoidinio roboto nuoma?</h3>
-        <p class="tile__desc">Skaidrus vadovas po roboto nuomos kaštus Lietuvoje: kas įeina į kainą, kaip skaičiuojamas pasiūlymas ir kodėl transportas pas mus nemokamas.</p>
-        <a href="blog-kiek-kainuoja-roboto-nuoma.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Renginiai · Strategija</span></div>
-        <h3 class="tile__title">5 priežastys, kodėl jūsų renginiui reikia humanoido</h3>
-        <p class="tile__desc">Robotas renginyje — ne žaisliukas, o rinkodaros sprendimas. Kodėl G1 generuoja kontaktus, virusinį pasiekiamumą ir lieka svečių atmintyje savaitėms.</p>
-        <a href="blog-kodel-robotas-renginyje.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Technologijos · Unitree G1</span></div>
-        <h3 class="tile__title">Unitree G1 — specifikacija ir galimybės</h3>
-        <p class="tile__desc">Viskas apie robotą Unitree G1: 132 cm ūgis, 43 DoF, 2 m/s greitis. Specifikacijų lentelės ir palyginimas su kitais humanoidais.</p>
-        <a href="blog-unitree-g1-specifikacija.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Parodos · Kontaktų rinkimas</span></div>
-        <h3 class="tile__title">Robotas parodų stende — kaip generuoti kontaktus</h3>
-        <p class="tile__desc">Kaip humanoidinis robotas sustabdo minią LITEXPO ar Litexpo tipo parodose ir paverčia srautą realiais verslo kontaktais.</p>
-        <a href="blog-robotas-parodu-stende.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Vadovas · Nuoma</span></div>
-        <h3 class="tile__title">Kaip išsinuomoti robotą — pilnas vadovas 2026</h3>
-        <p class="tile__desc">Kaip išsinuomoti humanoidinį robotą žingsnis po žingsnio: ką apima paslauga, į ką atkreipti dėmesį renkantis įmonę ir kada robotas turi daugiausia prasmės.</p>
-        <a href="blog-kaip-issinuomoti-robota.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Pramogos · Palyginimas</span></div>
-        <h3 class="tile__title">Renginio pramoga: robotas ar kitos galimybės?</h3>
-        <p class="tile__desc">Populiariausių renginių pramogų palyginimas pagal WOW efektą, socialinių tinklų pasiekiamumą ir verslo vertę.</p>
-        <a href="blog-robotas-ar-kitos-pramogos.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Robotų tipai</span></div>
-        <h3 class="tile__title">Humanoidinis ar mobilus robotas — ką rinktis?</h3>
-        <p class="tile__desc">Kodėl humanoidinis robotas daro didesnį įspūdį nei mobilus robotas ar interaktyvus kioskas? Palyginimas ir patarimai prieš nuomą.</p>
-        <a href="blog-humanoidinis-ar-mobilus-robotas.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
-      <div class="tile">
-        <div class="tile__top"><span class="tile__tag">Sauga · Organizatoriams</span></div>
-        <h3 class="tile__title">Roboto sauga renginyje — ką turi žinoti organizatorius</h3>
-        <p class="tile__desc">Jutikliai, draudimas, saugos zona ir operatoriaus vaidmuo. Praktinis saugos vadovas renginių organizatoriams.</p>
-        <a href="blog-roboto-sauga-renginyje.html" class="tile__link">Skaityti straipsnį →</a>
-      </div>
+{BLOG_CARDS}
     </div>
 
     <div style="text-align:center; margin:0 0 var(--s10);">
       <a href="blog.html" class="btn-ghost" style="display:inline-flex;">Visi straipsniai →</a>
     </div>
 
-    <!-- MIESTAI -->
+    <!-- VISOS PASLAUGOS -->
     <div style="margin-top:var(--s8); max-width:900px; margin-left:auto; margin-right:auto;">
-      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">Robotų nuoma jūsų mieste</p>
+      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">Visos nuomos paslaugos</p>
+      <div class="related-links">
+{OFFER_CHIPS}
+      </div>
+    </div>
+
+    <!-- MIESTAI -->
+    <div style="margin-top:var(--s7); max-width:900px; margin-left:auto; margin-right:auto;">
+      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">Robotų nuoma jūsų mieste — <a href="robotu-nuoma.html" style="color:var(--text-2); text-decoration:underline; text-underline-offset:3px;">visi {len(CITIES)} miestai</a></p>
       <div style="display:flex; flex-wrap:wrap; gap:var(--s2);">
 {CITY_CHIPS}
       </div>

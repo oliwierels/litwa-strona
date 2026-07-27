@@ -21,10 +21,14 @@ yra **generuojami** — jų nereikia redaguoti ranka. Keiskite turinį skriptuos
 | --- | --- |
 | `lt_common.py` | Bendri komponentai: `<head>`, navigacija, poraštė, kontaktų forma, schema.org blokai, miestų sąrašas |
 | `lt_articles.py` | Blogo straipsnių turinys (tekstai, DUK, metaduomenys) |
+| `lt_articles2.py` | Antroji straipsnių banga |
+| `lt_offers2.py` | Antroji paslaugų puslapių banga |
 | `build_index.py` | Pagrindinis puslapis |
-| `build_offers.py` | 7 paslaugų puslapiai (nuoma, renginiai, parodos, konferencijos, šventės, atidarymai, vestuvės) |
-| `build_blog.py` | Blogo indeksas ir 8 straipsniai |
-| `build_cities.py` | 16 miestų puslapių su unikaliu vietos turiniu |
+| `build_offers.py` | 16 paslaugų puslapių (renderina `PAGES` + `PAGES2`) |
+| `build_hub.py` | `robotu-nuoma.html` — paslaugų ir miestų mazgas (silo struktūra) |
+| `build_blog.py` | Blogo indeksas ir 14 straipsnių |
+| `build_cities.py` | 28 miestų puslapiai su unikaliu vietos turiniu |
+| `build_fonts.py` | Parsisiunčia Inter (latin + latin-ext) į `fonts/`; paleidžiama tik atnaujinant šriftą |
 | `build_misc.py` | Kainos, apie mus, kontaktai, vaizdo įrašai, privatumo politika, 404 |
 | `build_og.py` | Open Graph paveikslėliai (1200×630) į `og/` |
 | `build_seo.py` | `sitemap.xml`, `robots.txt`, `llms.txt`, `feed.xml`, `_redirects`, `.htaccess` |
@@ -44,6 +48,10 @@ Rankiniu būdu tvarkomi failai: `style.css`, `main.js`, paveikslėliai, `video/`
   65 / 160 simbolių.
 - Miestų puslapiai turi savą turinį (vietos renginių scena, tipinės erdvės, regionas), o ne
   pakeistą miesto pavadinimą tame pačiame tekste.
+- Sitemapa ir `llms.txt` puslapių sąrašus ima tiesiai iš generatorių, todėl negali atsilikti nuo
+  turinio.
+- Silo struktūra: `robotu-nuoma.html` sujungia visas paslaugas ir visus miestus, sugrupuotus pagal
+  apskritis.
 
 ## UX sprendimai
 
@@ -53,6 +61,13 @@ Rankiniu būdu tvarkomi failai: `style.css`, `main.js`, paveikslėliai, `video/`
 - Straipsniuose — turinio lentelė su nuorodomis į skyrius.
 - Vaizdo įrašai su `preload="none"` ir plakatais, paveikslėliai su `width`/`height` (be CLS).
 - Dviejų žingsnių kontaktinė forma su validacija lietuvių kalba.
+
+## Greitis (Core Web Vitals)
+
+- Inter šriftas talpinamas **lokaliai** (`fonts/`, ~133 KB kintamasis šriftas) — jokių blokuojančių
+  užklausų į Google Fonts. Atnaujinama su `python3 build_fonts.py`.
+- Kritinis pirmo ekrano CSS įterptas tiesiai į `<head>`; `style.css` kraunamas neblokuojančiai.
+- LCP paveikslėlis su `preload`, `fetchpriority="high"` ir WebP variantais.
 
 ## Diegimas
 
@@ -71,4 +86,7 @@ Prieš tai sugeneruokite raktą ir įkelkite jį kaip `https://33bots.lt/<RAKTAS
 
 - Pakeisti Formspree galinį tašką `main.js` savu (dabar naudojamas tas pats kaip 33bots.pl).
 - Pridėti tikrus Lietuvos projektų atsiliepimus ir case study, kai jų atsiras.
-- Pridėti hreflang nuorodas į 33bots.lt taip pat 33bots.at ir robotollern.de puslapiuose.
+- Pridėti hreflang nuorodas į 33bots.lt taip pat 33bots.at ir robotollern.de puslapiuose
+  (33bots.pl jau nurodo atgal).
+- Pridėti atsiliepimų ir `AggregateRating` žymėjimą, kai atsiras tikrų Lietuvos klientų atsiliepimų —
+  jų negalima susigalvoti.

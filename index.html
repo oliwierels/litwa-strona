@@ -210,12 +210,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="preload" as="image" href="robot-g1-960.webp" imagesrcset="robot-g1-960.webp 960w, robot-g1.webp 2390w" imagesizes="45vw" fetchpriority="high" type="image/webp" media="(min-width: 769px)" />
   <link rel="alternate" type="application/rss+xml" title="33bots — blogo RSS" href="https://33bots.lt/feed.xml" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css?v=1" />
+
+  <!-- Šriftas talpinamas lokaliai — jokių blokuojančių užklausų į trečiųjų šalių serverius -->
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts.css?v=1" />
+
+  <!-- Kritinis CSS įterptas — pirmas ekranas piešiamas nelaukiant style.css -->
+  <style>:root{--bg:#000;--surface-2:#111;--text:#fff;--text-2:#a8a8a8;--text-3:#444;--border-mid:#2c2c2c;--s4:20px;--s5:28px;--s8:64px}*{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}.nav{position:fixed;top:0;left:0;right:0;z-index:100}.nav__inner{max-width:1200px;margin:0 auto;padding:0 var(--s4);height:var(--s8);display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}.logo{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:#fff;text-decoration:none}.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1200px;margin:0 auto;padding:0 var(--s4);min-height:100svh}.hero__content{padding:var(--s8) 0}.hero__eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin:0 0 var(--s4)}.hero__title{font-size:clamp(2.2rem,8vw,6.5rem);font-weight:800;line-height:.96;letter-spacing:-.03em;margin:0 0 var(--s4)}.hero__title em{font-style:normal;color:var(--text-2)}.hero__sub{font-size:.975rem;line-height:1.7;color:var(--text-2);margin:0 0 var(--s5)}.hero__robot-img{width:100%;height:auto;display:block}@media(max-width:900px){.nav__links,.lang-switch{display:none}}@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}}</style>
+  <link rel="preload" href="style.css?v=1" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="style.css?v=1" /></noscript>
+
   <link rel="preconnect" href="https://www.googletagmanager.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -241,8 +247,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="robotas-imones-sventei.html">Įmonės šventės</a>
             <a href="robotas-atidarymui.html">Atidarymai ir pristatymai</a>
             <a href="robotas-vestuvems.html">Robotas vestuvėms</a>
+            <a href="robotas-gimtadieniui.html">Robotas gimtadieniui</a>
+            <a href="robotas-komandos-formavimui.html">Komandos formavimas</a>
+            <a href="robotas-prekybos-centrui.html">Prekybos centrai</a>
+            <a href="robotas-mokyklai.html">Mokykloms ir universitetams</a>
+            <a href="robotas-sporto-renginiui.html">Sporto renginiai</a>
+            <a href="robotas-kaledinei-sventei.html">Kalėdinės šventės</a>
+            <a href="robotas-fotosesijai.html">Fotosesijos ir filmavimai</a>
+            <a href="unitree-g1-nuoma.html">Unitree G1 nuoma</a>
+            <a href="pramogos-renginiams.html">Pramogos renginiams</a>
           </div>
         </div>
+        <a href="robotu-nuoma.html">Miestai</a>
         <a href="video-realizacijos.html">Vaizdo įrašai</a>
         <a href="kainos.html">Kainos</a>
         <a href="apie-mus.html">Apie mus</a>
@@ -271,6 +287,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="robotas-imones-sventei.html" class="mobile-menu__sub">Įmonės šventės</a>
     <a href="robotas-atidarymui.html" class="mobile-menu__sub">Atidarymai ir pristatymai</a>
     <a href="robotas-vestuvems.html" class="mobile-menu__sub">Robotas vestuvėms</a>
+    <a href="robotas-gimtadieniui.html" class="mobile-menu__sub">Robotas gimtadieniui</a>
+    <a href="robotas-komandos-formavimui.html" class="mobile-menu__sub">Komandos formavimas</a>
+    <a href="robotas-prekybos-centrui.html" class="mobile-menu__sub">Prekybos centrai</a>
+    <a href="robotas-mokyklai.html" class="mobile-menu__sub">Mokykloms ir universitetams</a>
+    <a href="robotas-sporto-renginiui.html" class="mobile-menu__sub">Sporto renginiai</a>
+    <a href="robotas-kaledinei-sventei.html" class="mobile-menu__sub">Kalėdinės šventės</a>
+    <a href="robotas-fotosesijai.html" class="mobile-menu__sub">Fotosesijos ir filmavimai</a>
+    <a href="unitree-g1-nuoma.html" class="mobile-menu__sub">Unitree G1 nuoma</a>
+    <a href="pramogos-renginiams.html" class="mobile-menu__sub">Pramogos renginiams</a>
+    <a href="robotu-nuoma.html">Miestai</a>
     <a href="video-realizacijos.html">Vaizdo įrašai</a>
     <a href="kainos.html">Kainos</a>
     <a href="apie-mus.html">Apie mus</a>
@@ -803,49 +829,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="tiles tiles--blog">
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Kainos · Paketai</span></div>
-        <h3 class="tile__title">Kiek kainuoja humanoidinio roboto nuoma?</h3>
+        <h3 class="tile__title" style="font-size:1.1rem;">Kiek kainuoja humanoidinio roboto nuoma Lietuvoje? Kainos 2026</h3>
         <p class="tile__desc">Skaidrus vadovas po roboto nuomos kaštus Lietuvoje: kas įeina į kainą, kaip skaičiuojamas pasiūlymas ir kodėl transportas pas mus nemokamas.</p>
         <a href="blog-kiek-kainuoja-roboto-nuoma.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Renginiai · Strategija</span></div>
-        <h3 class="tile__title">5 priežastys, kodėl jūsų renginiui reikia humanoido</h3>
+        <h3 class="tile__title" style="font-size:1.1rem;">5 priežastys, kodėl jūsų renginiui reikia humanoidinio roboto</h3>
         <p class="tile__desc">Robotas renginyje — ne žaisliukas, o rinkodaros sprendimas. Kodėl G1 generuoja kontaktus, virusinį pasiekiamumą ir lieka svečių atmintyje savaitėms.</p>
         <a href="blog-kodel-robotas-renginyje.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Technologijos · Unitree G1</span></div>
-        <h3 class="tile__title">Unitree G1 — specifikacija ir galimybės</h3>
+        <h3 class="tile__title" style="font-size:1.1rem;">Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams</h3>
         <p class="tile__desc">Viskas apie robotą Unitree G1: 132 cm ūgis, 43 DoF, 2 m/s greitis. Specifikacijų lentelės ir palyginimas su kitais humanoidais.</p>
         <a href="blog-unitree-g1-specifikacija.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Parodos · Kontaktų rinkimas</span></div>
-        <h3 class="tile__title">Robotas parodų stende — kaip generuoti kontaktus</h3>
-        <p class="tile__desc">Kaip humanoidinis robotas sustabdo minią LITEXPO ar Litexpo tipo parodose ir paverčia srautą realiais verslo kontaktais.</p>
+        <h3 class="tile__title" style="font-size:1.1rem;">Robotas parodų stende — kaip paversti dėmesį kontaktais</h3>
+        <p class="tile__desc">Kaip humanoidinis robotas sustabdo minią parodose ir paverčia srautą realiais verslo kontaktais. Mechanikos ir stendo išdėstymo patarimai.</p>
         <a href="blog-robotas-parodu-stende.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Vadovas · Nuoma</span></div>
-        <h3 class="tile__title">Kaip išsinuomoti robotą — pilnas vadovas 2026</h3>
+        <h3 class="tile__title" style="font-size:1.1rem;">Kaip išsinuomoti humanoidinį robotą — pilnas vadovas 2026</h3>
         <p class="tile__desc">Kaip išsinuomoti humanoidinį robotą žingsnis po žingsnio: ką apima paslauga, į ką atkreipti dėmesį renkantis įmonę ir kada robotas turi daugiausia prasmės.</p>
         <a href="blog-kaip-issinuomoti-robota.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Pramogos · Palyginimas</span></div>
-        <h3 class="tile__title">Renginio pramoga: robotas ar kitos galimybės?</h3>
+        <h3 class="tile__title" style="font-size:1.1rem;">Renginio pramoga: robotas ar kitos galimybės? Palyginimas</h3>
         <p class="tile__desc">Populiariausių renginių pramogų palyginimas pagal WOW efektą, socialinių tinklų pasiekiamumą ir verslo vertę.</p>
         <a href="blog-robotas-ar-kitos-pramogos.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Robotų tipai</span></div>
-        <h3 class="tile__title">Humanoidinis ar mobilus robotas — ką rinktis?</h3>
+        <h3 class="tile__title" style="font-size:1.1rem;">Humanoidinis ar mobilus robotas renginiui — ką rinktis?</h3>
         <p class="tile__desc">Kodėl humanoidinis robotas daro didesnį įspūdį nei mobilus robotas ar interaktyvus kioskas? Palyginimas ir patarimai prieš nuomą.</p>
         <a href="blog-humanoidinis-ar-mobilus-robotas.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
       <div class="tile">
         <div class="tile__top"><span class="tile__tag">Sauga · Organizatoriams</span></div>
-        <h3 class="tile__title">Roboto sauga renginyje — ką turi žinoti organizatorius</h3>
+        <h3 class="tile__title" style="font-size:1.1rem;">Roboto sauga renginyje — ką turi žinoti organizatorius</h3>
         <p class="tile__desc">Jutikliai, draudimas, saugos zona ir operatoriaus vaidmuo. Praktinis saugos vadovas renginių organizatoriams.</p>
         <a href="blog-roboto-sauga-renginyje.html" class="tile__link">Skaityti straipsnį →</a>
       </div>
@@ -855,9 +881,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="blog.html" class="btn-ghost" style="display:inline-flex;">Visi straipsniai →</a>
     </div>
 
-    <!-- MIESTAI -->
+    <!-- VISOS PASLAUGOS -->
     <div style="margin-top:var(--s8); max-width:900px; margin-left:auto; margin-right:auto;">
-      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">Robotų nuoma jūsų mieste</p>
+      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">Visos nuomos paslaugos</p>
+      <div class="related-links">
+        <a href="humanoidinio-roboto-nuoma.html">Humanoidinio roboto nuoma</a>
+        <a href="robotas-renginiui.html">Robotas renginiui</a>
+        <a href="robotas-parodoms.html">Robotas parodoms</a>
+        <a href="robotas-konferencijai.html">Konferencijos ir gala vakarai</a>
+        <a href="robotas-imones-sventei.html">Įmonės šventės</a>
+        <a href="robotas-atidarymui.html">Atidarymai ir pristatymai</a>
+        <a href="robotas-vestuvems.html">Robotas vestuvėms</a>
+        <a href="unitree-g1-nuoma.html">Unitree G1 nuoma</a>
+        <a href="pramogos-renginiams.html">Pramogos renginiams</a>
+        <a href="robotas-gimtadieniui.html">Robotas gimtadieniui</a>
+        <a href="robotas-prekybos-centrui.html">Robotas prekybos centrui</a>
+        <a href="robotas-mokyklai.html">Robotas mokyklai</a>
+        <a href="robotas-kaledinei-sventei.html">Kalėdinės šventės</a>
+        <a href="robotas-fotosesijai.html">Fotosesijos ir filmavimai</a>
+        <a href="robotas-komandos-formavimui.html">Komandos formavimas</a>
+        <a href="robotas-sporto-renginiui.html">Sporto renginiai</a>
+      </div>
+    </div>
+
+    <!-- MIESTAI -->
+    <div style="margin-top:var(--s7); max-width:900px; margin-left:auto; margin-right:auto;">
+      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">Robotų nuoma jūsų mieste — <a href="robotu-nuoma.html" style="color:var(--text-2); text-decoration:underline; text-underline-offset:3px;">visi 28 miestai</a></p>
       <div style="display:flex; flex-wrap:wrap; gap:var(--s2);">
         <a href="robotu-nuoma-vilnius.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Vilnius</a>
         <a href="robotu-nuoma-kaunas.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Kaunas</a>
@@ -875,6 +924,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="robotu-nuoma-palanga.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Palanga</a>
         <a href="robotu-nuoma-druskininkai.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Druskininkai</a>
         <a href="robotu-nuoma-trakai.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Trakai</a>
+        <a href="robotu-nuoma-visaginas.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Visaginas</a>
+        <a href="robotu-nuoma-ukmerge.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Ukmergė</a>
+        <a href="robotu-nuoma-plunge.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Plungė</a>
+        <a href="robotu-nuoma-kretinga.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Kretinga</a>
+        <a href="robotu-nuoma-silute.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Šilutė</a>
+        <a href="robotu-nuoma-radviliskis.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Radviliškis</a>
+        <a href="robotu-nuoma-birstonas.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Birštonas</a>
+        <a href="robotu-nuoma-elektrenai.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Elektrėnai</a>
+        <a href="robotu-nuoma-anyksciai.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Anykščiai</a>
+        <a href="robotu-nuoma-birzai.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Biržai</a>
+        <a href="robotu-nuoma-rokiskis.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Rokiškis</a>
+        <a href="robotu-nuoma-prienai.html" class="tile__link" style="padding:8px 16px; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:8px;">Prienai</a>
       </div>
     </div>
   </section>
@@ -928,6 +989,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="robotu-nuoma-palanga.html">Palanga</a></li>
             <li><a href="robotu-nuoma-druskininkai.html">Druskininkai</a></li>
             <li><a href="robotu-nuoma-trakai.html">Trakai</a></li>
+            <li><a href="robotu-nuoma-visaginas.html">Visaginas</a></li>
+            <li><a href="robotu-nuoma-ukmerge.html">Ukmergė</a></li>
+            <li><a href="robotu-nuoma-plunge.html">Plungė</a></li>
+            <li><a href="robotu-nuoma-kretinga.html">Kretinga</a></li>
+            <li><a href="robotu-nuoma-silute.html">Šilutė</a></li>
+            <li><a href="robotu-nuoma-radviliskis.html">Radviliškis</a></li>
+            <li><a href="robotu-nuoma-birstonas.html">Birštonas</a></li>
+            <li><a href="robotu-nuoma-elektrenai.html">Elektrėnai</a></li>
+            <li><a href="robotu-nuoma-anyksciai.html">Anykščiai</a></li>
+            <li><a href="robotu-nuoma-birzai.html">Biržai</a></li>
+            <li><a href="robotu-nuoma-rokiskis.html">Rokiškis</a></li>
+            <li><a href="robotu-nuoma-prienai.html">Prienai</a></li>
           </ul>
           <p class="coverage__note">ir bet kurią kitą Lietuvos vietą — transportas įskaičiuotas į kainą</p>
         </nav>
@@ -1016,6 +1089,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="robotas-renginiui.html">Robotas renginiui</a>
         <a href="robotas-parodoms.html">Robotas parodoms</a>
         <a href="robotas-konferencijai.html">Konferencijos ir gala vakarai</a>
+        <a href="robotu-nuoma.html">Miestai</a>
         <a href="video-realizacijos.html">Vaizdo įrašai</a>
         <a href="kainos.html">Kainos</a>
         <a href="apie-mus.html">Apie mus</a>

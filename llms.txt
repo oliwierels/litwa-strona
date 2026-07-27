@@ -19,13 +19,23 @@
 
 ## Paslaugų puslapiai
 
-- [Humanoidinio roboto nuoma](https://33bots.lt/humanoidinio-roboto-nuoma.html)
-- [Robotas renginiui](https://33bots.lt/robotas-renginiui.html)
-- [Robotas parodoms](https://33bots.lt/robotas-parodoms.html)
-- [Konferencijos ir gala vakarai](https://33bots.lt/robotas-konferencijai.html)
-- [Įmonės šventės](https://33bots.lt/robotas-imones-sventei.html)
-- [Atidarymai ir pristatymai](https://33bots.lt/robotas-atidarymui.html)
-- [Robotas vestuvėms](https://33bots.lt/robotas-vestuvems.html)
+- [Robotų nuoma Lietuvoje — visi miestai ir paslaugos](https://33bots.lt/robotu-nuoma.html)
+- [Humanoidinio roboto nuoma](https://33bots.lt/humanoidinio-roboto-nuoma.html) — Humanoidinio roboto Unitree G1 nuoma visoje Lietuvoje. Operatorius, transportas ir ženklinimas įskaičiuoti į kainą. Pasiūlymas per 24 val.
+- [Robotas renginiui](https://33bots.lt/robotas-renginiui.html) — Robotas renginiui visoje Lietuvoje: Unitree G1 pasitinka svečius, veda pasirodymą ir šoka. Operatorius ir transportas kainoje.
+- [Robotas parodoms](https://33bots.lt/robotas-parodoms.html) — Humanoidinis robotas parodų stende: sustabdo lankytojų srautą ir padeda rinkti kontaktus. Kelių dienų nuoma su operatoriumi ir transportu.
+- [Konferencijos ir gala vakarai](https://33bots.lt/robotas-konferencijai.html) — Humanoidinis robotas konferencijoje ar gala vakare: pasitinka svečius ir tampa programos akcentu. Nuoma visoje Lietuvoje su operatoriumi.
+- [Įmonės šventės](https://33bots.lt/robotas-imones-sventei.html) — Humanoidinis robotas įmonės šventėje, vasaros renginyje ar jubiliejuje — pramoga, kurios nepamiršta. Nuoma visoje Lietuvoje su operatoriumi.
+- [Atidarymai ir pristatymai](https://33bots.lt/robotas-atidarymui.html) — Humanoidinis robotas parduotuvės atidaryme ar produkto pristatyme — pritraukia praeivius ir žiniasklaidą. Nuoma visoje Lietuvoje.
+- [Robotas vestuvėms](https://33bots.lt/robotas-vestuvems.html) — Humanoidinis robotas vestuvėse: pasitinka svečius, šoka ir sukuria kadrus, kurių niekas nesitikėjo. Nuoma visoje Lietuvoje su operatoriumi.
+- [Unitree G1 nuoma](https://33bots.lt/unitree-g1-nuoma.html) — Unitree G1 nuoma Lietuvoje: 132 cm, 43 laisvės laipsniai, LiDAR. Robotas su operatoriumi renginiams ir parodoms. Transportas įskaičiuotas.
+- [Pramogos renginiams](https://33bots.lt/pramogos-renginiams.html) — Pramogos renginiams, kurios iš tikrųjų įsimenamos: humanoidinis robotas vietoj eilinės programos. Palyginimas su kitomis pramogomis ir praktiniai scenarijai.
+- [Robotas gimtadieniui](https://33bots.lt/robotas-gimtadieniui.html) — Humanoidinis robotas gimtadienio šventėje: pasitinka svečius, šoka ir fotografuojasi. Nuoma visoje Lietuvoje su operatoriumi ir transportu.
+- [Robotas prekybos centrui](https://33bots.lt/robotas-prekybos-centrui.html) — Humanoidinis robotas prekybos centre: pritraukia praeivius, sukuria minią prie parduotuvės ir generuoja turinį. Nuoma visoje Lietuvoje.
+- [Robotas mokyklai](https://33bots.lt/robotas-mokyklai.html) — Humanoidinis robotas mokyklos, gimnazijos ar universiteto renginyje: atvirų durų dienos, karjeros dienos, STEM pamokos. Nuoma visoje Lietuvoje.
+- [Kalėdinės šventės](https://33bots.lt/robotas-kaledinei-sventei.html) — Humanoidinis robotas kalėdiniame įmonės vakarėlyje ar miesto šventėje. Netikėta programos dalis gruodį. Nuoma visoje Lietuvoje su operatoriumi.
+- [Fotosesijos ir filmavimai](https://33bots.lt/robotas-fotosesijai.html) — Humanoidinis robotas Unitree G1 reklamos fotosesijoje, vaizdo klipe ar filmavimo aikštelėje. Nuoma su operatoriumi visoje Lietuvoje.
+- [Komandos formavimas](https://33bots.lt/robotas-komandos-formavimui.html) — Humanoidinis robotas komandos formavimo renginyje: bendra patirtis, interaktyvios veiklos ir ledlaužis naujoje komandoje. Nuoma visoje Lietuvoje.
+- [Sporto renginiai](https://33bots.lt/robotas-sporto-renginiui.html) — Humanoidinis robotas sporto renginyje: pertraukų programa, rėmėjų zona ir turinys socialiniams tinklams. Nuoma arenose visoje Lietuvoje.
 - [Kainos ir paketai](https://33bots.lt/kainos.html)
 - [Vaizdo įrašai iš renginių](https://33bots.lt/video-realizacijos.html)
 - [Apie 33bots](https://33bots.lt/apie-mus.html)
@@ -41,6 +51,12 @@
 - [Renginio pramoga: robotas ar kitos galimybės? Palyginimas](https://33bots.lt/blog-robotas-ar-kitos-pramogos.html) — Robotas, fokusnininkas, VR zona, fotobūdelė ar gyva muzika — palyginimas pagal WOW efektą, soc. tinklų pasiekiamumą ir verslo vertę.
 - [Humanoidinis ar mobilus robotas renginiui — ką rinktis?](https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html) — Humanoidas, mobilus robotas ar interaktyvus kioskas? Palyginimas pagal poveikį svečiams, logistiką, kainą ir pritaikymo scenarijus renginiuose.
 - [Roboto sauga renginyje — ką turi žinoti organizatorius](https://33bots.lt/blog-roboto-sauga-renginyje.html) — Jutikliai, saugos zona, draudimas ir operatoriaus vaidmuo. Praktinis saugos vadovas renginių organizatoriams, planuojantiems humanoidinį robotą.
+- [Pramogos renginiams: 12 idėjų, kurios iš tikrųjų veikia](https://33bots.lt/blog-renginio-pramogos-idejos.html) — 12 pramogų idėjų įmonių renginiams ir šventėms — su sąžiningu vertinimu, kam kiekviena tinka, kiek dėmesio pritraukia ir ką duoda verslui.
+- [Kaip pritraukti lankytojus į parodos stendą — 9 būdai](https://33bots.lt/blog-kaip-pritraukti-lankytojus-i-stenda.html) — Devyni patikrinti būdai pritraukti lankytojus prie parodos stendo: vietos parinkimas, traukos objektas, mainų mechanika ir dažniausios klaidos.
+- [Humanoidinį robotą nuomotis ar pirkti? Skaičiai ir logika](https://33bots.lt/blog-roboto-nuoma-ar-pirkimas.html) — Kada apsimoka pirkti humanoidinį robotą, o kada nuomotis. Paslėpti nuosavybės kaštai, technologijos senėjimas ir lūžio taškas pagal renginių skaičių.
+- [Įmonės renginio biudžetas — kaip jį paskirstyti protingai](https://33bots.lt/blog-imones-renginio-biudzetas.html) — Kaip paskirstyti įmonės renginio biudžetą: kokia dalis skiriama vietai, maistui, programai ir pramogai, ir kur dažniausiai išleidžiama be rezultato.
+- [Employer branding renginiai — kaip iš jų gauti daugiau](https://33bots.lt/blog-employer-branding-renginiai.html) — Kaip įmonės renginius paversti employer branding turiniu: ką filmuoti, kaip gauti darbuotojų sutikimą ir kur medžiaga realiai panaudojama.
+- [Kalėdinio įmonės renginio planavimas — grafikas ir programa](https://33bots.lt/blog-kaledinio-renginio-planavimas.html) — Kada pradėti planuoti kalėdinį įmonės renginį, kaip sudaryti vakaro programą ir kodėl gruodžio datos užsipildo dar rudenį.
 
 ## Miestai
 
@@ -60,6 +76,18 @@
 - [Palanga](https://33bots.lt/robotu-nuoma-palanga.html)
 - [Druskininkai](https://33bots.lt/robotu-nuoma-druskininkai.html)
 - [Trakai](https://33bots.lt/robotu-nuoma-trakai.html)
+- [Visaginas](https://33bots.lt/robotu-nuoma-visaginas.html)
+- [Ukmergė](https://33bots.lt/robotu-nuoma-ukmerge.html)
+- [Plungė](https://33bots.lt/robotu-nuoma-plunge.html)
+- [Kretinga](https://33bots.lt/robotu-nuoma-kretinga.html)
+- [Šilutė](https://33bots.lt/robotu-nuoma-silute.html)
+- [Radviliškis](https://33bots.lt/robotu-nuoma-radviliskis.html)
+- [Birštonas](https://33bots.lt/robotu-nuoma-birstonas.html)
+- [Elektrėnai](https://33bots.lt/robotu-nuoma-elektrenai.html)
+- [Anykščiai](https://33bots.lt/robotu-nuoma-anyksciai.html)
+- [Biržai](https://33bots.lt/robotu-nuoma-birzai.html)
+- [Rokiškis](https://33bots.lt/robotu-nuoma-rokiskis.html)
+- [Prienai](https://33bots.lt/robotu-nuoma-prienai.html)
 
 ## Dažni klausimai
 

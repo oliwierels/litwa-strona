@@ -3,7 +3,10 @@
 import re
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
                        footer, faq_section, faq_ld, organization_ld, write, esc)
-from lt_articles import ARTICLES
+from lt_articles import ARTICLES as _A1
+from lt_articles2 import ARTICLES2 as _A2
+
+ARTICLES = _A1 + _A2
 
 
 def slugify_anchor(text):

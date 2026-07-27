@@ -2,9 +2,16 @@
 """33bots.lt: sitemap.xml, robots.txt, llms.txt, feed.xml, _redirects, .htaccess."""
 from datetime import date, datetime
 
-from lt_common import SITE, EMAIL, PHONE_1_H, write, esc, CITIES, city_url, NAV_OFFER
-from lt_articles import ARTICLES
+from lt_common import (SITE, EMAIL, PHONE_1_H, write, esc, CITIES, city_url, NAV_OFFER,
+                       alternates)
+from lt_articles import ARTICLES as _A1
+from lt_articles2 import ARTICLES2 as _A2
 from build_misc import VIDEOS
+from build_offers import PAGES as _P1
+from lt_offers2 import PAGES2 as _P2
+
+ARTICLES = _A1 + _A2
+OFFER_PAGES = _P1 + _P2
 
 TODAY = date.today().isoformat()
 
@@ -15,25 +22,20 @@ def rfc822(iso_date):
     return dt.strftime("%a, %d %b %Y %H:%M:%S %z")
 
 
-CORE = [
-    ("", "1.0", "weekly", TODAY),
-    ("humanoidinio-roboto-nuoma.html", "0.9", "monthly", TODAY),
-    ("robotas-renginiui.html", "0.9", "monthly", TODAY),
-    ("robotas-parodoms.html", "0.9", "monthly", TODAY),
-    ("robotas-konferencijai.html", "0.9", "monthly", TODAY),
-    ("robotas-imones-sventei.html", "0.8", "monthly", TODAY),
-    ("robotas-atidarymui.html", "0.8", "monthly", TODAY),
-    ("robotas-vestuvems.html", "0.8", "monthly", TODAY),
-    ("kainos.html", "0.9", "monthly", TODAY),
-    ("video-realizacijos.html", "0.8", "monthly", TODAY),
-    ("apie-mus.html", "0.7", "yearly", TODAY),
-    ("kontaktai.html", "0.7", "yearly", TODAY),
-    ("blog.html", "0.8", "weekly", TODAY),
-    ("privatumo-politika.html", "0.2", "yearly", TODAY),
-]
+# Paslaugų puslapiai imami tiesiai iš generatorių — sitemapa negali atsilikti nuo turinio.
+CORE = (
+    [("", "1.0", "weekly", TODAY),
+     ("robotu-nuoma.html", "0.9", "weekly", TODAY)]
+    + [(p["slug"], "0.9", "monthly", TODAY) for p in OFFER_PAGES]
+    + [("kainos.html", "0.9", "monthly", TODAY),
+       ("video-realizacijos.html", "0.8", "monthly", TODAY),
+       ("apie-mus.html", "0.7", "yearly", TODAY),
+       ("kontaktai.html", "0.7", "yearly", TODAY),
+       ("blog.html", "0.8", "weekly", TODAY),
+       ("privatumo-politika.html", "0.2", "yearly", TODAY)]
+)
 
-from lt_common import alternates  # hreflang poros imamos iš to paties šaltinio kaip HTML
-
+# hreflang poros imamos iš to paties šaltinio kaip HTML
 ALT = alternates("index.html")
 
 
@@ -122,7 +124,8 @@ Sitemap: {SITE}/sitemap.xml
 
 
 def build_llms():
-    offers = "\n".join(f"- [{t}]({SITE}/{u})" for u, t in NAV_OFFER)
+    offers = "\n".join(f"- [{p['crumb']}]({SITE}/{p['slug']}) — {p['desc']}"
+                        for p in OFFER_PAGES)
     posts = "\n".join(f"- [{a['title']}]({SITE}/{a['slug']}) — {a['desc']}" for a in ARTICLES)
     cities = "\n".join(f"- [{n}]({SITE}/{city_url(s)})" for s, n, _, _ in CITIES)
     write("llms.txt", f"""# 33bots — humanoidinių robotų nuoma renginiams Lietuvoje
@@ -146,6 +149,7 @@ def build_llms():
 
 ## Paslaugų puslapiai
 
+- [Robotų nuoma Lietuvoje — visi miestai ir paslaugos]({SITE}/robotu-nuoma.html)
 {offers}
 - [Kainos ir paketai]({SITE}/kainos.html)
 - [Vaizdo įrašai iš renginių]({SITE}/video-realizacijos.html)

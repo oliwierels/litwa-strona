@@ -3,8 +3,14 @@
 import os
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-from lt_articles import ARTICLES
+from lt_articles import ARTICLES as _A1
+from lt_articles2 import ARTICLES2 as _A2
+from build_offers import PAGES as _P1
+from lt_offers2 import PAGES2 as _P2
 from lt_common import CITIES, city_url
+
+ARTICLES = _A1 + _A2
+OFFER_PAGES = _P1 + _P2
 
 W, H = 1200, 630
 BASE = "robot-g1.jpg"
@@ -15,19 +21,16 @@ FOOTER = "33bots.lt — humanoidinių robotų nuoma"
 
 TITLES = {
     "index.jpg": "Humanoidinių robotų nuoma renginiams",
-    "humanoidinio-roboto-nuoma.jpg": "Humanoidinio roboto nuoma — Unitree G1",
-    "robotas-renginiui.jpg": "Robotas renginiui, kuris sustabdo minią",
-    "robotas-parodoms.jpg": "Robotas parodoms — stendas, pro kurį nepraeisi",
-    "robotas-konferencijai.jpg": "Robotas konferencijai ir gala vakarui",
-    "robotas-imones-sventei.jpg": "Robotas įmonės šventei",
-    "robotas-atidarymui.jpg": "Robotas atidarymui ir pristatymui",
-    "robotas-vestuvems.jpg": "Robotas vestuvėms",
+    "robotu-nuoma.jpg": "Robotų nuoma Lietuvoje — visi miestai",
     "blog.jpg": "Žinios apie renginių robotus",
     "kainos.jpg": "Roboto nuomos kainos ir paketai",
     "apie-mus.jpg": "Apie 33bots — viena specializacija",
     "kontaktai.jpg": "Kontaktai — atsakome per 24 val.",
     "video-realizacijos.jpg": "Robotas renginyje — vaizdo įrašai",
 }
+
+for p in OFFER_PAGES:
+    TITLES[p["slug"].replace(".html", ".jpg")] = p["crumb"]
 
 for a in ARTICLES:
     key = a["slug"].replace(".html", ".jpg")
