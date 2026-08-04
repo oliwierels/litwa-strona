@@ -7,10 +7,11 @@ from lt_articles import ARTICLES as _A1
 from lt_articles2 import ARTICLES2 as _A2
 from build_offers import PAGES as _P1
 from lt_offers2 import PAGES2 as _P2
+from lt_offers3 import PAGES3 as _P3
 from lt_common import CITIES, city_url
 
 ARTICLES = _A1 + _A2
-OFFER_PAGES = _P1 + _P2
+OFFER_PAGES = _P1 + _P2 + _P3
 
 W, H = 1200, 630
 BASE = "robot-g1.jpg"
@@ -27,6 +28,7 @@ TITLES = {
     "apie-mus.jpg": "Apie 33bots — viena specializacija",
     "kontaktai.jpg": "Kontaktai — atsakome per 24 val.",
     "video-realizacijos.jpg": "Robotas renginyje — vaizdo įrašai",
+    "galerija.jpg": "Kadrai iš tikrų pasirodymų",
 }
 
 for p in OFFER_PAGES:

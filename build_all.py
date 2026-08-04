@@ -3,7 +3,8 @@
 
 Paleidimas:  python3 build_all.py
 """
-import build_index, build_offers, build_blog, build_cities, build_misc, build_hub, build_og, build_seo
+import build_index, build_offers, build_blog, build_cities, build_misc, build_hub
+import build_gallery, build_gallery_assets, build_og, build_seo
 
 STEPS = [
     ("Pagrindinis puslapis", build_index.build),
@@ -12,6 +13,8 @@ STEPS = [
     ("Miestų puslapiai", build_cities.build),
     ("Kiti puslapiai", build_misc.build),
     ("Robotų nuomos mazgas", build_hub.build),
+    ("Galerijos nuotraukos", build_gallery_assets.build),
+    ("Galerijos puslapis", build_gallery.build),
     ("Open Graph paveikslėliai", build_og.build),
     ("SEO failai", build_seo.build),
 ]

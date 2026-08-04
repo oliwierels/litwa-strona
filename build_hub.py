@@ -4,6 +4,7 @@ from collections import OrderedDict
 
 from build_cities import CITY_DATA
 from lt_offers2 import PAGES2
+from lt_offers3 import PAGES3
 from build_offers import PAGES
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
                        footer, faq_section, faq_ld, organization_ld, service_ld, video_section,
@@ -48,7 +49,7 @@ def regions():
 
 def build():
     url = f"{SITE}/{SLUG}"
-    all_pages = PAGES + PAGES2
+    all_pages = PAGES + PAGES2 + PAGES3
 
     region_blocks = "\n".join(f"""      <div class="use-item">
         <span class="use-num">{i + 1:02d}</span>
@@ -102,7 +103,7 @@ def build():
     html = head(
         title="Robotų nuoma Lietuvoje — visi miestai ir paslaugos | 33bots",
         description="Robotų nuoma visoje Lietuvoje: humanoidinis Unitree G1 su operatoriumi, "
-                    "transportu ir ženklinimu. 28 miestai, 16 paslaugų formatų.",
+                    "transportu ir ženklinimu. Visi miestai ir paslaugų formatai.",
         slug=SLUG,
         keywords="robotų nuoma, robotų nuoma Lietuvoje, roboto nuoma, humanoidinių robotų nuoma, "
                  "robotas renginiui",

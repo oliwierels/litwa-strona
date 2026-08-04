@@ -4,12 +4,14 @@ from lt_articles import ARTICLES as _A1
 from lt_articles2 import ARTICLES2 as _A2
 from build_offers import PAGES as _P1
 from lt_offers2 import PAGES2 as _P2
+from lt_offers3 import PAGES3 as _P3
+from lt_gallery import gallery_section
 from lt_common import (SITE, head, body_open, nav, contact_section, footer, faq_section,
                        faq_ld, organization_ld, website_ld, video_ld, video_section,
                        write, CITIES, city_url, service_ld)
 
 ARTICLES = _A1 + _A2
-OFFER_PAGES = _P1 + _P2
+OFFER_PAGES = _P1 + _P2 + _P3
 
 FAQ = [
     ("Ar galiu išsinuomoti robotą, jei nemoku juo valdyti?",
@@ -77,6 +79,45 @@ def build():
         service_ld("Humanoidinio roboto Unitree G1 nuoma renginiams",
                    "Humanoidinio roboto nuoma renginiams, parodoms, konferencijoms ir įmonių šventėms visoje Lietuvoje.",
                    f"{SITE}/"),
+        f"""{{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Humanoidinio roboto Unitree G1 nuoma",
+  "description": "Humanoidinio roboto Unitree G1 nuoma renginiams, parodoms ir konferencijoms Lietuvoje.",
+  "url": "{SITE}/",
+  "image": "{SITE}/robot-g1.jpg",
+  "brand": {{"@type": "Brand", "name": "Unitree"}},
+  "aggregateRating": {{
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "3",
+    "bestRating": "5",
+    "worstRating": "1"
+  }},
+  "review": [
+    {{
+      "@type": "Review",
+      "author": {{"@type": "Person", "name": "Karolina M."}},
+      "datePublished": "2025-10-12",
+      "reviewRating": {{"@type": "Rating", "ratingValue": "5", "bestRating": "5"}},
+      "reviewBody": "Rezultatas pranoko drąsiausius lūkesčius. Susidomėjimas buvo milžiniškas visą renginio laiką."
+    }},
+    {{
+      "@type": "Review",
+      "author": {{"@type": "Person", "name": "Piotr Z."}},
+      "datePublished": "2025-11-03",
+      "reviewRating": {{"@type": "Rating", "ratingValue": "5", "bestRating": "5"}},
+      "reviewBody": "Tai buvo vienas geriausių organizacinių sprendimų. Teigiamos dalyvių reakcijos ir jų įsitraukimas mums yra geriausias įvertinimas."
+    }},
+    {{
+      "@type": "Review",
+      "author": {{"@type": "Person", "name": "Magdalena T."}},
+      "datePublished": "2025-12-08",
+      "reviewRating": {{"@type": "Rating", "ratingValue": "5", "bestRating": "5"}},
+      "reviewBody": "Bendradarbiavimas virto neįtikėtinais pasiekiamumo skaičiais socialiniuose tinkluose."
+    }}
+  ]
+}}""",
         faq_ld(FAQ),
         f"""{{
   "@context": "https://schema.org",
@@ -193,6 +234,40 @@ def build():
       <span class="marquee__item">132 CM</span><span class="marquee__sep">·</span>
     </div>
   </div>
+
+  <!-- ŽINIASKLAIDA -->
+  <section class="section" id="ziniasklaida" style="padding-top:var(--s8); padding-bottom:var(--s8);">
+    <div style="max-width:1000px; margin:0 auto; text-align:center;">
+      <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:var(--s5);">Mus rodė nacionalinė televizija</p>
+      <div style="display:flex; flex-wrap:wrap; align-items:stretch; justify-content:center; gap:var(--s4);">
+        <a href="https://gdansk.tvp.pl/93950197/pan-mecenas-robot" target="_blank" rel="noopener noreferrer" style="display:flex; flex-direction:column; gap:4px; padding:var(--s4) var(--s6); background:var(--surface-2); border:1px solid var(--border-mid); border-radius:12px; text-decoration:none; min-width:240px; text-align:left;">
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-3);">TVP Gdańsk · Reportažas</span>
+          <span style="font-size:1.05rem; font-weight:700; color:var(--text);">„Pan Mecenas Robot“ →</span>
+        </a>
+        <a href="https://www.tiktok.com/@teleexpress.tvp/video/7654958168786619680" target="_blank" rel="noopener noreferrer" style="display:flex; flex-direction:column; gap:4px; padding:var(--s4) var(--s6); background:var(--surface-2); border:1px solid var(--border-mid); border-radius:12px; text-decoration:none; min-width:240px; text-align:left;">
+          <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-3);">Teleexpress TVP · Video</span>
+          <span style="font-size:1.05rem; font-weight:700; color:var(--text);">Mūsų robotas per žinias →</span>
+        </a>
+      </div>
+      <p style="margin-top:var(--s5); color:var(--text-2); font-size:0.95rem; max-width:660px; margin-left:auto; margin-right:auto; line-height:1.7;">Mūsų humanoidinis robotas Unitree G1 pateko į Lenkijos nacionalinės televizijos laidas — <strong style="color:var(--text);">Teleexpress</strong> reportažą ir <strong style="color:var(--text);">TVP Gdańsk</strong> reportažą „Pan Mecenas Robot“, filmuotą per mūsų kliento renginį.</p>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:var(--s6); margin-top:var(--s7);">
+        <div style="background:var(--surface-2); border:1px solid var(--border-mid); border-radius:16px; overflow:hidden; width:min(340px,90vw);">
+          <iframe loading="lazy" src="https://www.tiktok.com/embed/v2/7654958168786619680" title="Teleexpress TVP — 33bots humanoidinis robotas" style="width:100%; height:580px; border:0; display:block;" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          <div style="padding:var(--s3) var(--s4); text-align:left;">
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-3);">Teleexpress TVP</span>
+            <p style="font-size:0.95rem; font-weight:700; color:var(--text); margin:4px 0 0;">Robotas per nacionalines žinias</p>
+          </div>
+        </div>
+        <div style="background:var(--surface-2); border:1px solid var(--border-mid); border-radius:16px; overflow:hidden; width:min(340px,90vw);">
+          <iframe loading="lazy" src="https://www.instagram.com/p/DZNfiWNseFm/embed/" title="33bots humanoidinis robotas WallStreet konferencijoje" style="width:100%; height:580px; border:0; display:block;" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
+          <div style="padding:var(--s3) var(--s4); text-align:left;">
+            <span style="font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-3);">Projektas · Instagram</span>
+            <p style="font-size:0.95rem; font-weight:700; color:var(--text); margin:4px 0 0;">WallStreet 30 konferencija</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PATIRTIS -->
   <section class="section" id="patirtis" style="padding-top:var(--s8); padding-bottom:var(--s8);">
@@ -342,6 +417,10 @@ def build():
 
 """
 
+    html += gallery_section(
+        lead="Ne renderiai ir ne gamintojo reklama — kadrai iš tikrų 33bots pasirodymų. "
+             "Ant roboto krūtinės matyti ženklinimas su logotipu ir QR kodu, kuris į nuomos kainą "
+             "įeina visada.")
     html += video_section()
 
     html += """  <!-- CITATA -->
@@ -407,6 +486,38 @@ def build():
       </div>
     </div>
     <p style="text-align:center; margin-top:var(--s6);"><a href="kainos.html" class="btn-ghost" style="display:inline-flex;">Kas įeina į kainą →</a></p>
+  </section>
+
+  <!-- ATSILIEPIMAI -->
+  <section class="section testimonials-section">
+    <div class="section-header">
+      <span class="tag">Atsiliepimai</span>
+      <h2 class="section-title">Ką sako<br />klientai</h2>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p class="testimonial__quote">„Rezultatas pranoko drąsiausius lūkesčius. Susidomėjimas buvo milžiniškas visą renginio laiką — nesitikėjau, kad pritrauksime tiek dėmesio."</p>
+        <div class="testimonial__meta">
+          <span class="testimonial__name">Karolina M.</span>
+          <span class="testimonial__role">Rinkodara · IT sektorius</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial__quote">„Tai buvo vienas geriausių organizacinių sprendimų. Teigiamos dalyvių reakcijos ir jų įsitraukimas mums yra geriausias viso renginio įvertinimas."</p>
+        <div class="testimonial__meta">
+          <span class="testimonial__name">Piotr Z.</span>
+          <span class="testimonial__role">Organizatorius · įmonės gala vakaras</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial__quote">„Bendradarbiavimas virto neįtikėtinais pasiekiamumo skaičiais socialiniuose tinkluose. Tokio autentiško susidomėjimo tiesiog nenusipirksi."</p>
+        <div class="testimonial__meta">
+          <span class="testimonial__name">Magdalena T.</span>
+          <span class="testimonial__role">PR vadovė · technologijų paroda</span>
+        </div>
+      </div>
+    </div>
+    <p style="max-width:700px; margin:var(--s6) auto 0; text-align:center; color:var(--text-3); font-size:0.85rem; line-height:1.7;">Atsiliepimai iš 33bots projektų Lenkijoje — ta pati įranga, ta pati komanda ir tas pats aptarnavimo standartas dirba ir Lietuvoje.</p>
   </section>
 
   <!-- KUR TINKA -->

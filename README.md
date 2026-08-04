@@ -23,6 +23,10 @@ yra **generuojami** — jų nereikia redaguoti ranka. Keiskite turinį skriptuos
 | `lt_articles.py` | Blogo straipsnių turinys (tekstai, DUK, metaduomenys) |
 | `lt_articles2.py` | Antroji straipsnių banga |
 | `lt_offers2.py` | Antroji paslaugų puslapių banga |
+| `lt_offers3.py` | Kategoriniai puslapiai (atrakcijos, pramogos, idėjos) — platesnės paieškos frazės |
+| `lt_gallery.py` | Galerijos nuotraukų sąrašas ir atvaizdavimas |
+| `build_gallery_assets.py` | Paruošia `galerija/` nuotraukas iš tikrų renginių kadrų |
+| `build_gallery.py` | `galerija.html` |
 | `build_index.py` | Pagrindinis puslapis |
 | `build_offers.py` | 16 paslaugų puslapių (renderina `PAGES` + `PAGES2`) |
 | `build_hub.py` | `robotu-nuoma.html` — paslaugų ir miestų mazgas (silo struktūra) |
@@ -52,6 +56,10 @@ Rankiniu būdu tvarkomi failai: `style.css`, `main.js`, paveikslėliai, `video/`
   turinio.
 - Silo struktūra: `robotu-nuoma.html` sujungia visas paslaugas ir visus miestus, sugrupuotus pagal
   apskritis.
+- Kategoriniai puslapiai (`atrakcijos-renginiams`, `atrakcijos-parodoms`, `modernios-pramogos`,
+  `renginio-idejos`) taikosi į bendresnes užklausas, kuriose žodžio „robotas“ dar nėra.
+- `AggregateRating` ir `Review` naudoja tikrus 33bots klientų atsiliepimus iš Lenkijos projektų —
+  puslapyje aiškiai nurodyta, iš kur jie.
 
 ## UX sprendimai
 
@@ -82,11 +90,22 @@ INDEXNOW_KEY=<jūsų raktas> ./scripts/indexnow-submit.sh
 
 Prieš tai sugeneruokite raktą ir įkelkite jį kaip `https://33bots.lt/<RAKTAS>.txt`.
 
+## Nuotraukos
+
+`galerija/` turinys generuojamas iš tikrų renginių kadrų (`build_gallery_assets.py`). Šaltiniai —
+vaizdo įrašų plakatai ir roboto nuotraukos; viename kadre nukerpama viršutinė juosta su lenkišku
+tekstu.
+
+**Naujų nuotraukų pridėjimas:** įkelkite failus į repozitoriją, įrašykite juos į
+`build_gallery_assets.SOURCES` ir aprašykite `lt_gallery.PHOTOS` (antraštė + alt tekstas), tada
+paleiskite `python3 build_all.py`. Nuotraukos automatiškai atsiras galerijoje, pagrindiniame
+puslapyje ir `ImageGallery` struktūrizuotuose duomenyse.
+
 ## Ką dar verta padaryti
 
 - Pakeisti Formspree galinį tašką `main.js` savu (dabar naudojamas tas pats kaip 33bots.pl).
 - Pridėti tikrus Lietuvos projektų atsiliepimus ir case study, kai jų atsiras.
 - Pridėti hreflang nuorodas į 33bots.lt taip pat 33bots.at ir robotollern.de puslapiuose
   (33bots.pl jau nurodo atgal).
-- Pridėti atsiliepimų ir `AggregateRating` žymėjimą, kai atsiras tikrų Lietuvos klientų atsiliepimų —
-  jų negalima susigalvoti.
+- Įkelti daugiau nuotraukų iš renginių — dabar galerijoje yra 8 tikri kadrai, o repozitorijoje
+  daugiau nuotraukų nėra.

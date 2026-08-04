@@ -9,9 +9,10 @@ from lt_articles2 import ARTICLES2 as _A2
 from build_misc import VIDEOS
 from build_offers import PAGES as _P1
 from lt_offers2 import PAGES2 as _P2
+from lt_offers3 import PAGES3 as _P3
 
 ARTICLES = _A1 + _A2
-OFFER_PAGES = _P1 + _P2
+OFFER_PAGES = _P1 + _P2 + _P3
 
 TODAY = date.today().isoformat()
 
@@ -29,6 +30,7 @@ CORE = (
     + [(p["slug"], "0.9", "monthly", TODAY) for p in OFFER_PAGES]
     + [("kainos.html", "0.9", "monthly", TODAY),
        ("video-realizacijos.html", "0.8", "monthly", TODAY),
+       ("galerija.html", "0.8", "monthly", TODAY),
        ("apie-mus.html", "0.7", "yearly", TODAY),
        ("kontaktai.html", "0.7", "yearly", TODAY),
        ("blog.html", "0.8", "weekly", TODAY),
@@ -153,6 +155,7 @@ def build_llms():
 {offers}
 - [Kainos ir paketai]({SITE}/kainos.html)
 - [Vaizdo įrašai iš renginių]({SITE}/video-realizacijos.html)
+- [Nuotraukų galerija]({SITE}/galerija.html)
 - [Apie 33bots]({SITE}/apie-mus.html)
 - [Kontaktai]({SITE}/kontaktai.html)
 

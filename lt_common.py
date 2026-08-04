@@ -116,13 +116,20 @@ NAV_OFFER = [
     ("pramogos-renginiams.html", "Pramogos renginiams"),
 ]
 
+# Viršutinėje juostoje laikome tik 5 punktus — daugiau nebetelpa vienoje eilutėje.
+# „Vaizdo įrašai" ir „Apie mus" pasiekiami iš poraštės ir vidinių nuorodų.
 NAV_MAIN = [
     ("robotu-nuoma.html", "Miestai"),
-    ("video-realizacijos.html", "Vaizdo įrašai"),
+    ("galerija.html", "Galerija"),
     ("kainos.html", "Kainos"),
-    ("apie-mus.html", "Apie mus"),
     ("blog.html", "Blogas"),
     ("kontaktai.html", "Kontaktai"),
+]
+
+# Mobiliajame meniu ir poraštėje rodome visus punktus
+NAV_SECONDARY = [
+    ("video-realizacijos.html", "Vaizdo įrašai"),
+    ("apie-mus.html", "Apie mus"),
 ]
 
 CITIES = [
@@ -284,7 +291,7 @@ def nav(active=""):
     mob_offer = "\n".join(
         f'    <a href="{u}" class="mobile-menu__sub">{t}</a>' for u, t in NAV_OFFER
     )
-    mob_main = "\n".join(f'    <a href="{u}">{t}</a>' for u, t in NAV_MAIN)
+    mob_main = "\n".join(f'    <a href="{u}">{t}</a>' for u, t in NAV_MAIN + NAV_SECONDARY)
 
     return f"""  <!-- NAVIGACIJA -->
   <header class="nav" id="nav">
@@ -540,7 +547,8 @@ def footer():
     )
     links = "\n".join(
         f'        <a href="{u}">{t}</a>'
-        for u, t in (NAV_OFFER[:4] + NAV_MAIN + [("privatumo-politika.html", "Privatumo politika")])
+        for u, t in (NAV_OFFER[:4] + NAV_MAIN + NAV_SECONDARY
+                     + [("privatumo-politika.html", "Privatumo politika")])
     )
     return f"""  </main>
   <footer class="footer">

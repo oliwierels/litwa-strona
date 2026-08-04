@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """33bots.lt paslaugų (landing) puslapiai."""
 from lt_offers2 import PAGES2
+from lt_offers3 import PAGES3
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
                        footer, faq_section, faq_ld, organization_ld, video_section,
                        service_ld, write, CITIES, city_url)
@@ -615,7 +616,7 @@ def build_page(p):
 
 
 def build():
-    for p in PAGES + PAGES2:
+    for p in PAGES + PAGES2 + PAGES3:
         build_page(p)
 
 

@@ -36,8 +36,13 @@
 - [Fotosesijos ir filmavimai](https://33bots.lt/robotas-fotosesijai.html) — Humanoidinis robotas Unitree G1 reklamos fotosesijoje, vaizdo klipe ar filmavimo aikštelėje. Nuoma su operatoriumi visoje Lietuvoje.
 - [Komandos formavimas](https://33bots.lt/robotas-komandos-formavimui.html) — Humanoidinis robotas komandos formavimo renginyje: bendra patirtis, interaktyvios veiklos ir ledlaužis naujoje komandoje. Nuoma visoje Lietuvoje.
 - [Sporto renginiai](https://33bots.lt/robotas-sporto-renginiui.html) — Humanoidinis robotas sporto renginyje: pertraukų programa, rėmėjų zona ir turinys socialiniams tinklams. Nuoma arenose visoje Lietuvoje.
+- [Atrakcijos renginiams](https://33bots.lt/atrakcijos-renginiams.html) — Atrakcijos renginiams, kurios iš tikrųjų įsimenamos. Humanoidinis robotas vietoj eilinės programos — visoje Lietuvoje su operatoriumi.
+- [Atrakcijos parodoms](https://33bots.lt/atrakcijos-parodoms.html) — Atrakcija parodų stendui, kuri sustabdo lankytojų srautą. Humanoidinis robotas su ženklinimu ir QR kodu — kelių dienų nuoma visoje Lietuvoje.
+- [Modernios pramogos](https://33bots.lt/modernios-pramogos.html) — Modernios, technologinės pramogos įmonių renginiams: humanoidinis robotas vietoj eilinės programos. Nuoma visoje Lietuvoje su operatoriumi.
+- [Renginio idėjos](https://33bots.lt/renginio-idejos.html) — Idėjos įmonės renginiui ir šventei: programos struktūra, akcentas, kurį prisimena, ir klaidos, kurių verta vengti. Praktinis vadovas organizatoriams.
 - [Kainos ir paketai](https://33bots.lt/kainos.html)
 - [Vaizdo įrašai iš renginių](https://33bots.lt/video-realizacijos.html)
+- [Nuotraukų galerija](https://33bots.lt/galerija.html)
 - [Apie 33bots](https://33bots.lt/apie-mus.html)
 - [Kontaktai](https://33bots.lt/kontaktai.html)
 
