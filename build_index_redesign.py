@@ -9,7 +9,8 @@ import html
 import re
 
 from lt_common import SITE, EMAIL, PHONE_1, PHONE_1_H, alternates, esc, CITIES, city_url
-from lt_index_strings import TEXTS, ATTRS, JS_TEXTS, PRICE_FROM, PRICE_DOG, DISCOUNT
+from lt_index_strings import (TEXTS, ATTRS, JS_TEXTS, PRICE_FROM, PRICE_FROM_PLAIN,
+                              PRICE_DOG, DISCOUNT)
 
 SRC = "templates/pl-index.html"
 OUT = "index.html"
@@ -137,7 +138,7 @@ def rewrite_jsonld(doc):
     blocks = [organization_ld(), website_ld(), video_ld(),
               service_ld("Humanoidinio roboto Unitree G1 nuoma renginiams",
                          "Humanoidinio roboto nuoma renginiams, parodoms ir konferencijoms "
-                         "visoje Lietuvoje.", f"{SITE}/"),
+                         "visoje Lietuvoje.", f"{SITE}/", price=PRICE_FROM_PLAIN),
               faq_ld(FAQ)]
     new = "\n".join(f'  <script type="application/ld+json">\n{b}\n  </script>' for b in blocks)
 
@@ -147,6 +148,19 @@ def rewrite_jsonld(doc):
     # grąžinam mūsų bloką (ankstesnis šalinimas nuvalė ir jį)
     if "application/ld+json" not in doc:
         doc = doc.replace("</head>", new + "\n</head>")
+    return doc
+
+
+def swap_prices(doc):
+    """Lenkiškas kainas keičia lietuviškomis visur — tekste, meta, JSON-LD ir skripte.
+
+    Daroma po vertimo, kad būtų pagauti ir atskiri skaičių mazgai (pvz. didelis
+    skaičius kainų kortelėje), kurių vertimo žemėlapyje nėra.
+    """
+    doc = doc.replace("5 500", PRICE_FROM).replace("5500", PRICE_FROM_PLAIN)
+    doc = doc.replace("1 900", PRICE_DOG).replace("1900", PRICE_DOG)
+    doc = re.sub(r"\bzł\b", "€", doc)
+    doc = doc.replace("PLN", "EUR")
     return doc
 
 
@@ -171,6 +185,8 @@ def build():
     doc = swap_city_list(doc)
     doc = rewrite_head(doc)
     doc = rewrite_jsonld(doc)
+
+    doc = swap_prices(doc)
 
     # skriptų tekstai (formos pranešimai)
     for pl, lt in JS_TEXTS.items():

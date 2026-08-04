@@ -632,7 +632,7 @@ def organization_ld():
     "Unitree G1",
     "renginių pramogos"
   ],
-  "priceRange": "$$"
+  "priceRange": "nuo 2500 EUR už renginio dieną"
 }}"""
 
 
@@ -665,17 +665,25 @@ def video_ld():
 }}"""
 
 
-def service_ld(name, description, url, area="Lietuva"):
-    return f"""{{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "{esc(name)}",
-  "description": "{esc(description)}",
-  "url": "{url}",
-  "serviceType": "Humanoidinio roboto nuoma",
-  "provider": {{"@id": "{SITE}/#organizacija"}},
-  "areaServed": {{"@type": "Place", "name": "{esc(area)}"}},
-  "offers": {{
+def service_ld(name, description, url, area="Lietuva", price=None):
+    """`price` — kaina eurais už realizacijos dieną; nurodžius ji patenka į Offer bloką."""
+    if price:
+        offers = f"""{{
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "{price}",
+    "availability": "https://schema.org/InStock",
+    "url": "{url}",
+    "priceSpecification": {{
+      "@type": "UnitPriceSpecification",
+      "priceCurrency": "EUR",
+      "price": "{price}",
+      "unitText": "diena",
+      "valueAddedTaxIncluded": false
+    }}
+  }}"""
+    else:
+        offers = f"""{{
     "@type": "Offer",
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
@@ -685,7 +693,17 @@ def service_ld(name, description, url, area="Lietuva"):
       "priceCurrency": "EUR",
       "valueAddedTaxIncluded": false
     }}
-  }}
+  }}"""
+    return f"""{{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{esc(name)}",
+  "description": "{esc(description)}",
+  "url": "{url}",
+  "serviceType": "Humanoidinio roboto nuoma",
+  "provider": {{"@id": "{SITE}/#organizacija"}},
+  "areaServed": {{"@type": "Place", "name": "{esc(area)}"}},
+  "offers": {offers}
 }}"""
 
 

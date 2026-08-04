@@ -121,12 +121,18 @@ Atvaizdavimas (`lt_gallery.py`):
 į `lt_gallery.PHOTOS` (failas, išdėstymo klasė, antraštė, alt tekstas) ir paleiskite
 `python3 build_all.py`.
 
-## ⚠️ Kainos — patvirtinti prieš paskelbiant
+## Kainos
 
-Perdarytas pagrindinis puslapis rodo konkrečias kainas. Lenkiškoje versijoje nurodyta 5500 zł už
-dieną ir 1900 zł už roboto šunį; `lt_index_strings.py` viršuje šie skaičiai perskaičiuoti į eurus
-(**1 290 €** ir **450 €**) tik kaip apytikslė reikšmė. Galutines Lietuvos rinkos kainas nustato
-įmonė — pakeiskite `PRICE_FROM`, `PRICE_DOG` ir `DISCOUNT` ir paleiskite `build_all.py`.
+Kainos Lietuvos rinkai nustatytos `lt_index_strings.py` viršuje:
+
+| Konstanta | Reikšmė | Kur rodoma |
+| --- | --- | --- |
+| `PRICE_FROM` | 2 500 € | hero blokas, kainų kortelė, DUK, „Visa diena“ paketas |
+| `PRICE_DOG` | 690 € | roboto šuns kortelė, DUK |
+| `DISCOUNT` | 15% | „Kelios dienos“ paketas, DUK |
+
+Pakeitus reikšmę ir paleidus `build_all.py`, kaina atsinaujina visose vietose vienu metu —
+įskaitant `Offer` bloką struktūrizuotuose duomenyse ir `priceRange` organizacijos apraše.
 
 ## Ką dar verta padaryti
 

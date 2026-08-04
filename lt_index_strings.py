@@ -5,13 +5,14 @@
 Raktas — lenkiškas tekstas, reikšmė — lietuviškas atitikmuo.
 """
 
-# ── KAINOS ───────────────────────────────────────────────────────────────────
-# PATVIRTINTI PRIEŠ PASKELBIANT. Lenkiškame puslapyje nurodyta 5500 zł / dieną
-# ir 1900 zł už roboto šunį. Čia — apytikslis perskaičiavimas į eurus; galutines
-# kainas Lietuvos rinkai nustato įmonė.
-PRICE_FROM = "1 290"          # € už visą dieną (5500 zł ekvivalentas)
-PRICE_DOG = "450"             # € už roboto šunį per dieną (1900 zł ekvivalentas)
-DISCOUNT = "15%"              # nuolaida ilgesnėms realizacijoms
+# ── KAINOS LIETUVOS RINKAI ───────────────────────────────────────────────────
+# Kainas nustatė įmonė; jos nėra perskaičiuotos iš lenkiškų.
+# Pakeitus reikšmes ir paleidus build_all.py, kaina atsinaujina visame puslapyje:
+# hero bloke, kainų kortelėje, DUK atsakyme ir struktūrizuotuose duomenyse.
+PRICE_FROM = "2 500"          # € už visą realizacijos dieną
+PRICE_FROM_PLAIN = "2500"     # ta pati kaina be tarpo (meta, JSON-LD, JS)
+PRICE_DOG = "690"             # € už roboto šunį per dieną
+DISCOUNT = "15%"              # nuolaida dviejų ir daugiau dienų realizacijoms
 
 TEXTS = {
     # ── Navigacija ──────────────────────────────────────────────────────────
