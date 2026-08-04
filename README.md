@@ -24,8 +24,7 @@ yra **generuojami** — jų nereikia redaguoti ranka. Keiskite turinį skriptuos
 | `lt_articles2.py` | Antroji straipsnių banga |
 | `lt_offers2.py` | Antroji paslaugų puslapių banga |
 | `lt_offers3.py` | Kategoriniai puslapiai (atrakcijos, pramogos, idėjos) — platesnės paieškos frazės |
-| `lt_gallery.py` | Galerijos nuotraukų sąrašas ir atvaizdavimas |
-| `build_gallery_assets.py` | Paruošia `galerija/` nuotraukas iš tikrų renginių kadrų |
+| `lt_gallery.py` | Nuotraukų sąrašas, galerijos ir juostų atvaizdavimas |
 | `build_gallery.py` | `galerija.html` |
 | `build_index.py` | Pagrindinis puslapis |
 | `build_offers.py` | 16 paslaugų puslapių (renderina `PAGES` + `PAGES2`) |
@@ -92,14 +91,21 @@ Prieš tai sugeneruokite raktą ir įkelkite jį kaip `https://33bots.lt/<RAKTAS
 
 ## Nuotraukos
 
-`galerija/` turinys generuojamas iš tikrų renginių kadrų (`build_gallery_assets.py`). Šaltiniai —
-vaizdo įrašų plakatai ir roboto nuotraukos; viename kadre nukerpama viršutinė juosta su lenkišku
-tekstu.
+`nuotraukos/` — 16 kadrų iš tikrų 33bots realizacijų (Women in Tech Summit, gala vakarai,
+LEX AI akcijos, verslo susitikimai, roboto šuo su kliento ženklinimu). Perimta iš vokiškos
+33bots versijos, kad visos kalbų versijos rodytų tuos pačius projektus.
 
-**Naujų nuotraukų pridėjimas:** įkelkite failus į repozitoriją, įrašykite juos į
-`build_gallery_assets.SOURCES` ir aprašykite `lt_gallery.PHOTOS` (antraštė + alt tekstas), tada
-paleiskite `python3 build_all.py`. Nuotraukos automatiškai atsiras galerijoje, pagrindiniame
-puslapyje ir `ImageGallery` struktūrizuotuose duomenyse.
+Atvaizdavimas (`lt_gallery.py`):
+
+- `gallery_section()` — pilna mozaikinė galerija (pagrindiniame puslapyje, mazge, `galerija.html`);
+  išdėstymo klasės `shot--wide` / `shot--narrow` perimtos iš vokiškos versijos.
+- `strip_section(slug)` — kompaktiška juosta paslaugų ir miestų puslapiuose. Nuotraukų rinkinys
+  parenkamas pagal puslapio adresą, todėl **kiekvienas puslapis rodo kitas nuotraukas** ir svetainė
+  neatrodo monotoniškai.
+
+**Naujų nuotraukų pridėjimas:** įkelkite failus (`.jpg` + `.webp`) į `nuotraukos/`, įrašykite juos
+į `lt_gallery.PHOTOS` (failas, išdėstymo klasė, antraštė, alt tekstas) ir paleiskite
+`python3 build_all.py`.
 
 ## Ką dar verta padaryti
 
@@ -107,5 +113,4 @@ puslapyje ir `ImageGallery` struktūrizuotuose duomenyse.
 - Pridėti tikrus Lietuvos projektų atsiliepimus ir case study, kai jų atsiras.
 - Pridėti hreflang nuorodas į 33bots.lt taip pat 33bots.at ir robotollern.de puslapiuose
   (33bots.pl jau nurodo atgal).
-- Įkelti daugiau nuotraukų iš renginių — dabar galerijoje yra 8 tikri kadrai, o repozitorijoje
-  daugiau nuotraukų nėra.
+- Įkelti nuotraukų iš pirmųjų Lietuvos renginių ir pridėti jas į `lt_gallery.PHOTOS`.

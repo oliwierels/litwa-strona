@@ -2,6 +2,7 @@
 """Centrinis „robotų nuoma“ puslapis — paslaugų ir miestų mazgas (silo struktūra)."""
 from collections import OrderedDict
 
+from lt_gallery import gallery_section
 from build_cities import CITY_DATA
 from lt_offers2 import PAGES2
 from lt_offers3 import PAGES3
@@ -163,6 +164,7 @@ def build():
   </section>
 
 """
+    html += gallery_section(lead="Kadrai iš tikrų 33bots projektų — ta pati įranga ir komanda dirba visoje Lietuvoje.")
     html += video_section()
     html += faq_section(FAQ, title="Klausimai apie<br />robotų nuomą")
     html += contact_section(heading="Gaukite pasiūlymą<br />savo renginiui.")

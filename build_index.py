@@ -418,9 +418,9 @@ def build():
 """
 
     html += gallery_section(
-        lead="Ne renderiai ir ne gamintojo reklama — kadrai iš tikrų 33bots pasirodymų. "
-             "Ant roboto krūtinės matyti ženklinimas su logotipu ir QR kodu, kuris į nuomos kainą "
-             "įeina visada.")
+        lead="Ne renderiai ir ne gamintojo reklama — kadrai iš tikrų 33bots projektų: Women in Tech "
+             "Summit, gala vakarai, LEX AI akcijos ir verslo renginiai. Kiekvienoje nuotraukoje "
+             "matyti kliento ženklinimas, kuris į nuomos kainą įeina visada.")
     html += video_section()
 
     html += """  <!-- CITATA -->

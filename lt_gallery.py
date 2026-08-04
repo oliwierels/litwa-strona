@@ -1,78 +1,134 @@
 # -*- coding: utf-8 -*-
-"""Galerijos nuotraukos (tikri kadrai iš renginių) ir jų atvaizdavimas."""
+"""Nuotraukos iš tikrų 33bots realizacijų ir jų atvaizdavimas.
+
+Nuotraukos perimtos iš vokiškos 33bots versijos — tai tie patys kadrai iš realių renginių
+(Women in Tech Summit, gala vakarai, LEX AI, verslo susitikimai).
+"""
 from lt_common import SITE, esc
 
-# (failo vardas be plėtinio, plotis, aukštis, antraštė, alt tekstas)
+DIR = "nuotraukos"
+
+# (failas, klasė, antraštė, alt tekstas)
+# Klasės atitinka vokiškos versijos išdėstymą: plati / siaura / standartinė plytelė.
 PHOTOS = [
-    ("robotas-renginyje", 720, 1076,
-     "Robotas su kliento ženklinimu",
-     "Humanoidinis robotas Unitree G1 renginyje su 33bots logotipu ir QR kodu ant krūtinės"),
-    ("svetainiu-pasitikimas", 540, 960,
-     "Svečių pasitikimas",
-     "Humanoidinis robotas Unitree G1 mojuoja ranka pasitikdamas renginio svečius"),
-    ("sokio-pasirodymas", 540, 960,
-     "Šokio choreografija",
-     "Robotas Unitree G1 atlieka šokio choreografiją lauko renginyje"),
-    ("gestai-is-arti", 540, 960,
-     "Gestai iš arti",
-     "Humanoidinio roboto Unitree G1 rankos ir gestai iš arti — 43 laisvės laipsniai"),
-    ("judejimas-lauke", 540, 960,
-     "Judėjimas lauke",
-     "Robotas Unitree G1 vaikšto žole lauko renginio erdvėje"),
-    ("zenklinimas-qr", 540, 960,
-     "Ženklinimas ir QR kodas",
-     "Roboto krūtinė su prekės ženklo logotipu ir QR kodu — ženklinimas įskaičiuotas į nuomos kainą"),
-    ("unitree-g1-studija", 720, 540,
-     "Unitree G1 iš arti",
-     "Humanoidinis robotas Unitree G1 studijoje — 132 cm, 35 kg, 43 laisvės laipsniai"),
-    ("g1-choreografija", 600, 600,
-     "Dinamiška poza",
-     "Robotas Unitree G1 dinamiškoje pozoje — kadras iš pasirodymo"),
+    ("realizacja-women-in-tech-tlum", "shot shot--wide",
+     "Visi traukia telefonus",
+     "Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais"),
+    ("realizacja-gala-czerwony-dywan", "shot",
+     "Raudonas kilimas",
+     "Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo"),
+    ("realizacja-women-in-tech-wybieg", "shot",
+     "Women in Tech Summit",
+     "Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką"),
+    ("realizacja-lexai-starowka", "shot shot--wide",
+     "Gatvė sustoja",
+     "Humanoidinis robotas su LEX AI marškinėliais senamiestyje — praeiviai jį fotografuoja"),
+    ("realizacja-gala-detal", "shot shot--narrow",
+     "Iki smulkmenų",
+     "Humanoidinio roboto stambus planas su karūna ir blizgančiu smokingu"),
+    ("realizacja-gala-zdjecia-gosci", "shot shot--wide",
+     "Eilė prie nuotraukų zonos",
+     "Gala vakaro svečiai fotografuoja humanoidinį robotą prie rėmėjų sienos"),
+    ("realizacja-robot-gala-dresden", "shot",
+     "Gala vakaras Dresdene",
+     "Humanoidinis robotas Unitree G1 gala vakare Dresdene tarp svečių"),
+    ("realizacja-gala-palac", "shot",
+     "Rūmų pokylių salė",
+     "Humanoidinis robotas smokingu rūmų pokylių salėje"),
+    ("realizacja-gala-wsrod-gosci", "shot shot--wide",
+     "Tarp svečių",
+     "Humanoidinis robotas tarp gerai nusiteikusių gala vakaro svečių su taurėmis"),
+    ("realizacja-event-nad-woda", "shot",
+     "Renginys prie vandens",
+     "Humanoidinis robotas mojuoja terasoje virš jachtų prieplaukos"),
+    ("realizacja-nocny-pokaz", "shot shot--narrow",
+     "Naktiniai pasirodymai",
+     "Humanoidinis robotas raudonu apsiaustu naktiniame pasirodyme prie istorinio pastato"),
+    ("realizacja-lexai-ulica", "shot",
+     "Užduotyje dėl LEX AI",
+     "Humanoidinis robotas su LEX AI ženklinimu ir portfeliu senamiesčio gatvelėje"),
+    ("realizacja-spotkanie-biznesowe", "shot",
+     "Verslo susitikimas",
+     "Humanoidinis robotas su įmonės marškinėliais terasoje verslo susitikime"),
+    ("robot-pies-branding-klienta", "shot",
+     "Robotas šuo su kliento ženklinimu",
+     "Robotas šuo su kliento įmonės marškinėliais akcijoje automobilių salone"),
+    ("realizacja-robot-w-deszczu", "shot shot--narrow",
+     "Ir per lietų",
+     "Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį"),
+    ("realizacja-robot-gala-portret", "shot",
+     "Portretas",
+     "Humanoidinio roboto Unitree G1 portretas gala vakaro apranga"),
 ]
 
 
-def figure(name, w, h, caption, alt, loading="lazy"):
-    return f"""      <figure style="margin:0; background:var(--surface-2); border:1px solid var(--border-mid); border-radius:14px; overflow:hidden;">
+def figure(photo, loading="lazy", strip=False):
+    name, cls, cap, alt = photo
+    if strip:
+        # juostoje visos plytelės vienodo aukščio — plačiąsias paliekame, siaurąsias sulyginame
+        cls = cls.replace(" shot--narrow", "")
+    return f"""      <figure class="{cls}">
         <picture>
-          <source srcset="galerija/{name}.webp" type="image/webp" />
-          <img src="galerija/{name}.jpg" alt="{esc(alt)}" width="{w}" height="{h}"
-               loading="{loading}" decoding="async"
-               style="width:100%; height:auto; display:block;" />
+          <source srcset="{DIR}/{name}.webp" type="image/webp" />
+          <img src="{DIR}/{name}.jpg" alt="{esc(alt)}" loading="{loading}" decoding="async" class="shot__img" />
         </picture>
-        <figcaption style="padding:var(--s3) var(--s4); font-size:0.85rem; color:var(--text-2);">{caption}</figcaption>
+        <figcaption class="shot__cap">{cap}</figcaption>
       </figure>"""
 
 
-def gallery_grid(photos=None, loading_first_eager=False):
+def shots(photos=None, strip=False, eager_first=False):
     photos = photos or PHOTOS
-    items = []
-    for i, (name, w, h, cap, alt) in enumerate(photos):
-        loading = "eager" if (loading_first_eager and i == 0) else "lazy"
-        items.append(figure(name, w, h, cap, alt, loading))
-    return "\n".join(items)
+    out = []
+    for i, p in enumerate(photos):
+        loading = "eager" if (eager_first and i == 0) else "lazy"
+        out.append(figure(p, loading, strip))
+    return "\n".join(out)
 
 
-def gallery_section(title="Kadrai iš<br />tikrų pasirodymų", tag="Galerija", photos=None,
+def rotate_for(slug, count=6):
+    """Kiekvienam puslapiui parenka kitą nuotraukų rinkinį, kad svetainė neatrodytų monotoniškai.
+
+    Poslinkis skaičiuojamas iš puslapio adreso, todėl jis stabilus tarp generavimų.
+    """
+    offset = sum(ord(c) for c in slug) % len(PHOTOS)
+    doubled = PHOTOS + PHOTOS
+    return doubled[offset:offset + count]
+
+
+def gallery_section(title="Kadrai iš tikrų<br />renginių", tag="Realizacijos", photos=None,
                     lead=None, cta=True):
     photos = photos or PHOTOS
-    lead_html = ""
-    if lead:
-        lead_html = (f'    <p style="max-width:760px; margin:0 auto var(--s7); text-align:center; '
-                     f'color:var(--text-2); line-height:1.8;">{lead}</p>\n')
-    cta_html = ""
-    if cta:
-        cta_html = ('\n    <p style="text-align:center; margin-top:var(--s7);">'
-                    '<a href="galerija.html" class="btn-ghost" style="display:inline-flex;">'
-                    'Visa galerija →</a></p>')
-    return f"""  <!-- GALERIJA -->
+    lead_html = f'    <p class="shots__lead">{lead}</p>\n' if lead else ""
+    cta_html = ('\n      <div class="shots__more"><a href="galerija.html" class="btn-ghost">'
+                'Visa galerija →</a></div>') if cta else ""
+    return f"""  <!-- REALIZACIJOS -->
   <section class="section" id="galerija">
     <div class="section-header">
       <span class="tag">{tag}</span>
       <h2 class="section-title">{title}</h2>
     </div>
-{lead_html}    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:var(--s4);">
-{gallery_grid(photos)}
-    </div>{cta_html}
+    <div class="shots-wrap">
+{lead_html}      <div class="shots">
+{shots(photos)}
+      </div>{cta_html}
+    </div>
+  </section>
+
+"""
+
+
+def strip_section(slug, title="Iš mūsų renginių", count=6):
+    """Kompaktiška nuotraukų juosta paslaugų ir miestų puslapiams."""
+    photos = rotate_for(slug, count)
+    return f"""  <!-- NUOTRAUKŲ JUOSTA -->
+  <section class="section" style="padding-top:0;">
+    <div class="shots-wrap">
+      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">{title}</p>
+      <div class="shots shots--strip">
+{shots(photos, strip=True)}
+      </div>
+      <div class="shots__more"><a href="galerija.html" class="btn-ghost">Visos nuotraukos →</a></div>
+    </div>
   </section>
 
 """
@@ -81,16 +137,14 @@ def gallery_section(title="Kadrai iš<br />tikrų pasirodymų", tag="Galerija", 
 def image_ld():
     items = ",\n".join(f"""      {{
         "@type": "ImageObject",
-        "contentUrl": "{SITE}/galerija/{name}.jpg",
+        "contentUrl": "{SITE}/{DIR}/{name}.jpg",
         "name": "{esc(cap)}",
-        "description": "{esc(alt)}",
-        "width": {w},
-        "height": {h}
-      }}""" for name, w, h, cap, alt in PHOTOS)
+        "description": "{esc(alt)}"
+      }}""" for name, cls, cap, alt in PHOTOS)
     return f"""{{
   "@context": "https://schema.org",
   "@type": "ImageGallery",
-  "name": "33bots — kadrai iš humanoidinio roboto pasirodymų",
+  "name": "33bots — nuotraukos iš humanoidinio roboto realizacijų",
   "url": "{SITE}/galerija.html",
   "inLanguage": "lt-LT",
   "publisher": {{"@id": "{SITE}/#organizacija"}},

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """33bots.lt paslaugų (landing) puslapiai."""
+from lt_gallery import strip_section
 from lt_offers2 import PAGES2
 from lt_offers3 import PAGES3
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
@@ -592,6 +593,7 @@ def build_page(p):
 
 """
     html += video_section()
+    html += strip_section(p["slug"], title=f"Iš mūsų renginių — {p['crumb'].lower()}")
     html += faq_section(p["faq"])
 
     related = "\n".join(f'      <a href="{u}">{t} →</a>' for u, t in p["related"])

@@ -2,7 +2,7 @@
 """galerija.html — nuotraukų galerija iš tikrų pasirodymų."""
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
                        footer, organization_ld, write)
-from lt_gallery import gallery_grid, image_ld, PHOTOS
+from lt_gallery import shots, image_ld, PHOTOS
 
 SLUG = "galerija.html"
 
@@ -14,8 +14,8 @@ def build():
 
     html = head(
         title="Roboto nuotraukos iš renginių — 33bots galerija",
-        description="Nuotraukos iš tikrų humanoidinio roboto Unitree G1 pasirodymų: svečių "
-                    "pasitikimas, šokis, gestai ir ženklinimas prekės ženklu.",
+        description="Nuotraukos iš tikrų 33bots realizacijų: Women in Tech Summit, gala vakarai, "
+                    "LEX AI, verslo renginiai ir naktiniai pasirodymai.",
         slug=SLUG,
         keywords="roboto nuotraukos, humanoidinis robotas nuotraukos, Unitree G1 nuotraukos, "
                  "robotas renginyje",
@@ -27,8 +27,8 @@ def build():
   <section class="hero hero--sub">
     <div class="hero__content">
       <p class="hero__eyebrow">Galerija · Kadrai iš pasirodymų</p>
-      <h1 class="hero__title">Taip robotas atrodo<br />ne renderyje, o gyvai.</h1>
-      <p class="hero__sub">Nuotraukos iš tikrų 33bots pasirodymų — su kliento ženklinimu ant krūtinės, lauke ir iš arti. Tas pats robotas ir ta pati komanda dirba ir Lietuvoje.</p>
+      <h1 class="hero__title">Taip robotas atrodo<br />tikruose renginiuose.</h1>
+      <p class="hero__sub">Kadrai iš realių 33bots projektų: Women in Tech Summit, gala vakarai rūmuose, LEX AI akcijos senamiestyje, verslo susitikimai ir naktiniai pasirodymai. Ta pati įranga ir ta pati komanda dirba Lietuvoje.</p>
       <div class="hero__ctas">
         <a href="#kontaktai" class="btn-primary">Gauti pasiūlymą</a>
         <a href="video-realizacijos.html" class="btn-ghost">Vaizdo įrašai →</a>
@@ -37,11 +37,13 @@ def build():
   </section>
 
   <section class="section">
-    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:var(--s4);">
-{gallery_grid(loading_first_eager=True)}
+    <div class="shots-wrap">
+      <div class="shots">
+{shots(eager_first=True)}
+      </div>
     </div>
     <p style="max-width:760px; margin:var(--s8) auto 0; text-align:center; color:var(--text-2); line-height:1.8;">
-      Ant roboto krūtinės matomas logotipas ir QR kodas — tai <strong style="color:var(--text);">nemokamas ženklinimas</strong>, įskaičiuotas į kiekvieną nuomos paketą. Jūsų renginyje toje vietoje bus jūsų prekės ženklas.
+      Visose nuotraukose matyti <strong style="color:var(--text);">kliento ženklinimas</strong> — marškinėliai, logotipas ar QR kodas. Tai įskaičiuota į kiekvieną nuomos paketą, todėl jūsų renginyje toje vietoje bus jūsų prekės ženklas.
     </p>
   </section>
 

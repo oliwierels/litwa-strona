@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """33bots.lt miestų puslapiai — lokalus SEO."""
+from lt_gallery import strip_section
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
                        footer, faq_section, faq_ld, organization_ld, video_section,
                        write, esc, CITIES, city_url)
@@ -469,6 +470,7 @@ def build_city(slug, name, loc, gen):
   </section>
 
 """
+    html += strip_section(city_url(slug), title=f"Kadrai iš mūsų renginių")
     html += video_section(heading=f"Pamatykite robotą<br />prieš užsakant")
     html += faq_section(faq, title=f"Klausimai apie nuomą<br />{loc}")
 
