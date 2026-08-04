@@ -26,7 +26,10 @@ yra **generuojami** — jų nereikia redaguoti ranka. Keiskite turinį skriptuos
 | `lt_offers3.py` | Kategoriniai puslapiai (atrakcijos, pramogos, idėjos) — platesnės paieškos frazės |
 | `lt_gallery.py` | Nuotraukų sąrašas, galerijos ir juostų atvaizdavimas |
 | `build_gallery.py` | `galerija.html` |
-| `build_index.py` | Pagrindinis puslapis |
+| `build_index_redesign.py` | **Pagrindinis puslapis** — perkeltas 33bots.pl perdarytas dizainas |
+| `lt_index_strings.py` | Pagrindinio puslapio vertimo žemėlapis (PL → LT) ir kainos |
+| `templates/pl-index.html` | Lenkiškos versijos kopija — porto šaltinis |
+| `build_index.py` | Senasis pagrindinio puslapio variantas (nebenaudojamas; iš jo imamas DUK sąrašas) |
 | `build_offers.py` | 16 paslaugų puslapių (renderina `PAGES` + `PAGES2`) |
 | `build_hub.py` | `robotu-nuoma.html` — paslaugų ir miestų mazgas (silo struktūra) |
 | `build_blog.py` | Blogo indeksas ir 14 straipsnių |
@@ -37,7 +40,18 @@ yra **generuojami** — jų nereikia redaguoti ranka. Keiskite turinį skriptuos
 | `build_seo.py` | `sitemap.xml`, `robots.txt`, `llms.txt`, `feed.xml`, `_redirects`, `.htaccess` |
 | `build_all.py` | Paleidžia visus žingsnius iš eilės |
 
-Rankiniu būdu tvarkomi failai: `style.css`, `main.js`, paveikslėliai, `video/`.
+Rankiniu būdu tvarkomi failai: `style.css`, `assets-redesign.css`, `main.js`, paveikslėliai, `video/`.
+
+## Du dizainai — kaip 33bots.pl
+
+Lenkiškoje svetainėje perdarytas **tik pagrindinis puslapis** (`assets-redesign.css`, Tailwind,
+Space Grotesk), o likę 187 puslapiai tebeturi senąjį `style.css` dizainą. Lietuviška versija tą patį
+atkartoja: naujas pagrindinis puslapis + senojo dizaino vidiniai puslapiai.
+
+Kai lenkiškas dizainas bus išplėstas į vidinius puslapius, tą patį reikės padaryti ir čia.
+Atnaujinant pagrindinį puslapį: nukopijuokite naują `index.html` į `templates/pl-index.html`,
+papildykite `lt_index_strings.TEXTS` naujais tekstais ir paleiskite `build_all.py` — skriptas
+išvardija visus neišverstus fragmentus.
 
 ## SEO sprendimai
 
@@ -106,6 +120,13 @@ Atvaizdavimas (`lt_gallery.py`):
 **Naujų nuotraukų pridėjimas:** įkelkite failus (`.jpg` + `.webp`) į `nuotraukos/`, įrašykite juos
 į `lt_gallery.PHOTOS` (failas, išdėstymo klasė, antraštė, alt tekstas) ir paleiskite
 `python3 build_all.py`.
+
+## ⚠️ Kainos — patvirtinti prieš paskelbiant
+
+Perdarytas pagrindinis puslapis rodo konkrečias kainas. Lenkiškoje versijoje nurodyta 5500 zł už
+dieną ir 1900 zł už roboto šunį; `lt_index_strings.py` viršuje šie skaičiai perskaičiuoti į eurus
+(**1 290 €** ir **450 €**) tik kaip apytikslė reikšmė. Galutines Lietuvos rinkos kainas nustato
+įmonė — pakeiskite `PRICE_FROM`, `PRICE_DOG` ir `DISCOUNT` ir paleiskite `build_all.py`.
 
 ## Ką dar verta padaryti
 

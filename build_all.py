@@ -3,11 +3,11 @@
 
 Paleidimas:  python3 build_all.py
 """
-import build_index, build_offers, build_blog, build_cities, build_misc, build_hub
+import build_index_redesign, build_offers, build_blog, build_cities, build_misc, build_hub
 import build_gallery, build_og, build_seo
 
 STEPS = [
-    ("Pagrindinis puslapis", build_index.build),
+    ("Pagrindinis puslapis (perkeltas PL dizainas)", build_index_redesign.build),
     ("Paslaugų puslapiai", build_offers.build),
     ("Blogas", build_blog.build),
     ("Miestų puslapiai", build_cities.build),
