@@ -92,16 +92,31 @@ išvardija visus neišverstus fragmentus.
 
 ## Diegimas
 
-Svetainė statinė — tinka bet kuriam hostingui. `_redirects` skirtas Netlify,
-`.htaccess` — Apache (HTTPS, non-www, 404, talpykla, gzip).
+Svetainė statinė — visas repozitorijos turinys keliamas į serverio šaknį. `_redirects` skirtas
+Netlify, `.htaccess` — Apache (HTTPS, non-www, 404, talpykla, gzip).
 
-Po diegimo verta pranešti IndexNow:
+### Ką padaryti paleidžiant
 
-```bash
-INDEXNOW_KEY=<jūsų raktas> ./scripts/indexnow-submit.sh
-```
+1. **Domenas ir HTTPS** — nukreipti 33bots.lt į serverį, įjungti sertifikatą.
+   Non-www ir HTTPS peradresavimai jau paruošti `.htaccess` / `_redirects`.
+2. **Google Search Console** — pridėti 33bots.lt, patvirtinti nuosavybę ir pateikti
+   `https://33bots.lt/sitemap.xml` (71 adresas).
+3. **Bing Webmaster Tools** — tas pats sitemap; iš čia veikia ir IndexNow.
+4. **IndexNow raktas** — sugeneruoti raktą, įkelti kaip `https://33bots.lt/<RAKTAS>.txt`
+   ir paleisti `INDEXNOW_KEY=<raktas> ./scripts/indexnow-submit.sh`.
+5. **Google Business Profile** — sukurti įrašą Lietuvai; vietinei paieškai tai duoda
+   daugiau nei bet koks on-page pakeitimas.
+6. **Formspree** — `main.js` ir pagrindinio puslapio skripte naudojamas tas pats galinis
+   taškas kaip 33bots.pl. Verta susikurti atskirą, kad lietuviškos užklausos nesimaišytų.
+7. **Google Tag Manager** — dabar naudojamas lenkiškas konteineris `GTM-MR7R7CJ3`
+   (`lt_common.GTM`). Jei norite atskirti statistiką, pakeiskite į savo.
 
-Prieš tai sugeneruokite raktą ir įkelkite jį kaip `https://33bots.lt/<RAKTAS>.txt`.
+### Patikra po paleidimo
+
+- `https://33bots.lt/robots.txt` ir `/sitemap.xml` atsidaro be klaidų
+- Search Console → Patikrinti URL pagrindiniam puslapiui (ar mato kainą ir `Offer`)
+- Rich Results Test: FAQ, Service su kaina, BreadcrumbList, ImageGallery
+- hreflang poros: 33bots.pl jau nurodo atgal į 33bots.lt (8 puslapiai)
 
 ## Nuotraukos
 

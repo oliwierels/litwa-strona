@@ -91,6 +91,56 @@ def swap_city_list(doc):
     return pattern.sub(lambda m: m.group(1) + "\n" + items + "\n      " + m.group(2), doc, count=1)
 
 
+def add_internal_links(doc):
+    """Poraštėje prideda paslaugų, straipsnių ir puslapių nuorodas.
+
+    Perdarytame lenkiškame puslapyje jų nėra — jis nukreipia tik į kelis pagrindinius
+    skyrius. Be šio bloko pagrindinis puslapis neperduotų svorio 35 vidiniams puslapiams.
+    Stilius toks pat kaip miestų sąrašo (<details> juosta poraštėje).
+    """
+    from build_offers import PAGES as P1
+    from lt_offers2 import PAGES2
+    from lt_offers3 import PAGES3
+    from lt_articles import ARTICLES as A1
+    from lt_articles2 import ARTICLES2
+
+    def block(label, items):
+        links = "\n".join(
+            f'        <a href="{u}" class="transition hover:text-accent">{t}</a>'
+            for u, t in items)
+        return f"""
+    <details class="mt-6 border-t border-line pt-6">
+      <summary class="cursor-pointer list-none text-[11px] font-600 uppercase tracking-widest text-neutral-600 transition hover:text-neutral-400">{label} ▾</summary>
+      <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-[12px] text-neutral-500">
+{links}
+      </div>
+    </details>"""
+
+    services = [(p["slug"], p["crumb"]) for p in P1 + PAGES2 + PAGES3]
+    # Nuorodos tekstas — straipsnio pavadinimas iki brūkšnio, kad būtų aprašomasis,
+    # o ne kartotųsi kategorijos pavadinimas.
+    articles = [(a["slug"], a["title"].split("—")[0].split("|")[0].strip())
+                for a in A1 + ARTICLES2]
+    pages = [("robotu-nuoma.html", "Robotų nuoma Lietuvoje"),
+             ("kainos.html", "Kainos ir paketai"),
+             ("galerija.html", "Nuotraukų galerija"),
+             ("video-realizacijos.html", "Vaizdo įrašai"),
+             ("blog.html", "Blogas"),
+             ("apie-mus.html", "Apie mus"),
+             ("kontaktai.html", "Kontaktai"),
+             ("privatumo-politika.html", "Privatumo politika")]
+
+    extra = (block("Visos nuomos paslaugos", services)
+             + block("Straipsniai apie renginių robotus", articles)
+             + block("Svetainės puslapiai", pages))
+
+    # įterpiame iškart po miestų sąrašo bloko
+    m = re.search(r'</details>', doc)
+    if not m:
+        return doc
+    return doc[:m.end()] + extra + doc[m.end():]
+
+
 def rewrite_head(doc):
     hreflang = "\n  ".join(
         f'<link rel="alternate" hreflang="{lang}" href="{href}" />'
@@ -183,6 +233,7 @@ def build():
     doc, missing = translate_texts(doc)
     doc = translate_attrs(doc)
     doc = swap_city_list(doc)
+    doc = add_internal_links(doc)
     doc = rewrite_head(doc)
     doc = rewrite_jsonld(doc)
 
