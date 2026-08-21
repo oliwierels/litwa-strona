@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7R7CJ3');</script>
-<!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Humanoidinių robotų nuoma renginiams Lietuvoje | 33bots</title>
+
+<link rel="preload" as="image" href="robot-g1-960.webp" type="image/webp" fetchpriority="high" />
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin-ext.woff2" crossorigin />
+
+<link rel="stylesheet" href="fonts.css" />
+
+<link rel="stylesheet" href="assets-redesign.css" />
 <meta name="description" content="Humanoidinio roboto Unitree G1 nuoma renginiams visoje Lietuvoje. Transportas, operatorius ir ženklinimas kainoje. Kaina per 24 val." />
 <link rel="canonical" href="https://33bots.lt/" />
 <meta name="theme-color" content="#050505" />
@@ -39,15 +40,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="alternate" type="application/rss+xml" title="33bots — blogo RSS" href="https://33bots.lt/feed.xml" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <script>history.scrollRestoration = 'manual';</script>
-<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="fonts.css?v=1" />
-<link rel="preload" as="image" href="robot-g1-960.webp" type="image/webp" fetchpriority="high" />
-
-<!-- Tailwind skompilowany statycznie (30 KB) — bez CDN, bez JS w runtime.
-     Przebudowa po zmianach w HTML:
-     npx tailwindcss -c tailwind.config.js -i tw-input.css -o assets-redesign.css --minify -->
-<link rel="stylesheet" href="assets-redesign.css" />
 
 <style>
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -61,6 +53,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     opacity: 1; transform: none;
     transition: opacity .8s cubic-bezier(.16,1,.3,1) var(--d, 0s),
                 transform .8s cubic-bezier(.16,1,.3,1) var(--d, 0s);
+  }
+
+  /* Pierwszy ekran odsłania się animacją CSS od razu przy wczytaniu, bez
+     czekania na IntersectionObserver. Wcześniej obraz robota — czyli element
+     LCP — stał w opacity:0 aż do startu JS, co wypychało LCP do ~2,3 s.
+     Kaskada (--d) zostaje bez zmian, zmienia się tylko to, co ją uruchamia. */
+  #hero .reveal { animation: revealIn .8s cubic-bezier(.16,1,.3,1) var(--d, 0s) both; }
+  @keyframes revealIn {
+    from { opacity: 0; transform: translateY(28px) scale(.985); }
+    to   { opacity: 1; transform: none; }
   }
 
   /* ——— Robot w hero: wtopienie krawędzi kadru w tło ——— */
@@ -182,6 +184,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .track-line { transform: none; }
   }
 </style>
+
+<script>
+  (function (w, d, s, l, i) {
+    var started = false;
+    function loadGTM() {
+      if (started) return; started = true;
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    }
+    // po załadowaniu strony albo przy pierwszej interakcji — zależnie co pierwsze
+    if (d.readyState === 'complete') loadGTM();
+    else w.addEventListener('load', loadGTM, { once: true });
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
+      w.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  })(window, document, 'script', 'dataLayer', 'GTM-MR7R7CJ3');
+</script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,7 +214,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "url": "https://33bots.lt/",
   "logo": "https://33bots.lt/logo.png",
   "image": "https://33bots.lt/robot-g1.jpg",
-  "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Nemokamas transportas ir sertifikuotas operatorius kainoje.",
+  "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Sertifikuotas operatorius ir ženklinimas kainoje; atvykimą vertiname pagal renginio vietą.",
   "telephone": "+48531408004",
   "email": "kontakt@33bots.pl",
   "areaServed": {"@type": "Country", "name": "Lithuania"},
@@ -218,7 +240,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "Unitree G1",
     "renginių pramogos"
   ],
-  "priceRange": "nuo 2500 EUR už renginio dieną"
+  "priceRange": "nuo 2100 EUR už renginio dieną"
 }
   </script>
   <script type="application/ld+json">
@@ -261,13 +283,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "offers": {
     "@type": "Offer",
     "priceCurrency": "EUR",
-    "price": "2500",
+    "price": "2100",
     "availability": "https://schema.org/InStock",
     "url": "https://33bots.lt/",
     "priceSpecification": {
       "@type": "UnitPriceSpecification",
       "priceCurrency": "EUR",
-      "price": "2500",
+      "price": "2100",
       "unitText": "diena",
       "valueAddedTaxIncluded": false
     }
@@ -297,7 +319,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {
         "@type": "Question",
         "name": "Ar nuomojate robotą visoje Lietuvoje?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Taip — dirbame visoje Lietuvoje ir transportas įskaičiuotas į kainą, nesvarbu, ar renginys Vilniuje, Klaipėdoje, ar mažesniame mieste. Nėra mokesčio už kilometrus ir nėra minimalaus atstumo."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Taip — dirbame visoje Lietuvoje, nesvarbu, ar renginys Vilniuje, Klaipėdoje, ar mažesniame mieste. Nėra mokesčio už kilometrus ir nėra minimalaus atstumo."}
       },
       {
         "@type": "Question",
@@ -322,7 +344,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {
         "@type": "Question",
         "name": "Kuo 33bots skiriasi nuo kitų nuomos įmonių?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Į kainą visada įeina visas paketas: nemokamas transportas be kilometrų limito, sertifikuotas operatorius visą renginį ir nemokamas roboto ženklinimas. Dirbame su savo įranga — be tarpininkų, o mūsų projektai Lenkijoje buvo rodomi nacionalinėje televizijoje."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Į pradinę kainą visada įeina: sertifikuotas operatorius visą renginį ir nemokamas roboto ženklinimas. Dirbame su savo įranga — be tarpininkų, o mūsų projektai Lenkijoje buvo rodomi nacionalinėje televizijoje."}
       }
   ]
 }
@@ -330,15 +352,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body class="grain bg-ink font-sans text-neutral-200 antialiased selection:bg-accent selection:text-ink">
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR7R7CJ3"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- ══════════ PASEK POSTĘPU ══════════ -->
 <div id="progress" class="fixed inset-x-0 top-0 z-[70] h-[2px] w-0 bg-gradient-to-r from-accent to-white shadow-[0_0_12px_rgba(111,214,255,.5)]"></div>
 
-<!-- ══════════ NAV ══════════ -->
 <header id="nav" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
   <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8">
     <a href="#" class="font-display text-lg font-700 tracking-tight text-white">33BOTS</a>
@@ -351,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <a href="#kontakt"
        class="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-5 py-2.5 text-[13px] font-700 uppercase tracking-wider text-ink transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_28px_rgba(111,214,255,.45)]">
-      Nemokama kaina
+      Nemokama sąmata
       <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
     </a>
   </div>
@@ -359,27 +377,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
 
-<!-- ══════════════════════════════════════════════════════
-     1. HERO — animowane tło (aurora + siatka + orbity), parallax
-     ══════════════════════════════════════════════════════ -->
-<section class="relative flex min-h-[100svh] items-center overflow-hidden px-5 pt-24 pb-14 md:px-8">
+<section id="hero" class="relative flex min-h-[100svh] items-center overflow-hidden px-5 pt-24 pb-14 md:px-8">
 
-  <!-- Warstwy tła -->
-  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="pointer-events-none absolute inset-0 -z-10">
     <div class="absolute inset-0 bg-grid animate-grid-pan"></div>
     <div class="absolute -left-[10%] top-[6%] h-[38rem] w-[38rem] rounded-full bg-accent/20 blur-[130px] animate-aurora"></div>
     <div class="absolute -right-[8%] bottom-[2%] h-[34rem] w-[34rem] rounded-full bg-violet/15 blur-[130px] animate-aurora-slow"></div>
     <div class="absolute left-1/2 top-1/3 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-accent-deep/10 blur-[120px] animate-aurora"></div>
-    <!-- geometryczne akcenty -->
-    <div class="absolute left-[12%] top-[22%] h-24 w-24 rotate-12 rounded-2xl border border-white/10 animate-float"></div>
+        <div class="absolute left-[12%] top-[22%] h-24 w-24 rotate-12 rounded-2xl border border-white/10 animate-float"></div>
     <div class="absolute right-[16%] top-[62%] h-16 w-16 rounded-full border border-accent/25 animate-float [animation-delay:1.5s]"></div>
     <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-ink to-transparent"></div>
   </div>
 
   <div class="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
 
-    <!-- Kolumna tekstowa -->
-    <div>
+        <div>
       <p class="reveal mb-6 inline-flex items-center gap-2.5 rounded-full border border-line-mid bg-white/[.03] px-4 py-2 text-[11px] font-600 uppercase tracking-[.18em] text-neutral-400 backdrop-blur" style="--d:.05s">
         <span class="relative flex h-1.5 w-1.5">
           <span class="absolute inline-flex h-full w-full rounded-full bg-accent animate-pulse-ring"></span>
@@ -396,22 +408,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </h1>
 
       <p class="reveal mt-5 max-w-lg leading-relaxed text-neutral-400 md:text-lg" style="--d:.2s">
-        Humanoidas Unitree G1 jūsų parodoje, konferencijoje ar gala vakare. Visa pasirodymo diena — <span class="text-white">transportas, operatorius ir ženklinimas kainoje</span>.
+        Humanoidas Unitree G1 jūsų parodoje, konferencijoje ar gala vakare. Visa pasirodymo diena — <span class="text-white">su sertifikuotu operatoriumi ir jūsų ženklinimu</span>.
       </p>
 
-      <!-- Kotwica cenowa -->
-      <div class="reveal mt-6 flex items-end gap-4 border-l-2 border-accent/60 pl-5" style="--d:.26s">
+            <div class="reveal mt-6 flex items-end gap-4 border-l-2 border-accent/60 pl-5" style="--d:.26s">
         <div>
-          <p class="font-display text-4xl font-700 leading-none text-white">nuo 2 500 €</p>
-          <p class="mt-1.5 text-xs font-600 uppercase tracking-[.14em] text-neutral-500">už visą dieną · jokių priemokų</p>
+          <p class="font-display text-4xl font-700 leading-none text-white">nuo 2 100 €</p>
+          <p class="mt-1.5 text-xs font-600 uppercase tracking-[.14em] text-neutral-500">už visą dieną · pradinė kaina (be PVM)</p>
         </div>
       </div>
 
-      <!-- CTA -->
-      <div class="reveal mt-7 flex flex-col gap-3 sm:flex-row" style="--d:.32s">
+            <div class="reveal mt-7 flex flex-col gap-3 sm:flex-row" style="--d:.32s">
         <a href="#kontakt"
            class="cta-shine group relative inline-flex items-center justify-center gap-3 rounded-2xl px-9 py-5 font-display text-base font-700 uppercase tracking-wider text-ink shadow-[0_0_40px_rgba(111,214,255,.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(111,214,255,.5)]">
-          Gaukite nemokamą kainą
+          Gaukite nemokamą sąmatą
           <span class="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
         </a>
         <a href="#cennik"
@@ -420,38 +430,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
       </div>
 
-      <!-- Mikro-dowody -->
-      <ul class="reveal mt-6 flex flex-wrap gap-x-6 gap-y-2.5 text-[13px] text-neutral-400" style="--d:.38s">
+            <ul class="reveal mt-6 flex flex-wrap gap-x-6 gap-y-2.5 text-[13px] text-neutral-400" style="--d:.38s">
         <li class="flex items-center gap-2"><span class="text-accent">✓</span> Jokio avanso</li>
         <li class="flex items-center gap-2"><span class="text-accent">✓</span> Sąskaita po renginio</li>
-        <li class="flex items-center gap-2"><span class="text-accent">✓</span> Nemokamas transportas</li>
+        <li class="flex items-center gap-2"><span class="text-accent">✓</span> Atvykimas visoje Lietuvoje</li>
         <li class="flex items-center gap-2"><span class="text-accent">✓</span> Kaina per 24 val.</li>
       </ul>
     </div>
 
-    <!-- Robot z parallaxem -->
-    <div class="relative hidden lg:block" data-par data-speed="-.06">
+        <div class="relative hidden lg:block" data-par data-speed="-.06">
       <div class="absolute inset-0 -z-10 rounded-full bg-accent/10 blur-[100px]"></div>
       <img src="robot-g1-960.webp" alt="Humanoidinis robotas Unitree G1 — nuoma renginiams visoje Lietuvoje"
            width="600" height="800" fetchpriority="high"
            class="reveal mx-auto max-h-[68vh] w-auto hero-robot" style="--d:.2s" />
-      <!-- pływające etykiety spec -->
-      <span class="reveal absolute left-2 top-[28%] rounded-lg border border-line-mid bg-surface-2/80 px-3 py-1.5 text-[11px] font-600 uppercase tracking-widest text-neutral-400 backdrop-blur animate-float" style="--d:.5s">23 DOF</span>
+            <span class="reveal absolute left-2 top-[28%] rounded-lg border border-line-mid bg-surface-2/80 px-3 py-1.5 text-[11px] font-600 uppercase tracking-widest text-neutral-400 backdrop-blur animate-float" style="--d:.5s">23 DOF</span>
       <span class="reveal absolute right-2 top-[52%] rounded-lg border border-line-mid bg-surface-2/80 px-3 py-1.5 text-[11px] font-600 uppercase tracking-widest text-neutral-400 backdrop-blur animate-float [animation-delay:2s]" style="--d:.6s">132 cm</span>
       <span class="reveal absolute bottom-[14%] left-6 rounded-lg border border-accent/30 bg-accent/10 px-3 py-1.5 text-[11px] font-600 uppercase tracking-widest text-accent backdrop-blur animate-float [animation-delay:1s]" style="--d:.7s">2 m/s</span>
     </div>
   </div>
 
-  <!-- Wskaźnik scrolla -->
-  <a href="#zaufanie" class="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-neutral-600 transition hover:text-accent md:flex">
+    <a href="#zaufanie" class="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-neutral-600 transition hover:text-accent md:flex">
     <span class="text-[10px] uppercase tracking-[.25em]">Slinkti</span>
     <span class="animate-bob text-lg">↓</span>
   </a>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     2. PAS ZAUFANIA — jedna linia, zero zbędnego miejsca
-     ══════════════════════════════════════════════════════ -->
 <section id="zaufanie" class="border-y border-line bg-surface/60 py-8">
   <div class="mx-auto max-w-7xl px-5 md:px-8">
     <div class="flex flex-col items-center gap-6 md:flex-row md:justify-between">
@@ -472,9 +475,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     3. BENTO BOX — możliwości / realizacje, wideo na hover
-     ══════════════════════════════════════════════════════ -->
 <section id="realizacje" class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
   <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
     <div>
@@ -488,26 +488,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       GALERIA REALIZACJI — dwa pasy w przeciwnych kierunkach.
-       Najechanie zatrzymuje pas, kliknięcie otwiera zdjęcie na pełnym ekranie.
-       Szerokości kafelków celowo przeplatane (wąski / zwykły / szeroki),
-       żeby rytm przewijania nie był monotonny.
-
-       ▸ NOWE ZDJĘCIE: uruchom  python3 dodaj-zdjecia.py <katalog>
-         i wklej wygenerowany blok DWA RAZY — w części ORYGINAŁ i KOPIA.
-       ═══════════════════════════════════════════════════════════════ -->
-  <div class="strip reveal -mx-5 md:-mx-8" style="--d:.05s">
+    <div class="strip reveal -mx-5 md:-mx-8" style="--d:.05s">
     <div class="strip-track py-1">
-      <!-- ORYGINAŁ -->
-      <figure class="strip-item " data-full="nuotraukos/realizacja-gala-czerwony-dywan.jpg" data-alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo">
-        <picture><source srcset="nuotraukos/realizacja-gala-czerwony-dywan.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-czerwony-dywan.jpg" alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo" class="strip-img" /></picture>
+            <figure class="strip-item " data-full="nuotraukos/realizacja-gala-czerwony-dywan.jpg" data-alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo">
+        <picture><source srcset="nuotraukos/realizacja-gala-czerwony-dywan-400.webp 400w, nuotraukos/realizacja-gala-czerwony-dywan.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-czerwony-dywan.jpg" alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Raudonas kilimas</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-women-in-tech-tlum.jpg" data-alt="Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais">
-        <picture><source srcset="nuotraukos/realizacja-women-in-tech-tlum.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-women-in-tech-tlum.jpg" alt="Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-women-in-tech-tlum-400.webp 400w, nuotraukos/realizacja-women-in-tech-tlum.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-women-in-tech-tlum.jpg" alt="Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Visi traukia telefonus</figcaption>
       </figure>
       <figure class="strip-item ">
@@ -517,38 +507,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Šokis · užveskite</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-lexai-starowka.jpg" data-alt="Humanoidinis robotas su LEX AI marškinėliais senamiestyje — praeiviai fotografuoja">
-        <picture><source srcset="nuotraukos/realizacja-lexai-starowka.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-lexai-starowka.jpg" alt="Humanoidinis robotas su LEX AI marškinėliais senamiestyje — praeiviai fotografuoja" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-lexai-starowka-400.webp 400w, nuotraukos/realizacja-lexai-starowka.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-lexai-starowka.jpg" alt="Humanoidinis robotas su LEX AI marškinėliais senamiestyje — praeiviai fotografuoja" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Gatvė sustoja</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-gala-detal.jpg" data-alt="Humanoidinio roboto stambus planas su karūna ir blizgančiu smokingu">
-        <picture><source srcset="nuotraukos/realizacja-gala-detal.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-detal.jpg" alt="Humanoidinio roboto stambus planas su karūna ir blizgančiu smokingu" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-detal-400.webp 400w, nuotraukos/realizacja-gala-detal.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-detal.jpg" alt="Humanoidinio roboto stambus planas su karūna ir blizgančiu smokingu" decoding="async" class="strip-img" /></picture>
       </figure>
       <figure class="strip-item " data-full="nuotraukos/realizacja-event-nad-woda.jpg" data-alt="Humanoidinis robotas mojuoja terasoje virš jachtų prieplaukos">
-        <picture><source srcset="nuotraukos/realizacja-event-nad-woda.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-event-nad-woda.jpg" alt="Humanoidinis robotas mojuoja terasoje virš jachtų prieplaukos" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-event-nad-woda-400.webp 400w, nuotraukos/realizacja-event-nad-woda.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-event-nad-woda.jpg" alt="Humanoidinis robotas mojuoja terasoje virš jachtų prieplaukos" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Lauko renginiai</figcaption>
       </figure>
       <figure class="strip-item " data-full="nuotraukos/robot-pies-branding-klienta.jpg" data-alt="Robotas šuo su kliento įmonės marškinėliais akcijoje automobilių salone">
         <picture><source srcset="nuotraukos/robot-pies-branding-klienta.webp" type="image/webp" />
-        <img src="nuotraukos/robot-pies-branding-klienta.jpg" alt="Robotas šuo su kliento įmonės marškinėliais akcijoje automobilių salone" class="strip-img" /></picture>
+        <img src="nuotraukos/robot-pies-branding-klienta.jpg" alt="Robotas šuo su kliento įmonės marškinėliais akcijoje automobilių salone" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Robotas šuo su ženklinimu</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-nocny-pokaz.jpg" data-alt="Humanoidinis robotas raudonu apsiaustu naktiniame pasirodyme prie istorinio pastato">
-        <picture><source srcset="nuotraukos/realizacja-nocny-pokaz.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-nocny-pokaz.jpg" alt="Humanoidinis robotas raudonu apsiaustu naktiniame pasirodyme prie istorinio pastato" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-nocny-pokaz-400.webp 400w, nuotraukos/realizacja-nocny-pokaz.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-nocny-pokaz.jpg" alt="Humanoidinis robotas raudonu apsiaustu naktiniame pasirodyme prie istorinio pastato" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Naktiniai pasirodymai</figcaption>
       </figure>
-      <!-- KOPIA — bezszwowa pętla -->
-      <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/realizacja-gala-czerwony-dywan.jpg" data-alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo">
-        <picture><source srcset="nuotraukos/realizacja-gala-czerwony-dywan.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-czerwony-dywan.jpg" alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo" class="strip-img" /></picture>
+            <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/realizacja-gala-czerwony-dywan.jpg" data-alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo">
+        <picture><source srcset="nuotraukos/realizacja-gala-czerwony-dywan-400.webp 400w, nuotraukos/realizacja-gala-czerwony-dywan.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-czerwony-dywan.jpg" alt="Humanoidinis robotas blizgančiu smokingu ant gala vakaro raudonojo kilimo" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Raudonas kilimas</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-women-in-tech-tlum.jpg" data-alt="Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais">
-        <picture><source srcset="nuotraukos/realizacja-women-in-tech-tlum.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-women-in-tech-tlum.jpg" alt="Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-women-in-tech-tlum-400.webp 400w, nuotraukos/realizacja-women-in-tech-tlum.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-women-in-tech-tlum.jpg" alt="Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Visi traukia telefonus</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item ">
@@ -558,47 +547,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Šokis · užveskite</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-lexai-starowka.jpg" data-alt="Humanoidinis robotas su LEX AI marškinėliais senamiestyje — praeiviai fotografuoja">
-        <picture><source srcset="nuotraukos/realizacja-lexai-starowka.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-lexai-starowka.jpg" alt="Humanoidinis robotas su LEX AI marškinėliais senamiestyje — praeiviai fotografuoja" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-lexai-starowka-400.webp 400w, nuotraukos/realizacja-lexai-starowka.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-lexai-starowka.jpg" alt="Humanoidinis robotas su LEX AI marškinėliais senamiestyje — praeiviai fotografuoja" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Gatvė sustoja</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-gala-detal.jpg" data-alt="Humanoidinio roboto stambus planas su karūna ir blizgančiu smokingu">
-        <picture><source srcset="nuotraukos/realizacja-gala-detal.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-detal.jpg" alt="Humanoidinio roboto stambus planas su karūna ir blizgančiu smokingu" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-detal-400.webp 400w, nuotraukos/realizacja-gala-detal.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-detal.jpg" alt="Humanoidinio roboto stambus planas su karūna ir blizgančiu smokingu" decoding="async" class="strip-img" /></picture>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/realizacja-event-nad-woda.jpg" data-alt="Humanoidinis robotas mojuoja terasoje virš jachtų prieplaukos">
-        <picture><source srcset="nuotraukos/realizacja-event-nad-woda.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-event-nad-woda.jpg" alt="Humanoidinis robotas mojuoja terasoje virš jachtų prieplaukos" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-event-nad-woda-400.webp 400w, nuotraukos/realizacja-event-nad-woda.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-event-nad-woda.jpg" alt="Humanoidinis robotas mojuoja terasoje virš jachtų prieplaukos" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Lauko renginiai</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/robot-pies-branding-klienta.jpg" data-alt="Robotas šuo su kliento įmonės marškinėliais akcijoje automobilių salone">
         <picture><source srcset="nuotraukos/robot-pies-branding-klienta.webp" type="image/webp" />
-        <img src="nuotraukos/robot-pies-branding-klienta.jpg" alt="Robotas šuo su kliento įmonės marškinėliais akcijoje automobilių salone" class="strip-img" /></picture>
+        <img src="nuotraukos/robot-pies-branding-klienta.jpg" alt="Robotas šuo su kliento įmonės marškinėliais akcijoje automobilių salone" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Robotas šuo su ženklinimu</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-nocny-pokaz.jpg" data-alt="Humanoidinis robotas raudonu apsiaustu naktiniame pasirodyme prie istorinio pastato">
-        <picture><source srcset="nuotraukos/realizacja-nocny-pokaz.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-nocny-pokaz.jpg" alt="Humanoidinis robotas raudonu apsiaustu naktiniame pasirodyme prie istorinio pastato" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-nocny-pokaz-400.webp 400w, nuotraukos/realizacja-nocny-pokaz.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-nocny-pokaz.jpg" alt="Humanoidinis robotas raudonu apsiaustu naktiniame pasirodyme prie istorinio pastato" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Naktiniai pasirodymai</figcaption>
       </figure>
     </div>
   </div>
   <div class="strip reveal -mx-5 md:-mx-8 mt-4" style="--d:.12s">
     <div class="strip-track strip-track--rev py-1">
-      <!-- ORYGINAŁ -->
-      <figure class="strip-item " data-full="nuotraukos/realizacja-women-in-tech-wybieg.jpg" data-alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką">
-        <picture><source srcset="nuotraukos/realizacja-women-in-tech-wybieg.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-women-in-tech-wybieg.jpg" alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką" class="strip-img" /></picture>
+            <figure class="strip-item " data-full="nuotraukos/realizacja-women-in-tech-wybieg.jpg" data-alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką">
+        <picture><source srcset="nuotraukos/realizacja-women-in-tech-wybieg-400.webp 400w, nuotraukos/realizacja-women-in-tech-wybieg.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-women-in-tech-wybieg.jpg" alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Women in Tech Summit</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-gala-zdjecia-gosci.jpg" data-alt="Gala vakaro svečiai fotografuoja humanoidinį robotą prie rėmėjų sienos">
-        <picture><source srcset="nuotraukos/realizacja-gala-zdjecia-gosci.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-zdjecia-gosci.jpg" alt="Gala vakaro svečiai fotografuoja humanoidinį robotą prie rėmėjų sienos" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-zdjecia-gosci-400.webp 400w, nuotraukos/realizacja-gala-zdjecia-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-zdjecia-gosci.jpg" alt="Gala vakaro svečiai fotografuoja humanoidinį robotą prie rėmėjų sienos" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Svečiai fotografuoja</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-robot-w-deszczu.jpg" data-alt="Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį">
-        <picture><source srcset="nuotraukos/realizacja-robot-w-deszczu.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-robot-w-deszczu.jpg" alt="Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-robot-w-deszczu-400.webp 400w, nuotraukos/realizacja-robot-w-deszczu.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-robot-w-deszczu.jpg" alt="Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Ir per lietų</figcaption>
       </figure>
       <figure class="strip-item ">
@@ -608,39 +596,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Logotipas ir QR kodas · 0 €</figcaption>
       </figure>
       <figure class="strip-item " data-full="nuotraukos/realizacja-lexai-ulica.jpg" data-alt="Humanoidinis robotas su LEX AI ženklinimu ir portfeliu senamiesčio gatvelėje">
-        <picture><source srcset="nuotraukos/realizacja-lexai-ulica.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-lexai-ulica.jpg" alt="Humanoidinis robotas su LEX AI ženklinimu ir portfeliu senamiesčio gatvelėje" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-lexai-ulica-400.webp 400w, nuotraukos/realizacja-lexai-ulica.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-lexai-ulica.jpg" alt="Humanoidinis robotas su LEX AI ženklinimu ir portfeliu senamiesčio gatvelėje" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Rinkodara mieste</figcaption>
       </figure>
       <figure class="strip-item " data-full="nuotraukos/realizacja-gala-palac.jpg" data-alt="Humanoidinis robotas smokingu rūmų pokylių salėje">
-        <picture><source srcset="nuotraukos/realizacja-gala-palac.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-palac.jpg" alt="Humanoidinis robotas smokingu rūmų pokylių salėje" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-palac-400.webp 400w, nuotraukos/realizacja-gala-palac.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-palac.jpg" alt="Humanoidinis robotas smokingu rūmų pokylių salėje" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Rūmų interjerai</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-spotkanie-biznesowe.jpg" data-alt="Humanoidinis robotas su įmonės marškinėliais terasoje verslo susitikime">
-        <picture><source srcset="nuotraukos/realizacja-spotkanie-biznesowe.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-spotkanie-biznesowe.jpg" alt="Humanoidinis robotas su įmonės marškinėliais terasoje verslo susitikime" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-spotkanie-biznesowe-400.webp 400w, nuotraukos/realizacja-spotkanie-biznesowe.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-spotkanie-biznesowe.jpg" alt="Humanoidinis robotas su įmonės marškinėliais terasoje verslo susitikime" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Verslo susitikimai</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-gala-wsrod-gosci.jpg" data-alt="Humanoidinis robotas tarp linksmų gala vakaro svečių su taurėmis">
-        <picture><source srcset="nuotraukos/realizacja-gala-wsrod-gosci.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-wsrod-gosci.jpg" alt="Humanoidinis robotas tarp linksmų gala vakaro svečių su taurėmis" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-wsrod-gosci-400.webp 400w, nuotraukos/realizacja-gala-wsrod-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-wsrod-gosci.jpg" alt="Humanoidinis robotas tarp linksmų gala vakaro svečių su taurėmis" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Tarp svečių</figcaption>
       </figure>
-      <!-- KOPIA — bezszwowa pętla -->
-      <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/realizacja-women-in-tech-wybieg.jpg" data-alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką">
-        <picture><source srcset="nuotraukos/realizacja-women-in-tech-wybieg.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-women-in-tech-wybieg.jpg" alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką" class="strip-img" /></picture>
+            <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/realizacja-women-in-tech-wybieg.jpg" data-alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką">
+        <picture><source srcset="nuotraukos/realizacja-women-in-tech-wybieg-400.webp 400w, nuotraukos/realizacja-women-in-tech-wybieg.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-women-in-tech-wybieg.jpg" alt="Humanoidinis robotas ant rožinio podiumo Women in Tech Summit renginyje prieš publiką" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Women in Tech Summit</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-gala-zdjecia-gosci.jpg" data-alt="Gala vakaro svečiai fotografuoja humanoidinį robotą prie rėmėjų sienos">
-        <picture><source srcset="nuotraukos/realizacja-gala-zdjecia-gosci.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-zdjecia-gosci.jpg" alt="Gala vakaro svečiai fotografuoja humanoidinį robotą prie rėmėjų sienos" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-zdjecia-gosci-400.webp 400w, nuotraukos/realizacja-gala-zdjecia-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-zdjecia-gosci.jpg" alt="Gala vakaro svečiai fotografuoja humanoidinį robotą prie rėmėjų sienos" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Svečiai fotografuoja</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-robot-w-deszczu.jpg" data-alt="Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį">
-        <picture><source srcset="nuotraukos/realizacja-robot-w-deszczu.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-robot-w-deszczu.jpg" alt="Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-robot-w-deszczu-400.webp 400w, nuotraukos/realizacja-robot-w-deszczu.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-robot-w-deszczu.jpg" alt="Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Ir per lietų</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item ">
@@ -650,29 +637,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Logotipas ir QR kodas · 0 €</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/realizacja-lexai-ulica.jpg" data-alt="Humanoidinis robotas su LEX AI ženklinimu ir portfeliu senamiesčio gatvelėje">
-        <picture><source srcset="nuotraukos/realizacja-lexai-ulica.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-lexai-ulica.jpg" alt="Humanoidinis robotas su LEX AI ženklinimu ir portfeliu senamiesčio gatvelėje" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-lexai-ulica-400.webp 400w, nuotraukos/realizacja-lexai-ulica.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-lexai-ulica.jpg" alt="Humanoidinis robotas su LEX AI ženklinimu ir portfeliu senamiesčio gatvelėje" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Rinkodara mieste</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="nuotraukos/realizacja-gala-palac.jpg" data-alt="Humanoidinis robotas smokingu rūmų pokylių salėje">
-        <picture><source srcset="nuotraukos/realizacja-gala-palac.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-palac.jpg" alt="Humanoidinis robotas smokingu rūmų pokylių salėje" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-palac-400.webp 400w, nuotraukos/realizacja-gala-palac.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-palac.jpg" alt="Humanoidinis robotas smokingu rūmų pokylių salėje" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Rūmų interjerai</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="nuotraukos/realizacja-spotkanie-biznesowe.jpg" data-alt="Humanoidinis robotas su įmonės marškinėliais terasoje verslo susitikime">
-        <picture><source srcset="nuotraukos/realizacja-spotkanie-biznesowe.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-spotkanie-biznesowe.jpg" alt="Humanoidinis robotas su įmonės marškinėliais terasoje verslo susitikime" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-spotkanie-biznesowe-400.webp 400w, nuotraukos/realizacja-spotkanie-biznesowe.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-spotkanie-biznesowe.jpg" alt="Humanoidinis robotas su įmonės marškinėliais terasoje verslo susitikime" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Verslo susitikimai</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="nuotraukos/realizacja-gala-wsrod-gosci.jpg" data-alt="Humanoidinis robotas tarp linksmų gala vakaro svečių su taurėmis">
-        <picture><source srcset="nuotraukos/realizacja-gala-wsrod-gosci.webp" type="image/webp" />
-        <img src="nuotraukos/realizacja-gala-wsrod-gosci.jpg" alt="Humanoidinis robotas tarp linksmų gala vakaro svečių su taurėmis" class="strip-img" /></picture>
+        <picture><source srcset="nuotraukos/realizacja-gala-wsrod-gosci-400.webp 400w, nuotraukos/realizacja-gala-wsrod-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="nuotraukos/realizacja-gala-wsrod-gosci.jpg" alt="Humanoidinis robotas tarp linksmų gala vakaro svečių su taurėmis" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Tarp svečių</figcaption>
       </figure>
     </div>
   </div>
-  <!-- Pas kluczowych atutów pod galerią -->
-  <div class="mt-10 grid gap-3 sm:grid-cols-3">
+    <div class="mt-10 grid gap-3 sm:grid-cols-3">
     <div class="reveal rounded-2xl border border-line-mid bg-surface-2 p-5" style="--d:.05s">
       <p class="font-display text-3xl font-700 text-white"><span data-count="10" data-suffix="×">0</span></p>
       <p class="mt-1 text-[13px] text-neutral-400">daugiau dėmesio nei bet kuri kita pramoga</p>
@@ -698,9 +684,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     MOŻLIWOŚCI ROBOTA — co potrafi i dlaczego to się opłaca
-     ══════════════════════════════════════════════════════ -->
 <section id="mozliwosci" class="relative overflow-hidden border-t border-line py-24 md:py-32">
   <div class="pointer-events-none absolute right-0 top-1/4 -z-10 h-[28rem] w-[42rem] rounded-full bg-violet/10 blur-[140px]"></div>
 
@@ -717,11 +700,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
     </div>
 
-    <!-- Dwie kluczowe zdolności -->
-    <div class="grid gap-4 lg:grid-cols-2">
+        <div class="grid gap-4 lg:grid-cols-2">
 
-      <!-- Mowa i rozmowa -->
-      <article class="reveal group relative overflow-hidden rounded-[28px] border border-accent/30 bg-surface-2 p-7 transition-all duration-500 hover:border-accent/60 md:p-9" style="--d:.05s">
+            <article class="reveal group relative overflow-hidden rounded-[28px] border border-accent/30 bg-surface-2 p-7 transition-all duration-500 hover:border-accent/60 md:p-9" style="--d:.05s">
         <div class="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-accent/12 blur-3xl transition-transform duration-700 group-hover:scale-150"></div>
 
         <div class="relative">
@@ -737,8 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Pasitinka svečius, atsako į klausimus, juokauja ir pristato programos punktus — natūralia kalba, be dirbtinio robotiško skambesio. Žmonės užkalbina jį iš smalsumo, o lieka ilgesniam pokalbiui.
           </p>
 
-          <!-- Przykładowa rozmowa -->
-          <div class="mt-6 space-y-2.5 rounded-2xl border border-line-mid bg-ink/50 p-4">
+                    <div class="mt-6 space-y-2.5 rounded-2xl border border-line-mid bg-ink/50 p-4">
             <p class="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-sm bg-surface-3 px-4 py-2.5 text-[13px] text-neutral-300">
               Pašoksi su manimi?
             </p>
@@ -753,8 +733,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </article>
 
-      <!-- Osobowość i wiedza -->
-      <article class="reveal group relative flex flex-col overflow-hidden rounded-[28px] border border-line-mid bg-surface-2 p-7 transition-all duration-500 hover:border-accent/40 md:p-9" style="--d:.12s">
+            <article class="reveal group relative flex flex-col overflow-hidden rounded-[28px] border border-line-mid bg-surface-2 p-7 transition-all duration-500 hover:border-accent/40 md:p-9" style="--d:.12s">
         <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-line-hi bg-surface-3 text-accent">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6" aria-hidden="true">
             <path d="M12 3a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4z" stroke-linecap="round"/>
@@ -782,8 +761,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </article>
     </div>
 
-    <!-- Pozostałe zdolności -->
-    <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
       <article class="reveal group flex flex-col rounded-[24px] border border-line-mid bg-surface/70 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.05s">
         <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line-hi bg-surface-3 text-accent">
@@ -841,10 +819,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </article>
     </div>
 
-    <!-- Domknięcie -->
-    <div class="reveal mt-10 flex flex-col items-center gap-4 rounded-[24px] border border-line bg-surface/50 px-7 py-8 text-center md:flex-row md:justify-between md:text-left" style="--d:.1s">
+        <div class="reveal mt-10 flex flex-col items-center gap-4 rounded-[24px] border border-line bg-surface/50 px-7 py-8 text-center md:flex-row md:justify-between md:text-left" style="--d:.1s">
       <p class="max-w-2xl text-[15px] leading-relaxed text-neutral-300">
-        Užtenka vieno pokalbio — pasakote, kokį įspūdį norite padaryti, o mes paruošiame balsą, charakterį ir scenarijų. <span class="text-white">Viskas nuomos kainoje.</span>
+        Užtenka vieno pokalbio — pasakote, kokį įspūdį norite padaryti, o mes paruošiame balsą, charakterį ir scenarijų. <span class="text-white">Tai nuomos standartas, o ne mokamas priedas.</span>
       </p>
       <a href="#kontakt" class="inline-flex shrink-0 items-center gap-2 rounded-2xl bg-white px-7 py-4 font-display text-sm font-700 uppercase tracking-wider text-ink transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_36px_rgba(111,214,255,.4)]">
         Aptarkime jūsų scenarijų
@@ -854,9 +831,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     4. CENNIK — kompaktowa karta + upsell + rabat
-     ══════════════════════════════════════════════════════ -->
 <section id="cennik" class="relative overflow-hidden border-y border-line py-24 md:py-32">
   <div class="pointer-events-none absolute left-1/2 top-0 -z-10 h-[30rem] w-[60rem] -translate-x-1/2 rounded-full bg-accent/10 blur-[140px]"></div>
 
@@ -872,8 +846,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
     </div>
 
-    <!-- Wybór długości realizacji -->
-    <div class="mb-5 grid gap-3 sm:grid-cols-3">
+        <div class="mb-5 grid gap-3 sm:grid-cols-3">
       <div class="reveal rounded-2xl border border-line-mid bg-surface/70 p-5 transition duration-500 hover:-translate-y-1 hover:border-line-hi" style="--d:.02s">
         <p class="text-[10px] font-600 uppercase tracking-widest text-neutral-500">Trumpiau nei diena</p>
         <p class="mt-2 font-display text-xl font-700 text-white">Kelios valandos</p>
@@ -882,7 +855,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="reveal rounded-2xl border border-accent/50 bg-accent/[.07] p-5 shadow-[0_0_30px_rgba(111,214,255,.12)] transition duration-500 hover:-translate-y-1" style="--d:.08s">
         <p class="text-[10px] font-600 uppercase tracking-widest text-accent">Dažniausiai renkamasi</p>
         <p class="mt-2 font-display text-xl font-700 text-white">Visa diena</p>
-        <p class="mt-1.5 text-[13px] leading-relaxed text-neutral-300">Pilna paslauga nuo paruošimo iki finalo. <span class="font-600 text-white">nuo 2 500 €</span></p>
+        <p class="mt-1.5 text-[13px] leading-relaxed text-neutral-300">Pilna paslauga nuo paruošimo iki finalo. <span class="font-600 text-white">nuo 2 100 €</span></p>
       </div>
       <div class="reveal rounded-2xl border border-line-mid bg-surface/70 p-5 transition duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.14s">
         <p class="text-[10px] font-600 uppercase tracking-widest text-neutral-500">Dvi dienos ir daugiau</p>
@@ -893,48 +866,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="grid gap-4 lg:grid-cols-[1.6fr_1fr]">
 
-      <!-- Karta główna -->
-      <article class="reveal group relative overflow-hidden rounded-[28px] border border-accent/40 bg-surface-2 p-8 shadow-[0_0_70px_rgba(111,214,255,.12)] transition-all duration-500 hover:border-accent/70 hover:shadow-[0_0_90px_rgba(111,214,255,.22)] md:p-10" style="--d:.05s">
+            <article class="reveal group relative overflow-hidden rounded-[28px] border border-accent/40 bg-surface-2 p-8 shadow-[0_0_70px_rgba(111,214,255,.12)] transition-all duration-500 hover:border-accent/70 hover:shadow-[0_0_90px_rgba(111,214,255,.22)] md:p-10" style="--d:.05s">
         <div class="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-accent/15 blur-3xl transition-transform duration-700 group-hover:scale-150"></div>
 
         <div class="flex flex-wrap items-center justify-between gap-4">
-          <span class="rounded-full bg-accent px-4 py-1.5 text-[11px] font-700 uppercase tracking-widest text-ink">Viskas kainoje</span>
+          <span class="rounded-full bg-accent px-4 py-1.5 text-[11px] font-700 uppercase tracking-widest text-ink">Pradinė kaina</span>
           <span class="text-[12px] font-600 uppercase tracking-widest text-neutral-500">Unitree G1 · visa diena</span>
         </div>
 
         <div class="mt-8 flex flex-wrap items-end gap-x-4 gap-y-1">
           <span class="font-display text-xl font-600 text-neutral-500">nuo</span>
-          <span class="font-display text-6xl font-700 leading-none tracking-[-.03em] text-white md:text-7xl">2 500</span>
+          <span class="font-display text-6xl font-700 leading-none tracking-[-.03em] text-white md:text-7xl">2 100</span>
           <span class="font-display text-3xl font-600 text-neutral-400">€</span>
         </div>
         <p class="mt-3 text-sm text-neutral-400">
-          Už visą realizacijos dieną. Galutinė kaina priklauso tik nuo renginio vietos.
+          Pradinė kaina už visą realizacijos dieną (be PVM). Galutinę sumą pateikiame pasiūlyme — ji priklauso nuo renginio vietos ir apimties.
         </p>
 
-        <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+        <p class="mt-8 text-[11px] font-600 uppercase tracking-widest text-neutral-500">Į pradinę kainą įeina</p>
+        <ul class="mt-3 grid gap-3 sm:grid-cols-2">
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Robotas visą dieną</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Sertifikuotas operatorius</li>
-          <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Transportas visoje Lietuvoje</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Ženklinimas: logotipas ir QR kodas</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Choreografijos ir bendravimas</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Scenarijus ir konfigūracija</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Civilinės atsakomybės draudimas</li>
         </ul>
 
         <p class="mt-7 rounded-2xl border border-accent/30 bg-accent/10 px-5 py-3.5 text-center text-sm text-white">
-          Į kainą įeina absoliučiai viskas. <strong class="font-700 text-accent">JOKIŲ priemokų.</strong>
+          Atvykimą įvertiname pagal renginio vietą. <strong class="font-700 text-accent">Jokių paslėptų kaštų.</strong>
         </p>
 
         <a href="#kontakt"
            class="cta-shine group/btn mt-7 flex w-full items-center justify-center gap-3 rounded-2xl px-8 py-5 font-display text-base font-700 uppercase tracking-wider text-ink transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(111,214,255,.45)]">
-          Gaukite nemokamą kainą
+          Gaukite nemokamą sąmatą
           <span class="transition-transform duration-300 group-hover/btn:translate-x-1.5">→</span>
         </a>
       </article>
 
-      <!-- Kolumna boczna -->
-      <div class="flex flex-col gap-4">
-        <!-- Upsell: robot-pies -->
-        <article class="reveal group relative overflow-hidden rounded-[28px] border border-line-mid bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.12s">
+            <div class="flex flex-col gap-4">
+                <article class="reveal group relative overflow-hidden rounded-[28px] border border-line-mid bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.12s">
           <picture>
             <source srcset="nuotraukos/robot-pies-branding-klienta.webp" type="image/webp" />
             <img src="nuotraukos/robot-pies-branding-klienta.jpg" loading="lazy" width="900" height="1200"
@@ -954,8 +925,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </article>
 
-        <!-- Rabat -->
-        <article class="reveal group relative flex-1 overflow-hidden rounded-[28px] border border-dashed border-accent/40 bg-gradient-to-br from-accent/[.08] to-transparent p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/70" style="--d:.18s">
+                <article class="reveal group relative flex-1 overflow-hidden rounded-[28px] border border-dashed border-accent/40 bg-gradient-to-br from-accent/[.08] to-transparent p-7 transition-all duration-500 hover:-translate-y-1 hover:border-accent/70" style="--d:.18s">
           <span class="text-[10px] font-600 uppercase tracking-widest text-accent">Nuolaida ilgesnėms realizacijoms</span>
           <p class="mt-4 font-display text-5xl font-700 leading-none text-white">−15%</p>
           <p class="mt-3 text-[13px] leading-relaxed text-neutral-300">
@@ -967,9 +937,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     5. PROCES — oś czasu z animowaną linią
-     ══════════════════════════════════════════════════════ -->
 <section id="proces" class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
   <div class="mb-14 text-center">
     <p class="reveal mb-4 text-[11px] font-600 uppercase tracking-[.18em] text-accent">Kaip dirbame</p>
@@ -982,8 +949,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="relative">
-    <!-- animowana linia -->
-    <div class="absolute left-6 top-0 h-full w-px bg-gradient-to-b from-accent via-accent/40 to-transparent track-line md:left-0 md:top-6 md:h-px md:w-full md:bg-gradient-to-r"></div>
+        <div class="absolute left-6 top-0 h-full w-px bg-gradient-to-b from-accent via-accent/40 to-transparent track-line md:left-0 md:top-6 md:h-px md:w-full md:bg-gradient-to-r"></div>
 
     <ol class="relative grid gap-8 md:grid-cols-5 md:gap-4">
       <li class="reveal pl-16 md:pl-0" style="--d:.05s">
@@ -1014,8 +980,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ol>
   </div>
 
-  <!-- Opinie: kompaktowy pas -->
-  <div class="mt-20 grid gap-4 md:grid-cols-3">
+    <div class="mt-20 grid gap-4 md:grid-cols-3">
     <blockquote class="reveal rounded-2xl border border-line bg-surface/60 p-6 transition-colors duration-500 hover:border-line-hi" style="--d:.05s">
       <p class="text-[14px] leading-relaxed text-neutral-300">„Rezultatas pranoko drąsiausius lūkesčius. Susidomėjimas buvo milžiniškas visą renginio laiką.“</p>
       <footer class="mt-4 text-[12px] text-neutral-500">Karolina M. · rinkodara, IT sektorius</footer>
@@ -1031,9 +996,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     6. FAQ — kompaktowy akordeon
-     ══════════════════════════════════════════════════════ -->
 <section id="faq" class="border-t border-line py-24 md:py-28">
   <div class="mx-auto max-w-3xl px-5 md:px-8">
     <h2 class="reveal mb-10 text-center font-display text-3xl font-700 tracking-[-.02em] text-white md:text-4xl">Prieš paklausiant</h2>
@@ -1043,7 +1005,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="font-600 text-white">Kiek tiksliai kainuoja nuoma?</span>
           <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
         </button>
-        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Nuo 2 500 € už visą realizacijos dieną — galutinė suma priklauso tik nuo renginio vietos. Robotą galima išsinuomoti ir trumpesniam pasirodymui, pvz. kelioms valandoms per konferencijos pertrauką — tada kainą skaičiuojame individualiai ir visada pigiau nei visa diena. Dviejų dienų ir ilgesnėms realizacijoms taikoma 15% nuolaida kiekvienai dienai. Į kainą įeina transportas, operatorius, ženklinimas ir draudimas; roboto šuo — papildomai 690 € už dieną.</p></div>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Nuo 2 100 € be PVM už visą realizacijos dieną — tai pradinė kaina, o galutinė suma priklauso nuo renginio vietos ir apimties; ją pateikiame pasiūlyme. Į pradinę kainą įeina sertifikuotas operatorius, ženklinimas, scenarijaus paruošimas ir civilinės atsakomybės draudimas — atvykimą įvertiname pagal vietą. Robotą galima išsinuomoti ir trumpesniam pasirodymui, pvz. kelioms valandoms per konferencijos pertrauką — tada kainą skaičiuojame individualiai ir visada pigiau nei visa diena. Dviejų dienų ir ilgesnėms realizacijoms taikoma 15% nuolaida kiekvienai dienai. Roboto šuo — papildomai 690 € už dieną.</p></div>
       </div>
       <div class="faq-item" open-state="0">
         <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
@@ -1078,15 +1040,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="font-600 text-white">Ar atvažiuojate į mano miestą?</span>
           <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
         </button>
-        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Taip — į kiekvieną Lietuvos miestą, be priemokų ir be kilometrų limito. Nuo Klaipėdos iki Visagino, nuo Palangos iki Druskininkų.</p></div>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Taip — atvažiuojame į kiekvieną Lietuvos miestą, nuo Klaipėdos iki Visagino, nuo Palangos iki Druskininkų. Atvykimo kainą suderiname rengiant pasiūlymą, priklausomai nuo renginio vietos.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════
-     7. FINAŁOWE CTA + kompaktowy formularz
-     ══════════════════════════════════════════════════════ -->
 <section id="kontakt" class="relative overflow-hidden border-t border-line py-24 md:py-32">
   <div class="pointer-events-none absolute inset-0 -z-10">
     <div class="absolute left-1/2 top-1/2 h-[36rem] w-[70rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/12 blur-[150px] animate-aurora"></div>
@@ -1120,18 +1079,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
 
-    <!-- Formularz -->
-    <form id="contactForm" class="reveal rounded-[28px] border border-line-mid bg-surface-2/80 p-7 backdrop-blur md:p-9" style="--d:.1s" novalidate>
+        <form id="contactForm" class="reveal rounded-[28px] border border-line-mid bg-surface-2/80 p-7 backdrop-blur md:p-9" style="--d:.1s" novalidate>
 
-      <!-- Wskaźnik kroków -->
-      <div class="mb-7 flex items-center gap-3 text-[11px] font-600 uppercase tracking-widest">
+            <div class="mb-7 flex items-center gap-3 text-[11px] font-600 uppercase tracking-widest">
         <span id="stepInd1" class="text-accent transition-colors">01 — Kontaktiniai duomenys</span>
         <span class="text-neutral-700">/</span>
         <span id="stepInd2" class="text-neutral-600 transition-colors">02 — Jūsų renginys</span>
       </div>
 
-      <!-- KROK 1 -->
-      <div id="formStep1" class="transition-opacity duration-200">
+            <div id="formStep1" class="transition-opacity duration-200">
         <div class="grid gap-4 sm:grid-cols-2">
           <label class="block">
             <span class="mb-2 block text-[11px] font-600 uppercase tracking-widest text-neutral-500">Vardas ir pavardė *</span>
@@ -1158,8 +1114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
       </div>
 
-      <!-- KROK 2 -->
-      <div id="formStep2" class="hidden transition-opacity duration-200" aria-hidden="true">
+            <div id="formStep2" class="hidden transition-opacity duration-200" aria-hidden="true">
         <div class="grid gap-4 sm:grid-cols-2">
           <label class="block">
             <span class="mb-2 block text-[11px] font-600 uppercase tracking-widest text-neutral-500">Planuojama renginio data</span>
@@ -1183,7 +1138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
           <button type="button" id="btnBack" class="rounded-2xl border border-line-hi px-6 py-5 font-display text-sm font-600 uppercase tracking-wider text-neutral-400 transition hover:border-accent/50 hover:text-white sm:w-auto">← Atgal</button>
           <button type="submit" class="cta-shine group flex w-full items-center justify-center gap-3 rounded-2xl px-8 py-5 font-display text-base font-700 uppercase tracking-wider text-ink transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(111,214,255,.45)] flex-1">
-            Siųsti ir gauti nemokamą kainą
+            Siųsti ir gauti nemokamą sąmatą
             <span class="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
           </button>
         </div>
@@ -1196,7 +1151,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </main>
 
-<!-- ══════════ FOOTER ══════════ -->
 <footer class="border-t border-line bg-surface/40 px-5 py-14 md:px-8">
   <div class="mx-auto max-w-7xl">
     <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
@@ -1223,8 +1177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <!-- Miasta: SEO, zwinięte -->
-    <details class="mt-10 border-t border-line pt-6">
+        <details class="mt-10 border-t border-line pt-6">
       <summary class="cursor-pointer list-none text-[11px] font-600 uppercase tracking-widest text-neutral-600 transition hover:text-neutral-400">Roboto nuoma jūsų mieste ▾</summary>
       <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-[12px] text-neutral-500">
         <a href="robotu-nuoma-vilnius.html" class="transition hover:text-accent">Vilnius</a>
@@ -1319,15 +1272,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<!-- ══════════ STICKY CTA (mobile) ══════════ -->
 <div class="fixed inset-x-0 bottom-0 z-50 border-t border-line-mid bg-ink/95 p-3 backdrop-blur md:hidden">
   <a href="#kontakt" class="cta-shine flex items-center justify-center gap-2 rounded-xl px-6 py-4 font-display text-sm font-700 uppercase tracking-wider text-ink">
-    Nemokama kaina →
+    Nemokama sąmata →
   </a>
 </div>
 <div class="h-20 md:hidden"></div>
 
-<!-- Baner cookie -->
 <div class="cookies" id="cookies" aria-live="polite">
   <p class="flex-1 text-[13px] leading-relaxed text-neutral-400" style="min-width:220px">
     Naudojame slapukus analizės tikslais.
@@ -1337,7 +1288,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </button>
 </div>
 
-<!-- Lightbox galerii -->
 <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Padidinta nuotrauka">
   <button class="lb-close" id="lbClose" aria-label="Uždaryti">×</button>
   <button class="lb-btn lb-prev" id="lbPrev" aria-label="Ankstesnė nuotrauka">‹</button>
@@ -1576,7 +1526,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
 </script>
-<!-- Albacross -->
 <script>window._nQc="89159321";</script>
 <script async src="https://serve.albacross.com/track.js"></script>
 </body>

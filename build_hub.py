@@ -16,16 +16,16 @@ SLUG = "robotu-nuoma.html"
 FAQ = [
     ("Kas yra robotų nuoma ir kuo ji skiriasi nuo pirkimo?",
      "Nuomos atveju vienam renginiui gaunate ne tik įrangą, bet ir komandą: robotą, operatorių, "
-     "transportą, paruošimą ir ženklinimą. Perkant robotą prie kainos prisideda mokymai, servisas, "
+     "paruošimą ir ženklinimą. Perkant robotą prie kainos prisideda mokymai, servisas, "
      "atsarginės dalys, sandėliavimas ir draudimas — todėl iki maždaug 10–15 renginių per metus nuoma "
      "beveik visada pigesnė."),
     ("Kokiuose Lietuvos miestuose nuomojate robotus?",
      "Visoje Lietuvoje. Turime atskirus puslapius 28 miestams — nuo Vilniaus ir Kauno iki Mažeikių, "
      "Anykščių ar Birštono — bet atvažiuojame ir į bet kurią kitą vietą, įskaitant sodybas bei "
      "gamyklų teritorijas."),
-    ("Ar transportas kainuoja papildomai?",
-     "Ne. Transportas įskaičiuotas į kainą visoje Lietuvoje — be kilometrų limito, be minimalaus "
-     "atstumo ir be priemokos už tolimesnius miestus."),
+    ("Kiek kainuoja atvykimas?",
+     "Atvykimą vertiname pagal renginio vietą ir sumą nurodome pasiūlyme kartu su nuomos kaina. "
+     "Dirbame visoje Lietuvoje."),
     ("Kokiems renginiams tinka robotų nuoma?",
      "Dažniausiai — parodoms, konferencijoms, gala vakarams, įmonių šventėms, atidarymams ir produktų "
      "pristatymams. Taip pat vestuvėms, gimtadieniams, mokyklų renginiams, sporto varžyboms ir "
@@ -77,8 +77,8 @@ def build():
     ld = [
         organization_ld(),
         service_ld("Robotų nuoma Lietuvoje",
-                   "Humanoidinių robotų Unitree G1 nuoma renginiams visoje Lietuvoje su operatoriumi, "
-                   "transportu ir ženklinimu.", url),
+                   "Humanoidinių robotų Unitree G1 nuoma renginiams visoje Lietuvoje su operatoriumi "
+                   "ir ženklinimu.", url),
         f"""{{
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -103,8 +103,8 @@ def build():
 
     html = head(
         title="Robotų nuoma Lietuvoje — visi miestai ir paslaugos | 33bots",
-        description="Robotų nuoma visoje Lietuvoje: humanoidinis Unitree G1 su operatoriumi, "
-                    "transportu ir ženklinimu. Visi miestai ir paslaugų formatai.",
+        description="Robotų nuoma visoje Lietuvoje: humanoidinis Unitree G1 su operatoriumi "
+                    "ir ženklinimu. Visi miestai ir paslaugų formatai.",
         slug=SLUG,
         keywords="robotų nuoma, robotų nuoma Lietuvoje, roboto nuoma, humanoidinių robotų nuoma, "
                  "robotas renginiui",
@@ -124,7 +124,7 @@ def build():
         <a href="#miestai" class="btn-ghost">Rasti savo miestą ↓</a>
       </div>
       <div class="hero__trust">
-        <span class="hero__trust-item">✓ Transportas 0 €</span>
+        <span class="hero__trust-item">✓ Atvykimas visoje Lietuvoje</span>
         <span class="hero__trust-item">✓ Operatorius kainoje</span>
         <span class="hero__trust-item">✓ Ženklinimas be priemokų</span>
         <span class="hero__trust-item">✓ Atsakymas per 24 val.</span>

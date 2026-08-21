@@ -201,6 +201,15 @@ def rewrite_jsonld(doc):
     return doc
 
 
+def strip_comments(doc):
+    """Pašalina lenkiškus kūrimo komentarus iš galutinio HTML.
+
+    Tai kūrėjų pastabos lenkų kalba — lietuviškame puslapyje jos neturi prasmės,
+    o kartu sutaupoma apie 3,8 KB.
+    """
+    return re.sub(r"<!--(?!\[if).*?-->\n?", "", doc, flags=re.S)
+
+
 def swap_prices(doc):
     """Lenkiškas kainas keičia lietuviškomis visur — tekste, meta, JSON-LD ir skripte.
 
@@ -216,8 +225,11 @@ def swap_prices(doc):
 
 def swap_photos(doc):
     """Nuotraukų keliai — iš šaknies į nuotraukos/ katalogą (įskaitant lightbox data-full)."""
-    doc = re.sub(r'(src|srcset|data-full)="(realizacja-[a-z-]+|robot-pies-branding-klienta)\.(jpg|webp)"',
-                 r'\1="nuotraukos/\2.\3"', doc)
+    # srcset gali turėti kelis variantus (400w, 760w), todėl prefiksą dedame kiekvienam
+    # failo vardui atskirai, o ne visam atributui.
+    doc = re.sub(r'\b((?:realizacja|robot-pies)[a-z0-9-]*\.(?:jpg|webp))\b',
+                 r'nuotraukos/\1', doc)
+    doc = doc.replace("nuotraukos/nuotraukos/", "nuotraukos/")
     # Juostos nuotraukos slenka horizontaliai ir niekada nepatenka į matomą sritį,
     # todėl lazy įkėlimas joms nesuveikia — paliekame įprastą įkėlimą.
     doc = re.sub(r'(<img[^>]*class="strip-img"[^>]*)\sloading="lazy"', r'\1', doc)
@@ -238,6 +250,7 @@ def build():
     doc = rewrite_jsonld(doc)
 
     doc = swap_prices(doc)
+    doc = strip_comments(doc)
 
     # skriptų tekstai (formos pranešimai)
     for pl, lt in JS_TEXTS.items():

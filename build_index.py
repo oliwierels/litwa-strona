@@ -26,7 +26,7 @@ FAQ = [
      "ir žmones. Papildomai visą laiką budi mūsų operatorius, o veiklai taikoma civilinės "
      "atsakomybės draudimo apsauga."),
     ("Ar nuomojate robotą visoje Lietuvoje?",
-     "Taip — dirbame visoje Lietuvoje ir transportas įskaičiuotas į kainą, nesvarbu, ar renginys "
+     "Taip — dirbame visoje Lietuvoje, nesvarbu, ar renginys "
      "Vilniuje, Klaipėdoje, ar mažesniame mieste. Nėra mokesčio už kilometrus ir nėra minimalaus "
      "atstumo."),
     ("Kokių techninių sąlygų reikia vietoje?",
@@ -44,7 +44,7 @@ FAQ = [
      "Robotas dirba ciklais su trumpomis pertraukomis baterijai pakeisti — svečiams tai nepastebima, "
      "nes operatorius pertraukas suderina su renginio programa."),
     ("Kuo 33bots skiriasi nuo kitų nuomos įmonių?",
-     "Į kainą visada įeina visas paketas: nemokamas transportas be kilometrų limito, sertifikuotas "
+     "Į pradinę kainą visada įeina: sertifikuotas "
      "operatorius visą renginį ir nemokamas roboto ženklinimas. Dirbame su savo įranga — be tarpininkų, "
      "o mūsų projektai Lenkijoje buvo rodomi nacionalinėje televizijoje."),
 ]
@@ -68,7 +68,7 @@ CITY_CHIPS = "\n".join(
 
 TITLE = "Humanoidinių robotų nuoma renginiams Lietuvoje | 33bots"
 DESC = ("Humanoidinio roboto Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje "
-        "Lietuvoje. Transportas, operatorius ir ženklinimas kainoje.")
+        "Lietuvoje. Operatorius ir ženklinimas kainoje; atvykimas — pagal vietą.")
 
 
 def build():
@@ -149,14 +149,14 @@ def build():
     <div class="hero__content">
       <p class="hero__eyebrow">Humanoidinių robotų nuoma · Lietuva · Robotas renginiui</p>
       <h1 class="hero__title">Humanoidinių<br />robotų nuoma<br /><em>Unitree G1.</em></h1>
-      <p class="hero__sub">Humanoidinio roboto Unitree G1 nuoma renginiui, konferencijai ir parodai visoje Lietuvoje. Vaikšto, gestikuliuoja, sustabdo minią. Nemokamas transportas — Vilnius, Kaunas, Klaipėda, Šiauliai, Panevėžys ir visa šalis.</p>
+      <p class="hero__sub">Humanoidinio roboto Unitree G1 nuoma renginiui, konferencijai ir parodai visoje Lietuvoje. Vaikšto, gestikuliuoja, sustabdo minią. Atvykimas visoje Lietuvoje — Vilnius, Kaunas, Klaipėda, Šiauliai, Panevėžys ir visa šalis.</p>
       <div class="hero__ctas">
         <a href="#kontaktai" class="btn-primary">Rezervuoti datą</a>
         <a href="#paslaugos" class="btn-ghost">Pamatyti pasiūlymą ↓</a>
       </div>
       <div class="hero__trust">
         <span class="hero__trust-item">✓ Skaidri kaina</span>
-        <span class="hero__trust-item">✓ Nemokamas transportas</span>
+        <span class="hero__trust-item">✓ Atvykimas visoje Lietuvoje</span>
         <span class="hero__trust-item">✓ Operatorius kainoje</span>
         <span class="hero__trust-item">✓ Ženklinimas be priemokų</span>
       </div>
@@ -362,7 +362,7 @@ def build():
       <div class="transport-callout__glow" aria-hidden="true"></div>
       <div class="transport-callout__left">
         <span class="transport-callout__eyebrow">Mūsų standartas</span>
-        <p class="transport-callout__claim"><em>Nemokamas transportas</em><br />visoje<br />Lietuvoje.</p>
+        <p class="transport-callout__claim"><em>Atvykimas visoje Lietuvoje</em><br />visoje<br />Lietuvoje.</p>
       </div>
       <div class="transport-callout__right">
         <p class="transport-callout__note">Jokių priemokų už kilometrus, jokio minimalaus atstumo, jokių paslėptų kaštų. Atvežame robotą į kiekvieną renginį — nuo Klaipėdos iki Visagino, nuo Palangos iki Druskininkų — ir už tai nepridedame nė vieno euro.</p>
@@ -451,7 +451,7 @@ def build():
           <li>Robotas iki 3 val.</li>
           <li>Operatorius vietoje</li>
           <li>Trumpas pasirodymas</li>
-          <li>Transportas visoje Lietuvoje</li>
+          <li>Operatorius visą renginį</li>
         </ul>
         <a href="#kontaktai" class="tile__link">Klausti kainos →</a>
       </div>
@@ -466,7 +466,7 @@ def build():
           <li>Operatorius + asistentas</li>
           <li>Bendravimas su svečiais</li>
           <li>Ženklinimas (logotipas / QR)</li>
-          <li>Transportas visoje Lietuvoje</li>
+          <li>Operatorius visą renginį</li>
         </ul>
         <a href="#kontaktai" class="tile__link">Klausti kainos →</a>
       </div>
@@ -480,7 +480,7 @@ def build():
           <li>Kelių dienų nuoma</li>
           <li>Skirtas operatorius</li>
           <li>Pilnas pritaikymas</li>
-          <li>Nemokamas transportas visoje Lietuvoje</li>
+          <li>Atvykimas visoje Lietuvoje visoje Lietuvoje</li>
         </ul>
         <a href="#kontaktai" class="tile__link">Klausti kainos →</a>
       </div>

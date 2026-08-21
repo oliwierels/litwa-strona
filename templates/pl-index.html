@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7R7CJ3');</script>
-<!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Wynajem robota humanoidalnego na event — od 5500 zł | 33bots</title>
-<meta name="description" content="Wynajem robota humanoidalnego Unitree G1 na targi, konferencje i gale. Od kilku godzin po realizacje wielodniowe. Cały dzień od 5500 zł — transport, operator i branding w cenie. Zero zaliczki, faktura po evencie." />
+
+<!-- Zasoby krytyczne najpierw: przeglądarka zaczyna je pobierać zanim dojdzie
+     do reszty <head>. Skrypty analityczne czekają na koniec sekcji. -->
+<link rel="preload" as="image" href="robot-g1-960.webp" type="image/webp" fetchpriority="high" />
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin-ext.woff2" crossorigin />
+
+<!-- Fonty hostowane lokalnie — bez łączenia z fonts.googleapis.com i fonts.gstatic.com
+     (dwa handshake'i DNS+TLS mniej na ścieżce krytycznej renderowania).
+     Podzbiory latin + latin-ext (polskie znaki), zmienne, font-display: swap. -->
+<link rel="stylesheet" href="fonts.css" />
+
+<!-- Tailwind skompilowany statycznie (30 KB) — bez CDN, bez JS w runtime.
+     Przebudowa po zmianach w HTML:
+     npx tailwindcss -c tailwind.config.js -i tw-input.css -o assets-redesign.css --minify -->
+<link rel="stylesheet" href="assets-redesign.css" />
+<meta name="description" content="Wynajem robota humanoidalnego Unitree G1 na targi, konferencje i gale. Od kilku godzin po realizacje wielodniowe. Cały dzień od 5500 zł — ostateczną kwotę podajemy w wycenie. Zero zaliczki, faktura po evencie." />
 <link rel="canonical" href="https://33bots.pl/" />
 <meta name="theme-color" content="#050505" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://33bots.pl/" />
 <meta property="og:title" content="Wynajem robota humanoidalnego na event — od 5500 zł | 33bots" />
-<meta property="og:description" content="Unitree G1 na Twoim evencie. Cały dzień od 5500 zł, wszystko w cenie. Zero zaliczki, faktura po wydarzeniu." />
+<meta property="og:description" content="Unitree G1 na Twoim evencie. Cały dzień od 5500 zł — wycena zależy od lokalizacji i zakresu. Zero zaliczki, faktura po wydarzeniu." />
 <meta property="og:image" content="https://33bots.pl/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -36,15 +45,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="alternate" type="application/rss+xml" title="33bots — blog RSS" href="https://33bots.pl/feed.xml" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <script>history.scrollRestoration = 'manual';</script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" />
-<link rel="preload" as="image" href="robot-g1-960.webp" type="image/webp" fetchpriority="high" />
-
-<!-- Tailwind skompilowany statycznie (30 KB) — bez CDN, bez JS w runtime.
-     Przebudowa po zmianach w HTML:
-     npx tailwindcss -c tailwind.config.js -i tw-input.css -o assets-redesign.css --minify -->
-<link rel="stylesheet" href="assets-redesign.css" />
 
 <style>
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -58,6 +58,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     opacity: 1; transform: none;
     transition: opacity .8s cubic-bezier(.16,1,.3,1) var(--d, 0s),
                 transform .8s cubic-bezier(.16,1,.3,1) var(--d, 0s);
+  }
+
+  /* Pierwszy ekran odsłania się animacją CSS od razu przy wczytaniu, bez
+     czekania na IntersectionObserver. Wcześniej obraz robota — czyli element
+     LCP — stał w opacity:0 aż do startu JS, co wypychało LCP do ~2,3 s.
+     Kaskada (--d) zostaje bez zmian, zmienia się tylko to, co ją uruchamia. */
+  #hero .reveal { animation: revealIn .8s cubic-bezier(.16,1,.3,1) var(--d, 0s) both; }
+  @keyframes revealIn {
+    from { opacity: 0; transform: translateY(28px) scale(.985); }
+    to   { opacity: 1; transform: none; }
   }
 
   /* ——— Robot w hero: wtopienie krawędzi kadru w tło ——— */
@@ -181,7 +191,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"Wynajem robota humanoidalnego Unitree G1","description":"Wynajem robota humanoidalnego Unitree G1 na eventy, targi i konferencje w całej Polsce.","url":"https://33bots.pl","image":"https://33bots.pl/robot-g1.jpg","brand":{"@type":"Brand","name":"Unitree"},"offers":{"@type":"AggregateOffer","priceCurrency":"PLN","lowPrice":"5500","highPrice":"6500","availability":"https://schema.org/InStock","url":"https://33bots.pl/#cennik","description":"Cały dzień realizacji z transportem, operatorem i brandingiem w cenie. Możliwy krótszy pokaz (wycena indywidualna) oraz realizacje wielodniowe z rabatem 15% na każdy dzień. Zero dopłat, zero zaliczki, faktura po evencie."},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"3","bestRating":"5","worstRating":"1"}}
+{"@context":"https://schema.org","@type":"Product","name":"Wynajem robota humanoidalnego Unitree G1","description":"Wynajem robota humanoidalnego Unitree G1 na eventy, targi i konferencje w całej Polsce.","url":"https://33bots.pl","image":"https://33bots.pl/robot-g1.jpg","brand":{"@type":"Brand","name":"Unitree"},"offers":{"@type":"AggregateOffer","priceCurrency":"PLN","lowPrice":"5500","availability":"https://schema.org/InStock","url":"https://33bots.pl/#cennik","description":"Cena wyjściowa za cały dzień realizacji — ostateczną kwotę podajemy w wycenie, zależnie od lokalizacji i zakresu eventu. W cenie wyjściowej certyfikowany operator, branding, scenariusz i ubezpieczenie OC; dojazd wyceniamy według lokalizacji. Możliwy krótszy pokaz (wycena indywidualna) oraz realizacje wielodniowe z rabatem 15% na każdy dzień. Zero zaliczki, faktura po evencie."},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"3","bestRating":"5","worstRating":"1"}}
 </script>
 <script type="application/ld+json">
 {
@@ -193,7 +203,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    "name": "Ile dokładnie kosztuje wynajem?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Od 5500 zł za cały dzień realizacji — ostateczna kwota zależy wyłącznie od lokalizacji eventu. Robota wynajmiesz też na krótszy pokaz, np. kilka godzin podczas przerwy konferencyjnej — wtedy wyceniamy indywidualnie i zawsze taniej niż pełny dzień. Przy realizacjach 2-dniowych i dłuższych obowiązuje 15% zniżki na każdy dzień. W cenie transport, operator, branding i ubezpieczenie; robot-pies to dodatkowe 1900 zł za dzień."
+    "text": "Od 5500 zł za cały dzień realizacji — to cena wyjściowa, a ostateczna kwota zależy od lokalizacji i zakresu eventu; podajemy ją w wycenie. W cenie wyjściowej: certyfikowany operator, branding, przygotowanie scenariusza i ubezpieczenie OC — dojazd wyceniamy według lokalizacji. Robota wynajmiesz też na krótszy pokaz, np. kilka godzin podczas przerwy konferencyjnej — wtedy wyceniamy indywidualnie i zawsze taniej niż pełny dzień. Przy realizacjach 2-dniowych i dłuższych obowiązuje 15% zniżki na każdy dzień. Robot-pies to dodatkowe 1900 zł za dzień."
    }
   },
   {
@@ -233,14 +243,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    "name": "Dojeżdżacie do mojego miasta?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Tak — do każdego miasta w Polsce, bez dopłat i bez limitu kilometrów. Od Szczecina po Rzeszów, od Gdańska po Karpacz."
+    "text": "Tak — dojeżdżamy do każdego miasta w Polsce, od Szczecina po Rzeszów, od Gdańska po Karpacz. Koszt dojazdu ustalamy przy wycenie, zależnie od lokalizacji eventu."
    }
   }
  ]
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"33bots – Wynajem Robotów na Eventy i Targi","url":"https://33bots.pl","logo":"https://33bots.pl/logo.png","image":"https://33bots.pl/robot-g1.jpg","telephone":"+48531408004","email":"kontakt@33bots.pl","priceRange":"5500-6500 PLN","areaServed":{"@type":"Country","name":"Poland"},"sameAs":["https://www.facebook.com/33bots","https://www.instagram.com/33bots_/","https://www.linkedin.com/company/33bots","https://www.tiktok.com/@aimforum"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"33bots – Wynajem Robotów na Eventy i Targi","url":"https://33bots.pl","logo":"https://33bots.pl/logo.png","image":"https://33bots.pl/robot-g1.jpg","telephone":"+48531408004","email":"kontakt@33bots.pl","priceRange":"od 5500 PLN","areaServed":{"@type":"Country","name":"Poland"},"sameAs":["https://www.facebook.com/33bots","https://www.instagram.com/33bots_/","https://www.linkedin.com/company/33bots","https://www.tiktok.com/@aimforum"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HowTo","name":"Jak wynająć robota humanoidalnego — 5 kroków bez zaliczki","step":[
@@ -277,7 +287,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "alternateName": "33bots — wynajem robotów humanoidalnych",
     "url": "https://33bots.pl/",
     "inLanguage": "pl-PL",
-    "description": "Wynajem robotów humanoidalnych Unitree G1 na eventy, targi i konferencje w całej Polsce. Darmowy transport, certyfikowany operator w cenie.",
+    "description": "Wynajem robotów humanoidalnych Unitree G1 na eventy, targi i konferencje w całej Polsce. Certyfikowany operator w cenie, dojazd wyceniany według lokalizacji.",
     "publisher": {
       "@type": "Organization",
       "name": "33bots",
@@ -289,6 +299,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
   </script>
+
+<!-- Google Tag Manager — na końcu <head>, żeby nie opóźniał wykrycia CSS,
+     fontów i obrazu hero. Ładowany po pierwszym malowaniu strony. -->
+<script>
+  (function (w, d, s, l, i) {
+    var started = false;
+    function loadGTM() {
+      if (started) return; started = true;
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    }
+    // po załadowaniu strony albo przy pierwszej interakcji — zależnie co pierwsze
+    if (d.readyState === 'complete') loadGTM();
+    else w.addEventListener('load', loadGTM, { once: true });
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
+      w.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  })(window, document, 'script', 'dataLayer', 'GTM-MR7R7CJ3');
+</script>
 </head>
 
 <body class="grain bg-ink font-sans text-neutral-200 antialiased selection:bg-accent selection:text-ink">
@@ -324,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ══════════════════════════════════════════════════════
      1. HERO — animowane tło (aurora + siatka + orbity), parallax
      ══════════════════════════════════════════════════════ -->
-<section class="relative flex min-h-[100svh] items-center overflow-hidden px-5 pt-24 pb-14 md:px-8">
+<section id="hero" class="relative flex min-h-[100svh] items-center overflow-hidden px-5 pt-24 pb-14 md:px-8">
 
   <!-- Warstwy tła -->
   <div class="pointer-events-none absolute inset-0 -z-10">
@@ -359,14 +391,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <p class="reveal mt-5 max-w-lg leading-relaxed text-neutral-400 md:text-lg" style="--d:.2s">
         Humanoid Unitree G1 na Twoich targach, konferencji albo gali.
-        Cały dzień pokazu — <span class="text-white">transport, operator i branding w cenie</span>.
+        Cały dzień pokazu — <span class="text-white">z certyfikowanym operatorem i Twoim brandingiem</span>.
       </p>
 
       <!-- Kotwica cenowa -->
       <div class="reveal mt-6 flex items-end gap-4 border-l-2 border-accent/60 pl-5" style="--d:.26s">
         <div>
           <p class="font-display text-4xl font-700 leading-none text-white">od 5 500 zł</p>
-          <p class="mt-1.5 text-xs font-600 uppercase tracking-[.14em] text-neutral-500">za cały dzień · zero dopłat</p>
+          <p class="mt-1.5 text-xs font-600 uppercase tracking-[.14em] text-neutral-500">za cały dzień · cena wyjściowa</p>
         </div>
       </div>
 
@@ -387,7 +419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul class="reveal mt-6 flex flex-wrap gap-x-6 gap-y-2.5 text-[13px] text-neutral-400" style="--d:.38s">
         <li class="flex items-center gap-2"><span class="text-accent">✓</span> Zero zaliczki</li>
         <li class="flex items-center gap-2"><span class="text-accent">✓</span> Faktura po evencie</li>
-        <li class="flex items-center gap-2"><span class="text-accent">✓</span> Darmowy transport</li>
+        <li class="flex items-center gap-2"><span class="text-accent">✓</span> Dojazd w całej Polsce</li>
         <li class="flex items-center gap-2"><span class="text-accent">✓</span> Wycena w 24 h</li>
       </ul>
     </div>
@@ -464,13 +496,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="strip-track py-1">
       <!-- ORYGINAŁ -->
       <figure class="strip-item " data-full="realizacja-gala-czerwony-dywan.jpg" data-alt="Robot humanoidalny w cekinowym smokingu na czerwonym dywanie gali">
-        <picture><source srcset="realizacja-gala-czerwony-dywan.webp" type="image/webp" />
-        <img src="realizacja-gala-czerwony-dywan.jpg" alt="Robot humanoidalny w cekinowym smokingu na czerwonym dywanie gali" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-czerwony-dywan-400.webp 400w, realizacja-gala-czerwony-dywan.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-czerwony-dywan.jpg" alt="Robot humanoidalny w cekinowym smokingu na czerwonym dywanie gali" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Czerwony dywan</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="realizacja-women-in-tech-tlum.jpg" data-alt="Uczestniczki Women in Tech Summit nagrywające robota humanoidalnego telefonami">
-        <picture><source srcset="realizacja-women-in-tech-tlum.webp" type="image/webp" />
-        <img src="realizacja-women-in-tech-tlum.jpg" alt="Uczestniczki Women in Tech Summit nagrywające robota humanoidalnego telefonami" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-women-in-tech-tlum-400.webp 400w, realizacja-women-in-tech-tlum.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-women-in-tech-tlum.jpg" alt="Uczestniczki Women in Tech Summit nagrywające robota humanoidalnego telefonami" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Wszyscy wyciągają telefony</figcaption>
       </figure>
       <figure class="strip-item ">
@@ -480,38 +512,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Taniec · najedź</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="realizacja-lexai-starowka.jpg" data-alt="Robot humanoidalny w koszulce LEX AI na starówce, przechodnie robią zdjęcia">
-        <picture><source srcset="realizacja-lexai-starowka.webp" type="image/webp" />
-        <img src="realizacja-lexai-starowka.jpg" alt="Robot humanoidalny w koszulce LEX AI na starówce, przechodnie robią zdjęcia" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-lexai-starowka-400.webp 400w, realizacja-lexai-starowka.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-lexai-starowka.jpg" alt="Robot humanoidalny w koszulce LEX AI na starówce, przechodnie robią zdjęcia" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Ulica przystaje</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="realizacja-gala-detal.jpg" data-alt="Zbliżenie robota humanoidalnego w koronie i cekinowym smokingu">
-        <picture><source srcset="realizacja-gala-detal.webp" type="image/webp" />
-        <img src="realizacja-gala-detal.jpg" alt="Zbliżenie robota humanoidalnego w koronie i cekinowym smokingu" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-detal-400.webp 400w, realizacja-gala-detal.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-detal.jpg" alt="Zbliżenie robota humanoidalnego w koronie i cekinowym smokingu" loading="lazy" decoding="async" class="strip-img" /></picture>
       </figure>
       <figure class="strip-item " data-full="realizacja-event-nad-woda.jpg" data-alt="Robot humanoidalny macha ręką na tarasie nad mariną z jachtami">
-        <picture><source srcset="realizacja-event-nad-woda.webp" type="image/webp" />
-        <img src="realizacja-event-nad-woda.jpg" alt="Robot humanoidalny macha ręką na tarasie nad mariną z jachtami" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-event-nad-woda-400.webp 400w, realizacja-event-nad-woda.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-event-nad-woda.jpg" alt="Robot humanoidalny macha ręką na tarasie nad mariną z jachtami" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Eventy plenerowe</figcaption>
       </figure>
       <figure class="strip-item " data-full="robot-pies-branding-klienta.jpg" data-alt="Robot-pies w firmowej koszulce klienta podczas akcji promocyjnej salonu samochodowego">
         <picture><source srcset="robot-pies-branding-klienta.webp" type="image/webp" />
-        <img src="robot-pies-branding-klienta.jpg" alt="Robot-pies w firmowej koszulce klienta podczas akcji promocyjnej salonu samochodowego" loading="lazy" class="strip-img" /></picture>
+        <img src="robot-pies-branding-klienta.jpg" alt="Robot-pies w firmowej koszulce klienta podczas akcji promocyjnej salonu samochodowego" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Robot-pies w brandingu</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="realizacja-nocny-pokaz.jpg" data-alt="Robot humanoidalny w czerwonej pelerynie podczas nocnego pokazu przy zabytkowej kamienicy">
-        <picture><source srcset="realizacja-nocny-pokaz.webp" type="image/webp" />
-        <img src="realizacja-nocny-pokaz.jpg" alt="Robot humanoidalny w czerwonej pelerynie podczas nocnego pokazu przy zabytkowej kamienicy" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-nocny-pokaz-400.webp 400w, realizacja-nocny-pokaz.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-nocny-pokaz.jpg" alt="Robot humanoidalny w czerwonej pelerynie podczas nocnego pokazu przy zabytkowej kamienicy" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Pokazy nocne</figcaption>
       </figure>
       <!-- KOPIA — bezszwowa pętla -->
       <figure aria-hidden="true" class="strip-item " data-full="realizacja-gala-czerwony-dywan.jpg" data-alt="Robot humanoidalny w cekinowym smokingu na czerwonym dywanie gali">
-        <picture><source srcset="realizacja-gala-czerwony-dywan.webp" type="image/webp" />
-        <img src="realizacja-gala-czerwony-dywan.jpg" alt="Robot humanoidalny w cekinowym smokingu na czerwonym dywanie gali" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-czerwony-dywan-400.webp 400w, realizacja-gala-czerwony-dywan.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-czerwony-dywan.jpg" alt="Robot humanoidalny w cekinowym smokingu na czerwonym dywanie gali" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Czerwony dywan</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="realizacja-women-in-tech-tlum.jpg" data-alt="Uczestniczki Women in Tech Summit nagrywające robota humanoidalnego telefonami">
-        <picture><source srcset="realizacja-women-in-tech-tlum.webp" type="image/webp" />
-        <img src="realizacja-women-in-tech-tlum.jpg" alt="Uczestniczki Women in Tech Summit nagrywające robota humanoidalnego telefonami" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-women-in-tech-tlum-400.webp 400w, realizacja-women-in-tech-tlum.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-women-in-tech-tlum.jpg" alt="Uczestniczki Women in Tech Summit nagrywające robota humanoidalnego telefonami" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Wszyscy wyciągają telefony</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item ">
@@ -521,27 +553,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Taniec · najedź</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="realizacja-lexai-starowka.jpg" data-alt="Robot humanoidalny w koszulce LEX AI na starówce, przechodnie robią zdjęcia">
-        <picture><source srcset="realizacja-lexai-starowka.webp" type="image/webp" />
-        <img src="realizacja-lexai-starowka.jpg" alt="Robot humanoidalny w koszulce LEX AI na starówce, przechodnie robią zdjęcia" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-lexai-starowka-400.webp 400w, realizacja-lexai-starowka.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-lexai-starowka.jpg" alt="Robot humanoidalny w koszulce LEX AI na starówce, przechodnie robią zdjęcia" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Ulica przystaje</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="realizacja-gala-detal.jpg" data-alt="Zbliżenie robota humanoidalnego w koronie i cekinowym smokingu">
-        <picture><source srcset="realizacja-gala-detal.webp" type="image/webp" />
-        <img src="realizacja-gala-detal.jpg" alt="Zbliżenie robota humanoidalnego w koronie i cekinowym smokingu" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-detal-400.webp 400w, realizacja-gala-detal.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-detal.jpg" alt="Zbliżenie robota humanoidalnego w koronie i cekinowym smokingu" loading="lazy" decoding="async" class="strip-img" /></picture>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="realizacja-event-nad-woda.jpg" data-alt="Robot humanoidalny macha ręką na tarasie nad mariną z jachtami">
-        <picture><source srcset="realizacja-event-nad-woda.webp" type="image/webp" />
-        <img src="realizacja-event-nad-woda.jpg" alt="Robot humanoidalny macha ręką na tarasie nad mariną z jachtami" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-event-nad-woda-400.webp 400w, realizacja-event-nad-woda.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-event-nad-woda.jpg" alt="Robot humanoidalny macha ręką na tarasie nad mariną z jachtami" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Eventy plenerowe</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="robot-pies-branding-klienta.jpg" data-alt="Robot-pies w firmowej koszulce klienta podczas akcji promocyjnej salonu samochodowego">
         <picture><source srcset="robot-pies-branding-klienta.webp" type="image/webp" />
-        <img src="robot-pies-branding-klienta.jpg" alt="Robot-pies w firmowej koszulce klienta podczas akcji promocyjnej salonu samochodowego" loading="lazy" class="strip-img" /></picture>
+        <img src="robot-pies-branding-klienta.jpg" alt="Robot-pies w firmowej koszulce klienta podczas akcji promocyjnej salonu samochodowego" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Robot-pies w brandingu</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="realizacja-nocny-pokaz.jpg" data-alt="Robot humanoidalny w czerwonej pelerynie podczas nocnego pokazu przy zabytkowej kamienicy">
-        <picture><source srcset="realizacja-nocny-pokaz.webp" type="image/webp" />
-        <img src="realizacja-nocny-pokaz.jpg" alt="Robot humanoidalny w czerwonej pelerynie podczas nocnego pokazu przy zabytkowej kamienicy" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-nocny-pokaz-400.webp 400w, realizacja-nocny-pokaz.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-nocny-pokaz.jpg" alt="Robot humanoidalny w czerwonej pelerynie podczas nocnego pokazu przy zabytkowej kamienicy" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Pokazy nocne</figcaption>
       </figure>
     </div>
@@ -550,18 +582,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="strip-track strip-track--rev py-1">
       <!-- ORYGINAŁ -->
       <figure class="strip-item " data-full="realizacja-women-in-tech-wybieg.jpg" data-alt="Robot humanoidalny na różowym wybiegu Women in Tech Summit przed publicznością">
-        <picture><source srcset="realizacja-women-in-tech-wybieg.webp" type="image/webp" />
-        <img src="realizacja-women-in-tech-wybieg.jpg" alt="Robot humanoidalny na różowym wybiegu Women in Tech Summit przed publicznością" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-women-in-tech-wybieg-400.webp 400w, realizacja-women-in-tech-wybieg.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-women-in-tech-wybieg.jpg" alt="Robot humanoidalny na różowym wybiegu Women in Tech Summit przed publicznością" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Women in Tech Summit</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="realizacja-gala-zdjecia-gosci.jpg" data-alt="Goście gali fotografujący robota humanoidalnego przy ściance sponsorskiej">
-        <picture><source srcset="realizacja-gala-zdjecia-gosci.webp" type="image/webp" />
-        <img src="realizacja-gala-zdjecia-gosci.jpg" alt="Goście gali fotografujący robota humanoidalnego przy ściance sponsorskiej" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-zdjecia-gosci-400.webp 400w, realizacja-gala-zdjecia-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-zdjecia-gosci.jpg" alt="Goście gali fotografujący robota humanoidalnego przy ściance sponsorskiej" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Goście robią zdjęcia</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="realizacja-robot-w-deszczu.jpg" data-alt="Robot humanoidalny w czerwonej koszulce trzymający parasol podczas deszczu">
-        <picture><source srcset="realizacja-robot-w-deszczu.webp" type="image/webp" />
-        <img src="realizacja-robot-w-deszczu.jpg" alt="Robot humanoidalny w czerwonej koszulce trzymający parasol podczas deszczu" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-robot-w-deszczu-400.webp 400w, realizacja-robot-w-deszczu.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-robot-w-deszczu.jpg" alt="Robot humanoidalny w czerwonej koszulce trzymający parasol podczas deszczu" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Także w deszczu</figcaption>
       </figure>
       <figure class="strip-item ">
@@ -571,39 +603,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Logo i kod QR · 0 zł</figcaption>
       </figure>
       <figure class="strip-item " data-full="realizacja-lexai-ulica.jpg" data-alt="Robot humanoidalny LEX AI idący ulicą starówki z teczką w dłoni">
-        <picture><source srcset="realizacja-lexai-ulica.webp" type="image/webp" />
-        <img src="realizacja-lexai-ulica.jpg" alt="Robot humanoidalny LEX AI idący ulicą starówki z teczką w dłoni" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-lexai-ulica-400.webp 400w, realizacja-lexai-ulica.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-lexai-ulica.jpg" alt="Robot humanoidalny LEX AI idący ulicą starówki z teczką w dłoni" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Marketing w mieście</figcaption>
       </figure>
       <figure class="strip-item " data-full="realizacja-gala-palac.jpg" data-alt="Robot humanoidalny w smokingu we wnętrzu pałacowej sali balowej">
-        <picture><source srcset="realizacja-gala-palac.webp" type="image/webp" />
-        <img src="realizacja-gala-palac.jpg" alt="Robot humanoidalny w smokingu we wnętrzu pałacowej sali balowej" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-palac-400.webp 400w, realizacja-gala-palac.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-palac.jpg" alt="Robot humanoidalny w smokingu we wnętrzu pałacowej sali balowej" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Pałacowe wnętrza</figcaption>
       </figure>
       <figure class="strip-item strip-item--narrow" data-full="realizacja-spotkanie-biznesowe.jpg" data-alt="Robot humanoidalny w firmowej koszulce na tarasie podczas spotkania biznesowego">
-        <picture><source srcset="realizacja-spotkanie-biznesowe.webp" type="image/webp" />
-        <img src="realizacja-spotkanie-biznesowe.jpg" alt="Robot humanoidalny w firmowej koszulce na tarasie podczas spotkania biznesowego" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-spotkanie-biznesowe-400.webp 400w, realizacja-spotkanie-biznesowe.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-spotkanie-biznesowe.jpg" alt="Robot humanoidalny w firmowej koszulce na tarasie podczas spotkania biznesowego" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Spotkania firmowe</figcaption>
       </figure>
       <figure class="strip-item strip-item--wide" data-full="realizacja-gala-wsrod-gosci.jpg" data-alt="Robot humanoidalny wśród rozbawionych gości gali z kieliszkami">
-        <picture><source srcset="realizacja-gala-wsrod-gosci.webp" type="image/webp" />
-        <img src="realizacja-gala-wsrod-gosci.jpg" alt="Robot humanoidalny wśród rozbawionych gości gali z kieliszkami" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-wsrod-gosci-400.webp 400w, realizacja-gala-wsrod-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-wsrod-gosci.jpg" alt="Robot humanoidalny wśród rozbawionych gości gali z kieliszkami" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Wśród gości</figcaption>
       </figure>
       <!-- KOPIA — bezszwowa pętla -->
       <figure aria-hidden="true" class="strip-item " data-full="realizacja-women-in-tech-wybieg.jpg" data-alt="Robot humanoidalny na różowym wybiegu Women in Tech Summit przed publicznością">
-        <picture><source srcset="realizacja-women-in-tech-wybieg.webp" type="image/webp" />
-        <img src="realizacja-women-in-tech-wybieg.jpg" alt="Robot humanoidalny na różowym wybiegu Women in Tech Summit przed publicznością" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-women-in-tech-wybieg-400.webp 400w, realizacja-women-in-tech-wybieg.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-women-in-tech-wybieg.jpg" alt="Robot humanoidalny na różowym wybiegu Women in Tech Summit przed publicznością" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Women in Tech Summit</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="realizacja-gala-zdjecia-gosci.jpg" data-alt="Goście gali fotografujący robota humanoidalnego przy ściance sponsorskiej">
-        <picture><source srcset="realizacja-gala-zdjecia-gosci.webp" type="image/webp" />
-        <img src="realizacja-gala-zdjecia-gosci.jpg" alt="Goście gali fotografujący robota humanoidalnego przy ściance sponsorskiej" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-zdjecia-gosci-400.webp 400w, realizacja-gala-zdjecia-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-zdjecia-gosci.jpg" alt="Goście gali fotografujący robota humanoidalnego przy ściance sponsorskiej" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Goście robią zdjęcia</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="realizacja-robot-w-deszczu.jpg" data-alt="Robot humanoidalny w czerwonej koszulce trzymający parasol podczas deszczu">
-        <picture><source srcset="realizacja-robot-w-deszczu.webp" type="image/webp" />
-        <img src="realizacja-robot-w-deszczu.jpg" alt="Robot humanoidalny w czerwonej koszulce trzymający parasol podczas deszczu" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-robot-w-deszczu-400.webp 400w, realizacja-robot-w-deszczu.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-robot-w-deszczu.jpg" alt="Robot humanoidalny w czerwonej koszulce trzymający parasol podczas deszczu" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Także w deszczu</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item ">
@@ -613,23 +645,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figcaption class="strip-cap">Logo i kod QR · 0 zł</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="realizacja-lexai-ulica.jpg" data-alt="Robot humanoidalny LEX AI idący ulicą starówki z teczką w dłoni">
-        <picture><source srcset="realizacja-lexai-ulica.webp" type="image/webp" />
-        <img src="realizacja-lexai-ulica.jpg" alt="Robot humanoidalny LEX AI idący ulicą starówki z teczką w dłoni" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-lexai-ulica-400.webp 400w, realizacja-lexai-ulica.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-lexai-ulica.jpg" alt="Robot humanoidalny LEX AI idący ulicą starówki z teczką w dłoni" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Marketing w mieście</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item " data-full="realizacja-gala-palac.jpg" data-alt="Robot humanoidalny w smokingu we wnętrzu pałacowej sali balowej">
-        <picture><source srcset="realizacja-gala-palac.webp" type="image/webp" />
-        <img src="realizacja-gala-palac.jpg" alt="Robot humanoidalny w smokingu we wnętrzu pałacowej sali balowej" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-palac-400.webp 400w, realizacja-gala-palac.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-palac.jpg" alt="Robot humanoidalny w smokingu we wnętrzu pałacowej sali balowej" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Pałacowe wnętrza</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--narrow" data-full="realizacja-spotkanie-biznesowe.jpg" data-alt="Robot humanoidalny w firmowej koszulce na tarasie podczas spotkania biznesowego">
-        <picture><source srcset="realizacja-spotkanie-biznesowe.webp" type="image/webp" />
-        <img src="realizacja-spotkanie-biznesowe.jpg" alt="Robot humanoidalny w firmowej koszulce na tarasie podczas spotkania biznesowego" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-spotkanie-biznesowe-400.webp 400w, realizacja-spotkanie-biznesowe.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-spotkanie-biznesowe.jpg" alt="Robot humanoidalny w firmowej koszulce na tarasie podczas spotkania biznesowego" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Spotkania firmowe</figcaption>
       </figure>
       <figure aria-hidden="true" class="strip-item strip-item--wide" data-full="realizacja-gala-wsrod-gosci.jpg" data-alt="Robot humanoidalny wśród rozbawionych gości gali z kieliszkami">
-        <picture><source srcset="realizacja-gala-wsrod-gosci.webp" type="image/webp" />
-        <img src="realizacja-gala-wsrod-gosci.jpg" alt="Robot humanoidalny wśród rozbawionych gości gali z kieliszkami" loading="lazy" class="strip-img" /></picture>
+        <picture><source srcset="realizacja-gala-wsrod-gosci-400.webp 400w, realizacja-gala-wsrod-gosci.webp 760w" sizes="(max-width: 640px) 260px, 380px" type="image/webp" />
+        <img src="realizacja-gala-wsrod-gosci.jpg" alt="Robot humanoidalny wśród rozbawionych gości gali z kieliszkami" loading="lazy" decoding="async" class="strip-img" /></picture>
         <figcaption class="strip-cap">Wśród gości</figcaption>
       </figure>
     </div>
@@ -812,7 +844,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="reveal mt-10 flex flex-col items-center gap-4 rounded-[24px] border border-line bg-surface/50 px-7 py-8 text-center md:flex-row md:justify-between md:text-left" style="--d:.1s">
       <p class="max-w-2xl text-[15px] leading-relaxed text-neutral-300">
         Wystarczy jedna rozmowa — mówisz, jakie wrażenie chcesz zrobić, a my przygotowujemy głos,
-        charakter i scenariusz. <span class="text-white">Wszystko w cenie wynajmu.</span>
+        charakter i scenariusz. <span class="text-white">To standard wynajmu, nie płatny dodatek.</span>
       </p>
       <a href="#kontakt" class="inline-flex shrink-0 items-center gap-2 rounded-2xl bg-white px-7 py-4 font-display text-sm font-700 uppercase tracking-wider text-ink transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_36px_rgba(111,214,255,.4)]">
         Omów swój scenariusz
@@ -866,7 +898,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-accent/15 blur-3xl transition-transform duration-700 group-hover:scale-150"></div>
 
         <div class="flex flex-wrap items-center justify-between gap-4">
-          <span class="rounded-full bg-accent px-4 py-1.5 text-[11px] font-700 uppercase tracking-widest text-ink">Wszystko w cenie</span>
+          <span class="rounded-full bg-accent px-4 py-1.5 text-[11px] font-700 uppercase tracking-widest text-ink">Cena wyjściowa</span>
           <span class="text-[12px] font-600 uppercase tracking-widest text-neutral-500">Unitree G1 · cały dzień</span>
         </div>
 
@@ -876,20 +908,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="font-display text-3xl font-600 text-neutral-400">zł</span>
         </div>
         <p class="mt-3 text-sm text-neutral-400">
-          Za cały dzień realizacji. Ostateczna cena zależy wyłącznie od lokalizacji eventu.
+          Cena wyjściowa za cały dzień realizacji. Ostateczną kwotę podajemy w wycenie — zależy od lokalizacji i zakresu eventu.
         </p>
 
-        <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+        <p class="mt-8 text-[11px] font-600 uppercase tracking-widest text-neutral-500">W cenie wyjściowej</p>
+        <ul class="mt-3 grid gap-3 sm:grid-cols-2">
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Robot przez cały dzień</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Certyfikowany operator</li>
-          <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Transport w całej Polsce</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Branding: logo i kod QR</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Choreografie i interakcje</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Scenariusz i konfiguracja</li>
           <li class="flex items-start gap-2.5 text-[14px] text-neutral-200"><span class="mt-0.5 text-accent">✓</span> Ubezpieczenie OC</li>
         </ul>
 
         <p class="mt-7 rounded-2xl border border-accent/30 bg-accent/10 px-5 py-3.5 text-center text-sm text-white">
-          Cena zawiera absolutnie wszystko. <strong class="font-700 text-accent">ZERO dopłat.</strong>
+          Dojazd wyceniamy według lokalizacji eventu. <strong class="font-700 text-accent">Bez ukrytych kosztów.</strong>
         </p>
 
         <a href="#kontakt"
@@ -1011,7 +1044,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="font-600 text-white">Ile dokładnie kosztuje wynajem?</span>
           <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
         </button>
-        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Od 5500 zł za cały dzień realizacji — ostateczna kwota zależy wyłącznie od lokalizacji eventu. Robota wynajmiesz też na krótszy pokaz, np. kilka godzin podczas przerwy konferencyjnej — wtedy wyceniamy indywidualnie i zawsze taniej niż pełny dzień. Przy realizacjach 2-dniowych i dłuższych obowiązuje 15% zniżki na każdy dzień. W cenie transport, operator, branding i ubezpieczenie; robot-pies to dodatkowe 1900 zł za dzień.</p></div>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Od 5500 zł za cały dzień realizacji — to cena wyjściowa, a ostateczna kwota zależy od lokalizacji i zakresu eventu; podajemy ją w wycenie. W cenie wyjściowej: certyfikowany operator, branding, przygotowanie scenariusza i ubezpieczenie OC — dojazd wyceniamy według lokalizacji. Robota wynajmiesz też na krótszy pokaz, np. kilka godzin podczas przerwy konferencyjnej — wtedy wyceniamy indywidualnie i zawsze taniej niż pełny dzień. Przy realizacjach 2-dniowych i dłuższych obowiązuje 15% zniżki na każdy dzień. Robot-pies to dodatkowe 1900 zł za dzień.</p></div>
       </div>
       <div class="faq-item" open-state="0">
         <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
@@ -1046,7 +1079,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="font-600 text-white">Dojeżdżacie do mojego miasta?</span>
           <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
         </button>
-        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Tak — do każdego miasta w Polsce, bez dopłat i bez limitu kilometrów. Od Szczecina po Rzeszów, od Gdańska po Karpacz.</p></div>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Tak — dojeżdżamy do każdego miasta w Polsce, od Szczecina po Rzeszów, od Gdańska po Karpacz. Koszt dojazdu ustalamy przy wycenie, zależnie od lokalizacji eventu.</p></div>
       </div>
     </div>
   </div>

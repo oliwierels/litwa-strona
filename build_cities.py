@@ -96,8 +96,8 @@ CITY_DATA = {
               "darbuotojų šventes. Tokiuose renginiuose robotas tampa pagrindiniu vakaro akcentu.",
         scene="Dažniausi užsakymai — pramonės įmonių šventės ir jubiliejai, miesto renginiai, mokyklų "
               "technologijų dienos.",
-        extra="Nesvarbu, kad Mažeikiai toli nuo sostinės — transportas įskaičiuotas į kainą. Už atvykimą "
-              "į Mažeikius mokate lygiai tiek pat, kiek už atvykimą į Vilnių: nulį eurų."),
+        extra="Mažeikiai toli nuo sostinės, bet tai nėra kliūtis — dirbame visoje Lietuvoje. "
+              "Atvykimo kainą įvertiname pagal vietą ir nurodome pasiūlyme kartu su nuomos kaina."),
     "jonava": dict(
         region="Kauno apskritis",
         venues=["Jonavos kultūros centras", "pramonės įmonių teritorijos", "miesto viešosios erdvės",
@@ -200,7 +200,7 @@ CITY_DATA = {
         scene="Populiariausi formatai — įmonių šventės, miesto renginiai ir mokyklų bei gimnazijų "
               "technologijų dienos.",
         extra="Patogi vieta prie magistralės reiškia, kad renginiai Ukmergėje logistiškai paprasti — "
-              "bet kainai tai įtakos neturi, nes transportas visada įskaičiuotas."),
+              "o atvykimo kainą visada nurodome pasiūlyme."),
     "plunge": dict(
         region="Telšių apskritis",
         venues=["Plungės kultūros centras", "Oginskių dvaro parko erdvės", "gamybos įmonių teritorijos",
@@ -308,16 +308,16 @@ def build_city(slug, name, loc, gen):
     url = f"{SITE}/{city_url(slug)}"
     title = f"Humanoidinio roboto nuoma {loc} renginiams | 33bots"
     desc = (f"Humanoidinio roboto Unitree G1 nuoma {loc}: renginiams, konferencijoms ir parodoms. "
-            f"Transportas ir operatorius kainoje. Atsakome per 24 val.")
+            f"Operatorius ir ženklinimas kainoje. Atsakome per 24 val.")
     keywords = (f"roboto nuoma {name}, robotas renginiui {name}, humanoidinis robotas {loc}, "
                 f"renginių pramoga {name}, robotų nuoma {gen} regione")
 
     venues = "\n".join(f"        <li>{v}</li>" for v in d["venues"])
 
     faq = [
-        (f"Ar transportas į {loc} kainuoja papildomai?",
-         f"Ne. Atvykimas į {loc} ir bet kurią kitą Lietuvos vietą įskaičiuotas į nuomos kainą — "
-         f"be kilometrų limito ir be minimalaus atstumo."),
+        (f"Kiek kainuoja atvykimas į {loc}?",
+         f"Atvykimą į {loc} vertiname pagal renginio vietą ir sumą nurodome pasiūlyme kartu su "
+         f"nuomos kaina. Aptarnaujame visą Lietuvą."),
         (f"Kiek iš anksto reikia rezervuoti robotą {loc}?",
          "Sezono metu rekomenduojame 3–4 savaites, ne sezono metu dažnai pavyksta suderinti greičiau. "
          "Skubiems atvejams visada verta paskambinti — kartais turime laisvą langą."),
@@ -380,7 +380,7 @@ def build_city(slug, name, loc, gen):
         <a href="#nauda" class="btn-ghost">Kaip tai veikia ↓</a>
       </div>
       <div class="hero__trust">
-        <span class="hero__trust-item">✓ Transportas į {loc} — 0 €</span>
+        <span class="hero__trust-item">✓ Dirbame {loc}</span>
         <span class="hero__trust-item">✓ Operatorius kainoje</span>
         <span class="hero__trust-item">✓ Ženklinimas be priemokų</span>
         <span class="hero__trust-item">✓ Atsakymas per 24 val.</span>
@@ -448,8 +448,8 @@ def build_city(slug, name, loc, gen):
       </div>
       <div class="use-item">
         <span class="use-num">03</span>
-        <h3>Transportas — 0 €</h3>
-        <p>Atvykimas į {loc} ir atgal įskaičiuotas, be kilometrų limito.</p>
+        <h3>Atvykimas</h3>
+        <p>Atvažiuojame į {loc}; atvykimo kainą nurodome pasiūlyme.</p>
       </div>
       <div class="use-item">
         <span class="use-num">04</span>

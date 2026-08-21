@@ -1,15 +1,15 @@
 # 33bots — humanoidinių robotų nuoma renginiams Lietuvoje
 
 > 33bots nuomoja humanoidinius robotus Unitree G1 renginiams, parodoms, konferencijoms ir įmonių
-> šventėms visoje Lietuvoje. Į kainą visada įeina transportas, sertifikuotas operatorius visam
-> renginio laikui ir roboto ženklinimas kliento logotipu bei QR kodu.
+> šventėms visoje Lietuvoje. Į pradinę kainą įeina sertifikuotas operatorius visam renginio laikui ir roboto
+> ženklinimas kliento logotipu bei QR kodu; atvykimą vertiname pagal renginio vietą.
 
 ## Pagrindiniai faktai
 
 - Paslauga: humanoidinio roboto nuoma su operatoriumi
 - Robotas: Unitree G1 (132 cm, 35 kg, iki 43 laisvės laipsnių, iki 2 m/s, LiDAR ir kompiuterinė rega)
-- Teritorija: visa Lietuva, transportas 0 € be kilometrų limito
-- Į kainą įeina: robotas, operatorius, transportas, paruošimas, ženklinimas, scenarijaus derinimas,
+- Teritorija: visa Lietuva; atvykimas vertinamas pagal renginio vietą
+- Į pradinę kainą įeina: robotas, operatorius, paruošimas, ženklinimas, scenarijaus derinimas,
   civilinės atsakomybės draudimo apsauga
 - Paketai: Impulsas (iki 3 val.), Standartas (iki 8 val.), Multi-Day (2–7+ dienų)
 - Atsakymo laikas į užklausą: 24 darbo valandos
@@ -21,15 +21,15 @@
 
 - [Robotų nuoma Lietuvoje — visi miestai ir paslaugos](https://33bots.lt/robotu-nuoma.html)
 - [Humanoidinio roboto nuoma](https://33bots.lt/humanoidinio-roboto-nuoma.html) — Humanoidinio roboto Unitree G1 nuoma visoje Lietuvoje. Operatorius, transportas ir ženklinimas įskaičiuoti į kainą. Pasiūlymas per 24 val.
-- [Robotas renginiui](https://33bots.lt/robotas-renginiui.html) — Robotas renginiui visoje Lietuvoje: Unitree G1 pasitinka svečius, veda pasirodymą ir šoka. Operatorius ir transportas kainoje.
-- [Robotas parodoms](https://33bots.lt/robotas-parodoms.html) — Humanoidinis robotas parodų stende: sustabdo lankytojų srautą ir padeda rinkti kontaktus. Kelių dienų nuoma su operatoriumi ir transportu.
+- [Robotas renginiui](https://33bots.lt/robotas-renginiui.html) — Robotas renginiui visoje Lietuvoje: Unitree G1 pasitinka svečius, veda pasirodymą ir šoka. Operatorius ir ženklinimas kainoje.
+- [Robotas parodoms](https://33bots.lt/robotas-parodoms.html) — Humanoidinis robotas parodų stende: sustabdo lankytojų srautą ir padeda rinkti kontaktus. Kelių dienų nuoma su operatoriumi ir ženklinimu.
 - [Konferencijos ir gala vakarai](https://33bots.lt/robotas-konferencijai.html) — Humanoidinis robotas konferencijoje ar gala vakare: pasitinka svečius ir tampa programos akcentu. Nuoma visoje Lietuvoje su operatoriumi.
 - [Įmonės šventės](https://33bots.lt/robotas-imones-sventei.html) — Humanoidinis robotas įmonės šventėje, vasaros renginyje ar jubiliejuje — pramoga, kurios nepamiršta. Nuoma visoje Lietuvoje su operatoriumi.
 - [Atidarymai ir pristatymai](https://33bots.lt/robotas-atidarymui.html) — Humanoidinis robotas parduotuvės atidaryme ar produkto pristatyme — pritraukia praeivius ir žiniasklaidą. Nuoma visoje Lietuvoje.
 - [Robotas vestuvėms](https://33bots.lt/robotas-vestuvems.html) — Humanoidinis robotas vestuvėse: pasitinka svečius, šoka ir sukuria kadrus, kurių niekas nesitikėjo. Nuoma visoje Lietuvoje su operatoriumi.
-- [Unitree G1 nuoma](https://33bots.lt/unitree-g1-nuoma.html) — Unitree G1 nuoma Lietuvoje: 132 cm, 43 laisvės laipsniai, LiDAR. Robotas su operatoriumi renginiams ir parodoms. Transportas įskaičiuotas.
+- [Unitree G1 nuoma](https://33bots.lt/unitree-g1-nuoma.html) — Unitree G1 nuoma Lietuvoje: 132 cm, 43 laisvės laipsniai, LiDAR. Robotas su operatoriumi renginiams ir parodoms. Operatorius ir ženklinimas kainoje.
 - [Pramogos renginiams](https://33bots.lt/pramogos-renginiams.html) — Pramogos renginiams, kurios iš tikrųjų įsimenamos: humanoidinis robotas vietoj eilinės programos. Palyginimas su kitomis pramogomis ir praktiniai scenarijai.
-- [Robotas gimtadieniui](https://33bots.lt/robotas-gimtadieniui.html) — Humanoidinis robotas gimtadienio šventėje: pasitinka svečius, šoka ir fotografuojasi. Nuoma visoje Lietuvoje su operatoriumi ir transportu.
+- [Robotas gimtadieniui](https://33bots.lt/robotas-gimtadieniui.html) — Humanoidinis robotas gimtadienio šventėje: pasitinka svečius, šoka ir fotografuojasi. Nuoma visoje Lietuvoje su operatoriumi ir ženklinimu.
 - [Robotas prekybos centrui](https://33bots.lt/robotas-prekybos-centrui.html) — Humanoidinis robotas prekybos centre: pritraukia praeivius, sukuria minią prie parduotuvės ir generuoja turinį. Nuoma visoje Lietuvoje.
 - [Robotas mokyklai](https://33bots.lt/robotas-mokyklai.html) — Humanoidinis robotas mokyklos, gimnazijos ar universiteto renginyje: atvirų durų dienos, karjeros dienos, STEM pamokos. Nuoma visoje Lietuvoje.
 - [Kalėdinės šventės](https://33bots.lt/robotas-kaledinei-sventei.html) — Humanoidinis robotas kalėdiniame įmonės vakarėlyje ar miesto šventėje. Netikėta programos dalis gruodį. Nuoma visoje Lietuvoje su operatoriumi.
@@ -97,7 +97,7 @@
 ## Dažni klausimai
 
 - Ar robotą gali valdyti užsakovas? Ne — robotą valdo 33bots operatorius, kuris lieka visą renginį.
-- Ar transportas kainuoja papildomai? Ne, visoje Lietuvoje transportas įskaičiuotas.
+- Ar atvykimas kainuoja papildomai? Atvykimą vertiname pagal renginio vietą ir nurodome pasiūlyme.
 - Ar ženklinimas kainuoja papildomai? Ne, logotipas ir QR kodas įeina į standartinį paketą.
 - Kokių sąlygų reikia vietoje? 230 V lizdo, ~2×2 m laisvos erdvės, prieigos likus 45 min. iki starto.
 - Ar robotas saugus? Taip — LiDAR jutikliai, kompiuterinė rega ir nuolatinė operatoriaus priežiūra.

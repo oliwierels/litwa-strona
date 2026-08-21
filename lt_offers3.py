@@ -32,7 +32,7 @@ PAGES3 = [
                                    "programą, o ne konkuruoja su ja."),
             ("Tinka bet kur", "Konferencijų salė, restoranas, sodyba, gamyklos aikštelė ar prekybos "
                               "centro atriumas — robotui reikia tik lizdo ir lygaus paviršiaus."),
-            ("Be paslėptų kaštų", "Transportas, operatorius ir ženklinimas visada įskaičiuoti. "
+            ("Be paslėptų kaštų", "Operatorius ir ženklinimas visada įskaičiuoti, o atvykimą nurodome pasiūlyme. "
                                   "Atrakcijos kaina nesikeičia dėl atstumo."),
         ],
         body_h2_1="Kaip pasirinkti atrakciją renginiui",
@@ -59,7 +59,7 @@ PAGES3 = [
         faq=[
             ("Kiek kainuoja atrakcija renginiui?",
              "Priklauso nuo trukmės, formato ir datos. Vietoj bendro kainoraščio pateikiame konkrečią "
-             "kainą per 24 valandas po užklausos — su transportu, operatoriumi ir ženklinimu kainoje."),
+             "kainą per 24 valandas po užklausos — su operatoriumi ir ženklinimu kainoje."),
             ("Kokiam renginio dydžiui tinka?",
              "Efektas matomas jau nuo maždaug 30 svečių. Didžiausią vertę atrakcija duoda renginiuose "
              "nuo 100 dalyvių, kur svarbus ir turinio pasiekiamumas."),
@@ -189,7 +189,7 @@ PAGES3 = [
         faq=[
             ("Ar moderni pramoga brangesnė už klasikinę?",
              "Dažnai taip, bet vertinant pagal sukurtą dėmesį ir turinį kaina už rezultatą būna "
-             "palankesnė. Į mūsų kainą visada įeina transportas, operatorius ir ženklinimas."),
+             "palankesnė. Į mūsų pradinę kainą visada įeina operatorius ir ženklinimas."),
             ("Ar robotui reikia specialios technikos salėje?",
              "Ne. Užtenka 230 V lizdo ir maždaug 2×2 m laisvos erdvės. Interneto ryšys ar specialus "
              "apšvietimas nebūtinas."),

@@ -471,7 +471,7 @@ def contact_section(heading="Rezervuokite robotą<br />savo renginiui.",
           <ul class="coverage__cities">
 {city_links}
           </ul>
-          <p class="coverage__note">ir bet kurią kitą Lietuvos vietą — transportas įskaičiuotas į kainą</p>
+          <p class="coverage__note">ir bet kurią kitą Lietuvos vietą — atvykimo kainą nurodome pasiūlyme</p>
         </nav>
       </div>
       <div class="contact-right">
@@ -609,7 +609,7 @@ def organization_ld():
   "url": "{SITE}/",
   "logo": "{SITE}/logo.png",
   "image": "{SITE}/robot-g1.jpg",
-  "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Nemokamas transportas ir sertifikuotas operatorius kainoje.",
+  "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Sertifikuotas operatorius ir ženklinimas kainoje; atvykimą vertiname pagal renginio vietą.",
   "telephone": "{PHONE_1}",
   "email": "{EMAIL}",
   "areaServed": {{"@type": "Country", "name": "Lithuania"}},
@@ -632,7 +632,7 @@ def organization_ld():
     "Unitree G1",
     "renginių pramogos"
   ],
-  "priceRange": "nuo 2500 EUR už renginio dieną"
+  "priceRange": "nuo 2100 EUR už renginio dieną"
 }}"""
 
 

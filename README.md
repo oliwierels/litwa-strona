@@ -142,12 +142,17 @@ Kainos Lietuvos rinkai nustatytos `lt_index_strings.py` viršuje:
 
 | Konstanta | Reikšmė | Kur rodoma |
 | --- | --- | --- |
-| `PRICE_FROM` | 2 500 € | hero blokas, kainų kortelė, DUK, „Visa diena“ paketas |
+| `PRICE_FROM` | 2 100 € | hero blokas, kainų kortelė, DUK, „Visa diena“ paketas |
 | `PRICE_DOG` | 690 € | roboto šuns kortelė, DUK |
 | `DISCOUNT` | 15% | „Kelios dienos“ paketas, DUK |
 
 Pakeitus reikšmę ir paleidus `build_all.py`, kaina atsinaujina visose vietose vienu metu —
-įskaitant `Offer` bloką struktūrizuotuose duomenyse ir `priceRange` organizacijos apraše.
+įskaitant `Offer` bloką struktūrizuotuose duomenyse ir `priceRange` organizacijos apraše
+(`lt_common.py`).
+
+**Transportas nėra įskaičiuotas.** Kaip ir 33bots.pl nuo 2026-08-14, atvykimą vertiname pagal
+renginio vietą, o 2 100 € yra pradinė kaina už visą realizacijos dieną. Jokiame puslapyje
+nerašome „nemokamas transportas" ar „transportas — 0 €".
 
 ## Ką dar verta padaryti
 

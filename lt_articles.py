@@ -11,7 +11,7 @@ ARTICLES = [
         keywords="kiek kainuoja roboto nuoma, roboto nuomos kaina, humanoidinio roboto kaina, robotas renginiui kaina",
         tag="Kainos · Paketai",
         card="Skaidrus vadovas po roboto nuomos kaštus Lietuvoje: kas įeina į kainą, kaip skaičiuojamas "
-             "pasiūlymas ir kodėl transportas pas mus nemokamas.",
+             "pasiūlymas ir kaip vertiname atvykimą.",
         h1="Kiek kainuoja<br />humanoidinio roboto<br />nuoma?",
         lead="Trumpas atsakymas: priklauso nuo trukmės, formato ir to, kiek paslaugų įeina į paketą. "
              "Ilgas atsakymas — šiame straipsnyje, su visais kintamaisiais, kuriuos verta patikrinti "
@@ -39,21 +39,21 @@ ARTICLES = [
              "<ul>"
              "<li><strong>Robotą</strong> ir visą reikalingą įrangą (baterijos, valdymas, garsas).</li>"
              "<li><strong>Operatorių</strong> visą renginio laiką — ne tik atvežimui ir paleidimui.</li>"
-             "<li><strong>Transportą</strong> į renginio vietą ir atgal.</li>"
+             "<li><strong>Atvykimą</strong> į renginio vietą — vertiname pagal lokaciją.</li>"
              "<li><strong>Paruošimą vietoje</strong> ir bandomąjį paleidimą prieš renginį.</li>"
              "<li><strong>Draudimą</strong> — civilinės atsakomybės apsaugą veiklai.</li>"
              "<li><strong>Ženklinimą</strong> jūsų logotipu ir QR kodu.</li>"
              "</ul>"
-             "<p>33bots atveju visi šie punktai yra standartas, o ne priedas. Transportas visoje "
-             "Lietuvoje kainuoja 0 € nepriklausomai nuo atstumo — nesvarbu, ar renginys Vilniuje, ar "
-             "Palangoje.</p>"),
+             "<p>33bots atveju operatorius, ženklinimas, scenarijaus paruošimas ir draudimas yra "
+             "standartas, o ne priedas. Atvykimą vertiname atskirai — pagal renginio vietą, ir sumą "
+             "nurodome pasiūlyme.</p>"),
             ("Paketai ir tipiniai formatai",
              "<div class=\"data-table-wrap\">"
              "<table class=\"data-table\">"
              "<thead><tr><th>Paketas</th><th>Trukmė</th><th>Kam tinka</th><th>Kas įeina</th></tr></thead>"
              "<tbody>"
              "<tr><td><strong>Impulsas</strong></td><td>iki 3 val.</td><td>Pertrauka konferencijoje, "
-             "stendo atidarymas, trumpas pasirodymas</td><td>Robotas, operatorius, transportas, "
+             "stendo atidarymas, trumpas pasirodymas</td><td>Robotas, operatorius, "
              "trumpas pasirodymas</td></tr>"
              "<tr><td><strong>Standartas</strong></td><td>iki 8 val.</td><td>Visa renginio diena, "
              "įmonės šventė, gala vakaras</td><td>Robotas, operatorius su asistentu, ženklinimas, "
@@ -90,9 +90,9 @@ ARTICLES = [
             ("Ar galima gauti kainą iš karto internete?",
              "Ne — ir tai sąmoningas sprendimas. Kaina priklauso nuo trukmės, formato ir datos, todėl "
              "vietoj bendro kainoraščio pateikiame konkrečią kainą per 24 valandas po užklausos."),
-            ("Ar transportas tikrai nemokamas visoje Lietuvoje?",
-             "Taip. Nėra kilometrų limito, minimalaus atstumo ar priemokos už tolimesnius miestus. Ta "
-             "pati kaina galioja Vilniuje ir Mažeikiuose."),
+            ("Kiek kainuoja atvykimas?",
+             "Atvykimą vertiname pagal renginio vietą ir sumą nurodome pasiūlyme kartu su nuomos "
+             "kaina. Dirbame visoje Lietuvoje — nuo Vilniaus iki Mažeikių."),
             ("Ar reikia mokėti avansą?",
              "Taip, data rezervuojama avansu — tai standartinė renginių rinkos praktika. Likusi suma "
              "mokama pagal sutartyje numatytą tvarką."),
@@ -366,7 +366,7 @@ ARTICLES = [
              "<ul>"
              "<li>Ar robotas <strong>jūsų nuosavas</strong>, ar nuomojamas iš tarpininko?</li>"
              "<li>Ar operatorius lieka <strong>visą renginio laiką</strong>?</li>"
-             "<li>Kiek kainuoja <strong>transportas</strong> į mano miestą?</li>"
+             "<li>Kiek kainuoja <strong>atvykimas</strong> į mano miestą?</li>"
              "<li>Ar veikla <strong>apdrausta</strong> civilinės atsakomybės draudimu?</li>"
              "<li>Ar <strong>ženklinimas</strong> įskaičiuotas į kainą?</li>"
              "<li>Kokia <strong>atšaukimo</strong> ir datos perkėlimo tvarka?</li>"
@@ -393,7 +393,7 @@ ARTICLES = [
              "<li><strong>Kontaktinis asmuo</strong> vietoje, kuris žino programos grafiką.</li>"
              "<li><strong>Ryšys su garso technikais</strong>, jei robotas pasirodo scenoje.</li>"
              "</ul>"
-             "<p>Visa kita — transportas, paruošimas, valdymas, išardymas — yra nuomos įmonės "
+             "<p>Visa kita — atvykimas, paruošimas, valdymas, išardymas — yra nuomos įmonės "
              "atsakomybė.</p>"),
             ("Žingsnis 5: išnaudokite renginį iki galo",
              "<p>Dažna klaida — robotas užsakomas, pasirodo, ir tuo viskas baigiasi. Tuo tarpu didžiausia "

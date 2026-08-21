@@ -9,10 +9,13 @@ Raktas — lenkiškas tekstas, reikšmė — lietuviškas atitikmuo.
 # Kainas nustatė įmonė; jos nėra perskaičiuotos iš lenkiškų.
 # Pakeitus reikšmes ir paleidus build_all.py, kaina atsinaujina visame puslapyje:
 # hero bloke, kainų kortelėje, DUK atsakyme ir struktūrizuotuose duomenyse.
-PRICE_FROM = "2 500"          # € už visą realizacijos dieną
-PRICE_FROM_PLAIN = "2500"     # ta pati kaina be tarpo (meta, JSON-LD, JS)
-PRICE_DOG = "690"             # € už roboto šunį per dieną
+PRICE_FROM = "2 100"          # € be PVM — pradinė kaina už visą realizacijos dieną
+PRICE_FROM_PLAIN = "2100"     # ta pati kaina be tarpo (meta, JSON-LD, JS)
+PRICE_DOG = "690"             # € be PVM už roboto šunį per dieną
 DISCOUNT = "15%"              # nuolaida dviejų ir daugiau dienų realizacijoms
+
+# Transportas NĖRA įskaičiuotas — atvykimą vertiname pagal renginio vietą,
+# kaip ir 33bots.pl nuo 2026-08-14. Jokiame puslapyje nerašome „atvykimas pagal vietą".
 
 TEXTS = {
     # ── Navigacija ──────────────────────────────────────────────────────────
@@ -21,8 +24,8 @@ TEXTS = {
     "Cennik": "Kainos",
     "Proces": "Procesas",
     "Oferta": "Paslaugos",
-    "Darmowa wycena": "Nemokama kaina",
-    "Darmowa wycena →": "Nemokama kaina →",
+    "Darmowa wycena": "Nemokama sąmata",
+    "Darmowa wycena →": "Nemokama sąmata →",
 
     # ── Hero ────────────────────────────────────────────────────────────────
     "Wynajem robotów humanoidalnych · cała Polska":
@@ -32,14 +35,18 @@ TEXTS = {
     "zapadają w pamięć.": "įsimenami ilgam.",
     "Humanoid Unitree G1 na Twoich targach, konferencji albo gali. Cały dzień pokazu —":
         "Humanoidas Unitree G1 jūsų parodoje, konferencijoje ar gala vakare. Visa pasirodymo diena —",
-    "transport, operator i branding w cenie": "transportas, operatorius ir ženklinimas kainoje",
+    "transport, operator i branding w cenie": "operatorius ir ženklinimas kainoje",
+    "z certyfikowanym operatorem i Twoim brandingiem":
+        "su sertifikuotu operatoriumi ir jūsų ženklinimu",
     "od 5 500 zł": f"nuo {PRICE_FROM} €",
-    "za cały dzień · zero dopłat": "už visą dieną · jokių priemokų",
-    "Odbierz darmową wycenę": "Gaukite nemokamą kainą",
+    "za cały dzień · cena wyjściowa": "už visą dieną · pradinė kaina (be PVM)",
+    "za cały dzień · zero dopłat": "už visą dieną · pradinė kaina (be PVM)",
+    "Odbierz darmową wycenę": "Gaukite nemokamą sąmatą",
     "Zobacz cennik ↓": "Žiūrėti kainas ↓",
     "Zero zaliczki": "Jokio avanso",
     "Faktura po evencie": "Sąskaita po renginio",
-    "Darmowy transport": "Nemokamas transportas",
+    "Darmowy transport": "Atvykimas visoje Lietuvoje",
+    "Dojazd w całej Polsce": "Atvykimas visoje Lietuvoje",
     "Wycena w 24 h": "Kaina per 24 val.",
     "Przewiń": "Slinkti",
 
@@ -149,6 +156,16 @@ TEXTS = {
     "Rabat naliczamy na każdy dzień realizacji.":
         "Nuolaidą taikome kiekvienai realizacijos dienai.",
     "Wszystko w cenie": "Viskas kainoje",
+    "Cena wyjściowa": "Pradinė kaina",
+    "W cenie wyjściowej": "Į pradinę kainą įeina",
+    "Scenariusz i konfiguracja": "Scenarijus ir konfigūracija",
+    "To standard wynajmu, nie płatny dodatek.": "Tai nuomos standartas, o ne mokamas priedas.",
+    "Bez ukrytych kosztów.": "Jokių paslėptų kaštų.",
+    "Dojazd wyceniamy według lokalizacji eventu.":
+        "Atvykimą įvertiname pagal renginio vietą.",
+    "Cena wyjściowa za cały dzień realizacji. Ostateczną kwotę podajemy w wycenie — zależy od lokalizacji i zakresu eventu.":
+        "Pradinė kaina už visą realizacijos dieną (be PVM). Galutinę sumą pateikiame pasiūlyme — "
+        "ji priklauso nuo renginio vietos ir apimties.",
     "Unitree G1 · cały dzień": "Unitree G1 · visa diena",
     "od": "nuo",
     "zł": "€",
@@ -156,12 +173,12 @@ TEXTS = {
         "Už visą realizacijos dieną. Galutinė kaina priklauso tik nuo renginio vietos.",
     "Robot przez cały dzień": "Robotas visą dieną",
     "Certyfikowany operator": "Sertifikuotas operatorius",
-    "Transport w całej Polsce": "Transportas visoje Lietuvoje",
+    "Transport w całej Polsce": "Atvykimas visoje Lietuvoje",
     "Branding: logo i kod QR": "Ženklinimas: logotipas ir QR kodas",
     "Choreografie i interakcje": "Choreografijos ir bendravimas",
     "Ubezpieczenie OC": "Civilinės atsakomybės draudimas",
-    "Cena zawiera absolutnie wszystko.": "Į kainą įeina absoliučiai viskas.",
-    "ZERO dopłat.": "JOKIŲ priemokų.",
+    "Cena zawiera absolutnie wszystko.": "Aiškios sąlygos nuo pat pradžių.",
+    "ZERO dopłat.": "Jokių paslėptų kaštų.",
     "Opcja dodatkowa": "Papildoma galimybė",
     "Robot-pies": "Robotas šuo",
     "Duet nie do pobicia: humanoid robi show, pies kradnie serca gości. W Twoim brandingu.":
@@ -206,6 +223,14 @@ TEXTS = {
     # ── DUK ─────────────────────────────────────────────────────────────────
     "Zanim zapytasz": "Prieš paklausiant",
     "Ile dokładnie kosztuje wynajem?": "Kiek tiksliai kainuoja nuoma?",
+    "Od 5500 zł za cały dzień realizacji — to cena wyjściowa, a ostateczna kwota zależy od lokalizacji i zakresu eventu; podajemy ją w wycenie. W cenie wyjściowej: certyfikowany operator, branding, przygotowanie scenariusza i ubezpieczenie OC — dojazd wyceniamy według lokalizacji. Robota wynajmiesz też na krótszy pokaz, np. kilka godzin podczas przerwy konferencyjnej — wtedy wyceniamy indywidualnie i zawsze taniej niż pełny dzień. Przy realizacjach 2-dniowych i dłuższych obowiązuje 15% zniżki na każdy dzień. Robot-pies to dodatkowe 1900 zł za dzień.":
+        f"Nuo {PRICE_FROM} € be PVM už visą realizacijos dieną — tai pradinė kaina, o galutinė suma "
+        f"priklauso nuo renginio vietos ir apimties; ją pateikiame pasiūlyme. Į pradinę kainą įeina "
+        f"sertifikuotas operatorius, ženklinimas, scenarijaus paruošimas ir civilinės atsakomybės "
+        f"draudimas — atvykimą įvertiname pagal vietą. Robotą galima išsinuomoti ir trumpesniam "
+        f"pasirodymui, pvz. kelioms valandoms per konferencijos pertrauką — tada kainą skaičiuojame "
+        f"individualiai ir visada pigiau nei visa diena. Dviejų dienų ir ilgesnėms realizacijoms "
+        f"taikoma {DISCOUNT} nuolaida kiekvienai dienai. Roboto šuo — papildomai {PRICE_DOG} € už dieną.",
     "Od 5500 zł za cały dzień realizacji — ostateczna kwota zależy wyłącznie od lokalizacji eventu. Robota wynajmiesz też na krótszy pokaz, np. kilka godzin podczas przerwy konferencyjnej — wtedy wyceniamy indywidualnie i zawsze taniej niż pełny dzień. Przy realizacjach 2-dniowych i dłuższych obowiązuje 15% zniżki na każdy dzień. W cenie transport, operator, branding i ubezpieczenie; robot-pies to dodatkowe 1900 zł za dzień.":
         f"Nuo {PRICE_FROM} € už visą realizacijos dieną — galutinė suma priklauso tik nuo renginio vietos. "
         f"Robotą galima išsinuomoti ir trumpesniam pasirodymui, pvz. kelioms valandoms per konferencijos "
@@ -231,8 +256,11 @@ TEXTS = {
         "Taip. LiDAR ir kompiuterinė rega leidžia realiu laiku apeiti žmones ir kliūtis, pasirodymą prižiūri "
         "operatorius, o veiklai taikoma civilinės atsakomybės draudimo apsauga.",
     "Dojeżdżacie do mojego miasta?": "Ar atvažiuojate į mano miestą?",
+    "Tak — dojeżdżamy do każdego miasta w Polsce, od Szczecina po Rzeszów, od Gdańska po Karpacz. Koszt dojazdu ustalamy przy wycenie, zależnie od lokalizacji eventu.":
+        "Taip — atvažiuojame į kiekvieną Lietuvos miestą, nuo Klaipėdos iki Visagino, nuo Palangos iki "
+        "Druskininkų. Atvykimo kainą suderiname rengiant pasiūlymą, priklausomai nuo renginio vietos.",
     "Tak — do każdego miasta w Polsce, bez dopłat i bez limitu kilometrów. Od Szczecina po Rzeszów, od Gdańska po Karpacz.":
-        "Taip — į kiekvieną Lietuvos miestą, be priemokų ir be kilometrų limito. Nuo Klaipėdos iki Visagino, "
+        "Taip — į kiekvieną Lietuvos miestą, be priemokų ir pagal renginio vietą. Nuo Klaipėdos iki Visagino, "
         "nuo Palangos iki Druskininkų.",
 
     # ── Kontaktai ───────────────────────────────────────────────────────────
@@ -254,7 +282,7 @@ TEXTS = {
     "Miasto / Miejsce": "Miestas / vieta",
     "Opisz swój event *": "Papasakokite apie renginį *",
     "← Wróć": "← Atgal",
-    "Wyślij i odbierz darmową wycenę": "Siųsti ir gauti nemokamą kainą",
+    "Wyślij i odbierz darmową wycenę": "Siųsti ir gauti nemokamą sąmatą",
     "Odpowiadamy w ciągu 24 godzin roboczych.": "Atsakome per 24 darbo valandas.",
 
     # ── Poraštė ─────────────────────────────────────────────────────────────

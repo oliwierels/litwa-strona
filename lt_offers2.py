@@ -9,14 +9,14 @@ PAGES2 = [
         slug="unitree-g1-nuoma.html",
         title="Unitree G1 nuoma Lietuvoje — humanoidinis robotas | 33bots",
         desc="Unitree G1 nuoma Lietuvoje: 132 cm, 43 laisvės laipsniai, LiDAR. Robotas su operatoriumi "
-             "renginiams ir parodoms. Transportas įskaičiuotas.",
+             "renginiams ir parodoms. Operatorius ir ženklinimas kainoje.",
         keywords="Unitree G1 nuoma, Unitree robotas, G1 robotas Lietuvoje, Unitree nuoma",
         crumb="Unitree G1 nuoma",
         eyebrow="Unitree G1 · Nuoma Lietuvoje",
         h1="Unitree G1 nuoma —<br />humanoidas, kurį<br /><em>galite turėti rytoj.</em>",
         lead="Unitree G1 yra tas pats robotas, kurį matote technologijų konferencijų įrašuose ir "
-             "gamintojo demonstracijose. Lietuvoje jį galima tiesiog išsinuomoti — su operatoriumi, "
-             "transportu ir paruošta programa.",
+             "gamintojo demonstracijose. Lietuvoje jį galima tiesiog išsinuomoti — su operatoriumi "
+             "ir paruošta programa.",
         tag="Unitree G1",
         benefits_title="Kodėl būtent<br />Unitree G1",
         benefits=[
@@ -146,7 +146,7 @@ PAGES2 = [
         slug="robotas-gimtadieniui.html",
         title="Robotas gimtadieniui — staigmena, kurios niekas nesitiki | 33bots",
         desc="Humanoidinis robotas gimtadienio šventėje: pasitinka svečius, šoka ir fotografuojasi. "
-             "Nuoma visoje Lietuvoje su operatoriumi ir transportu.",
+             "Nuoma visoje Lietuvoje su operatoriumi ir ženklinimu.",
         keywords="robotas gimtadieniui, gimtadienio pramoga, staigmena gimtadieniui, robotas vaiko gimtadieniui",
         crumb="Robotas gimtadieniui",
         eyebrow="Gimtadieniai · Staigmena, kuri pranoksta lūkesčius",
@@ -493,7 +493,7 @@ PAGES2 = [
         body_2="<p>Dažnas scenarijus — dviejų dienų išvyka su darbo sesijomis dieną ir programa vakare. "
                "Populiariausios kryptys Lietuvoje: <a href=\"robotu-nuoma-druskininkai.html\">Druskininkai</a>, "
                "<a href=\"robotu-nuoma-trakai.html\">Trakai</a> ir "
-               "<a href=\"robotu-nuoma-palanga.html\">Palanga</a>. Transportas įskaičiuotas, todėl "
+               "<a href=\"robotu-nuoma-palanga.html\">Palanga</a>. Atvykimą vertiname pagal vietą, todėl "
                "atstumas nuo miesto kainos nekeičia.</p>"
                "<p>Dviejų dienų formatams siūlome paketą su tuo pačiu operatoriumi abiem dienoms — "
                "pigiau ir logistiškai paprasčiau nei du atskiri užsakymai. Kitus formatus rasite "
@@ -509,7 +509,7 @@ PAGES2 = [
              "Taip, jei yra maždaug 2×2 m laisvos erdvės ir elektros lizdas. Biuruose ir "
              "konferencijų salėse dirbame reguliariai."),
             ("Ar dirbate išvažiuojamuosiuose renginiuose už miesto?",
-             "Taip, ir transportas įskaičiuotas nepriklausomai nuo atstumo — sodybos ir kurortai mums "
+             "Taip. Atvykimą vertiname pagal vietą, o sodybos ir kurortai mums "
              "įprasta darbo vieta."),
         ],
         related=[("robotas-imones-sventei.html", "Įmonės šventė"),

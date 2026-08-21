@@ -3,6 +3,7 @@
 from lt_common import (SITE, EMAIL, PHONE_1, PHONE_1_H, PHONE_2, PHONE_2_H, head, body_open, nav,
                        crumbs, breadcrumb_ld, contact_section, footer, faq_section, faq_ld,
                        organization_ld, video_ld, write, esc, CITIES, city_url, SOCIALS)
+from lt_index_strings import PRICE_FROM, PRICE_FROM_PLAIN, PRICE_DOG, DISCOUNT
 
 VIDEOS = [
     ("33bots-robot-event", "Robotas renginyje — pilnas pasirodymas",
@@ -92,13 +93,16 @@ def build_video_page():
 
 def build_pricing():
     faq = [
-        ("Kodėl kainos nėra nurodytos tiesiogiai svetainėje?",
-         "Nes vienos teisingos kainos nėra: trijų valandų pasirodymas ir kelių dienų paroda yra "
-         "skirtingi produktai. Vietoj bendro kainoraščio pateikiame konkrečią kainą per 24 valandas "
+        ("Kiek kainuoja roboto nuoma?",
+         f"Pradinė kaina — {PRICE_FROM} € be PVM už visą renginio dieną. Galutinę sumą lemia trukmė, "
+         "renginio vieta ir scenarijaus apimtis, todėl konkretų pasiūlymą pateikiame per 24 valandas "
          "po užklausos."),
-        ("Ar transportas tikrai kainuoja 0 €?",
-         "Taip, visoje Lietuvoje. Nėra kilometrų limito, minimalaus atstumo ar priemokos už tolimesnius "
-         "miestus — kaina Vilniuje ir Mažeikiuose vienoda."),
+        ("Kiek kainuoja roboto šuo?",
+         f"Roboto šuo kainuoja papildomai {PRICE_DOG} € be PVM už dieną — jį galima užsakyti kartu su "
+         "humanoidiniu robotu arba atskirai."),
+        ("Kiek kainuoja atvykimas?",
+         "Atvykimą vertiname pagal renginio vietą ir sumą nurodome pasiūlyme kartu su nuomos kaina. "
+         "Dirbame visoje Lietuvoje — nuo Vilniaus iki Mažeikių."),
         ("Ar ženklinimas kainuoja papildomai?",
          "Ne. Logotipas ir QR kodas ant roboto krūtinės įeina į standartinį paketą, kad ir kiek kartų "
          "juos keistume prieš renginį."),
@@ -122,8 +126,11 @@ def build_pricing():
   "provider": {{"@id": "{SITE}/#organizacija"}},
   "itemListElement": [
     {{"@type": "Offer", "name": "Impulsas — iki 3 val.", "priceCurrency": "EUR",
-      "description": "Trumpas pasirodymas: robotas, operatorius, transportas.", "url": "{SITE}/kainos.html"}},
+      "description": "Trumpas pasirodymas: robotas ir operatorius vietoje.", "url": "{SITE}/kainos.html"}},
     {{"@type": "Offer", "name": "Standartas — iki 8 val.", "priceCurrency": "EUR",
+      "priceSpecification": {{"@type": "UnitPriceSpecification", "price": "{PRICE_FROM_PLAIN}",
+        "priceCurrency": "EUR", "valueAddedTaxIncluded": false,
+        "unitCode": "DAY", "unitText": "renginio diena"}},
       "description": "Visa renginio diena su ženklinimu ir bendravimu su svečiais.", "url": "{SITE}/kainos.html"}},
     {{"@type": "Offer", "name": "Multi-Day — 2–7+ dienų", "priceCurrency": "EUR",
       "description": "Parodos ir ilgesnės kampanijos su skirtu operatoriumi.", "url": "{SITE}/kainos.html"}}
@@ -132,7 +139,7 @@ def build_pricing():
 
     html = head(title="Roboto nuomos kainos ir paketai — kas įeina | 33bots",
                 description="Humanoidinio roboto nuomos paketai Lietuvoje: kas įeina į kainą, nuo ko "
-                            "priklauso pasiūlymas ir kodėl transportas kainuoja 0 €. Kaina per 24 val.",
+                            "priklauso pasiūlymas ir kaip vertiname atvykimą. Kaina per 24 val.",
                 slug="kainos.html",
                 keywords="roboto nuomos kaina, robotų nuomos paketai, kiek kainuoja robotas renginiui",
                 og_image=f"{SITE}/og/kainos.jpg", extra_ld=ld,
@@ -145,7 +152,7 @@ def build_pricing():
     <div class="hero__content">
       <p class="hero__eyebrow">Kainos · Paketai · Kas įeina</p>
       <h1 class="hero__title">Kainos be<br />žvaigždučių.</h1>
-      <p class="hero__sub">Nepateikiame vienos kainos už robotą, nes jos nėra — bet pateikiame tikslią kainą per 24 valandas ir aiškiai pasakome, kas į ją įeina. Ir kas neįeina.</p>
+      <p class="hero__sub">Nuo <strong>""" + PRICE_FROM + """ € be PVM</strong> už visą renginio dieną. Roboto šuo — papildomai """ + PRICE_DOG + """ € už dieną. Galutinę sumą lemia trukmė, vieta ir scenarijus, todėl tikslų pasiūlymą pateikiame per 24 valandas ir aiškiai pasakome, kas į kainą įeina. Ir kas neįeina.</p>
       <div class="hero__ctas">
         <a href="#kontaktai" class="btn-primary">Gauti kainą per 24 val.</a>
         <a href="#paketai" class="btn-ghost">Paketai ↓</a>
@@ -162,37 +169,40 @@ def build_pricing():
       <div class="tile tile--pkg">
         <div class="tile__top"><span class="tile__tag">Iki 3 valandų</span></div>
         <h3 class="tile__pkg-name">Impulsas</h3>
+        <p class="tile__price">kaina pagal užklausą <span>trumpesnis formatas nei visa diena</span></p>
         <p class="tile__desc">Trumpas pasirodymas per konferencijos pertrauką, stendo atidarymą arba vakaro akcentą.</p>
         <ul class="tile__list">
           <li>Robotas iki 3 val.</li>
           <li>Operatorius vietoje</li>
           <li>Vienas pasirodymas + nuotraukos</li>
-          <li>Transportas — 0 €</li>
+          <li>Atvykimas — pagal vietą</li>
         </ul>
         <a href="#kontaktai" class="tile__link">Klausti kainos →</a>
       </div>
       <div class="tile tile--pkg tile--pkg-featured">
         <div class="tile__top"><span class="tile__tag">Populiariausias</span></div>
         <h3 class="tile__pkg-name">Standartas</h3>
+        <p class="tile__price">nuo """ + PRICE_FROM + """ € <span>be PVM / diena</span></p>
         <p class="tile__desc">Visa renginio diena: pasirodymai ciklais, bendravimas su svečiais ir pilnas ženklinimas.</p>
         <ul class="tile__list">
           <li>Iki 8 valandų</li>
           <li>Operatorius + asistentas</li>
           <li>Ženklinimas (logotipas + QR)</li>
           <li>Individualus scenarijus</li>
-          <li>Transportas — 0 €</li>
+          <li>Atvykimas — pagal vietą</li>
         </ul>
         <a href="#kontaktai" class="tile__link">Klausti kainos →</a>
       </div>
       <div class="tile tile--pkg">
         <div class="tile__top"><span class="tile__tag">2–7+ dienų</span></div>
         <h3 class="tile__pkg-name">Multi-Day</h3>
+        <p class="tile__price">nuo """ + PRICE_FROM + """ € <span>be PVM / diena, –""" + DISCOUNT + """</span></p>
         <p class="tile__desc">Parodos, festivaliai ir ilgesnės kampanijos su ta pačia komanda visą laiką.</p>
         <ul class="tile__list">
-          <li>Kelių dienų nuoma</li>
+          <li>Kelių dienų nuoma su """ + DISCOUNT + """ nuolaida</li>
           <li>Skirtas operatorius</li>
           <li>Pilnas pritaikymas</li>
-          <li>Visa logistika — 0 €</li>
+          <li>Ta pati komanda visas dienas</li>
         </ul>
         <a href="#kontaktai" class="tile__link">Klausti kainos →</a>
       </div>
@@ -205,7 +215,7 @@ def build_pricing():
       <ul>
         <li><strong>Robotas Unitree G1</strong> su baterijomis, valdymu ir garso sistema.</li>
         <li><strong>Sertifikuotas operatorius</strong> visą renginio laiką — ne tik paleidimui.</li>
-        <li><strong>Transportas</strong> į bet kurią Lietuvos vietą ir atgal.</li>
+        <li><strong>Atvykimas</strong> į bet kurią Lietuvos vietą — vertinamas pagal lokaciją.</li>
         <li><strong>Paruošimas vietoje</strong> ir bandomasis paleidimas prieš renginį.</li>
         <li><strong>Ženklinimas</strong> jūsų logotipu ir QR kodu.</li>
         <li><strong>Scenarijaus derinimas</strong> prieš renginį.</li>
@@ -281,7 +291,7 @@ def build_about():
       <ul>
         <li><strong>Sava įranga.</strong> Jokių tarpininkų grandinių ir netikėtumų renginio dieną.</li>
         <li><strong>Operatorius visą laiką.</strong> Ne tik atvežimui — visą renginį.</li>
-        <li><strong>Transportas 0 €.</strong> Visoje Lietuvoje, be kilometrų limito.</li>
+        <li><strong>Atvykimas visoje Lietuvoje.</strong> Visoje Lietuvoje, pagal renginio vietą.</li>
         <li><strong>Ženklinimas įskaičiuotas.</strong> Logotipas ir QR kodas be priemokų.</li>
         <li><strong>Skaidrus pasiūlymas.</strong> Kaina su PVM ir be jo, be paslėptų punktų.</li>
         <li><strong>Atsakymas per 24 val.</strong> Kiekvieną darbo dieną.</li>

@@ -133,15 +133,15 @@ def build_llms():
     write("llms.txt", f"""# 33bots — humanoidinių robotų nuoma renginiams Lietuvoje
 
 > 33bots nuomoja humanoidinius robotus Unitree G1 renginiams, parodoms, konferencijoms ir įmonių
-> šventėms visoje Lietuvoje. Į kainą visada įeina transportas, sertifikuotas operatorius visam
-> renginio laikui ir roboto ženklinimas kliento logotipu bei QR kodu.
+> šventėms visoje Lietuvoje. Į pradinę kainą įeina sertifikuotas operatorius visam renginio laikui ir roboto
+> ženklinimas kliento logotipu bei QR kodu; atvykimą vertiname pagal renginio vietą.
 
 ## Pagrindiniai faktai
 
 - Paslauga: humanoidinio roboto nuoma su operatoriumi
 - Robotas: Unitree G1 (132 cm, 35 kg, iki 43 laisvės laipsnių, iki 2 m/s, LiDAR ir kompiuterinė rega)
-- Teritorija: visa Lietuva, transportas 0 € be kilometrų limito
-- Į kainą įeina: robotas, operatorius, transportas, paruošimas, ženklinimas, scenarijaus derinimas,
+- Teritorija: visa Lietuva; atvykimas vertinamas pagal renginio vietą
+- Į pradinę kainą įeina: robotas, operatorius, paruošimas, ženklinimas, scenarijaus derinimas,
   civilinės atsakomybės draudimo apsauga
 - Paketai: Impulsas (iki 3 val.), Standartas (iki 8 val.), Multi-Day (2–7+ dienų)
 - Atsakymo laikas į užklausą: 24 darbo valandos
@@ -170,7 +170,7 @@ def build_llms():
 ## Dažni klausimai
 
 - Ar robotą gali valdyti užsakovas? Ne — robotą valdo 33bots operatorius, kuris lieka visą renginį.
-- Ar transportas kainuoja papildomai? Ne, visoje Lietuvoje transportas įskaičiuotas.
+- Ar atvykimas kainuoja papildomai? Atvykimą vertiname pagal renginio vietą ir nurodome pasiūlyme.
 - Ar ženklinimas kainuoja papildomai? Ne, logotipas ir QR kodas įeina į standartinį paketą.
 - Kokių sąlygų reikia vietoje? 230 V lizdo, ~2×2 m laisvos erdvės, prieigos likus 45 min. iki starto.
 - Ar robotas saugus? Taip — LiDAR jutikliai, kompiuterinė rega ir nuolatinė operatoriaus priežiūra.

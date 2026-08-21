@@ -29,8 +29,8 @@ PAGES = [
         benefits=[
             ("Pilna paslauga", "Robotas neatvyksta dėžėje su instrukcija. Atvažiuoja operatorius, "
                                "kuris paruošia, valdo ir prižiūri robotą visą renginio laiką."),
-            ("Nemokamas transportas", "Vilnius, Kaunas, Klaipėda ar mažas miestelis — atvykimo kaina "
-                                      "ta pati: nulis eurų. Be kilometrų limito ir minimalaus atstumo."),
+            ("Atvykimas visoje Lietuvoje", "Vilnius, Kaunas, Klaipėda ar mažas miestelis — dirbame "
+                                      "visur. Atvykimo kainą įvertiname pagal vietą ir nurodome pasiūlyme."),
             ("Ženklinimas be priemokų", "Jūsų logotipas ir QR kodas ant roboto krūtinės, spalvinis "
                                         "akcentas ir pritaikyta programa — įskaičiuota į nuomos kainą."),
             ("Draudimas ir sauga", "Veiklai taikoma civilinės atsakomybės draudimo apsauga, o robotas "
@@ -86,7 +86,7 @@ PAGES = [
         slug="robotas-renginiui.html",
         title="Robotas renginiui — humanoidas, kuris sustabdo minią | 33bots",
         desc="Robotas renginiui visoje Lietuvoje: Unitree G1 pasitinka svečius, veda pasirodymą ir "
-             "šoka. Operatorius ir transportas kainoje.",
+             "šoka. Operatorius ir ženklinimas kainoje.",
         keywords="robotas renginiui, robotas į renginį, renginių pramoga, humanoidas renginyje",
         crumb="Robotas renginiui",
         eyebrow="Robotas renginiui · Pramoga, apie kurią kalbama",
@@ -154,7 +154,7 @@ PAGES = [
         slug="robotas-parodoms.html",
         title="Robotas parodoms — daugiau lankytojų prie stendo | 33bots",
         desc="Humanoidinis robotas parodų stende: sustabdo lankytojų srautą ir padeda rinkti kontaktus. "
-             "Kelių dienų nuoma su operatoriumi ir transportu.",
+             "Kelių dienų nuoma su operatoriumi ir ženklinimu.",
         keywords="robotas parodoms, robotas parodų stende, robotas mugėms, parodos stendas, LITEXPO robotas",
         crumb="Robotas parodoms",
         eyebrow="Robotas parodoms · Stendas, pro kurį nepraeisi",
@@ -194,7 +194,7 @@ PAGES = [
                "<a href=\"robotas-konferencijai.html\">konferencijų puslapyje</a>.</p>",
         faq=[
             ("Ar robotas gali dirbti visas parodos dienas?",
-             "Taip. Kelių dienų paketas apima robotą, operatorių ir transportą visoms parodos dienoms. "
+             "Taip. Kelių dienų paketas apima robotą ir operatorių visoms parodos dienoms. "
              "Baterijos keičiamos per suplanuotas pertraukas, todėl stendas nelieka tuščias."),
             ("Ar reikia atskiro leidimo iš parodos organizatoriaus?",
              "Paprastai pakanka standartinio stendo derinimo. Kai kurie organizatoriai prašo informacijos "
@@ -324,7 +324,7 @@ PAGES = [
                "Vestuvėms turime <a href=\"robotas-vestuvems.html\">atskirą puslapį</a>.</p>",
         faq=[
             ("Ar robotas tinka šventei sodyboje už miesto?",
-             "Taip. Transportas įskaičiuotas nepriklausomai nuo atstumo, o robotas juda ir kietu grindiniu, "
+             "Taip, dirbame ir už miesto. Robotas juda ir kietu grindiniu, "
              "ir trumpa žole. Reikia tik elektros lizdo netoliese."),
             ("Kiek žmonių renginyje yra optimalu?",
              "Robotas gerai veikia nuo 30 iki kelių šimtų svečių. Didesniems renginiams rekomenduojame "
@@ -457,7 +457,7 @@ PAGES = [
              "Techniškai tai įmanoma ir kartais taip darome, bet rekomenduojame tai aptarti iš anksto — "
              "svarbiausiam momentui visada siūlome atsarginį planą."),
             ("Ar robotas tinka vestuvėms sodyboje?",
-             "Taip, jei yra elektra ir lygus paviršius pasirodymui. Transportas įskaičiuotas nepriklausomai "
+             "Taip, jei yra elektra ir lygus paviršius pasirodymui. atvykimą vertiname pagal vietą nepriklausomai "
              "nuo atstumo nuo miesto."),
             ("Ar galime pasirinkti muziką pasirodymui?",
              "Taip. Choreografiją derinam prie jūsų pasirinkto kūrinio, jei jis tinka pagal tempą — "
@@ -511,7 +511,7 @@ def build_page(p):
         <a href="#nauda" class="btn-ghost">Kodėl verta ↓</a>
       </div>
       <div class="hero__trust">
-        <span class="hero__trust-item">✓ Nemokamas transportas</span>
+        <span class="hero__trust-item">✓ Atvykimas visoje Lietuvoje</span>
         <span class="hero__trust-item">✓ Operatorius kainoje</span>
         <span class="hero__trust-item">✓ Ženklinimas be priemokų</span>
         <span class="hero__trust-item">✓ Atsakymas per 24 val.</span>
