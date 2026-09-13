@@ -92,6 +92,14 @@ išvardija visus neišverstus fragmentus.
 
 ## Diegimas
 
+Svetainė diegiama **automatiškai iš GitHub** — lygiai taip pat kaip 33bots.pl. Kiekvienas
+pakeitimas, įkeltas į `claude/lithuanian-33bots-site-4v8qf8` šaką, per kelias sekundes atsiduria
+33bots.lt: GitHub Actions patikrina puslapius, o tada serveris pats parsisiunčia paketą iš GitHub
+per HTTPS (`narzedzia-serwer/deploy.php`). Rankiniu būdu per FTP nieko kelti nereikia.
+
+Vienkartinis nustatymas (token, `deploy.php` įkėlimas, `DEPLOY_URL` ir `DEPLOY_TOKEN` paslaptys)
+aprašytas [`WDROZENIE.md`](WDROZENIE.md).
+
 Svetainė statinė — visas repozitorijos turinys keliamas į serverio šaknį. `_redirects` skirtas
 Netlify, `.htaccess` — Apache (HTTPS, non-www, 404, talpykla, gzip).
 
