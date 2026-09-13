@@ -29,6 +29,8 @@ TITLES = {
     "kontaktai.jpg": "Kontaktai — atsakome per 24 val.",
     "video-realizacijos.jpg": "Robotas renginyje — vaizdo įrašai",
     "galerija.jpg": "Kadrai iš tikrų pasirodymų",
+    "parduotuve.jpg": "Humanoidinio roboto pirkimas",
+    "roboto-diegimas.jpg": "Roboto diegimas įmonėje",
 }
 
 for p in OFFER_PAGES:

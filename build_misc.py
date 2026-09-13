@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """33bots.lt: kainos, apie mus, kontaktai, vaizdo įrašai, privatumo politika, 404."""
-from lt_common import (SITE, EMAIL, PHONE_1, PHONE_1_H, PHONE_2, PHONE_2_H, head, body_open, nav,
+from lt_common import (SITE, EMAIL, PHONE, PHONE_H, HAS_PHONE, head, body_open, nav,
                        crumbs, breadcrumb_ld, contact_section, footer, faq_section, faq_ld,
                        organization_ld, video_ld, write, esc, CITIES, city_url, SOCIALS)
 from lt_index_strings import PRICE_FROM, PRICE_FROM_PLAIN, PRICE_DOG, DISCOUNT
@@ -323,6 +323,12 @@ def build_about():
 
 
 def build_contacts():
+    phone_line = (f'<br />\n        <strong>Telefonas:</strong> <a href="tel:{PHONE}">{PHONE_H}</a>'
+                  if HAS_PHONE else "")
+    availability = ("Dirbame darbo dienomis, o renginių savaitgaliais esame pasiekiami telefonu."
+                    if HAS_PHONE else
+                    "Rašykite el. paštu arba palikite užklausą formoje — atsakome per 24 darbo "
+                    "valandas, taip pat ir renginių savaitgaliais.")
     socials = "\n".join(
         f'        <a href="{u}" target="_blank" rel="noopener noreferrer">{n} →</a>' for n, u in SOCIALS)
     chips = "\n".join(f'        <a href="{city_url(s)}">{n}</a>' for s, n, _, _ in CITIES)
@@ -338,8 +344,8 @@ def build_contacts():
 }}"""]
 
     html = head(title="Kontaktai — humanoidinio roboto nuoma Lietuvoje | 33bots",
-                description="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas, telefonas "
-                            "ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą.",
+                description="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir "
+                            "užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą.",
                 slug="kontaktai.html",
                 keywords="33bots kontaktai, roboto nuoma kontaktai, susisiekti robotų nuoma",
                 og_image=f"{SITE}/og/kontaktai.jpg", extra_ld=ld,
@@ -360,10 +366,8 @@ def build_contacts():
     <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:var(--s6);">
       <div class="article-body" style="max-width:none;">
         <h2>Tiesioginiai kontaktai</h2>
-        <p><strong>El. paštas:</strong> <a href="mailto:{EMAIL}">{EMAIL}</a><br />
-        <strong>Telefonas:</strong> <a href="tel:{PHONE_1}">{PHONE_1_H}</a><br />
-        <strong>Telefonas:</strong> <a href="tel:{PHONE_2}">{PHONE_2_H}</a></p>
-        <p>Dirbame darbo dienomis, o renginių savaitgaliais esame pasiekiami telefonu.</p>
+        <p><strong>El. paštas:</strong> <a href="mailto:{EMAIL}">{EMAIL}</a>{phone_line}</p>
+        <p>{availability}</p>
         <h3>Socialiniai tinklai</h3>
         <div class="related-links">
 {socials}

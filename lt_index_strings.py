@@ -359,6 +359,7 @@ JS_TEXTS = {
     "Odezwiemy się na": "Susisieksime adresu",
     "Wiadomość wysłana": "Užklausa išsiųsta",
     "Wysyłanie...": "Siunčiama...",
+    "Wysyłanie…": "Siunčiama…",
     "Spróbuj ponownie": "Bandykite dar kartą",
     "To pole jest wymagane": "Šis laukas privalomas",
     "Nieprawidłowy format": "Neteisingas formatas",

@@ -2,7 +2,7 @@
 """33bots.lt: sitemap.xml, robots.txt, llms.txt, feed.xml, _redirects, .htaccess."""
 from datetime import date, datetime
 
-from lt_common import (SITE, EMAIL, PHONE_1_H, write, esc, CITIES, city_url, NAV_OFFER,
+from lt_common import (SITE, EMAIL, PHONE_H, HAS_PHONE, write, esc, CITIES, city_url, NAV_OFFER,
                        alternates)
 from lt_articles import ARTICLES as _A1
 from lt_articles2 import ARTICLES2 as _A2
@@ -28,7 +28,9 @@ CORE = (
     [("", "1.0", "weekly", TODAY),
      ("robotu-nuoma.html", "0.9", "weekly", TODAY)]
     + [(p["slug"], "0.9", "monthly", TODAY) for p in OFFER_PAGES]
-    + [("kainos.html", "0.9", "monthly", TODAY),
+    + [("parduotuve.html", "0.9", "monthly", TODAY),
+       ("roboto-diegimas.html", "0.9", "monthly", TODAY),
+       ("kainos.html", "0.9", "monthly", TODAY),
        ("video-realizacijos.html", "0.8", "monthly", TODAY),
        ("galerija.html", "0.8", "monthly", TODAY),
        ("apie-mus.html", "0.7", "yearly", TODAY),
@@ -126,6 +128,7 @@ Sitemap: {SITE}/sitemap.xml
 
 
 def build_llms():
+    kontaktu_telefonas = f", {PHONE_H}" if HAS_PHONE else ""
     offers = "\n".join(f"- [{p['crumb']}]({SITE}/{p['slug']}) — {p['desc']}"
                         for p in OFFER_PAGES)
     posts = "\n".join(f"- [{a['title']}]({SITE}/{a['slug']}) — {a['desc']}" for a in ARTICLES)
@@ -144,8 +147,10 @@ def build_llms():
 - Į pradinę kainą įeina: robotas, operatorius, paruošimas, ženklinimas, scenarijaus derinimas,
   civilinės atsakomybės draudimo apsauga
 - Paketai: Impulsas (iki 3 val.), Standartas (iki 8 val.), Multi-Day (2–7+ dienų)
+- Be nuomos: robotų pardavimas (parduotuve.html) ir diegimas įmonėje su kalbos programine
+  įranga bei komandos mokymais (roboto-diegimas.html); kaina pateikiama po pokalbio
 - Atsakymo laikas į užklausą: 24 darbo valandos
-- Kontaktai: {EMAIL}, {PHONE_1_H}
+- Kontaktai: {EMAIL}{kontaktu_telefonas}
 - Kalbų versijos: lietuvių ({SITE}), lenkų (https://33bots.pl), vokiečių (https://33bots.at,
   https://robotollern.de)
 
@@ -154,6 +159,8 @@ def build_llms():
 - [Robotų nuoma Lietuvoje — visi miestai ir paslaugos]({SITE}/robotu-nuoma.html)
 {offers}
 - [Kainos ir paketai]({SITE}/kainos.html)
+- [Parduotuvė — humanoidinio roboto ir roboto šuns pirkimas]({SITE}/parduotuve.html)
+- [Diegimai įmonėms — robotas, kalbos programinė įranga, mokymai]({SITE}/roboto-diegimas.html)
 - [Vaizdo įrašai iš renginių]({SITE}/video-realizacijos.html)
 - [Nuotraukų galerija]({SITE}/galerija.html)
 - [Apie 33bots]({SITE}/apie-mus.html)

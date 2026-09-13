@@ -12,8 +12,10 @@
 - Į pradinę kainą įeina: robotas, operatorius, paruošimas, ženklinimas, scenarijaus derinimas,
   civilinės atsakomybės draudimo apsauga
 - Paketai: Impulsas (iki 3 val.), Standartas (iki 8 val.), Multi-Day (2–7+ dienų)
+- Be nuomos: robotų pardavimas (parduotuve.html) ir diegimas įmonėje su kalbos programine
+  įranga bei komandos mokymais (roboto-diegimas.html); kaina pateikiama po pokalbio
 - Atsakymo laikas į užklausą: 24 darbo valandos
-- Kontaktai: kontakt@33bots.pl, +48 531 408 004
+- Kontaktai: kontakt@33bots.lt
 - Kalbų versijos: lietuvių (https://33bots.lt), lenkų (https://33bots.pl), vokiečių (https://33bots.at,
   https://robotollern.de)
 
@@ -41,6 +43,8 @@
 - [Modernios pramogos](https://33bots.lt/modernios-pramogos.html) — Modernios, technologinės pramogos įmonių renginiams: humanoidinis robotas vietoj eilinės programos. Nuoma visoje Lietuvoje su operatoriumi.
 - [Renginio idėjos](https://33bots.lt/renginio-idejos.html) — Idėjos įmonės renginiui ir šventei: programos struktūra, akcentas, kurį prisimena, ir klaidos, kurių verta vengti. Praktinis vadovas organizatoriams.
 - [Kainos ir paketai](https://33bots.lt/kainos.html)
+- [Parduotuvė — humanoidinio roboto ir roboto šuns pirkimas](https://33bots.lt/parduotuve.html)
+- [Diegimai įmonėms — robotas, kalbos programinė įranga, mokymai](https://33bots.lt/roboto-diegimas.html)
 - [Vaizdo įrašai iš renginių](https://33bots.lt/video-realizacijos.html)
 - [Nuotraukų galerija](https://33bots.lt/galerija.html)
 - [Apie 33bots](https://33bots.lt/apie-mus.html)

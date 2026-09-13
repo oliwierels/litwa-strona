@@ -37,7 +37,7 @@ jobs:
       - name: Sprawdź stronę przed wdrożeniem
         run: |
           python3 - <<'PY'
-          import json, os, re, sys
+          import hashlib, json, os, re, sys
           from html.parser import HTMLParser
           from urllib.parse import urlparse
 
@@ -126,6 +126,26 @@ jobs:
           for adres, pliki in kanoniczne.items():
               if len(pliki) > 1:
                   bledy.append(f'ten sam adres kanoniczny {adres} na stronach: {", ".join(pliki)}')
+
+          # Strony budowane Tailwindem: numer wersji arkusza musi odpowiadać jego treści,
+          # a każda taka strona musi być wymieniona w tailwind.config.js — inaczej jej klasy
+          # nie trafią do arkusza i strona wyświetli się bez stylów.
+          TAILWIND = sorted(p for p in STRONY
+                            if 'assets-redesign.css' in open(p, encoding='utf-8').read())
+          if TAILWIND:
+              SUMA = hashlib.md5(open('assets-redesign.css', 'rb').read()).hexdigest()[:8]
+              konfiguracja = open('tailwind.config.js', encoding='utf-8').read()
+              for plik in TAILWIND:
+                  zrodlo = open(plik, encoding='utf-8').read()
+                  znacznik = re.search(r'assets-redesign\.css\?v=([0-9a-f]{8})', zrodlo)
+                  if not znacznik:
+                      bledy.append(f'{plik}: arkusz bez numeru wersji — uruchom ./buduj.sh')
+                  elif znacznik.group(1) != SUMA:
+                      bledy.append(
+                          f'{plik}: arkusz nie zgadza się ze stroną (na stronie: {znacznik.group(1)}, '
+                          f'faktyczny: {SUMA}) — uruchom ./buduj.sh i zatwierdź zmiany')
+                  if plik not in konfiguracja:
+                      bledy.append(f'{plik}: brak w content w tailwind.config.js — style się nie skompilują')
 
           # Mapa strony: poprawny XML i każdy adres ma swój plik w repozytorium.
           import xml.etree.ElementTree as ET

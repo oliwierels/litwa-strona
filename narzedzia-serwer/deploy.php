@@ -38,7 +38,7 @@ const LIMIT_MB  = 200;              // bezpiecznik na rozmiar pobrania (repozyto
 const POMIJANE_KATALOGI = ['.git', '.github', 'node_modules', '__pycache__', 'scripts', 'narzedzia-serwer', 'templates'];
 const POMIJANE_PLIKI    = ['.gitignore', '_redirects', 'deploy.php'];
 const POMIJANE_KONCOWKI = ['.py', '.pyc', '.md'];
-const POMIJANE_NAZWY    = ['package.json', 'package-lock.json'];
+const POMIJANE_NAZWY    = ['package.json', 'package-lock.json', 'tailwind.config.js', 'tw-input.css', 'buduj.sh'];
 
 // ─────────────────────────────────────────────────────────────
 

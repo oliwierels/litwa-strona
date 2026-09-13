@@ -8,7 +8,8 @@ ir lokalus SEO.
 
 ```bash
 pip install Pillow          # reikalinga tik Open Graph paveikslėliams
-python3 build_all.py
+python3 build_all.py        # visi puslapiai ir SEO failai
+./buduj.sh                  # Tailwind arkušas perdaryto dizaino puslapiams
 ```
 
 Visi `.html` failai, `sitemap.xml`, `robots.txt`, `llms.txt`, `feed.xml` ir `og/` katalogas
@@ -28,6 +29,13 @@ yra **generuojami** — jų nereikia redaguoti ranka. Keiskite turinį skriptuos
 | `build_gallery.py` | `galerija.html` |
 | `build_index_redesign.py` | **Pagrindinis puslapis** — perkeltas 33bots.pl perdarytas dizainas |
 | `lt_index_strings.py` | Pagrindinio puslapio vertimo žemėlapis (PL → LT) ir kainos |
+| `lt_port.py` | Bendri lenkiško šablono perkėlimo įrankiai (vertimas, meta, hreflang, kontaktai) |
+| `lt_links.py` | Lenkiškų adresų ir nuotraukų kelių atitikmenys |
+| `build_shop.py` | `parduotuve.html` — robotų pardavimas (perkelta iš `sklep.html`) |
+| `lt_shop_strings.py` | Parduotuvės vertimo žemėlapis |
+| `build_deploy.py` | `roboto-diegimas.html` — diegimai įmonėms (perkelta iš `wdrozenia.html`) |
+| `lt_deploy_strings.py` | Diegimų puslapio vertimo žemėlapis |
+| `buduj.sh` | Tailwind arkušas (`assets-redesign.css`) + versijos žyma puslapiuose |
 | `templates/pl-index.html` | Lenkiškos versijos kopija — porto šaltinis |
 | `build_index.py` | Senasis pagrindinio puslapio variantas (nebenaudojamas; iš jo imamas DUK sąrašas) |
 | `build_offers.py` | 16 paslaugų puslapių (renderina `PAGES` + `PAGES2`) |
@@ -44,9 +52,17 @@ Rankiniu būdu tvarkomi failai: `style.css`, `assets-redesign.css`, `main.js`, p
 
 ## Du dizainai — kaip 33bots.pl
 
-Lenkiškoje svetainėje perdarytas **tik pagrindinis puslapis** (`assets-redesign.css`, Tailwind,
-Space Grotesk), o likę 187 puslapiai tebeturi senąjį `style.css` dizainą. Lietuviška versija tą patį
-atkartoja: naujas pagrindinis puslapis + senojo dizaino vidiniai puslapiai.
+Lenkiškoje svetainėje perdaryti **trys puslapiai** (`assets-redesign.css`, Tailwind,
+Space Grotesk): pagrindinis, parduotuvė ir diegimai; likusieji tebeturi senąjį `style.css`
+dizainą. Lietuviška versija tą patį atkartoja: `index.html`, `parduotuve.html` ir
+`roboto-diegimas.html` — naujas dizainas, visi kiti — senasis.
+
+Arkušas kompiliuojamas `./buduj.sh` (Tailwind 3.4 per `npx`, konfigūracija
+`tailwind.config.js`). Skriptas pažymi kiekvieną puslapį arkušo turinio kontroline suma
+(`assets-redesign.css?v=…`), todėl naršyklė niekada nerodo seno arkušo. **Pridėjus naują
+perdaryto dizaino puslapį, įrašykite jį į `tailwind.config.js`** — kitaip jo klasės į arkušą
+nepateks. Diegimo patikra abu dalykus tikrina ir sustabdo išleidimą, jei `./buduj.sh`
+pamirštas.
 
 Kai lenkiškas dizainas bus išplėstas į vidinius puslapius, tą patį reikės padaryti ir čia.
 Atnaujinant pagrindinį puslapį: nukopijuokite naują `index.html` į `templates/pl-index.html`,
@@ -129,12 +145,12 @@ Netlify, `.htaccess` — Apache (HTTPS, non-www, 404, talpykla, gzip).
    (visi kiti puslapiai).
 7. **Google Tag Manager** — dabar naudojamas lenkiškas konteineris `GTM-MR7R7CJ3`
    (`lt_common.GTM`). Jei norite atskirti statistiką, pakeiskite į savo.
-8. **Lietuviški kontaktai** — telefonas ir el. paštas struktūrizuotuose duomenyse kol kas
-   lenkiški (`+48…`, `kontakt@33bots.pl`). Gavus LT numerį ir pašto dėžutę 33bots.lt domene,
-   užpildykite `lt_common.EMAIL_LT`, `PHONE_LT` ir `PHONE_LT_H` — jie automatiškai pakeis
-   lenkiškus visuose puslapiuose, formoje ir schema.org blokuose. Vietinis numeris ir adresas
-   yra vienas stipriausių vietos signalų Google, todėl verta padaryti prieš Google Business
-   Profile kūrimą.
+8. **Telefonas** — el. paštas jau lietuviškas (`kontakt@33bots.lt`), o telefono kol kas
+   nerodome niekur: lenkiškas numeris lietuviškoje svetainėje yra silpnas vietos signalas.
+   Gavus LT numerį užpildykite `lt_common.PHONE_LT` ir `PHONE_LT_H` — numeris savaime grįš į
+   navigaciją, poraštę, kontaktų puslapį, formos klaidos pranešimą, `llms.txt` ir schema.org
+   blokus. Vietinis numeris yra vienas stipriausių vietos signalų Google, todėl verta padaryti
+   prieš Google Business Profile kūrimą.
 
 ### Patikra po paleidimo
 
@@ -161,6 +177,23 @@ Atvaizdavimas (`lt_gallery.py`):
 į `lt_gallery.PHOTOS` (failas, išdėstymo klasė, antraštė, alt tekstas) ir paleiskite
 `python3 build_all.py`.
 
+## Parduotuvė ir diegimai
+
+Be nuomos svetainė turi dvi komercines sekcijas, perkeltas iš 33bots.pl:
+
+- `parduotuve.html` — roboto pirkimas nuosavybėn (Unitree G1, robotas šuo, robotas su diegimu).
+  Kainų puslapyje nėra sąmoningai, kaip ir lenkiškoje versijoje: robotai vežami pagal užsakymą,
+  todėl kaina pateikiama po pokalbio. Struktūrizuoti duomenys — `Product` su techniniais
+  parametrais ir `FAQPage`.
+- `roboto-diegimas.html` — kas vyksta nusipirkus: pristatymas ir paleidimas, kalbos programinė
+  įranga su žiniomis apie įmonę, komandos mokymai, pagalba po starto. Struktūrizuoti duomenys —
+  `Service` ir `FAQPage`.
+
+Abu puslapiai generuojami iš lenkiškų šablonų (`templates/pl-sklep.html`,
+`templates/pl-wdrozenia.html`) taip pat, kaip pagrindinis puslapis. Atnaujinus lenkišką versiją:
+nukopijuokite naują HTML į `templates/`, paleiskite generatorių ir jis išvardys visus
+neišverstus fragmentus.
+
 ## Kainos
 
 Kainos Lietuvos rinkai nustatytos `lt_index_strings.py` viršuje:
@@ -182,7 +215,8 @@ nerašome „nemokamas transportas" ar „transportas — 0 €".
 ## Ką dar verta padaryti
 
 - Pakeisti Formspree galinį tašką savu (`lt_common.FORM_ENDPOINT` + `main.js`).
-- Įrašyti lietuviškus kontaktus (`lt_common.EMAIL_LT`, `PHONE_LT`, `PHONE_LT_H`).
+- Įrašyti lietuvišką telefono numerį (`lt_common.PHONE_LT`, `PHONE_LT_H`).
+- Įkelti `kontakt@33bots.lt` dėžutę — adresas jau rodomas visuose puslapiuose.
 - Pridėti tikrus Lietuvos projektų atsiliepimus ir case study, kai jų atsiras; `lt_common.REVIEWS`
   ir matomos citatos turi keistis kartu.
 - Pridėti hreflang nuorodas į 33bots.lt taip pat 33bots.at ir robotollern.de puslapiuose

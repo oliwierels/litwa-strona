@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MR7R7CJ3');</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Humanoidinio roboto diegimas įmonėje — pardavimas ir mokymai | 33bots</title>
+<meta name="description" content="Įsigyjate humanoidinį robotą, o mes sukonfigūruojame kalbą ir žinias apie jūsų įmonę bei apmokome komandą. Pristatymas, paleidimas vietoje ir pagalba po starto." />
+<link rel="canonical" href="https://33bots.lt/roboto-diegimas.html" />
+<meta name="theme-color" content="#050505" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://33bots.lt/roboto-diegimas.html" />
+<meta property="og:title" content="Humanoidinio roboto diegimas įmonėje | 33bots" />
+<meta property="og:description" content="Robotas nuolat jūsų įmonėje: įranga, kalbos programinė įranga su žiniomis apie jūsų pasiūlymą ir komandos mokymai." />
+<meta property="og:image" content="https://33bots.lt/og/roboto-diegimas.jpg" />
+<meta property="og:locale" content="lt_LT" />
+<meta property="og:site_name" content="33bots" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="alternate" hreflang="lt" href="https://33bots.lt/roboto-diegimas.html" />
+  <link rel="alternate" hreflang="pl" href="https://33bots.pl/wdrozenia.html" />
+  <link rel="alternate" hreflang="x-default" href="https://33bots.pl/wdrozenia.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts.css?v=1" />
+
+<link rel="stylesheet" href="assets-redesign.css?v=576794cf" />
+
+<style>
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: #050505; }
+  [id] { scroll-margin-top: 90px; }
+  ::selection { background: #6fd6ff; color: #050505; }
+
+  .reveal { opacity: 0; transform: translateY(28px) scale(.985); }
+  .reveal.in {
+    opacity: 1; transform: none;
+    transition: opacity .8s cubic-bezier(.16,1,.3,1) var(--d, 0s),
+                transform .8s cubic-bezier(.16,1,.3,1) var(--d, 0s);
+  }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .03;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
+  }
+
+  .cta-shine {
+    background-image: linear-gradient(110deg, #fff 0%, #fff 38%, #cdf0ff 50%, #fff 62%, #fff 100%);
+    background-size: 200% 100%;
+  }
+  @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+  .cta-shine:hover { animation: shimmer 1.4s linear infinite; }
+
+  @keyframes aurora {
+    0%,100% { transform: translate3d(0,0,0) scale(1); }
+    33%     { transform: translate3d(6%,-8%,0) scale(1.15); }
+    66%     { transform: translate3d(-7%,5%,0) scale(.92); }
+  }
+  .aurora { animation: aurora 20s ease-in-out infinite; }
+
+  .faq-panel { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.16,1,.3,1); }
+  .faq-item[open-state="1"] .faq-panel { max-height: 420px; }
+  .faq-item[open-state="1"] .faq-sign { transform: rotate(45deg); color: #6fd6ff; }
+
+  .cookies { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 80;
+             display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;
+             max-width: 640px; margin: 0 auto; padding: 1rem 1.25rem;
+             background: rgba(17,17,19,.94); backdrop-filter: blur(16px);
+             -webkit-backdrop-filter: blur(16px); border: 1px solid #2a2a30;
+             border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.6);
+             transform: translateY(140%); transition: transform .6s cubic-bezier(.16,1,.3,1); }
+  .cookies.show { transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://33bots.lt/#organizacija",
+  "name": "33bots — humanoidinių robotų nuoma renginiams",
+  "alternateName": "33bots",
+  "url": "https://33bots.lt/",
+  "logo": "https://33bots.lt/logo.png",
+  "image": "https://33bots.lt/robot-g1.jpg",
+  "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Sertifikuotas operatorius ir ženklinimas kainoje; atvykimą vertiname pagal renginio vietą.",
+  "email": "kontakt@33bots.lt",
+  "areaServed": {"@type": "Country", "name": "Lithuania"},
+  "sameAs": [
+      "https://www.instagram.com/33bots_/",
+      "https://www.tiktok.com/@aimforum",
+      "https://www.facebook.com/33bots",
+      "https://www.linkedin.com/company/33bots"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "kontakt@33bots.lt",
+    "contactType": "sales",
+    "areaServed": "LT",
+    "availableLanguage": ["Lithuanian", "Polish", "English"]
+  },
+  "knowsAbout": [
+    "humanoidinio roboto nuoma",
+    "robotas renginiui",
+    "robotas parodoms",
+    "robotas konferencijai",
+    "Unitree G1",
+    "renginių pramogos"
+  ],
+  "priceRange": "nuo 2100 EUR už renginio dieną"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Humanoidinio roboto diegimas įmonėje",
+  "description": "Roboto pristatymas ir paleidimas, kalbos programinė įranga su žiniomis apie įmonę, komandos mokymai ir pagalba po starto.",
+  "url": "https://33bots.lt/roboto-diegimas.html",
+  "serviceType": "Humanoidinio roboto diegimas",
+  "provider": {"@id": "https://33bots.lt/#organizacija"},
+  "areaServed": {"@type": "Country", "name": "Lithuania"},
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://33bots.lt/roboto-diegimas.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Pradžia", "item": "https://33bots.lt/"},
+      {"@type": "ListItem", "position": 2, "name": "Diegimai", "item": "https://33bots.lt/roboto-diegimas.html"}
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kuo diegimas skiriasi nuo nuomos?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Nuomos atveju atvežame robotą į renginį ir pasiimame jį po pabaigos — valdo mūsų operatorius. Diegimo atveju robotas tampa jūsų nuosavybe, dirba pas jus kasdien, o valdo jį apmokyta jūsų komanda. Nuoma tinka pavieniams renginiams, diegimas — kai robotas turi tapti nuolatine įmonės dalimi."}
+      },
+      {
+        "@type": "Question",
+        "name": "Kiek tai kainuoja?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Kaina priklauso nuo roboto modelio bei programinės įrangos ir pagalbos apimties, todėl kiekvieną diegimą vertiname atskirai. Pasiūlymą parengiame po trumpo pokalbio apie tai, kam robotas skirtas — be jokių įsipareigojimų iš jūsų pusės."}
+      },
+      {
+        "@type": "Question",
+        "name": "Kiek trunka visas diegimas?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ilgiausias etapas — roboto parvežimas, paprastai apie mėnesį nuo užsakymo. Programinės įrangos konfigūraciją ir žinių bazę ruošiame lygiagrečiai, todėl po pristatymo lieka paleidimas ir mokymai — paprastai viena diena pas jus."}
+      },
+      {
+        "@type": "Question",
+        "name": "Iš kur robotas žino, ką atsakyti?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Prieš paleidimą įkeliame jam žinias apie jūsų įmonę: pasiūlymą, produktų pavadinimus ir aprašymus, dažniausius klientų klausimus, darbo laiką, kontaktus. Taip pat suderiname, kaip jis turi elgtis ir ko neturėtų sakyti. Pasikeitus pasiūlymui, žinių bazę atnaujiname."}
+      },
+      {
+        "@type": "Question",
+        "name": "Kas gali valdyti robotą po mokymų?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Bet kuris jūsų komandos žmogus — techninio išsilavinimo nereikia. Mokymai apima paleidimą, pasirodymo vedimą, krovimą, scenarijų keitimą ir saugos taisykles. Paliekame paprasta kalba parašytą instrukciją, prie kurios visada galima grįžti."}
+      },
+      {
+        "@type": "Question",
+        "name": "O kaip su garantija ir servisu?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Robotui taikoma gamintojo garantija, o mes tarpininkaujame ją administruojant — jums nereikia susisiekti su Kinija. Techninės pagalbos apimtį po paleidimo suderiname rengdami pasiūlymą, atsižvelgdami į tai, kaip intensyviai robotas dirbs."}
+      }
+  ]
+}
+  </script>
+</head>
+
+<body class="grain bg-ink font-sans text-neutral-200 antialiased">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR7R7CJ3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header id="nav" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+  <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8">
+    <a href="index.html" class="font-display text-lg font-700 tracking-tight text-white">33BOTS</a>
+    <nav class="hidden items-center gap-8 text-sm text-neutral-400 md:flex">
+      <a href="index.html#realizacje" class="transition hover:text-white">Realizacijos</a>
+      <a href="index.html#cennik" class="transition hover:text-white">Nuoma</a>
+      <a href="roboto-diegimas.html" class="text-white transition">Diegimai</a>
+      <a href="parduotuve.html" class="transition hover:text-white">Parduotuvė</a>
+      <a href="robotu-nuoma.html" class="transition hover:text-white">Paslaugos</a>
+    </nav>
+    <a href="#kontakt"
+       class="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[13px] font-700 uppercase tracking-wider text-ink transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_28px_rgba(111,214,255,.45)]">
+      Pakalbėkime
+      <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="relative overflow-hidden px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-grid"></div>
+    <div class="aurora absolute -left-[5%] top-0 h-[32rem] w-[32rem] rounded-full bg-accent/15 blur-[130px]"></div>
+    <div class="aurora absolute right-0 top-1/3 h-[26rem] w-[26rem] rounded-full bg-violet/12 blur-[130px]" style="animation-delay:-8s"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl">
+    <nav class="reveal mb-8 text-[12px] text-neutral-600" aria-label="Naršymo kelias">
+      <a href="index.html" class="transition hover:text-neutral-300">Pradžia</a>
+      <span class="mx-2">/</span><span class="text-neutral-400">Diegimai</span>
+    </nav>
+
+    <p class="reveal mb-5 inline-flex items-center gap-2.5 rounded-full border border-line-mid bg-white/[.03] px-4 py-2 text-[11px] font-600 uppercase tracking-[.18em] text-neutral-400 backdrop-blur" style="--d:.05s">
+      Diegimai įmonėms
+    </p>
+
+    <h1 class="reveal max-w-4xl font-display text-[2.2rem] font-700 leading-[1.03] tracking-[-.03em] text-white sm:text-[2.9rem] xl:text-[3.4rem]" style="--d:.1s">
+      Robotas, kuris lieka pas jus<br />
+      <span class="bg-gradient-to-r from-white via-accent to-accent-deep bg-clip-text text-transparent">visam laikui — ir žino, ką sakyti.</span>
+    </h1>
+
+    <p class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-neutral-400" style="--d:.18s">
+      Jūs įsigyjate humanoidinį robotą, o mes pasiimame visa kita: pristatymą, paleidimą, kalbos programinę įrangą su žiniomis apie jūsų pasiūlymą ir komandos mokymus.
+      <span class="text-white">Gaunate paruoštą įrankį, o ne dėžę su elektronika.</span>
+    </p>
+
+    <div class="reveal mt-9 flex flex-col gap-3 sm:flex-row" style="--d:.26s">
+      <a href="#kontakt" class="cta-shine group inline-flex items-center justify-center gap-3 rounded-2xl px-9 py-5 font-display text-base font-700 uppercase tracking-wider text-ink shadow-[0_0_40px_rgba(111,214,255,.25)] transition-all duration-300 hover:-translate-y-1">
+        Pakalbėkime apie diegimą
+        <span class="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+      </a>
+      <a href="parduotuve.html" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-line-hi px-9 py-5 font-display text-base font-600 uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 hover:bg-white/[.03]">
+        Žiūrėti parduotuvę
+      </a>
+    </div>
+
+    <ul class="reveal mt-8 flex flex-wrap gap-x-6 gap-y-2.5 text-[13px] text-neutral-400" style="--d:.32s">
+      <li class="flex items-center gap-2"><span class="text-accent">✓</span> Kalba lietuviškai</li>
+      <li class="flex items-center gap-2"><span class="text-accent">✓</span> Žino jūsų pasiūlymą</li>
+      <li class="flex items-center gap-2"><span class="text-accent">✓</span> Mokymai kainoje</li>
+      <li class="flex items-center gap-2"><span class="text-accent">✓</span> Pagalba po paleidimo</li>
+    </ul>
+  </div>
+</section>
+
+<section id="zakres" class="border-t border-line px-5 py-24 md:px-8 md:py-28">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-12 max-w-3xl">
+      <p class="reveal mb-4 text-[11px] font-600 uppercase tracking-[.18em] text-accent">Diegimo apimtis</p>
+      <h2 class="reveal font-display text-3xl font-700 leading-[1.05] tracking-[-.025em] text-white md:text-5xl" style="--d:.08s">
+        Keturi dalykai, kuriuos gaunate
+      </h2>
+      <p class="reveal mt-5 leading-relaxed text-neutral-400" style="--d:.16s">
+        Vien robotas — tik pradžia. Be konfigūracijos ir apmokytos komandos jis stovi kampe, todėl diegimas apima visą komplektą.
+      </p>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2">
+
+      <article class="reveal group relative overflow-hidden rounded-[28px] border border-accent/30 bg-surface-2 p-7 transition-all duration-500 hover:border-accent/60 md:p-9" style="--d:.05s">
+        <div class="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-accent/12 blur-3xl transition-transform duration-700 group-hover:scale-150"></div>
+        <div class="relative">
+          <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/40 bg-accent/10 text-accent">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6 shrink-0" aria-hidden="true">
+              <rect x="6" y="8" width="12" height="10" rx="2"/><path d="M12 8V5M9 3h6" stroke-linecap="round"/>
+              <circle cx="9.5" cy="13" r="1"/><circle cx="14.5" cy="13" r="1"/>
+            </svg>
+          </span>
+          <h3 class="mt-5 font-display text-2xl font-700 text-white">Robotas ir paleidimas</h3>
+          <p class="mt-3 text-[15px] leading-relaxed text-neutral-400">
+            Parvežame robotą, pristatome nurodytu adresu ir paleidžiame vietoje. Patikriname erdvę, elektros maitinimą ir tinklą, po to perduodame įrangą, paruoštą darbui.
+          </p>
+          <p class="mt-5 border-l-2 border-accent/60 pl-4 text-[14px] leading-relaxed text-neutral-300">
+            <span class="font-600 text-white">Jokių netikėtumų:</span> muitinės formalumus ir logistiką pasiimame sau. Jūs nurodote adresą ir terminą.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal group flex flex-col rounded-[28px] border border-line-mid bg-surface-2 p-7 transition-all duration-500 hover:border-accent/40 md:p-9" style="--d:.12s">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-line-hi bg-surface-3 text-accent">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6 shrink-0" aria-hidden="true">
+            <path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z" stroke-linecap="round"/>
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-700 text-white">Kalbos programinė įranga</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-neutral-400">
+          Robotas kalba lietuviškai natūralia kalba ir atsako į klausimus. Įkeliame jam žinias apie jūsų įmonę — pasiūlymą, produktų pavadinimus, dažniausius klientų klausimus — ir suderiname, kokiu tonu jis turi kalbėti.
+        </p>
+        <p class="mt-auto pt-5 border-l-2 border-accent/60 pl-4 text-[14px] leading-relaxed text-neutral-300">
+          <span class="font-600 text-white">Tai yra diegimo esmė:</span> robotas be žinių apie jūsų įmonę yra tik dekoracija. Su jomis jis ima realiai aptarnauti žmones.
+        </p>
+      </article>
+
+      <article class="reveal group flex flex-col rounded-[28px] border border-line-mid bg-surface-2 p-7 transition-all duration-500 hover:border-accent/40 md:p-9" style="--d:.19s">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-line-hi bg-surface-3 text-accent">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6 shrink-0" aria-hidden="true">
+            <path d="M3 7l9-4 9 4-9 4-9-4z" stroke-linejoin="round"/><path d="M7 10v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-700 text-white">Komandos mokymai</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-neutral-400">
+          Išmokome jūsų žmones valdyti robotą: paleisti, vesti pasirodymą, krauti, keisti scenarijus ir laikytis saugos taisyklių minioje. Paliekame žmogiškai parašytą instrukciją.
+        </p>
+        <p class="mt-auto pt-5 border-l-2 border-accent/60 pl-4 text-[14px] leading-relaxed text-neutral-300">
+          <span class="font-600 text-white">Po mokymų susitvarkote patys</span> — nereikia mūsų kviesti kaskart, kai robotas turi išeiti pas žmones.
+        </p>
+      </article>
+
+      <article class="reveal group flex flex-col rounded-[28px] border border-line-mid bg-surface-2 p-7 transition-all duration-500 hover:border-accent/40 md:p-9" style="--d:.26s">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-line-hi bg-surface-3 text-accent">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6 shrink-0" aria-hidden="true">
+            <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="3.5"/>
+          </svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-700 text-white">Pagalba po paleidimo</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-neutral-400">
+          Po paleidimo liekame su jumis: padedame iškilus klausimams, atnaujiname žinių bazę pasikeitus pasiūlymui ir patariame dėl naujų scenarijų.
+        </p>
+        <p class="mt-auto pt-5 border-l-2 border-accent/60 pl-4 text-[14px] leading-relaxed text-neutral-300">
+          <span class="font-600 text-white">Pagalbos apimtį ir trukmę</span> suderiname rengdami pasiūlymą — jos priklauso nuo to, kaip intensyviai robotas dirbs.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="proces" class="relative overflow-hidden border-t border-line px-5 py-24 md:px-8 md:py-28">
+  <div class="pointer-events-none absolute left-1/2 top-0 -z-10 h-[26rem] w-[54rem] -translate-x-1/2 rounded-full bg-accent/8 blur-[140px]"></div>
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-14 max-w-2xl">
+      <p class="reveal mb-4 text-[11px] font-600 uppercase tracking-[.18em] text-accent">Kaip tai vyksta</p>
+      <h2 class="reveal font-display text-3xl font-700 leading-[1.05] tracking-[-.025em] text-white md:text-5xl" style="--d:.08s">
+        Nuo pokalbio iki pirmos darbo dienos
+      </h2>
+    </div>
+
+    <ol class="grid gap-4 md:grid-cols-5">
+      <li class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6" style="--d:.05s">
+        <span class="font-display text-2xl font-700 tabular-nums text-neutral-600">01</span>
+        <h3 class="mt-4 font-display text-base font-700 leading-snug text-white md:min-h-[3rem] xl:min-h-0">Pokalbis</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-neutral-400">Išsiaiškiname, kam robotas skirtas ir kur jis dirbs.</p>
+      </li>
+      <li class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6" style="--d:.12s">
+        <span class="font-display text-2xl font-700 tabular-nums text-neutral-600">02</span>
+        <h3 class="mt-4 font-display text-base font-700 leading-snug text-white md:min-h-[3rem] xl:min-h-0">Kaina ir sutartis</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-neutral-400">Konkreti suma su išskaidyta apimtimi. Jokių eilučių „bus suderinta“.</p>
+      </li>
+      <li class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6" style="--d:.19s">
+        <span class="font-display text-2xl font-700 tabular-nums text-neutral-600">03</span>
+        <h3 class="mt-4 font-display text-base font-700 leading-snug text-white md:min-h-[3rem] xl:min-h-0">Roboto parvežimas</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-neutral-400">Užsakome įrangą ir pasirūpiname transportu bei muitine. Paprastai apie mėnesį.</p>
+      </li>
+      <li class="reveal rounded-[24px] border border-accent/40 bg-accent/[.07] p-6" style="--d:.26s">
+        <span class="font-display text-2xl font-700 tabular-nums text-accent">04</span>
+        <h3 class="mt-4 font-display text-base font-700 leading-snug text-white md:min-h-[3rem] xl:min-h-0">Konfigūracija</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-neutral-300">Kalba, žinios apie įmonę, charakteris ir scenarijai pagal jūsų poreikį.</p>
+      </li>
+      <li class="reveal rounded-[24px] border border-accent/40 bg-accent/[.07] p-6" style="--d:.33s">
+        <span class="font-display text-2xl font-700 tabular-nums text-accent">05</span>
+        <h3 class="mt-4 font-display text-base font-700 leading-snug text-white md:min-h-[3rem] xl:min-h-0">Mokymai ir startas</h3>
+        <p class="mt-2 text-[13px] leading-relaxed text-neutral-300">Apmokome komandą, paleidžiame robotą ir liekame su jumis.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="border-t border-line px-5 py-24 md:px-8 md:py-28">
+  <div class="mx-auto max-w-7xl">
+    <div class="mb-12 max-w-2xl">
+      <p class="reveal mb-4 text-[11px] font-600 uppercase tracking-[.18em] text-accent">Kur tai veikia</p>
+      <h2 class="reveal font-display text-3xl font-700 leading-[1.05] tracking-[-.025em] text-white md:text-5xl" style="--d:.08s">
+        Vietos, kuriose robotas dirba kasdien
+      </h2>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.05s">
+        <h3 class="font-display text-lg font-700 text-white">Registratūra ir holas</h3>
+        <p class="mt-2 text-[14px] leading-relaxed text-neutral-400">Pasitinka svečius, nukreipia pas reikiamą žmogų, sutrumpina laukimą.</p>
+      </div>
+      <div class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.1s">
+        <h3 class="font-display text-lg font-700 text-white">Salonas ir showroom</h3>
+        <p class="mt-2 text-[14px] leading-relaxed text-neutral-400">Pasakoja apie produktus, sustabdo praeivius, patraukia dėmesį.</p>
+      </div>
+      <div class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.15s">
+        <h3 class="font-display text-lg font-700 text-white">Prekybos centras</h3>
+        <p class="mt-2 text-[14px] leading-relaxed text-neutral-400">Nuolatinė vieta, į kurią žmonės grįžta — ir atsiveda pažįstamus.</p>
+      </div>
+      <div class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.2s">
+        <h3 class="font-display text-lg font-700 text-white">Muziejus ir mokslo centras</h3>
+        <p class="mt-2 text-[14px] leading-relaxed text-neutral-400">Veda ekskursijas, paaiškina eksponatus, kalbasi su mokinių grupėmis.</p>
+      </div>
+      <div class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.25s">
+        <h3 class="font-display text-lg font-700 text-white">Universitetas ir mokykla</h3>
+        <p class="mt-2 text-[14px] leading-relaxed text-neutral-400">Mokymo priemonė ir studijų krypties vizitinė kortelė per atvirų durų dienas.</p>
+      </div>
+      <div class="reveal rounded-[24px] border border-line-mid bg-surface/70 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40" style="--d:.3s">
+        <h3 class="font-display text-lg font-700 text-white">Renginių agentūra</h3>
+        <p class="mt-2 text-[14px] leading-relaxed text-neutral-400">Savas robotas pasiūlyme vietoj nuomos kiekvienam užsakymui.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="border-t border-line px-5 py-24 md:px-8 md:py-28">
+  <div class="mx-auto max-w-4xl">
+    <div class="reveal rounded-[28px] border border-dashed border-line-hi bg-surface/50 p-8 text-center md:p-12">
+      <p class="mb-4 text-[11px] font-600 uppercase tracking-[.18em] text-accent">Įgyvendinti diegimai</p>
+      <h2 class="font-display text-2xl font-700 leading-snug text-white md:text-3xl">
+        Pirmasis diegimas startuoja artimiausiomis dienomis
+      </h2>
+      <p class="mx-auto mt-5 max-w-xl leading-relaxed text-neutral-400">
+        Aprašysime jį čia kartu su nuotraukomis ir rezultatais — be gražinimo. Iki tol geriausias mūsų patirties įrodymas yra renginių realizacijos: kelios dešimtys pasirodymų Lenkijoje ir užsienyje, siužetai Lenkijos televizijoje TVP.
+      </p>
+      <div class="mt-7 flex flex-wrap justify-center gap-3">
+        <a href="index.html#realizacje" class="inline-flex items-center gap-2 rounded-2xl border border-line-hi px-6 py-3.5 text-sm font-600 text-white transition hover:border-accent/60 hover:bg-white/[.03]">
+          Žiūrėti realizacijas
+        </a>
+        <a href="galerija.html" class="inline-flex items-center gap-2 rounded-2xl border border-line-hi px-6 py-3.5 text-sm font-600 text-white transition hover:border-accent/60 hover:bg-white/[.03]">
+          Atvejo analizė: LEX AI
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="border-t border-line py-24 md:py-28">
+  <div class="mx-auto max-w-3xl px-5 md:px-8">
+    <h2 class="reveal mb-10 text-center font-display text-3xl font-700 tracking-[-.02em] text-white md:text-4xl">Dažni klausimai</h2>
+    <div class="divide-y divide-line border-y border-line">
+
+      <div class="faq-item" open-state="0">
+        <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
+          <span class="font-600 text-white">Kuo diegimas skiriasi nuo nuomos?</span>
+          <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
+        </button>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Nuomos atveju atvežame robotą į renginį ir pasiimame jį po pabaigos — valdo mūsų operatorius. Diegimo atveju robotas tampa jūsų nuosavybe, dirba pas jus kasdien, o valdo jį apmokyta jūsų komanda. Nuoma tinka pavieniams renginiams, diegimas — kai robotas turi tapti nuolatine įmonės dalimi.</p></div>
+      </div>
+
+      <div class="faq-item" open-state="0">
+        <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
+          <span class="font-600 text-white">Kiek trunka visas diegimas?</span>
+          <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
+        </button>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Ilgiausias etapas — roboto parvežimas, paprastai apie mėnesį nuo užsakymo. Programinės įrangos konfigūraciją ir žinių bazę ruošiame lygiagrečiai, todėl po pristatymo lieka paleidimas ir mokymai — paprastai viena diena pas jus.</p></div>
+      </div>
+
+      <div class="faq-item" open-state="0">
+        <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
+          <span class="font-600 text-white">Iš kur robotas žino, ką atsakyti?</span>
+          <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
+        </button>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Prieš paleidimą įkeliame jam žinias apie jūsų įmonę: pasiūlymą, produktų pavadinimus ir aprašymus, dažniausius klientų klausimus, darbo laiką, kontaktus. Taip pat suderiname, kaip jis turi elgtis ir ko neturėtų sakyti. Pasikeitus pasiūlymui, žinių bazę atnaujiname.</p></div>
+      </div>
+
+      <div class="faq-item" open-state="0">
+        <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
+          <span class="font-600 text-white">Kas gali valdyti robotą po mokymų?</span>
+          <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
+        </button>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Bet kuris jūsų komandos žmogus — techninio išsilavinimo nereikia. Mokymai apima paleidimą, pasirodymo vedimą, krovimą, scenarijų keitimą ir saugos taisykles. Paliekame paprasta kalba parašytą instrukciją, prie kurios visada galima grįžti.</p></div>
+      </div>
+
+      <div class="faq-item" open-state="0">
+        <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
+          <span class="font-600 text-white">O kaip su garantija ir servisu?</span>
+          <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
+        </button>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Robotui taikoma gamintojo garantija, o mes tarpininkaujame ją administruojant — jums nereikia susisiekti su Kinija. Techninės pagalbos apimtį po paleidimo suderiname rengdami pasiūlymą, atsižvelgdami į tai, kaip intensyviai robotas dirbs.</p></div>
+      </div>
+
+      <div class="faq-item" open-state="0">
+        <button class="faq-btn flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-accent">
+          <span class="font-600 text-white">Kiek tai kainuoja?</span>
+          <span class="faq-sign shrink-0 text-xl text-neutral-500 transition-transform duration-300">+</span>
+        </button>
+        <div class="faq-panel"><p class="pb-5 text-[14px] leading-relaxed text-neutral-400">Kaina priklauso nuo roboto modelio bei programinės įrangos ir pagalbos apimties, todėl kiekvieną diegimą vertiname atskirai. Pasiūlymą parengiame po trumpo pokalbio apie tai, kam robotas skirtas — be jokių įsipareigojimų iš jūsų pusės.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="relative overflow-hidden border-t border-line py-24 md:py-28">
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="aurora absolute left-1/2 top-1/2 h-[32rem] w-[62rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/12 blur-[150px]"></div>
+    <div class="absolute inset-0 bg-grid opacity-60"></div>
+  </div>
+
+  <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 md:px-8 lg:grid-cols-2">
+    <div>
+      <h2 class="reveal font-display text-3xl font-700 leading-[1.05] tracking-[-.025em] text-white md:text-5xl">
+        Papasakokite, kam<br />jums reikia roboto.
+      </h2>
+      <p class="reveal mt-6 max-w-md text-lg text-neutral-400" style="--d:.08s">
+        Susisieksime, patarsime dėl modelio ir apimties, o paskui parengsime pasiūlymą. Be įsipareigojimų.
+      </p>
+      <div class="reveal mt-8 flex flex-col gap-3" style="--d:.16s">
+        <a href="mailto:kontakt@33bots.lt" class="group flex items-center gap-4 text-lg text-neutral-400 transition hover:text-white">
+          <span class="flex h-11 w-11 items-center justify-center rounded-full border border-line-mid text-base transition group-hover:border-accent">✉</span>
+          kontakt@33bots.lt
+        </a>
+      </div>
+    </div>
+
+    <form id="contactForm" class="reveal rounded-[28px] border border-line-mid bg-surface-2/80 p-7 backdrop-blur md:p-9" style="--d:.1s" novalidate>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="block sm:col-span-2">
+          <span class="mb-2 block text-[11px] font-600 uppercase tracking-widest text-neutral-500">Vardas ir pavardė *</span>
+          <input id="f-name" type="text" name="name" placeholder="Jonas Jonaitis" autocomplete="name" required class="w-full rounded-xl border border-line-mid bg-ink/60 px-4 py-3.5 text-white outline-none transition focus:border-accent focus:shadow-[0_0_0_3px_rgba(111,214,255,.15)]" />
+          <span class="mt-1.5 block text-[12px] text-red-400" data-err aria-live="polite"></span>
+        </label>
+        <label class="block">
+          <span class="mb-2 block text-[11px] font-600 uppercase tracking-widest text-neutral-500">Įmonė</span>
+          <input id="f-company" type="text" name="company" placeholder="Įmonės pavadinimas" autocomplete="organization" class="w-full rounded-xl border border-line-mid bg-ink/60 px-4 py-3.5 text-white outline-none transition focus:border-accent focus:shadow-[0_0_0_3px_rgba(111,214,255,.15)]" />
+        </label>
+        <label class="block">
+          <span class="mb-2 block text-[11px] font-600 uppercase tracking-widest text-neutral-500">Telefonas</span>
+          <input id="f-phone" type="tel" name="phone" placeholder="+370 600 00000" autocomplete="tel" class="w-full rounded-xl border border-line-mid bg-ink/60 px-4 py-3.5 text-white outline-none transition focus:border-accent focus:shadow-[0_0_0_3px_rgba(111,214,255,.15)]" />
+        </label>
+        <label class="block sm:col-span-2">
+          <span class="mb-2 block text-[11px] font-600 uppercase tracking-widest text-neutral-500">El. paštas *</span>
+          <input id="f-email" type="email" name="email" placeholder="info@imone.lt" autocomplete="email" required class="w-full rounded-xl border border-line-mid bg-ink/60 px-4 py-3.5 text-white outline-none transition focus:border-accent focus:shadow-[0_0_0_3px_rgba(111,214,255,.15)]" />
+          <span class="mt-1.5 block text-[12px] text-red-400" data-err aria-live="polite"></span>
+        </label>
+        <label class="block sm:col-span-2">
+          <span class="mb-2 block text-[11px] font-600 uppercase tracking-widest text-neutral-500">Kam bus naudojamas robotas? *</span>
+          <textarea id="f-message" name="message" rows="4" required placeholder="Kur jis dirbtų, kokias užduotis atliktų, ar jau turite scenarijaus idėją." class="w-full resize-y rounded-xl border border-line-mid bg-ink/60 px-4 py-3.5 text-white outline-none transition focus:border-accent focus:shadow-[0_0_0_3px_rgba(111,214,255,.15)]"></textarea>
+          <span class="mt-1.5 block text-[12px] text-red-400" data-err aria-live="polite"></span>
+        </label>
+      </div>
+      <button type="submit" class="cta-shine group mt-6 flex w-full items-center justify-center gap-3 rounded-2xl px-8 py-5 font-display text-base font-700 uppercase tracking-wider text-ink transition-all duration-300 hover:-translate-y-1">
+        Siųsti užklausą
+        <span class="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+      </button>
+      <p id="formMsg" class="mt-4 text-center text-[13px] text-neutral-500">Atsakome per 24 darbo valandas.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-line bg-surface/40 px-5 py-14 md:px-8">
+  <div class="mx-auto max-w-7xl">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div>
+        <p class="font-display text-lg font-700 text-white">33BOTS</p>
+        <p class="mt-2 text-[13px] text-neutral-500">Humanoidiniai robotai · nuoma, diegimai, pardavimas</p>
+        <div class="mt-4 flex gap-4 text-[13px] text-neutral-400">
+          <a href="mailto:kontakt@33bots.lt" class="transition hover:text-white">kontakt@33bots.lt</a>
+        </div>
+      </div>
+      <nav class="flex flex-wrap gap-x-7 gap-y-2 text-[13px] text-neutral-400">
+        <a href="index.html" class="transition hover:text-white">Nuoma renginiams</a>
+        <a href="roboto-diegimas.html" class="transition hover:text-white">Diegimai</a>
+        <a href="parduotuve.html" class="transition hover:text-white">Parduotuvė</a>
+        <a href="robotu-nuoma.html" class="transition hover:text-white">Paslaugos</a>
+        <a href="video-realizacijos.html" class="transition hover:text-white">Realizacijos</a>
+        <a href="blog.html" class="transition hover:text-white">Blogas</a>
+      </nav>
+      <div class="flex gap-4 text-[13px] text-neutral-400">
+        <a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">Instagram</a>
+        <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">TikTok</a>
+        <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">LinkedIn</a>
+      </div>
+    </div>
+    <p class="mt-8 text-[12px] text-neutral-600">© 2026 33bots. Visos teisės saugomos.</p>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" aria-live="polite">
+  <p class="flex-1 text-[13px] leading-relaxed text-neutral-400" style="min-width:220px">Naudojame slapukus analitikos tikslais.</p>
+  <button id="cookiesOk" class="rounded-xl bg-white px-5 py-2.5 text-[12px] font-700 uppercase tracking-wider text-ink transition hover:scale-105">Supratau</button>
+</div>
+
+<script>
+(() => {
+  const io = new IntersectionObserver((wpisy) => {
+    wpisy.forEach(w => { if (w.isIntersecting) { w.target.classList.add('in'); io.unobserve(w.target); } });
+  }, { threshold: .12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => {
+    nav.classList.toggle('bg-ink/80', scrollY > 20);
+    nav.classList.toggle('backdrop-blur-xl', scrollY > 20);
+    nav.classList.toggle('border-b', scrollY > 20);
+    nav.classList.toggle('border-line', scrollY > 20);
+  }, { passive: true });
+
+  const ciasteczka = document.getElementById('cookies');
+  if (!localStorage.getItem('33bots-cookies')) setTimeout(() => ciasteczka.classList.add('show'), 1400);
+  document.getElementById('cookiesOk').addEventListener('click', () => {
+    localStorage.setItem('33bots-cookies', '1');
+    ciasteczka.classList.remove('show');
+  });
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-btn').addEventListener('click', () => {
+      const otwarty = item.getAttribute('open-state') === '1';
+      document.querySelectorAll('.faq-item').forEach(i => i.setAttribute('open-state', '0'));
+      item.setAttribute('open-state', otwarty ? '0' : '1');
+    });
+  });
+
+  const form = document.getElementById('contactForm');
+  const msg = document.getElementById('formMsg');
+  const bledy = { valueMissing: 'Šis laukas privalomas', typeMismatch: 'Neteisingas formatas' };
+
+  function sprawdzPole(pole) {
+    const errEl = pole.closest('label')?.querySelector('[data-err]');
+    if (!pole.validity.valid) {
+      if (errEl) errEl.textContent = pole.validity.valueMissing ? bledy.valueMissing
+                                   : pole.validity.typeMismatch ? bledy.typeMismatch : 'Patikrinkite šį lauką';
+      pole.classList.add('border-red-500/70');
+      return false;
+    }
+    pole.classList.remove('border-red-500/70');
+    if (errEl) errEl.textContent = '';
+    return true;
+  }
+
+  form.querySelectorAll('input, textarea').forEach(pole => {
+    pole.addEventListener('blur', () => sprawdzPole(pole));
+    pole.addEventListener('input', () => {
+      if (pole.classList.contains('border-red-500/70')) sprawdzPole(pole);
+    });
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const wymagane = [...form.querySelectorAll('input[required], textarea[required]')];
+    if (!wymagane.map(sprawdzPole).every(Boolean)) return;
+
+    const btn = form.querySelector('button[type=submit]');
+    const pierwotny = btn.innerHTML;
+    btn.disabled = true; btn.style.opacity = '.6'; btn.innerHTML = 'Siunčiama…';
+
+    const d = new FormData(form);
+    const payload = {
+      temat:    'DIEGIMAS — užklausa iš svetainės',
+      name:     d.get('name'),
+      company:  d.get('company') || '—',
+      email:    d.get('email'),
+      phone:    d.get('phone') || '—',
+      message:  d.get('message'),
+    };
+
+    try {
+      const res = await fetch('https://formspree.io/f/mnjwvray', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const odp = await res.json().catch(() => ({}));
+        throw new Error(odp?.errors?.map(x => x.message).join(', ') || `HTTP ${res.status}`);
+      }
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', { event_category: 'wdrozenia', event_label: 'Užklausa dėl diegimo' });
+      }
+      form.innerHTML = `<div class="py-12 text-center">
+        <p class="font-display text-2xl font-700 text-white">Užklausa išsiųsta</p>
+        <p class="mt-3 text-neutral-400">Susisieksime adresu <strong class="text-white">${payload.email}</strong><br />per 24 darbo valandas.</p></div>`;
+    } catch (err) {
+      console.error('Forma — siuntimo klaida:', err?.message || err);
+      btn.disabled = false; btn.style.opacity = '1'; btn.innerHTML = pierwotny;
+      msg.innerHTML = 'Nepavyko išsiųsti — parašykite mums: <a class="text-accent underline" href="mailto:kontakt@33bots.lt">kontakt@33bots.lt</a>';
+      msg.className = 'mt-4 text-center text-[13px] text-red-400';
+    }
+  });
+})();
+</script>
+<script>window._nQc="89159321";</script>
+<script async src="https://serve.albacross.com/track.js"></script>
+</body>
+</html>

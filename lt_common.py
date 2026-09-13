@@ -13,16 +13,23 @@ EMAIL_PL = "kontakt@33bots.pl"
 PHONE_PL = "+48531408004"
 PHONE_PL_H = "+48 531 408 004"
 
-EMAIL_LT = ""        # pvz. "info@33bots.lt"
-PHONE_LT = ""        # pvz. "+37060000000"
+EMAIL_LT = "kontakt@33bots.lt"
+PHONE_LT = ""        # pvz. "+37060000000" — kol tuščia, telefonas nerodomas niekur
 PHONE_LT_H = ""      # pvz. "+370 600 00000"
 
 EMAIL = EMAIL_LT or EMAIL_PL
-PHONE_1 = PHONE_LT or PHONE_PL
-PHONE_1_H = PHONE_LT_H or PHONE_PL_H
 
-PHONE_2 = "+48601499947"
-PHONE_2_H = "+48 601 499 947"
+# Telefono kol kas nerodome: lenkiškas numeris lietuviškame puslapyje yra silpnas
+# vietos signalas ir kelia klausimų, o lietuviško dar nėra. Užpildžius PHONE_LT ir
+# PHONE_LT_H numeris savaime grįžta į navigaciją, poraštę, kontaktų puslapį,
+# formos klaidos pranešimą, llms.txt ir schema.org blokus.
+PHONE = PHONE_LT
+PHONE_H = PHONE_LT_H
+HAS_PHONE = bool(PHONE and PHONE_H)
+
+# Senieji pavadinimai — kad nereikėtų liesti visų generatorių iš karto.
+PHONE_1 = PHONE
+PHONE_1_H = PHONE_H
 
 # Kontaktų formos adresas. Kol bendras su 33bots.pl, lietuviškos ir lenkiškos
 # užklausos krenta į tą pačią dėžutę. Susikūrus atskirą formą Formspree, pakeiskite
@@ -77,6 +84,14 @@ EQUIVALENTS = {
     "blog.html": {
         "pl": "https://33bots.pl/blog.html",
         "x-default": "https://33bots.pl/blog.html",
+    },
+    "parduotuve.html": {
+        "pl": "https://33bots.pl/sklep.html",
+        "x-default": "https://33bots.pl/sklep.html",
+    },
+    "roboto-diegimas.html": {
+        "pl": "https://33bots.pl/wdrozenia.html",
+        "x-default": "https://33bots.pl/wdrozenia.html",
     },
 }
 
@@ -137,10 +152,13 @@ NAV_OFFER = [
     ("pramogos-renginiams.html", "Pramogos renginiams"),
 ]
 
-# Viršutinėje juostoje laikome tik 5 punktus — daugiau nebetelpa vienoje eilutėje.
+# Viršutinė juosta. Nuo parduotuvės ir diegimų atsiradimo punktų yra septyni, todėl
+# style.css juostai leidžiama persilaužti į dvi eilutes siaurame ekrane (.nav__links).
 # „Vaizdo įrašai" ir „Apie mus" pasiekiami iš poraštės ir vidinių nuorodų.
 NAV_MAIN = [
     ("robotu-nuoma.html", "Miestai"),
+    ("parduotuve.html", "Parduotuvė"),
+    ("roboto-diegimas.html", "Diegimai"),
     ("galerija.html", "Galerija"),
     ("kainos.html", "Kainos"),
     ("blog.html", "Blogas"),
@@ -474,6 +492,11 @@ def contact_section(heading="Rezervuokite robotą<br />savo renginiui.",
     city_links = "\n".join(
         f'            <li><a href="{city_url(s)}">{n}</a></li>' for s, n, _, _ in CITIES
     )
+    phone_block = f"""          <a href="tel:{PHONE}" class="contact-detail">
+            <span class="contact-detail__label">Telefonas</span>
+            <span class="contact-detail__val">{PHONE_H}</span>
+          </a>
+""" if HAS_PHONE else ""
     return f"""  <!-- KONTAKTAI -->
   <section class="section contact-section" id="kontaktai">
     <div class="contact-layout">
@@ -490,15 +513,7 @@ def contact_section(heading="Rezervuokite robotą<br />savo renginiui.",
             <span class="contact-detail__label">El. paštas</span>
             <span class="contact-detail__val">{EMAIL}</span>
           </a>
-          <a href="tel:{PHONE_1}" class="contact-detail">
-            <span class="contact-detail__label">Telefonas</span>
-            <span class="contact-detail__val">{PHONE_1_H}</span>
-          </a>
-          <a href="tel:{PHONE_2}" class="contact-detail">
-            <span class="contact-detail__label">Telefonas</span>
-            <span class="contact-detail__val">{PHONE_2_H}</span>
-          </a>
-          <div class="contact-detail">
+{phone_block}          <div class="contact-detail">
             <span class="contact-detail__label">Aptarnaujame</span>
             <span class="contact-detail__val">Visą Lietuvą</span>
           </div>
@@ -579,6 +594,8 @@ def contact_section(heading="Rezervuokite robotą<br />savo renginiui.",
 
 
 def footer():
+    footer_phone = (f'          <a href="tel:{PHONE}" class="footer__nap-item">{PHONE_H}</a>\n'
+                    if HAS_PHONE else "")
     socials = "\n".join(
         f'          <a href="{u}" target="_blank" rel="noopener noreferrer" class="footer__social">↗ {n}</a>'
         for n, u in SOCIALS
@@ -595,8 +612,7 @@ def footer():
         <span class="logo">33BOTS</span>
         <p class="footer__tagline">Humanoidinių robotų nuoma · Lietuva</p>
         <div class="footer__nap">
-          <a href="tel:{PHONE_1}" class="footer__nap-item">{PHONE_1_H}</a>
-          <a href="mailto:{EMAIL}" class="footer__nap-item">{EMAIL}</a>
+{footer_phone}          <a href="mailto:{EMAIL}" class="footer__nap-item">{EMAIL}</a>
         </div>
         <p class="footer__tagline" style="margin-top:12px;">
           <a href="https://33bots.pl/" hreflang="pl" lang="pl" style="color:inherit;">Polski</a> ·
@@ -638,6 +654,8 @@ def footer():
 
 def organization_ld():
     same_as = ",\n".join(f'      "{u}"' for _, u in SOCIALS)
+    tel_ld = f'  "telephone": "{PHONE}",\n' if HAS_PHONE else ""
+    tel_ld_cp = f'    "telephone": "{PHONE}",\n' if HAS_PHONE else ""
     return f"""{{
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -648,16 +666,14 @@ def organization_ld():
   "logo": "{SITE}/logo.png",
   "image": "{SITE}/robot-g1.jpg",
   "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Sertifikuotas operatorius ir ženklinimas kainoje; atvykimą vertiname pagal renginio vietą.",
-  "telephone": "{PHONE_1}",
-  "email": "{EMAIL}",
+{tel_ld}  "email": "{EMAIL}",
   "areaServed": {{"@type": "Country", "name": "Lithuania"}},
   "sameAs": [
 {same_as}
   ],
   "contactPoint": {{
     "@type": "ContactPoint",
-    "telephone": "{PHONE_1}",
-    "email": "{EMAIL}",
+{tel_ld_cp}    "email": "{EMAIL}",
     "contactType": "sales",
     "areaServed": "LT",
     "availableLanguage": ["Lithuanian", "Polish", "English"]

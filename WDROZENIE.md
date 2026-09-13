@@ -82,9 +82,12 @@ Strona jest generowana skryptami, więc po zmianie treści:
 
 ```bash
 python3 build_all.py
+./buduj.sh
 ```
 
 a potem zatwierdzasz **zarówno skrypty, jak i wygenerowane pliki HTML**.
+`buduj.sh` kompiluje arkusz Tailwinda dla trzech stron w nowym dizajnie (`index.html`,
+`parduotuve.html`, `roboto-diegimas.html`) i oznacza go w nich sumą kontrolną.
 Zatwierdzenie na gałęzi produkcyjnej uruchamia wdrożenie samo.
 
 Ostrzeżenie: wdrażany jest stan repozytorium, a nie wynik `build_all.py`.
@@ -106,16 +109,19 @@ Zanim GitHub poprosi serwer o cokolwiek, sprawdza **wszystkie 72 strony**:
   nadpisywał adresy wersji PL własną domeną),
 - czy strona nie odwołuje się do pliku, którego nie ma w repozytorium
   (zdjęcia, arkusze, czcionki, podstrony),
-- czy `sitemap.xml` to poprawny XML i czy każdy wymieniony adres ma swój plik.
+- czy `sitemap.xml` to poprawny XML i czy każdy wymieniony adres ma swój plik,
+- czy arkusz Tailwinda oznaczony na stronie odpowiada temu w repozytorium (wyłapuje
+  pominięte `./buduj.sh`) i czy każda taka strona jest wymieniona w `tailwind.config.js`.
 
 **Gdy którykolwiek warunek nie jest spełniony, wdrożenie się zatrzymuje**
 i strona zostaje w poprzedniej, działającej wersji.
 
 ## Co nie trafia na serwer
 
-Skrypty `.py`, katalog `templates/` (kopia polskiej strony jako źródło portu),
+Skrypty `.py`, katalog `templates/` (kopie polskich stron jako źródło portu),
 `scripts/`, pliki `.md`, `.gitignore`, `_redirects` (to konfiguracja Netlify —
-na Apache czytany jest `.htaccess`), katalog `.git`, `.github/`,
+na Apache czytany jest `.htaccess`), narzędzia budowania arkusza
+(`tailwind.config.js`, `tw-input.css`, `buduj.sh`), katalog `.git`, `.github/`,
 `narzedzia-serwer/` i sam `deploy.php`.
 
 W odróżnieniu od 33bots.pl **wysyłany jest katalog `og/`** — obrazki Open Graph
