@@ -307,8 +307,10 @@ def build_city(slug, name, loc, gen):
     d = CITY_DATA[slug]
     url = f"{SITE}/{city_url(slug)}"
     title = f"Humanoidinio roboto nuoma {loc} renginiams | 33bots"
-    desc = (f"Humanoidinio roboto Unitree G1 nuoma {loc}: renginiams, konferencijoms ir parodoms. "
-            f"Operatorius ir ženklinimas kainoje. Atsakome per 24 val.")
+    # Aprašyme minimas ir regionas — taip kiekvieno miesto santrauka paieškos
+    # rezultatuose skiriasi ne tik miesto vardu.
+    desc = (f"Humanoidinio roboto Unitree G1 nuoma {loc} ir visoje {d['region']}: renginiams, "
+            f"konferencijoms ir parodoms. Operatorius ir ženklinimas kainoje.")
     keywords = (f"roboto nuoma {name}, robotas renginiui {name}, humanoidinis robotas {loc}, "
                 f"renginių pramoga {name}, robotų nuoma {gen} regione")
 
@@ -330,6 +332,13 @@ def build_city(slug, name, loc, gen):
         ("Ar galima robotą ženklinti mūsų logotipu?",
          "Taip, ir tai nekainuoja papildomai. Logotipas ir QR kodas ant roboto krūtinės įeina į "
          "standartinį paketą."),
+        # Klausimas surenkamas iš to miesto erdvių sąrašo, todėl kiekviename puslapyje
+        # skiriasi ir atsako būtent į tai, ko ieško vietos organizatorius.
+        (f"Ar galite dirbti tokiose erdvėse kaip {d['venues'][0]}?",
+         f"Taip. {name} ir aplinkiniame regione dažniausiai dirbame būtent tokiose vietose: "
+         f"{', '.join(d['venues'][:3])}. Robotui reikia tik 230 V lizdo ir maždaug 2×2 m lygaus "
+         f"paviršiaus, todėl tinka ir salė, ir atriumas, ir gamyklos cechas. Nežinote, ar jūsų "
+         f"erdvė tinka — atsiųskite nuotrauką, atsakysime tą pačią dieną."),
     ]
 
     ld = [
@@ -366,7 +375,11 @@ def build_city(slug, name, loc, gen):
                     ("Humanoidinio roboto nuoma", "humanoidinio-roboto-nuoma.html"),
                     (name, None)])
 
-    other = [c for c in CITIES if c[0] != slug][:9]
+    # Kitų miestų sąrašas sukamas nuo esamo miesto, o ne visada nuo Vilniaus —
+    # taip kiekvienas puslapis turi savo nuorodų rinkinį (mažiau kartojimosi) ir
+    # vidinė nuorodų svoris pasiskirsto po visus 28 miestus, o ne po pirmus devynis.
+    i = next(n for n, c in enumerate(CITIES) if c[0] == slug)
+    other = (CITIES[i + 1:] + CITIES[:i])[:9]
     other_links = "\n".join(f'        <a href="{city_url(s)}">{n}</a>' for s, n, _, _ in other)
 
     html += f"""

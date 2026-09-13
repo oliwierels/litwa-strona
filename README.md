@@ -56,7 +56,10 @@ išvardija visus neišverstus fragmentus.
 ## SEO sprendimai
 
 - **hreflang** tarp visų kalbų versijų: `lt` → 33bots.lt, `pl` → 33bots.pl, `de-AT` → 33bots.at,
-  `de` → robotollern.de, `x-default` → 33bots.pl. Nustatoma `lt_common.ALTERNATES`.
+  `de` → robotollern.de, `x-default` → 33bots.pl. Nustatoma `lt_common.EQUIVALENTS`
+  (puslapiams be atitikmens lieka tik savoji `lt` nuoroda ir `x-default` į save).
+  Diegimo patikra neleidžia išvežti puslapio, kuriame svetimos kalbos nuoroda rodo
+  į 33bots.lt — būtent tokia klaida buvo įsivėlusi pagrindiniame puslapyje.
 - **Schema.org**: `ProfessionalService` (bendras `@id`, į kurį nurodo kiti blokai), `WebSite`,
   `Service`, `BreadcrumbList`, `FAQPage`, `BlogPosting`, `VideoObject`, `HowTo`, `OfferCatalog`.
 - **Sitemap** su `image:` ir `video:` plėtiniais bei hreflang alternatyvomis pagrindiniam puslapiui.
@@ -64,15 +67,21 @@ išvardija visus neišverstus fragmentus.
 - Unikalūs `title`, `description` ir `canonical` kiekvienam puslapiui; ilgiai neviršija
   65 / 160 simbolių.
 - Miestų puslapiai turi savą turinį (vietos renginių scena, tipinės erdvės, regionas), o ne
-  pakeistą miesto pavadinimą tame pačiame tekste.
+  pakeistą miesto pavadinimą tame pačiame tekste. Be teksto, kiekvienas miesto puslapis turi
+  savo DUK klausimą (surenkamą iš to miesto erdvių sąrašo), savo nuotraukų rinkinį
+  (`lt_gallery.rotate_for` — 27 skirtingi rinkiniai 28 miestams), savo aprašymą su apskrities
+  pavadinimu ir savą kitų miestų nuorodų rinkinį (sąrašas sukamas nuo esamo miesto, todėl
+  vidinių nuorodų svoris pasiskirsto po visus 28, o ne po pirmus devynis).
 - Sitemapa ir `llms.txt` puslapių sąrašus ima tiesiai iš generatorių, todėl negali atsilikti nuo
   turinio.
 - Silo struktūra: `robotu-nuoma.html` sujungia visas paslaugas ir visus miestus, sugrupuotus pagal
   apskritis.
 - Kategoriniai puslapiai (`atrakcijos-renginiams`, `atrakcijos-parodoms`, `modernios-pramogos`,
   `renginio-idejos`) taikosi į bendresnes užklausas, kuriose žodžio „robotas“ dar nėra.
-- `AggregateRating` ir `Review` naudoja tikrus 33bots klientų atsiliepimus iš Lenkijos projektų —
-  puslapyje aiškiai nurodyta, iš kur jie.
+- `AggregateRating` ir `Review` (pagrindinio puslapio `Product` blokas) naudoja tikrus 33bots
+  klientų atsiliepimus iš Lenkijos projektų — virš atsiliepimų puslapyje tai pasakyta atvirai.
+  Šaltinis vienas: `lt_common.REVIEWS`; `build_index_redesign.check_reviews` statybos metu
+  įspėja, jei struktūrizuotas atsiliepimas nebesutampa su matomu tekstu.
 
 ## UX sprendimai
 
@@ -114,10 +123,18 @@ Netlify, `.htaccess` — Apache (HTTPS, non-www, 404, talpykla, gzip).
    ir paleisti `INDEXNOW_KEY=<raktas> ./scripts/indexnow-submit.sh`.
 5. **Google Business Profile** — sukurti įrašą Lietuvai; vietinei paieškai tai duoda
    daugiau nei bet koks on-page pakeitimas.
-6. **Formspree** — `main.js` ir pagrindinio puslapio skripte naudojamas tas pats galinis
-   taškas kaip 33bots.pl. Verta susikurti atskirą, kad lietuviškos užklausos nesimaišytų.
+6. **Formspree** — naudojamas tas pats galinis taškas kaip 33bots.pl, todėl lietuviškos ir
+   lenkiškos užklausos krenta į tą pačią dėžutę. Susikūrus atskirą formą, adresą keiskite
+   dviejose vietose: `lt_common.FORM_ENDPOINT` (pagrindinis puslapis) ir `main.js` pradžioje
+   (visi kiti puslapiai).
 7. **Google Tag Manager** — dabar naudojamas lenkiškas konteineris `GTM-MR7R7CJ3`
    (`lt_common.GTM`). Jei norite atskirti statistiką, pakeiskite į savo.
+8. **Lietuviški kontaktai** — telefonas ir el. paštas struktūrizuotuose duomenyse kol kas
+   lenkiški (`+48…`, `kontakt@33bots.pl`). Gavus LT numerį ir pašto dėžutę 33bots.lt domene,
+   užpildykite `lt_common.EMAIL_LT`, `PHONE_LT` ir `PHONE_LT_H` — jie automatiškai pakeis
+   lenkiškus visuose puslapiuose, formoje ir schema.org blokuose. Vietinis numeris ir adresas
+   yra vienas stipriausių vietos signalų Google, todėl verta padaryti prieš Google Business
+   Profile kūrimą.
 
 ### Patikra po paleidimo
 
@@ -164,8 +181,10 @@ nerašome „nemokamas transportas" ar „transportas — 0 €".
 
 ## Ką dar verta padaryti
 
-- Pakeisti Formspree galinį tašką `main.js` savu (dabar naudojamas tas pats kaip 33bots.pl).
-- Pridėti tikrus Lietuvos projektų atsiliepimus ir case study, kai jų atsiras.
+- Pakeisti Formspree galinį tašką savu (`lt_common.FORM_ENDPOINT` + `main.js`).
+- Įrašyti lietuviškus kontaktus (`lt_common.EMAIL_LT`, `PHONE_LT`, `PHONE_LT_H`).
+- Pridėti tikrus Lietuvos projektų atsiliepimus ir case study, kai jų atsiras; `lt_common.REVIEWS`
+  ir matomos citatos turi keistis kartu.
 - Pridėti hreflang nuorodas į 33bots.lt taip pat 33bots.at ir robotollern.de puslapiuose
   (33bots.pl jau nurodo atgal).
 - Įkelti nuotraukų iš pirmųjų Lietuvos renginių ir pridėti jas į `lt_gallery.PHOTOS`.

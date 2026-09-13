@@ -101,6 +101,9 @@ Zanim GitHub poprosi serwer o cokolwiek, sprawdza **wszystkie 72 strony**:
   ma jego obsługę,
 - czy każda strona ma adres kanoniczny w domenie `33bots.lt` i czy żaden nie
   powtarza się na dwóch stronach,
+- czy hreflang obcych wersji językowych nie wskazuje na 33bots.lt, a `x-default`
+  strony głównej prowadzi na 33bots.pl (to wyłapuje błąd, przez który generator
+  nadpisywał adresy wersji PL własną domeną),
 - czy strona nie odwołuje się do pliku, którego nie ma w repozytorium
   (zdjęcia, arkusze, czcionki, podstrony),
 - czy `sitemap.xml` to poprawny XML i czy każdy wymieniony adres ma swój plik.

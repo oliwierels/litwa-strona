@@ -1,6 +1,9 @@
 // ─────────────────────────────────────────────────────────────
 // FORMSPREE — kontaktinės formos galinis taškas (33bots.lt)
 // ─────────────────────────────────────────────────────────────
+// Kontaktų formos adresas. Kol kas bendras su 33bots.pl — lietuviškos ir lenkiškos
+// užklausos krenta į tą pačią dėžutę. Pakeitus čia, pakeiskite ir lt_common.FORM_ENDPOINT
+// (iš ten adresas patenka į pagrindinį puslapį).
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnjwvray';
 
 // ── SLINKTIS Į VIRŠŲ ĮKĖLUS ───────────────────────────────────

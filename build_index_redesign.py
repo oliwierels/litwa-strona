@@ -8,7 +8,8 @@ Taip išdėstymas lieka identiškas lenkiškam, o turinys — lietuviškas.
 import html
 import re
 
-from lt_common import SITE, EMAIL, PHONE_1, PHONE_1_H, alternates, esc, CITIES, city_url
+from lt_common import (SITE, EMAIL, PHONE_1, PHONE_1_H, FORM_ENDPOINT, alternates, esc,
+                       CITIES, city_url)
 from lt_index_strings import (TEXTS, ATTRS, JS_TEXTS, PRICE_FROM, PRICE_FROM_PLAIN,
                               PRICE_DOG, DISCOUNT)
 
@@ -160,6 +161,15 @@ def rewrite_head(doc):
     doc = doc.replace('<html lang="pl">', '<html lang="lt">')
     doc = doc.replace('content="pl_PL"', 'content="lt_LT"')
 
+    # Visi likę absoliutūs adresai į lenkišką domeną.
+    # SVARBU: tai daroma PRIEŠ kanoninio adreso ir hreflang įrašymą. Anksčiau buvo
+    # atvirkščiai, todėl bendras pakeitimas sugadindavo ką tik įrašytas hreflang
+    # nuorodas — „pl“ ir „x-default“ imdavo rodyti į 33bots.lt vietoj 33bots.pl
+    # (savaiminis konfliktas, dėl kurio Google gali atmesti visą hreflang klasterį).
+    doc = doc.replace("https://33bots.pl/feed.xml", f"{SITE}/feed.xml")
+    doc = re.sub(r'https://33bots\.pl/og/[a-z0-9-]+\.jpg', f"{SITE}/og/index.jpg", doc)
+    doc = doc.replace("https://33bots.pl", SITE)
+
     # kanoninis adresas ir kalbų versijos
     doc = re.sub(r'<link rel="canonical" href="[^"]*" />',
                  f'<link rel="canonical" href="{SITE}/" />', doc)
@@ -173,22 +183,20 @@ def rewrite_head(doc):
                  '  <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />\n'
                  '  <link rel="stylesheet" href="fonts.css?v=1" />', doc)
 
-    # visi likę absoliutūs adresai į lenkišką domeną
-    doc = doc.replace("https://33bots.pl/feed.xml", f"{SITE}/feed.xml")
-    doc = re.sub(r'https://33bots\.pl/og/[a-z0-9-]+\.jpg', f"{SITE}/og/index.jpg", doc)
-    doc = doc.replace("https://33bots.pl", SITE)
     return doc
 
 
 def rewrite_jsonld(doc):
     """Struktūrizuotus duomenis keičia lietuviškais iš lt_common."""
-    from lt_common import organization_ld, website_ld, video_ld, service_ld, faq_ld
+    from lt_common import (organization_ld, website_ld, video_ld, service_ld, faq_ld,
+                           product_reviews_ld)
     from build_index import FAQ
 
     blocks = [organization_ld(), website_ld(), video_ld(),
               service_ld("Humanoidinio roboto Unitree G1 nuoma renginiams",
                          "Humanoidinio roboto nuoma renginiams, parodoms ir konferencijoms "
                          "visoje Lietuvoje.", f"{SITE}/", price=PRICE_FROM_PLAIN),
+              product_reviews_ld(PRICE_FROM_PLAIN),
               faq_ld(FAQ)]
     new = "\n".join(f'  <script type="application/ld+json">\n{b}\n  </script>' for b in blocks)
 
@@ -201,13 +209,57 @@ def rewrite_jsonld(doc):
     return doc
 
 
+def mark_reviews(doc):
+    """Virš atsiliepimų prideda eilutę, iš kur jie.
+
+    Atsiliepimai yra iš 33bots realizacijų Lenkijoje (lenkiški klientų vardai),
+    todėl puslapyje tai pasakoma atvirai — o struktūrizuoti duomenys
+    (`product_reviews_ld`) remiasi tais pačiais tekstais.
+    """
+    from lt_common import REVIEWS, REVIEWS_NOTE
+
+    zyme = ('<p class="reveal mt-20 text-center text-[12px] uppercase tracking-widest '
+            f'text-neutral-500">{REVIEWS_NOTE}</p>\n    ')
+    tinklelis = '<div class="mt-20 grid gap-4 md:grid-cols-3">'
+    if tinklelis in doc and REVIEWS_NOTE not in doc:
+        # tinklelis jau turi viršutinį tarpą — žymei jį perduodame, o tinkleliui mažiname
+        doc = doc.replace(tinklelis, zyme + '<div class="mt-8 grid gap-4 md:grid-cols-3">', 1)
+    return doc
+
+
+def check_reviews(doc):
+    """Įspėja, jei struktūrizuotų atsiliepimų nebėra matomame tekste.
+
+    Google reikalauja, kad `Review` atitiktų tai, ką mato lankytojas. Jei kas nors
+    pakeis citatą lt_index_strings.TEXTS ir pamirš lt_common.REVIEWS, tai išlįs čia,
+    o ne Search Console po mėnesio.
+    """
+    from lt_common import REVIEWS
+    tekstas = re.sub(r"\s+", " ", doc)
+    return [body for _, _, body in REVIEWS if body not in tekstas]
+
+
 def strip_comments(doc):
     """Pašalina lenkiškus kūrimo komentarus iš galutinio HTML.
 
     Tai kūrėjų pastabos lenkų kalba — lietuviškame puslapyje jos neturi prasmės,
-    o kartu sutaupoma apie 3,8 KB.
+    o kartu sutaupoma apie 4 KB. Šalinami trys tipai:
+
+    1. HTML komentarai `<!-- … -->` (išskyrus sąlyginius `<!--[if …]>`),
+    2. `/* … */` blokai `<style>` ir `<script>` viduje,
+    3. eilutės, prasidedančios `//` (tik visa eilutė, kad nenukentėtų adresai
+       su `https://`).
     """
-    return re.sub(r"<!--(?!\[if).*?-->\n?", "", doc, flags=re.S)
+    doc = re.sub(r"<!--(?!\[if).*?-->\n?", "", doc, flags=re.S)
+
+    def valyk(m):
+        turinys = m.group(2)
+        turinys = re.sub(r"/\*.*?\*/\s*", "", turinys, flags=re.S)
+        turinys = re.sub(r"(?m)^[ \t]*//.*\n?", "", turinys)
+        return m.group(1) + turinys + m.group(3)
+
+    return re.sub(r"(<(?:style|script)[^>]*>)(.*?)(</(?:style|script)>)",
+                  valyk, doc, flags=re.S)
 
 
 def swap_prices(doc):
@@ -246,6 +298,7 @@ def build():
     doc = translate_attrs(doc)
     doc = swap_city_list(doc)
     doc = add_internal_links(doc)
+    doc = mark_reviews(doc)
     doc = rewrite_head(doc)
     doc = rewrite_jsonld(doc)
 
@@ -260,9 +313,22 @@ def build():
     doc = doc.replace("+48 531 408 004", PHONE_1_H).replace("+48531408004", PHONE_1)
     doc = doc.replace("kontakt@33bots.pl", EMAIL)
 
+    # kontaktų formos adresas — iš lt_common, o ne iš lenkiško šablono
+    doc = re.sub(r"https://formspree\.io/f/\w+", FORM_ENDPOINT, doc)
+
+    be_atitikmens = check_reviews(doc)
+
+    # Į „neišversta“ sąrašą patenka ir tekstai, kurie vėlesniuose žingsniuose
+    # apskritai iškrenta iš puslapio (lenkiškų miestų sąrašas, senos meta antraštės).
+    # Rodome tik tai, kas realiai liko galutiniame HTML — kitaip įspėjimas skęsta
+    # tarp keturiasdešimties netikrų pranešimų ir nustoja ką nors reikšti.
+    missing = [t for t in missing if t in doc]
+
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(doc)
     print(f"  ✓ {OUT} (perkeltas lenkiškas dizainas)")
+    for citata in be_atitikmens:
+        print(f"  ! atsiliepimas struktūrizuotuose duomenyse be atitikmens puslapyje: {citata[:70]}…")
     if missing:
         uniq = sorted(set(missing))
         print(f"  ! neišversta: {len(uniq)}")

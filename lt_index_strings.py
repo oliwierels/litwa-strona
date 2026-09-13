@@ -330,6 +330,10 @@ ATTRS = {
         "Humanoidinis robotas raudonais marškinėliais per lietų laiko skėtį",
     "Robot humanoidalny Unitree G1 — wynajem na eventy w całej Polsce":
         "Humanoidinis robotas Unitree G1 — nuoma renginiams visoje Lietuvoje",
+    # og:image:alt lenkiškame šablone yra be žodžio „całej“ — be šios eilutės
+    # pagrindinio puslapio meta duomenyse likdavo lenkiškas tekstas.
+    "Robot humanoidalny Unitree G1 — wynajem na eventy w Polsce":
+        "Humanoidinis robotas Unitree G1 — nuoma renginiams visoje Lietuvoje",
 
     # Sąsajos elementai
     "Powiększone zdjęcie": "Padidinta nuotrauka",

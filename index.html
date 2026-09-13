@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://33bots.lt/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Robot humanoidalny Unitree G1 — wynajem na eventy w Polsce" />
+<meta property="og:image:alt" content="Humanoidinis robotas Unitree G1 — nuoma renginiams visoje Lietuvoje" />
 <meta property="og:video" content="https://33bots.lt/video/33bots-robot-event.mp4" />
 <meta property="og:video:type" content="video/mp4" />
 <meta property="og:video:width" content="540" />
@@ -33,10 +33,10 @@
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="alternate" hreflang="lt" href="https://33bots.lt/" />
-  <link rel="alternate" hreflang="pl" href="https://33bots.lt/" />
+  <link rel="alternate" hreflang="pl" href="https://33bots.pl/" />
   <link rel="alternate" hreflang="de-AT" href="https://33bots.at/" />
   <link rel="alternate" hreflang="de" href="https://robotollern.de/" />
-  <link rel="alternate" hreflang="x-default" href="https://33bots.lt/" />
+  <link rel="alternate" hreflang="x-default" href="https://33bots.pl/" />
   <link rel="alternate" type="application/rss+xml" title="33bots — blogo RSS" href="https://33bots.lt/feed.xml" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <script>history.scrollRestoration = 'manual';</script>
@@ -47,7 +47,6 @@
   [id] { scroll-margin-top: 90px; }
   ::selection { background: #6fd6ff; color: #050505; }
 
-  /* ——— Scroll-reveal: kaskadowe wejście z opóźnieniem ——— */
   .reveal { opacity: 0; transform: translateY(28px) scale(.985); }
   .reveal.in {
     opacity: 1; transform: none;
@@ -55,25 +54,18 @@
                 transform .8s cubic-bezier(.16,1,.3,1) var(--d, 0s);
   }
 
-  /* Pierwszy ekran odsłania się animacją CSS od razu przy wczytaniu, bez
-     czekania na IntersectionObserver. Wcześniej obraz robota — czyli element
-     LCP — stał w opacity:0 aż do startu JS, co wypychało LCP do ~2,3 s.
-     Kaskada (--d) zostaje bez zmian, zmienia się tylko to, co ją uruchamia. */
   #hero .reveal { animation: revealIn .8s cubic-bezier(.16,1,.3,1) var(--d, 0s) both; }
   @keyframes revealIn {
     from { opacity: 0; transform: translateY(28px) scale(.985); }
     to   { opacity: 1; transform: none; }
   }
 
-  /* ——— Robot w hero: wtopienie krawędzi kadru w tło ——— */
   .hero-robot {
-    /* tło kadru to niemal czerń (3,2,10) — "screen" sprawia, że znika bez śladu ramki */
     mix-blend-mode: screen;
     -webkit-mask-image: radial-gradient(ellipse 68% 76% at 50% 50%, #000 38%, rgba(0,0,0,.55) 72%, transparent 92%);
             mask-image: radial-gradient(ellipse 68% 76% at 50% 50%, #000 38%, rgba(0,0,0,.55) 72%, transparent 92%);
   }
 
-  /* ——— Przesuwające się pasy zdjęć ——— */
   .strip { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
                               mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
   .strip-track { display: flex; gap: 1rem; width: max-content; animation: slide 52s linear infinite; }
@@ -99,7 +91,6 @@
     .strip-item--narrow { width: 140px; }
   }
 
-  /* ——— Baner cookie ——— */
   .cookies { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 80;
              display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;
              max-width: 640px; margin: 0 auto; padding: 1rem 1.25rem;
@@ -110,7 +101,6 @@
   .cookies.show { transform: none; }
   @media (max-width: 640px) { .cookies { bottom: 5.5rem; } }
 
-  /* ——— Lightbox ——— */
   .lb { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center;
         background: rgba(5,5,5,.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
         opacity: 0; pointer-events: none; transition: opacity .35s ease; padding: 4vh 4vw; }
@@ -132,13 +122,11 @@
   @media (max-width: 640px) { .lb-btn { width: 44px; height: 44px; } }
   @media (prefers-reduced-motion: reduce) { .strip-track { animation: none; } .strip { overflow-x: auto; } }
 
-  /* ——— Ziarno: premium film grain ——— */
   .grain::after {
     content: ''; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .03;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  /* ——— Siatka geometryczna w tle ——— */
   .bg-grid {
     background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
@@ -147,14 +135,12 @@
     -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 75%);
   }
 
-  /* ——— CTA: przesuwający się połysk ——— */
   .cta-shine {
     background-image: linear-gradient(110deg, #fff 0%, #fff 38%, #cdf0ff 50%, #fff 62%, #fff 100%);
     background-size: 200% 100%;
   }
   .cta-shine:hover { animation: shimmer 1.4s linear infinite; }
 
-  /* ——— Bento: obramowanie reagujące na kursor ——— */
   .bento { position: relative; isolation: isolate; }
   .bento::before {
     content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px; z-index: 2;
@@ -165,7 +151,6 @@
   }
   .bento:hover::before { opacity: 1; }
 
-  /* ——— Linia procesu rysowana przy scrollu ——— */
   .track-line { transform: scaleX(0); transform-origin: left; transition: transform 1.6s cubic-bezier(.16,1,.3,1); }
   .track-line.in { transform: scaleX(1); }
   @media (max-width: 767px) {
@@ -173,7 +158,6 @@
     .track-line.in { transform: scaleY(1); }
   }
 
-  /* ——— FAQ ——— */
   .faq-panel { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.16,1,.3,1); }
   .faq-item[open-state="1"] .faq-panel { max-height: 320px; }
   .faq-item[open-state="1"] .faq-sign { transform: rotate(45deg); color: #6fd6ff; }
@@ -196,7 +180,6 @@
       j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
     }
-    // po załadowaniu strony albo przy pierwszej interakcji — zależnie co pierwsze
     if (d.readyState === 'complete') loadGTM();
     else w.addEventListener('load', loadGTM, { once: true });
     ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
@@ -294,6 +277,54 @@
       "valueAddedTaxIncluded": false
     }
   }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Humanoidinio roboto Unitree G1 nuoma",
+  "description": "Humanoidinio roboto Unitree G1 nuoma renginiams, parodoms ir konferencijoms Lietuvoje.",
+  "url": "https://33bots.lt/",
+  "image": "https://33bots.lt/robot-g1.jpg",
+  "brand": {"@type": "Brand", "name": "Unitree"},
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "2100",
+    "availability": "https://schema.org/InStock",
+    "url": "https://33bots.lt/#cennik"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "3",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Karolina M."},
+      "datePublished": "2025-10-12",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Rezultatas pranoko drąsiausius lūkesčius. Susidomėjimas buvo milžiniškas visą renginio laiką."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Piotr Z."},
+      "datePublished": "2025-11-03",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Vienas geriausių organizacinių sprendimų. Dalyvių reakcijos mums yra geriausias įvertinimas."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Magdalena T."},
+      "datePublished": "2025-12-08",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Neįtikėtini pasiekiamumo skaičiai socialiniuose tinkluose. Tokio susidomėjimo tiesiog nenusipirksi."
+    }
+  ]
 }
   </script>
   <script type="application/ld+json">
@@ -980,7 +1011,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ol>
   </div>
 
-    <div class="mt-20 grid gap-4 md:grid-cols-3">
+    <p class="reveal mt-20 text-center text-[12px] uppercase tracking-widest text-neutral-500">Atsiliepimai iš 33bots realizacijų Lenkijoje.</p>
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
     <blockquote class="reveal rounded-2xl border border-line bg-surface/60 p-6 transition-colors duration-500 hover:border-line-hi" style="--d:.05s">
       <p class="text-[14px] leading-relaxed text-neutral-300">„Rezultatas pranoko drąsiausius lūkesčius. Susidomėjimas buvo milžiniškas visą renginio laiką.“</p>
       <footer class="mt-4 text-[12px] text-neutral-500">Karolina M. · rinkodara, IT sektorius</footer>
@@ -1300,7 +1332,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ——— Podpięcie źródeł wideo (preload=none, ładowane leniwie) ——— */
   document.querySelectorAll('source-marker').forEach(m => {
     const video = m.previousElementSibling;
     if (video && video.tagName === 'VIDEO') {
@@ -1311,7 +1342,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     m.remove();
   });
 
-  /* ——— Kaskadowe wejście elementów ——— */
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -1321,7 +1351,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }, { threshold: .12, rootMargin: '0px 0px -60px 0px' });
   document.querySelectorAll('.reveal, .track-line').forEach(el => io.observe(el));
 
-  /* ——— Liczniki ——— */
   const easeOut = t => 1 - Math.pow(1 - t, 3);
   const counterIO = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -1338,7 +1367,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }, { threshold: .6 });
   document.querySelectorAll('[data-count]').forEach(el => counterIO.observe(el));
 
-  /* ——— Parallax + pasek postępu + nav ——— */
   const nav = document.getElementById('nav');
   const bar = document.getElementById('progress');
   const parItems = [...document.querySelectorAll('[data-par]')];
@@ -1361,7 +1389,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
 
-  /* ——— Bento: podświetlenie krawędzi za kursorem ——— */
   document.querySelectorAll('.bento').forEach(card => {
     card.addEventListener('pointermove', e => {
       const r = card.getBoundingClientRect();
@@ -1370,7 +1397,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }, { passive: true });
   });
 
-  /* ——— FAQ ——— */
   document.querySelectorAll('.faq-item').forEach(item => {
     item.querySelector('.faq-btn').addEventListener('click', () => {
       const open = item.getAttribute('open-state') === '1';
@@ -1379,7 +1405,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
 
-  /* ——— Baner cookie ——— */
   const ciasteczka = document.getElementById('cookies');
   if (!localStorage.getItem('33bots-cookies')) {
     setTimeout(() => ciasteczka.classList.add('show'), 1400);
@@ -1389,13 +1414,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ciasteczka.classList.remove('show');
   });
 
-  /* ——— Pasy: dotknięcie zatrzymuje przewijanie (mobile nie ma hovera) ——— */
   document.querySelectorAll('.strip').forEach(pas => {
     pas.addEventListener('touchstart', () => pas.classList.add('paused'), { passive: true });
     pas.addEventListener('touchend', () => setTimeout(() => pas.classList.remove('paused'), 2500), { passive: true });
   });
 
-  /* ——— Lightbox galerii ——— */
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
   const lbCap = document.getElementById('lbCap');
@@ -1424,7 +1447,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (e.key === 'ArrowRight') pokaz(idx + 1);
   });
 
-  /* ——— Kontaktinė forma: dwa kroki + Formspree ——— */
   const form    = document.getElementById('contactForm');
   const krok1   = document.getElementById('formStep1');
   const krok2   = document.getElementById('formStep2');

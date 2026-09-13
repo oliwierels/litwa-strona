@@ -90,9 +90,14 @@ def rotate_for(slug, count=6):
 
     Poslinkis skaičiuojamas iš puslapio adreso, todėl jis stabilus tarp generavimų.
     """
-    offset = sum(ord(c) for c in slug) % len(PHOTOS)
-    doubled = PHOTOS + PHOTOS
-    return doubled[offset:offset + count]
+    n = len(PHOTOS)
+    offset = sum(ord(c) for c in slug) % n
+    # Vien poslinkio neužtenka: 28 miestų puslapiams iš 16 nuotraukų gaunasi tik 16
+    # galimų gretimų langų, tad rinkiniai kartojasi. Todėl imame ne iš eilės, o žingsniu,
+    # kuris yra nelyginis (taigi tarpusavyje pirminis su 16) ir taip pat priklauso nuo
+    # adreso — variantų gaunasi 16 × 8, o nuotraukos viename puslapyje nesikartoja.
+    step = 1 + 2 * (sum(ord(c) * (i + 1) for i, c in enumerate(slug)) % (n // 2))
+    return [PHOTOS[(offset + i * step) % n] for i in range(count)]
 
 
 def gallery_section(title="Kadrai iš tikrų<br />renginių", tag="Realizacijos", photos=None,

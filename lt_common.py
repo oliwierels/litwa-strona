@@ -3,11 +3,32 @@
 
 SITE = "https://33bots.lt"
 BRAND = "33bots"
-EMAIL = "kontakt@33bots.pl"
-PHONE_1 = "+48531408004"
-PHONE_1_H = "+48 531 408 004"
+
+# ── Kontaktai ────────────────────────────────────────────────────────────────
+# Kol lietuviško numerio ir el. pašto nėra, rodomi lenkiški. Gavus LT kontaktus
+# užtenka užpildyti tris eilutes žemiau — nauji duomenys atsiras visur: puslapių
+# tekste, kontaktų formoje ir struktūrizuotuose duomenyse (schema.org). Lietuviškas
+# numeris ir el. paštas 33bots.lt domene yra stiprus vietos signalas Google.
+EMAIL_PL = "kontakt@33bots.pl"
+PHONE_PL = "+48531408004"
+PHONE_PL_H = "+48 531 408 004"
+
+EMAIL_LT = ""        # pvz. "info@33bots.lt"
+PHONE_LT = ""        # pvz. "+37060000000"
+PHONE_LT_H = ""      # pvz. "+370 600 00000"
+
+EMAIL = EMAIL_LT or EMAIL_PL
+PHONE_1 = PHONE_LT or PHONE_PL
+PHONE_1_H = PHONE_LT_H or PHONE_PL_H
+
 PHONE_2 = "+48601499947"
 PHONE_2_H = "+48 601 499 947"
+
+# Kontaktų formos adresas. Kol bendras su 33bots.pl, lietuviškos ir lenkiškos
+# užklausos krenta į tą pačią dėžutę. Susikūrus atskirą formą Formspree, pakeiskite
+# čia ir main.js pradžioje — daugiau niekur jo nėra.
+FORM_ENDPOINT = "https://formspree.io/f/mnjwvray"
+
 GTM = "GTM-MR7R7CJ3"
 CSS_V = "1"
 
@@ -162,6 +183,23 @@ CITIES = [
     ("rokiskis", "Rokiškis", "Rokiškyje", "Rokiškio"),
     ("prienai", "Prienai", "Prienuose", "Prienų"),
 ]
+
+
+# Atsiliepimai. Tie patys tekstai, kurie matomi pagrindiniame puslapyje
+# (perkelti iš lenkiško šablono per lt_index_strings.TEXTS) — struktūrizuoti
+# duomenys privalo atitikti tai, ką mato lankytojas, todėl šaltinis vienas.
+# Tai 33bots klientų iš realizacijų LENKIJOJE atsiliepimai; puslapyje tai
+# pasakyta atvirai, po antrašte virš atsiliepimų.
+REVIEWS = [
+    ("Karolina M.", "2025-10-12",
+     "Rezultatas pranoko drąsiausius lūkesčius. Susidomėjimas buvo milžiniškas visą renginio laiką."),
+    ("Piotr Z.", "2025-11-03",
+     "Vienas geriausių organizacinių sprendimų. Dalyvių reakcijos mums yra geriausias įvertinimas."),
+    ("Magdalena T.", "2025-12-08",
+     "Neįtikėtini pasiekiamumo skaičiai socialiniuose tinkluose. Tokio susidomėjimo tiesiog nenusipirksi."),
+]
+
+REVIEWS_NOTE = "Atsiliepimai iš 33bots realizacijų Lenkijoje."
 
 
 def city_url(slug):
@@ -711,3 +749,46 @@ def write(path, html):
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"  ✓ {path}")
+
+
+def product_reviews_ld(price):
+    """Product su tikrais atsiliepimais — rodomas tik pagrindiniame puslapyje.
+
+    Vertinimas skaičiuojamas iš REVIEWS, todėl `reviewCount` negali atsilikti nuo
+    tikrojo atsiliepimų skaičiaus. Visi atsiliepimai — penkių žvaigždučių, todėl
+    `ratingValue` yra 5,0; pridėjus žemesnį įvertinimą reikės skaičiuoti vidurkį.
+    """
+    reviews = ",\n".join(f"""    {{
+      "@type": "Review",
+      "author": {{"@type": "Person", "name": "{esc(author)}"}},
+      "datePublished": "{date}",
+      "reviewRating": {{"@type": "Rating", "ratingValue": "5", "bestRating": "5"}},
+      "reviewBody": "{esc(body)}"
+    }}""" for author, date, body in REVIEWS)
+
+    return f"""{{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Humanoidinio roboto Unitree G1 nuoma",
+  "description": "Humanoidinio roboto Unitree G1 nuoma renginiams, parodoms ir konferencijoms Lietuvoje.",
+  "url": "{SITE}/",
+  "image": "{SITE}/robot-g1.jpg",
+  "brand": {{"@type": "Brand", "name": "Unitree"}},
+  "offers": {{
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "{price}",
+    "availability": "https://schema.org/InStock",
+    "url": "{SITE}/#cennik"
+  }},
+  "aggregateRating": {{
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "{len(REVIEWS)}",
+    "bestRating": "5",
+    "worstRating": "1"
+  }},
+  "review": [
+{reviews}
+  ]
+}}"""

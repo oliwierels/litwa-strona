@@ -103,6 +103,21 @@ jobs:
                   kanoniczne.setdefault(m.group(1), []).append(plik)
 
               # Odwołania do plików, które musimy mieć w repozytorium.
+              # hreflang: obca wersja językowa nie może wskazywać na własną domenę.
+              # Gdy generator nadpisze te adresy domeną 33bots.lt (zdarzyło się na stronie
+              # głównej), powstaje self-referencing conflict unieważniający cały klaster.
+              # „x-default" bywa celowo własny — na podstronach bez odpowiednika.
+              for lang, href in re.findall(r'hreflang="([^"]+)" href="([^"]+)"', zrodlo):
+                  if lang not in ('lt', 'x-default') and href.startswith(DOMENA):
+                      bledy.append(f'{plik}: hreflang="{lang}" wskazuje na {href} zamiast na obcą wersję językową')
+
+              # Strona główna ma odpowiedniki we wszystkich wersjach, więc jej „x-default"
+              # musi wskazywać na wersję polską, a nie na samą siebie.
+              if plik == 'index.html':
+                  m = re.search(r'hreflang="x-default" href="([^"]+)"', zrodlo)
+                  if not m or m.group(1).startswith(DOMENA):
+                      bledy.append('index.html: hreflang="x-default" wskazuje na 33bots.lt zamiast na 33bots.pl')
+
               # Adresy bywają z numerem wersji (style.css?v=1) — sprawdzamy samą ścieżkę.
               for m in re.finditer(r'(?:src|href)="([^"#?:]+\.(?:webp|jpg|jpeg|png|svg|css|js|ico|woff2|mp4|html|xml|txt))(?:[?#][^"]*)?"', zrodlo):
                   if not os.path.exists(m.group(1)):
