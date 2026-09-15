@@ -36,13 +36,15 @@ Wstaw go w `narzedzia-serwer/deploy.php` w stałej `TOKEN`, w miejsce
 `WSTAW_TUTAJ_SWOJ_TOKEN`. **Tej wersji z tokenem nie zatwierdzaj w repozytorium** —
 plik z tokenem wgrywasz tylko na serwer.
 
-### Krok 1b. Token GitHuba — tylko dla repozytorium prywatnego
+### Krok 1b. Widoczność repozytorium
 
-`litwa-strona` jest prywatne, a serwer pobiera paczkę sam. Bez tokenu GitHub odpowiada na
-takie pobranie **404** (prywatnych repozytoriów nie ujawnia nawet ich istnieniem), więc
-`deploy.php` musi się przedstawić.
+Serwer pobiera paczkę sam, anonimowo — dlatego **`litwa-strona` musi być publiczne**
+(tak samo jak `33bots`). Przy repozytorium prywatnym GitHub odpowiada na takie pobranie
+**404**: prywatnych repozytoriów nie ujawnia nawet ich istnieniem.
 
-Wygeneruj **fine-grained token**: https://github.com/settings/personal-access-tokens/new
+Jeśli kiedyś trzeba będzie ustawić je z powrotem jako prywatne, `deploy.php` umie pobierać
+paczkę z uwierzytelnieniem — wystarczy wypełnić stałą `GITHUB_TOKEN`
+**fine-grained tokenem**: https://github.com/settings/personal-access-tokens/new
 
 | Pole | Wartość |
 |---|---|
@@ -50,11 +52,8 @@ Wygeneruj **fine-grained token**: https://github.com/settings/personal-access-to
 | Permissions → Contents | Read-only |
 | Expiration | wedle uznania (po wygaśnięciu wdrożenia przestaną działać) |
 
-Wklej go w `deploy.php` w stałej `GITHUB_TOKEN`. Token zostaje na serwerze — nigdzie go nie
-zatwierdzamy w repozytorium.
-
-Alternatywa bez tokenu: ustawić repozytorium jako publiczne (tak działa `33bots`). Wtedy
-`GITHUB_TOKEN` zostaje pusty.
+Token zostaje wtedy wyłącznie na serwerze — w repozytorium ta stała jest zawsze pusta.
+Przy repozytorium publicznym nie wpisuje się tam niczego.
 
 ### Krok 2. Wgraj punkt wdrożeniowy na serwer
 
@@ -167,7 +166,7 @@ wypisana w całości.
 | `Brak dostępu` | Token w `deploy.php` różni się od sekretu `DEPLOY_TOKEN` |
 | `Skrypt nie został skonfigurowany` | W `deploy.php` na serwerze został placeholder zamiast tokenu |
 | `Brak rozszerzenia ZipArchive` | Hosting nie ma tego rozszerzenia — trzeba zmienić metodę |
-| `Pobieranie nie powiodło się (HTTP 404)` | Repozytorium prywatne, a `GITHUB_TOKEN` w `deploy.php` pusty (albo zła nazwa gałęzi) |
+| `Pobieranie nie powiodło się (HTTP 404)` | Repozytorium przestało być publiczne, a `GITHUB_TOKEN` w `deploy.php` jest pusty (albo zmieniła się nazwa gałęzi) |
 | `Pobieranie nie powiodło się (HTTP 401/403)` | Token GitHuba wygasł lub nie obejmuje tego repozytorium |
 | `Pobieranie nie powiodło się` | Serwer nie dosięgnął GitHuba — sprawdź ruch wychodzący hostingu |
 | Zatrzymanie na bramce | Błąd w którejś stronie; log podaje który. Na serwer nic nie poszło |
