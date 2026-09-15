@@ -24,6 +24,18 @@ declare(strict_types=1);
 // ─────────────────────────────────────────────────────────────
 
 const TOKEN     = 'WSTAW_TUTAJ_SWOJ_TOKEN';
+
+/**
+ * Token GitHuba — potrzebny TYLKO dla repozytorium prywatnego.
+ *
+ * `litwa-strona` jest prywatne, więc anonimowe pobranie paczki kończy się błędem 404
+ * (GitHub nie przyznaje się do istnienia prywatnych repozytoriów). Z tokenem paczka
+ * pobierana jest przez API. Wystarczy fine-grained token z jednym uprawnieniem:
+ * Repository access -> tylko to repozytorium, Permissions -> Contents: Read-only.
+ * Dla repozytorium publicznego zostaw pusty ciąg.
+ */
+const GITHUB_TOKEN = '';
+
 const REPO      = 'oliwierels/litwa-strona';
 const GALAZ     = 'claude/lithuanian-33bots-site-4v8qf8';
 const KATALOG   = __DIR__;          // gdzie lądują pliki strony
@@ -73,6 +85,8 @@ if (isset($_GET['test'])) {
     $log('ZipArchive: ' . (class_exists('ZipArchive') ? 'dostępny' : 'BRAK — wdrożenie się nie uda'));
     $log('cURL: ' . (function_exists('curl_init') ? 'dostępny' : 'BRAK'));
     $log('Repozytorium: ' . REPO . ' (gałąź ' . GALAZ . ')');
+    $log('Token GitHuba: ' . (GITHUB_TOKEN === '' ? 'brak (repozytorium musi być publiczne)'
+                                                  : 'wpisany — pobieranie przez API'));
     $log('Katalog docelowy: ' . KATALOG);
     $log('Zapis do katalogu: ' . (is_writable(KATALOG) ? 'możliwy' : 'ZABLOKOWANY — sprawdź uprawnienia'));
     $log('Katalog tymczasowy: ' . sys_get_temp_dir() . (is_writable(sys_get_temp_dir()) ? ' (zapisywalny)' : ' (BRAK ZAPISU)'));
@@ -111,7 +125,19 @@ function usunKatalog(string $sciezka): void
 }
 
 // ── 1. Pobranie paczki z GitHuba ──
-$adres = sprintf('https://codeload.github.com/%s/zip/refs/heads/%s', REPO, GALAZ);
+// Bez tokenu: publiczny codeload. Z tokenem: API, które obsługuje też repozytoria prywatne
+// (przekierowuje na podpisany adres codeload, dlatego niżej zostaje FOLLOWLOCATION).
+if (GITHUB_TOKEN === '') {
+    $adres = sprintf('https://codeload.github.com/%s/zip/refs/heads/%s', REPO, GALAZ);
+    $naglowki = [];
+} else {
+    $adres = sprintf('https://api.github.com/repos/%s/zipball/%s', REPO, GALAZ);
+    $naglowki = [
+        'Authorization: Bearer ' . GITHUB_TOKEN,
+        'Accept: application/vnd.github+json',
+        'X-GitHub-Api-Version: 2022-11-28',
+    ];
+}
 $plikZip = tempnam(sys_get_temp_dir(), '33bots_lt_') ?: sys_get_temp_dir() . '/33bots_lt.zip';
 
 $log('Pobieram wersję z gałęzi ' . GALAZ . '…');
@@ -131,6 +157,7 @@ curl_setopt_array($ch, [
     CURLOPT_CONNECTTIMEOUT => 30,
     CURLOPT_USERAGENT      => '33bots-deploy',
     CURLOPT_FAILONERROR    => true,
+    CURLOPT_HTTPHEADER     => $naglowki,
 ]);
 $ok = curl_exec($ch);
 $blad = curl_error($ch);
@@ -141,7 +168,16 @@ fclose($uchwyt);
 if ($ok === false) {
     @unlink($plikZip);
     http_response_code(502);
-    exit("Pobieranie nie powiodło się (HTTP $kod): $blad\n");
+    $podpowiedz = '';
+    if ($kod === 404) {
+        $podpowiedz = GITHUB_TOKEN === ''
+            ? "Dla repozytorium prywatnego GitHub zwraca 404. Wpisz token w stałej GITHUB_TOKEN\n"
+              . "(fine-grained, Contents: Read-only na tym repozytorium) albo ustaw repozytorium jako publiczne.\n"
+            : "Sprawdź, czy token ma dostęp do " . REPO . " i czy gałąź " . GALAZ . " istnieje.\n";
+    } elseif ($kod === 401 || $kod === 403) {
+        $podpowiedz = "GitHub odrzucił token — sprawdź, czy nie wygasł i czy obejmuje to repozytorium.\n";
+    }
+    exit("Pobieranie nie powiodło się (HTTP $kod): $blad\n" . $podpowiedz);
 }
 
 $rozmiarMB = round(filesize($plikZip) / 1048576, 1);
