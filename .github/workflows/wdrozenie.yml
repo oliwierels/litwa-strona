@@ -189,11 +189,32 @@ jobs:
                      --data-urlencode "token=${TOKEN}" "${ADRES}") || true
 
           echo "── Odpowiedź serwera (HTTP ${KOD}) ──"
-          cat /tmp/odpowiedz.txt
+          # Serwer przy błędzie potrafi odesłać całą stronę 404 — wtedy w logu tonie
+          # jedna istotna linijka. Pełną odpowiedź pokazujemy tylko przy powodzeniu.
+          if [ "${KOD}" = "200" ]; then
+            cat /tmp/odpowiedz.txt
+          else
+            head -c 600 /tmp/odpowiedz.txt
+          fi
           echo ""
 
           if [ "${KOD}" != "200" ]; then
-            echo "Wdrożenie nie powiodło się."
+            # Kod odpowiedzi jednoznacznie wskazuje przyczynę — wypisujemy ją wprost,
+            # żeby nie trzeba było zgadywać, co jest nie tak po stronie hostingu.
+            case "${KOD}" in
+              404) echo "Pod adresem z sekretu DEPLOY_URL nie ma pliku deploy.php."
+                   echo "Wgraj go do katalogu, w którym leży index.html strony (np. domains/33bots.lt/public_html)"
+                   echo "i sprawdź, czy DEPLOY_URL wskazuje dokładnie na ten plik." ;;
+              403) echo "Serwer odrzucił token: ten w deploy.php różni się od sekretu DEPLOY_TOKEN."
+                   echo "Zmień jedną z dwóch wartości tak, żeby były identyczne." ;;
+              500) echo "deploy.php zgłosił błąd — najczęściej został w nim placeholder zamiast tokenu"
+                   echo "albo hosting nie ma rozszerzenia ZipArchive. Odpowiedź serwera jest wyżej." ;;
+              502) echo "Serwer nie dosięgnął GitHuba przy pobieraniu paczki — sprawdź ruch wychodzący hostingu." ;;
+              000) echo "Brak odpowiedzi: zły adres w DEPLOY_URL, brak certyfikatu albo hosting nie odpowiada." ;;
+              *)   echo "Nieoczekiwany kod odpowiedzi — treść odpowiedzi jest wyżej." ;;
+            esac
+            echo ""
+            echo "Wdrożenie nie powiodło się. Strona zostaje w poprzedniej wersji."
             exit 1
           fi
           if ! grep -q 'WDROŻENIE ZAKOŃCZONE' /tmp/odpowiedz.txt; then

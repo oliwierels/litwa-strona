@@ -69,7 +69,9 @@ zapisu do katalogu. Bez tokenu albo z błędnym tokenem skrypt zwraca
 
 ### Krok 5. Uruchom
 
-**Actions** → **Wdrożenie na 33bots.lt** → **Run workflow**.
+Zatwierdź dowolną zmianę na gałęzi produkcyjnej — push uruchamia wdrożenie sam. Bez nowego
+commita: `Actions` → ostatnie uruchomienie → **Re-run all jobs** (przycisku „Run workflow"
+tu nie ma; dlaczego — niżej).
 
 Przed pierwszym uruchomieniem warto zrobić kopię katalogu strony
 (Manager plików → zaznacz wszystko → Kompresuj).
@@ -165,3 +167,18 @@ i przywróci poprzedni stan strony.
 
 Zmieniając token, zmień go w obu miejscach naraz: w `deploy.php` na serwerze
 i w sekrecie `DEPLOY_TOKEN` na GitHubie.
+
+## Ręczne uruchomienie — bez przycisku „Run workflow"
+
+GitHub pokazuje przycisk **Run workflow** tylko wtedy, gdy plik workflow istnieje na
+**domyślnej gałęzi** repozytorium. Tutaj strona i workflow są na gałęzi produkcyjnej,
+a domyślna jest `main` — dlatego przycisku nie ma. Zamiast niego:
+
+- **Powtórz ostatni przebieg**: `Actions` → wybierz ostatnie uruchomienie → **Re-run all jobs**.
+  Wdroży aktualny stan gałęzi.
+- **Albo po prostu zatwierdź zmianę** — każdy push na gałąź produkcyjną uruchamia wdrożenie sam.
+
+Gdyby przycisk był potrzebny na stałe, są dwie drogi: zmienić domyślną gałąź na produkcyjną
+albo wgrać kopię `wdrozenie.yml` również na `main` (sam plik na `main` nic nie wdraża —
+workflow reaguje wyłącznie na push do gałęzi produkcyjnej).
+
