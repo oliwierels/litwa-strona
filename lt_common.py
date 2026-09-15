@@ -50,15 +50,20 @@ SOCIALS = [
 # Nurodomos tik tos versijos, kurios turi tikrą atitikmenį ir gali nurodyti atgal
 # (hreflang veikia tik tada, kai nuorodos abipusės). Puslapiams be atitikmens
 # paliekama tik savoji „lt“ nuoroda.
+#
+# robotollern.de čia nebėra: svetainės savininkas patvirtino, kad tai ne 33bots
+# vokiška versija, todėl atgalinės nuorodos ji niekada nepateiks, o vienpusę
+# hreflang deklaraciją paieškos sistemos ignoruoja. Navigacijos kalbų perjungiklyje
+# nuoroda kol kas palikta — tai turinio sprendimas, ne techninis.
 EQUIVALENTS = {
     "index.html": {
         "pl": "https://33bots.pl/",
         "de-AT": "https://33bots.at/",
-        "de": "https://robotollern.de/",
         "x-default": "https://33bots.pl/",
     },
     "humanoidinio-roboto-nuoma.html": {
         "pl": "https://33bots.pl/wypozyczenie-robota.html",
+        "de-AT": "https://33bots.at/humanoider-roboter-mieten.html",
         "x-default": "https://33bots.pl/wypozyczenie-robota.html",
     },
     "robotas-renginiui.html": {
@@ -67,6 +72,7 @@ EQUIVALENTS = {
     },
     "robotas-parodoms.html": {
         "pl": "https://33bots.pl/oferta-targi.html",
+        "de-AT": "https://33bots.at/messe-roboter-mieten.html",
         "x-default": "https://33bots.pl/oferta-targi.html",
     },
     "robotas-konferencijai.html": {
@@ -92,6 +98,12 @@ EQUIVALENTS = {
     "roboto-diegimas.html": {
         "pl": "https://33bots.pl/wdrozenia.html",
         "x-default": "https://33bots.pl/wdrozenia.html",
+    },
+    "unitree-g1-nuoma.html": {
+        "de-AT": "https://33bots.at/unitree-g1-mieten.html",
+    },
+    "kontaktai.html": {
+        "de-AT": "https://33bots.at/kontakt.html",
     },
 }
 
