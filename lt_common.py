@@ -190,6 +190,29 @@ NAV_SECONDARY = [
     ("apie-mus.html", "Apie mus"),
 ]
 
+# Miestai, kurių puslapiai buvo sujungti su stipresniais.
+#
+# Kiekvienas jų turėjo vos 60–70 žodžių savito teksto iš ~865 — likusi dalis buvo
+# navigacija, paslaugų aprašas ir poraštė, vienodi visuose puslapiuose. Dvidešimt aštuoni
+# tokie puslapiai atrodo kaip plona, kartojama masė, ir Google juos atidėlioja („aptikta —
+# kol kas neindeksuota"). Vietoj to paliekame aštuoniolika realių rinkų ir kiekvieną
+# praplečiame, o mažiausius nukreipiame (301) į savo apskrities centrą — svoris susilieja,
+# o vartotojas patenka į puslapį, kuriame ta pati paslauga aprašyta plačiau.
+#
+# Taip pat elgiamasi lenkiškoje versijoje su Silezijos aglomeracijos miestais.
+SUJUNGTI_MIESTAI = {
+    "radviliskis": "siauliai",
+    "rokiskis": "panevezys",
+    "birzai": "panevezys",
+    "prienai": "kaunas",
+    "kretinga": "klaipeda",
+    "silute": "klaipeda",
+    "ukmerge": "vilnius",
+    "elektrenai": "vilnius",
+    "plunge": "telsiai",
+    "visaginas": "utena",
+}
+
 CITIES = [
     ("vilnius", "Vilnius", "Vilniuje", "Vilniaus"),
     ("kaunas", "Kaunas", "Kaune", "Kauno"),
@@ -207,18 +230,8 @@ CITIES = [
     ("palanga", "Palanga", "Palangoje", "Palangos"),
     ("druskininkai", "Druskininkai", "Druskininkuose", "Druskininkų"),
     ("trakai", "Trakai", "Trakuose", "Trakų"),
-    ("visaginas", "Visaginas", "Visagine", "Visagino"),
-    ("ukmerge", "Ukmergė", "Ukmergėje", "Ukmergės"),
-    ("plunge", "Plungė", "Plungėje", "Plungės"),
-    ("kretinga", "Kretinga", "Kretingoje", "Kretingos"),
-    ("silute", "Šilutė", "Šilutėje", "Šilutės"),
-    ("radviliskis", "Radviliškis", "Radviliškyje", "Radviliškio"),
     ("birstonas", "Birštonas", "Birštone", "Birštono"),
-    ("elektrenai", "Elektrėnai", "Elektrėnuose", "Elektrėnų"),
     ("anyksciai", "Anykščiai", "Anykščiuose", "Anykščių"),
-    ("birzai", "Biržai", "Biržuose", "Biržų"),
-    ("rokiskis", "Rokiškis", "Rokiškyje", "Rokiškio"),
-    ("prienai", "Prienai", "Prienuose", "Prienų"),
 ]
 
 

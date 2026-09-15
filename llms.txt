@@ -85,18 +85,8 @@
 - [Palanga](https://33bots.lt/robotu-nuoma-palanga.html)
 - [Druskininkai](https://33bots.lt/robotu-nuoma-druskininkai.html)
 - [Trakai](https://33bots.lt/robotu-nuoma-trakai.html)
-- [Visaginas](https://33bots.lt/robotu-nuoma-visaginas.html)
-- [Ukmergė](https://33bots.lt/robotu-nuoma-ukmerge.html)
-- [Plungė](https://33bots.lt/robotu-nuoma-plunge.html)
-- [Kretinga](https://33bots.lt/robotu-nuoma-kretinga.html)
-- [Šilutė](https://33bots.lt/robotu-nuoma-silute.html)
-- [Radviliškis](https://33bots.lt/robotu-nuoma-radviliskis.html)
 - [Birštonas](https://33bots.lt/robotu-nuoma-birstonas.html)
-- [Elektrėnai](https://33bots.lt/robotu-nuoma-elektrenai.html)
 - [Anykščiai](https://33bots.lt/robotu-nuoma-anyksciai.html)
-- [Biržai](https://33bots.lt/robotu-nuoma-birzai.html)
-- [Rokiškis](https://33bots.lt/robotu-nuoma-rokiskis.html)
-- [Prienai](https://33bots.lt/robotu-nuoma-prienai.html)
 
 ## Dažni klausimai
 

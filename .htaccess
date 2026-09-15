@@ -7,6 +7,18 @@ RewriteRule ^(.*)$ https://33bots.lt/$1 [L,R=301]
 
 ErrorDocument 404 /404.html
 
+# Sujungti miestų puslapiai
+Redirect 301 /robotu-nuoma-birzai.html /robotu-nuoma-panevezys.html
+Redirect 301 /robotu-nuoma-elektrenai.html /robotu-nuoma-vilnius.html
+Redirect 301 /robotu-nuoma-kretinga.html /robotu-nuoma-klaipeda.html
+Redirect 301 /robotu-nuoma-plunge.html /robotu-nuoma-telsiai.html
+Redirect 301 /robotu-nuoma-prienai.html /robotu-nuoma-kaunas.html
+Redirect 301 /robotu-nuoma-radviliskis.html /robotu-nuoma-siauliai.html
+Redirect 301 /robotu-nuoma-rokiskis.html /robotu-nuoma-panevezys.html
+Redirect 301 /robotu-nuoma-silute.html /robotu-nuoma-klaipeda.html
+Redirect 301 /robotu-nuoma-ukmerge.html /robotu-nuoma-vilnius.html
+Redirect 301 /robotu-nuoma-visaginas.html /robotu-nuoma-utena.html
+
 # Talpyklos politika statiniam turiniui
 <IfModule mod_expires.c>
   ExpiresActive On

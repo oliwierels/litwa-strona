@@ -41,7 +41,8 @@ yra **generuojami** — jų nereikia redaguoti ranka. Keiskite turinį skriptuos
 | `build_offers.py` | 16 paslaugų puslapių (renderina `PAGES` + `PAGES2`) |
 | `build_hub.py` | `robotu-nuoma.html` — paslaugų ir miestų mazgas (silo struktūra) |
 | `build_blog.py` | Blogo indeksas ir 14 straipsnių |
-| `build_cities.py` | 28 miestų puslapiai su unikaliu vietos turiniu |
+| `build_cities.py` | 18 miestų puslapių su savitu vietos turiniu |
+| `lt_cities_extra.py` | Kiekvieno miesto formatai ir logistika — savitas turinys, kurio nėra kituose puslapiuose |
 | `build_fonts.py` | Parsisiunčia Inter (latin + latin-ext) į `fonts/`; paleidžiama tik atnaujinant šriftą |
 | `build_misc.py` | Kainos, apie mus, kontaktai, vaizdo įrašai, privatumo politika, 404 |
 | `build_og.py` | Open Graph paveikslėliai (1200×630) į `og/` |
@@ -82,8 +83,14 @@ išvardija visus neišverstus fragmentus.
 - **llms.txt** — svetainės santrauka kalbos modeliams (ChatGPT, Perplexity, Claude).
 - Unikalūs `title`, `description` ir `canonical` kiekvienam puslapiui; ilgiai neviršija
   65 / 160 simbolių.
-- Miestų puslapiai turi savą turinį (vietos renginių scena, tipinės erdvės, regionas), o ne
-  pakeistą miesto pavadinimą tame pačiame tekste. Be teksto, kiekvienas miesto puslapis turi
+- Miestų puslapių yra 18, ne 28. Dešimt mažiausių buvo sujungti (301) su savo apskrities
+  centru: kiekvienas jų turėjo vos 60–70 žodžių savito teksto iš ~865, o toks rinkinys
+  Google akyse yra plonas turinys, kurį jis atidėlioja. Nukreipimų sąrašas —
+  `lt_common.SUJUNGTI_MIESTAI`, o jį `build_seo` paverčia `.htaccess` ir `_redirects`
+  taisyklėmis.
+- Likusieji puslapiai turi savą turinį (vietos renginių scena, tipinės erdvės, regionas,
+  populiariausi formatai ir logistikos pastabos) — savito teksto padvigubėjo nuo ~74 iki
+  ~148 žodžių, o tekstų sutapimas tarp miestų nukrito nuo 0,53 iki 0,44 (6-gramų Jaccard). Be teksto, kiekvienas miesto puslapis turi
   savo DUK klausimą (surenkamą iš to miesto erdvių sąrašo), savo nuotraukų rinkinį
   (`lt_gallery.rotate_for` — 27 skirtingi rinkiniai 28 miestams), savo aprašymą su apskrities
   pavadinimu ir savą kitų miestų nuorodų rinkinį (sąrašas sukamas nuo esamo miesto, todėl

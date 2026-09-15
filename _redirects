@@ -5,3 +5,14 @@ http://33bots.lt/* https://33bots.lt/:splat 301!
 /index https://33bots.lt/ 301
 /kontaktas.html /kontaktai.html 301
 /blogas.html /blog.html 301
+
+/robotu-nuoma-birzai.html /robotu-nuoma-panevezys.html 301
+/robotu-nuoma-elektrenai.html /robotu-nuoma-vilnius.html 301
+/robotu-nuoma-kretinga.html /robotu-nuoma-klaipeda.html 301
+/robotu-nuoma-plunge.html /robotu-nuoma-telsiai.html 301
+/robotu-nuoma-prienai.html /robotu-nuoma-kaunas.html 301
+/robotu-nuoma-radviliskis.html /robotu-nuoma-siauliai.html 301
+/robotu-nuoma-rokiskis.html /robotu-nuoma-panevezys.html 301
+/robotu-nuoma-silute.html /robotu-nuoma-klaipeda.html 301
+/robotu-nuoma-ukmerge.html /robotu-nuoma-vilnius.html 301
+/robotu-nuoma-visaginas.html /robotu-nuoma-utena.html 301

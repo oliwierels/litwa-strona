@@ -3,7 +3,7 @@
 from datetime import date, datetime
 
 from lt_common import (SITE, EMAIL, PHONE_H, HAS_PHONE, write, esc, CITIES, city_url, NAV_OFFER,
-                       alternates)
+                       alternates, SUJUNGTI_MIESTAI)
 from lt_articles import ARTICLES as _A1
 from lt_articles2 import ARTICLES2 as _A2
 from build_misc import VIDEOS
@@ -210,16 +210,27 @@ def build_feed():
 
 
 def build_server_config():
-    write("_redirects", """https://www.33bots.lt/* https://33bots.lt/:splat 301!
+    # Sujungtų miestų puslapių nebėra — jų adresai nukreipiami į apskrities centrą,
+    # kad senos nuorodos ir paieškos rezultatai nevestų į 404.
+    netlify_301 = "\n".join(
+        f"/{city_url(senas)} /{city_url(naujas)} 301"
+        for senas, naujas in sorted(SUJUNGTI_MIESTAI.items()))
+    apache_301 = "\n".join(
+        f"Redirect 301 /{city_url(senas)} /{city_url(naujas)}"
+        for senas, naujas in sorted(SUJUNGTI_MIESTAI.items()))
+
+    write("_redirects", f"""https://www.33bots.lt/* https://33bots.lt/:splat 301!
 http://www.33bots.lt/* https://33bots.lt/:splat 301!
 http://33bots.lt/* https://33bots.lt/:splat 301!
 
 /index https://33bots.lt/ 301
 /kontaktas.html /kontaktai.html 301
 /blogas.html /blog.html 301
+
+{netlify_301}
 """)
 
-    write(".htaccess", """RewriteEngine On
+    htaccess = """RewriteEngine On
 
 # HTTPS ir non-www (kanoninis adresas: https://33bots.lt)
 RewriteCond %{HTTP_HOST} ^www\\.33bots\\.lt$ [NC,OR]
@@ -227,6 +238,9 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://33bots.lt/$1 [L,R=301]
 
 ErrorDocument 404 /404.html
+
+# Sujungti miestų puslapiai
+SUJUNGTI_MIESTAI_301
 
 # Talpyklos politika statiniam turiniui
 <IfModule mod_expires.c>
@@ -249,7 +263,8 @@ ErrorDocument 404 /404.html
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
-""")
+"""
+    write(".htaccess", htaccess.replace("SUJUNGTI_MIESTAI_301", apache_301))
 
 
 # IndexNow raktas. Jis yra viešas pagal sumanymą: tas pats raktas guli svetainėje kaip

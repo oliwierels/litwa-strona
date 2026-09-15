@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """33bots.lt miestų puslapiai — lokalus SEO."""
+from lt_cities_extra import PAPILDOMAI
 from lt_gallery import strip_section
 from lt_common import (SITE, head, body_open, nav, crumbs, breadcrumb_ld, contact_section,
                        footer, faq_section, faq_ld, organization_ld, video_section,
@@ -303,6 +304,12 @@ CITY_DATA = {
 }
 
 
+# Papildomas turinys laikomas atskirai, kad CITY_DATA liktų skaitomas.
+for _slug, _papildomai in PAPILDOMAI.items():
+    if _slug in CITY_DATA:
+        CITY_DATA[_slug].update(_papildomai)
+
+
 def build_city(slug, name, loc, gen):
     d = CITY_DATA[slug]
     url = f"{SITE}/{city_url(slug)}"
@@ -437,6 +444,24 @@ def build_city(slug, name, loc, gen):
 {venues}
           </ul>
           <p>Jei nesate tikri, ar jūsų erdvė tinka — atsiųskite nuotrauką ar planą, ir atsakysime tą pačią dieną.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATAI IR LOGISTIKA -->
+  <section class="section" style="padding-top:0;">
+    <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:var(--s7);">
+      <div>
+        <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem); margin-bottom:var(--s4);">Populiariausi formatai {loc}</h2>
+        <div class="article-body" style="max-width:none;">
+          <p>{d['formats']}</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem); margin-bottom:var(--s4);">Ką suplanuoti iš anksto</h2>
+        <div class="article-body" style="max-width:none;">
+          <p>{d['logistics']}</p>
         </div>
       </div>
     </div>
