@@ -135,8 +135,10 @@ Netlify, `.htaccess` — Apache (HTTPS, non-www, 404, talpykla, gzip).
 2. **Google Search Console** — pridėti 33bots.lt, patvirtinti nuosavybę ir pateikti
    `https://33bots.lt/sitemap.xml` (71 adresas).
 3. **Bing Webmaster Tools** — tas pats sitemap; iš čia veikia ir IndexNow.
-4. **IndexNow raktas** — sugeneruoti raktą, įkelti kaip `https://33bots.lt/<RAKTAS>.txt`
-   ir paleisti `INDEXNOW_KEY=<raktas> ./scripts/indexnow-submit.sh`.
+4. **IndexNow** — jau veikia automatiškai: raktas yra `build_seo.INDEXNOW_KEY`, jo failas
+   generuojamas į svetainės šaknį, o po kiekvieno diegimo GitHub Actions praneša Bing,
+   Seznam ir Yandex tik tuos adresus, kurių failai pasikeitė. Rankiniu būdu nieko daryti
+   nereikia; `scripts/indexnow-submit.sh` lieka atskiriems adresams paskelbti.
 5. **Google Business Profile** — sukurti įrašą Lietuvai; vietinei paieškai tai duoda
    daugiau nei bet koks on-page pakeitimas.
 6. **Formspree** — naudojamas tas pats galinis taškas kaip 33bots.pl, todėl lietuviškos ir

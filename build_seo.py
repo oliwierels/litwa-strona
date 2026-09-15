@@ -252,7 +252,18 @@ ErrorDocument 404 /404.html
 """)
 
 
+# IndexNow raktas. Jis yra viešas pagal sumanymą: tas pats raktas guli svetainėje kaip
+# <RAKTAS>.txt ir būtent taip paieškos sistema patikrina, kad adresus siunčia savininkas.
+# Todėl jį laikome repozitorijoje, o ne paslaptyse.
+INDEXNOW_KEY = "da66134087cc25b2d1bc36011f30f615"
+
+
+def build_indexnow_key():
+    write(f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY)
+
+
 def build():
+    build_indexnow_key()
     build_sitemap()
     build_robots()
     build_llms()
