@@ -51,44 +51,51 @@ SOCIALS = [
 # (hreflang veikia tik tada, kai nuorodos abipusės). Puslapiams be atitikmens
 # paliekama tik savoji „lt“ nuoroda.
 #
-# robotollern.de čia nebėra: svetainės savininkas patvirtino, kad tai ne 33bots
-# vokiška versija, todėl atgalinės nuorodos ji niekada nepateiks, o vienpusę
-# hreflang deklaraciją paieškos sistemos ignoruoja. Navigacijos kalbų perjungiklyje
-# nuoroda kol kas palikta — tai turinio sprendimas, ne techninis.
+# Vokiška versija yra 33bots.de (33bots saugyklos šaka claude/identical-pages-germany),
+# o ne robotollern.de — ta yra atskiras projektas ir atgalinės nuorodos nepateiktų,
+# todėl vienpusę deklaraciją paieškos sistemos vis tiek ignoruotų.
 EQUIVALENTS = {
     "index.html": {
         "pl": "https://33bots.pl/",
+        "de": "https://33bots.de/",
         "de-AT": "https://33bots.at/",
         "x-default": "https://33bots.pl/",
     },
     "humanoidinio-roboto-nuoma.html": {
         "pl": "https://33bots.pl/wypozyczenie-robota.html",
+        "de": "https://33bots.de/humanoiden-roboter-mieten.html",
         "de-AT": "https://33bots.at/humanoider-roboter-mieten.html",
         "x-default": "https://33bots.pl/wypozyczenie-robota.html",
     },
     "robotas-renginiui.html": {
         "pl": "https://33bots.pl/robot-na-event.html",
+        "de": "https://33bots.de/roboter-event.html",
         "x-default": "https://33bots.pl/robot-na-event.html",
     },
     "robotas-parodoms.html": {
         "pl": "https://33bots.pl/oferta-targi.html",
+        "de": "https://33bots.de/angebot-messen.html",
         "de-AT": "https://33bots.at/messe-roboter-mieten.html",
         "x-default": "https://33bots.pl/oferta-targi.html",
     },
     "robotas-konferencijai.html": {
         "pl": "https://33bots.pl/oferta-konferencje.html",
+        "de": "https://33bots.de/angebot-konferenzen-galas.html",
         "x-default": "https://33bots.pl/oferta-konferencje.html",
     },
     "robotas-vestuvems.html": {
         "pl": "https://33bots.pl/robot-na-wesele.html",
+        "de": "https://33bots.de/roboter-hochzeit.html",
         "x-default": "https://33bots.pl/robot-na-wesele.html",
     },
     "video-realizacijos.html": {
         "pl": "https://33bots.pl/realizacje-wideo.html",
+        "de": "https://33bots.de/referenzen-videos.html",
         "x-default": "https://33bots.pl/realizacje-wideo.html",
     },
     "blog.html": {
         "pl": "https://33bots.pl/blog.html",
+        "de": "https://33bots.de/blog.html",
         "x-default": "https://33bots.pl/blog.html",
     },
     "parduotuve.html": {
@@ -378,7 +385,7 @@ def nav(active=""):
         <span class="lang-switch__current" aria-current="true">LT</span>
         <a href="https://33bots.pl/" hreflang="pl" lang="pl" title="Polska wersja strony">PL</a>
         <a href="https://33bots.at/" hreflang="de-AT" lang="de" title="Österreichische Version">AT</a>
-        <a href="https://robotollern.de/" hreflang="de" lang="de" title="Deutsche Version">DE</a>
+        <a href="https://33bots.de/" hreflang="de" lang="de" title="Deutsche Version">DE</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Atidaryti meniu" aria-expanded="false">
         <span></span><span></span>
@@ -629,7 +636,7 @@ def footer():
         <p class="footer__tagline" style="margin-top:12px;">
           <a href="https://33bots.pl/" hreflang="pl" lang="pl" style="color:inherit;">Polski</a> ·
           <a href="https://33bots.at/" hreflang="de-AT" lang="de" style="color:inherit;">Österreich</a> ·
-          <a href="https://robotollern.de/" hreflang="de" lang="de" style="color:inherit;">Deutschland</a>
+          <a href="https://33bots.de/" hreflang="de" lang="de" style="color:inherit;">Deutschland</a>
         </p>
       </div>
       <div class="footer__links">

@@ -16,8 +16,8 @@
   įranga bei komandos mokymais (roboto-diegimas.html); kaina pateikiama po pokalbio
 - Atsakymo laikas į užklausą: 24 darbo valandos
 - Kontaktai: kontakt@33bots.lt
-- Kalbų versijos: lietuvių (https://33bots.lt), lenkų (https://33bots.pl), vokiečių (https://33bots.at,
-  https://robotollern.de)
+- Kalbų versijos: lietuvių (https://33bots.lt), lenkų (https://33bots.pl), vokiečių (https://33bots.de),
+  austriška (https://33bots.at)
 
 ## Paslaugų puslapiai
 

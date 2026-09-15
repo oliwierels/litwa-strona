@@ -151,8 +151,8 @@ def build_llms():
   įranga bei komandos mokymais (roboto-diegimas.html); kaina pateikiama po pokalbio
 - Atsakymo laikas į užklausą: 24 darbo valandos
 - Kontaktai: {EMAIL}{kontaktu_telefonas}
-- Kalbų versijos: lietuvių ({SITE}), lenkų (https://33bots.pl), vokiečių (https://33bots.at,
-  https://robotollern.de)
+- Kalbų versijos: lietuvių ({SITE}), lenkų (https://33bots.pl), vokiečių (https://33bots.de),
+  austriška (https://33bots.at)
 
 ## Paslaugų puslapiai
 
