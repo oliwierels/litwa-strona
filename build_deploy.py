@@ -13,7 +13,7 @@ from lt_links import LINKS, swap_photos
 SRC = "templates/pl-wdrozenia.html"
 OUT = "roboto-diegimas.html"
 
-TITLE = "Humanoidinio roboto diegimas įmonėje — pardavimas ir mokymai | 33bots"
+TITLE = "Humanoidinio roboto diegimas įmonėje | 33bots"
 DESC = ("Įsigyjate humanoidinį robotą, o mes sukonfigūruojame kalbą ir žinias apie jūsų įmonę "
         "bei apmokome komandą. Pristatymas, paleidimas vietoje ir pagalba po starto.")
 OG_TITLE = "Humanoidinio roboto diegimas įmonėje | 33bots"

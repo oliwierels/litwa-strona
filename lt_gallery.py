@@ -67,9 +67,17 @@ def figure(photo, loading="lazy", strip=False):
     if strip:
         # juostoje visos plytelės vienodo aukščio — plačiąsias paliekame, siaurąsias sulyginame
         cls = cls.replace(" shot--narrow", "")
+    # Telefone plytelė yra apie 400 px pločio, todėl pilno dydžio nuotrauka (150–270 KB)
+    # yra švaistymas. build_photo_variants paruošia 400 px variantą; srcset leidžia
+    # naršyklei pasiimti tik jį, o didelis failas lieka plačiam ekranui.
+    import os as _os
+    variantas = f"{DIR}/{name}-400.webp"
+    saltinis = (f'srcset="{variantas} 400w, {DIR}/{name}.webp 1200w" '
+                f'sizes="(max-width: 760px) 400px, 760px"'
+                if _os.path.exists(variantas) else f'srcset="{DIR}/{name}.webp"')
     return f"""      <figure class="{cls}">
         <picture>
-          <source srcset="{DIR}/{name}.webp" type="image/webp" />
+          <source {saltinis} type="image/webp" />
           <img src="{DIR}/{name}.jpg" alt="{esc(alt)}" loading="{loading}" decoding="async" class="shot__img" />
         </picture>
         <figcaption class="shot__cap">{cap}</figcaption>

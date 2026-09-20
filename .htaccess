@@ -5,6 +5,11 @@ RewriteCond %{HTTP_HOST} ^www\.33bots\.lt$ [NC,OR]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://33bots.lt/$1 [L,R=301]
 
+# Pagrindinio puslapio adresas yra vienas: / , o ne /index.html.
+# Kitaip robotas mato du adresus su ta pačia antrašte ir pats renkasi, kurį rodyti.
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://33bots.lt/ [L,R=301]
+
 ErrorDocument 404 /404.html
 
 # Sujungti miestų puslapiai
@@ -37,6 +42,16 @@ Redirect 301 /robotu-nuoma-visaginas.html /robotu-nuoma-utena.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # HSTS: po pirmo apsilankymo naršyklė pati reikalauja HTTPS.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  # Draudimas rodyti svetainę svetimame rėmelyje (clickjacking).
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Išjungiame naršyklės funkcijas, kurių svetainė nenaudoja.
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+  # CSP išvardija tik tuos serverius, iš kurių svetainė realiai kažką ima:
+  # GTM (analitika), Formspree (forma), Albacross. Šriftai talpinami vietoje.
+  # 'unsafe-inline' lieka, nes skriptai ir stiliai yra puslapio viduje.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://serve.albacross.com https://*.albacross.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.albacross.com https://serve.albacross.com; frame-src https://www.googletagmanager.com; media-src 'self'; form-action 'self' https://formspree.io; base-uri 'self'; frame-ancestors 'self'"
 </IfModule>
