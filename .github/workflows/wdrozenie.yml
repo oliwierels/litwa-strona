@@ -178,6 +178,9 @@ jobs:
           print('Struktura, dane strukturalne, analityka, adresy kanoniczne, odwołania i mapa strony w porządku.')
           PY
 
+      - name: Audyt SEO (31 kryteriów)
+        run: python3 auditas.py . 33bots.lt
+
       - name: Poproś serwer o pobranie zmian
         env:
           ADRES: ${{ secrets.DEPLOY_URL }}
