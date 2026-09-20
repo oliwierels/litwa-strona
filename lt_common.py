@@ -37,7 +37,7 @@ PHONE_1_H = PHONE_H
 FORM_ENDPOINT = "https://formspree.io/f/mnjwvray"
 
 GTM = "GTM-MR7R7CJ3"
-CSS_V = "2"   # podbijane przy każdej zmianie wyglądu — inaczej przeglądarka poda stary arkusz
+CSS_V = "3"   # podbijane przy każdej zmianie wyglądu — inaczej przeglądarka poda stary arkusz
 
 SOCIALS = [
     ("Instagram", "https://www.instagram.com/33bots_/"),
