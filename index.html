@@ -55,7 +55,7 @@
 
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/space-grotesk-latin-wght-normal.woff2" />
 <script>document.documentElement.classList.add('js');</script>
-<link rel="stylesheet" href="css/site.css?v=e78d5794" />
+<link rel="stylesheet" href="css/site.css?v=0c8ce682" />
 
 <script type="application/ld+json">
 {
@@ -829,13 +829,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <ul class="stopka__kol" aria-label="Renginių gidas">
       <li><a href="pramogos-renginiams.html">Pramogos renginiams</a></li>
+      <li><a href="renginio-idejos.html">Renginio idėjos</a></li>
+      <li><a href="sou-programa-renginiams.html">Šou programa</a></li>
+      <li><a href="pramogu-nuoma.html">Pramogų nuoma</a></li>
       <li><a href="renginiu-vedejas.html">Renginių vedėjas</a></li>
       <li><a href="vestuviu-vedejas.html">Vestuvių vedėjas</a></li>
+      <li><a href="vestuviu-programa.html">Vestuvių programa</a></li>
       <li><a href="fotobudeles-nuoma.html">Fotobūdelės nuoma</a></li>
-      <li><a href="pramogos-vestuvems.html">Pramogos vestuvėms</a></li>
+      <li><a href="gimtadienio-idejos-suaugusiems.html">Gimtadienio idėjos</a></li>
       <li><a href="kaledinio-vakarelio-idejos.html">Kalėdinio vakarėlio idėjos</a></li>
-      <li><a href="komandos-formavimo-idejos.html">Komandos formavimo idėjos</a></li>
-      <li><a href="renginio-idejos.html">Renginio idėjos</a></li>
+      <li><a href="imones-renginio-organizavimas.html">Įmonės renginys</a></li>
       <li><a href="blog.html">Visas renginių gidas</a></li>
     </ul>
     <ul class="stopka__kol" aria-label="Apie 33bots">
@@ -852,7 +855,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="blog-kaip-issinuomoti-robota.html">Kaip išsinuomoti robotą</a>
         <a href="blog-roboto-sauga-renginyje.html">Roboto sauga renginyje</a>
         <a href="blog-unitree-g1-specifikacija.html">Unitree G1 specifikacija</a>
-        <a href="blog-kaip-pritraukti-lankytojus-i-stenda.html">Lankytojai parodos stende</a>
+        <a href="parodos-stendo-idejos.html">Parodos stendo idėjos</a>
+        <a href="konferencijos-organizavimas.html">Konferencijos organizavimas</a>
         <a href="blog.html">Visas renginių gidas</a>
       </div>
     </div>
@@ -883,7 +887,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<!-- ══════════ Pasek mobilny: pojawia się po minięciu hero ══════════ -->
 <div class="pasek" id="pasekMobilny">
   <a class="btn" href="#kontakt" data-cta="sticky">Patikrinti datą <span aria-hidden="true">→</span></a>
 </div>
@@ -918,10 +921,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ——— Hero: rotacja zdjęć z realizacji ———
-     Jeden element img: przygaszenie, podmiana źródła, rozjaśnienie. Co 3 s, od załadowania
-     strony; pauza przyciskiem, najechaniem i fokusem (WCAG 2.2.2). Przy ograniczonym
-     ruchu nic nie zmienia się samo — przycisk przełącza zdjęcia ręcznie. */
+
   const SLAJDY = [
     { src: "realizacja-gala-wsrod-gosci.jpg", alt: "Humanoidinis robotas tarp pokylio svečių", klient: "Drezdeno pilių naktis", gdzie: "Drezdenas" },
     { src: "realizacja-eco-studio-wywiad.jpg", alt: "Žurnalistė kalbina humanoidinį robotą prie Eco Studio rėmėjų sienelės", klient: "Eco Studio ELECTRO-SYSTEM finalas", gdzie: "Varšuva" },
@@ -942,7 +942,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const s = SLAJDY[n];
     const wstepnie = new Image();
     wstepnie.src = s.src;
-    try { await wstepnie.decode(); } catch (e) { /* pokaż mimo to */ }
+    try { await wstepnie.decode(); } catch (e) { }
     heroImg.classList.add('znika');
     await new Promise((r) => setTimeout(r, reduce ? 0 : 400));
     heroImg.removeAttribute('fetchpriority');
@@ -980,7 +980,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (document.readyState === 'complete') planuj(); else addEventListener('load', planuj);
   }
 
-  /* ——— Nawigacja: tło i linia włosowa po przewinięciu ——— */
+
   const nav = document.getElementById('nav');
   const tloNav = () => nav.classList.toggle('nav--tlo', scrollY > 8 || !panel.hidden);
 
@@ -1000,7 +1000,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   addEventListener('scroll', tloNav, { passive: true });
   tloNav();
 
-  /* ——— Wejście sekcji: raz, 12 px, 700 ms ——— */
+
   const wejscia = document.querySelectorAll('.wejscie');
   if (reduce || !('IntersectionObserver' in window)) {
     wejscia.forEach((el) => el.classList.add('widoczne'));
@@ -1011,7 +1011,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     wejscia.forEach((el) => io.observe(el));
   }
 
-  /* ——— Pasek mobilny: dopiero po minięciu hero ——— */
+
   const pasek = document.getElementById('pasekMobilny');
   const hero = document.querySelector('.hero');
   if (pasek && hero) {
@@ -1019,16 +1019,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       { rootMargin: '-80px 0px 0px 0px' }).observe(hero);
   }
 
-  /* ——— Szuflada realizacji ———
-     Dodatkowe zdjęcia wstawiane dopiero przy otwarciu i usuwane przy zamknięciu,
-     więc każdy kadr jest w DOM najwyżej raz. */
-  /* ——— Pasy bez końca: realizacje i klienci ———
-     Przy ograniczonym ruchu pasy zostają zwykłymi rzędami przewijanymi ręcznie.
-     W przeciwnym razie za oryginałem doklejane są kopie rzędu (aria-hidden,
-     poza kolejnością Tab), a tor przesuwa się co klatkę i zawija o szerokość
-     jednego kompletu — rząd nie ma końca. Najechanie i fokus wyhamowują rząd,
-     przycisk zatrzymuje całą grupę (WCAG 2.2.2), rząd można też przeciągnąć
-     myszą albo palcem. */
+
+
   const grupyPasow = [...document.querySelectorAll('.pasy[data-grupa]')];
   if (!reduce && grupyPasow.length) {
     const rzedy = [];
@@ -1085,7 +1077,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
         pas.addEventListener('focusout', (e) => { if (!pas.contains(e.relatedTarget)) r.fokus = false; });
 
-        // Przeciąganie: dopiero po 6 px, żeby zwykłe kliknięcie otwierało szufladę.
         pas.addEventListener('pointerdown', (e) => {
           if (e.button !== 0) return;
           r.ciag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, start: r.x, aktywne: false, t: performance.now(), ostX: e.clientX, vx: 0 };
@@ -1385,7 +1376,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (szuflada.hidden) return;
     if (e.key === 'Escape') { zamknijSzuflade(); return; }
     if (e.key !== 'Tab') return;
-    // Fokus zostaje w szufladzie, dopóki jest otwarta.
     const f = [...szuflada.querySelectorAll('a[href], button')].filter((x) => x.offsetParent !== null);
     if (!f.length) return;
     if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
@@ -1409,7 +1399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ciasteczka.classList.remove('show');
   });
 
-  /* ——— Formularz: krok 1 wydarzenie, krok 2 kontakt, wysyłka na Formspree ——— */
+
   const form = document.getElementById('formularz');
   const krok1 = el('krok1'), krok2 = el('krok2');
   const etykiety = form.querySelectorAll('[data-krok-etykieta]');

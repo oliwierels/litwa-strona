@@ -46,13 +46,16 @@
 ## Renginių gidas
 
 - [Pramogos renginiams: idėjos ir kainos 2026](https://33bots.lt/pramogos-renginiams.html) — Pramogos renginiams: daugiau nei 40 idėjų įmonių šventėms, vestuvėms, gimtadieniams ir miesto šventėms — su kainomis, palyginimu ir patarimais, kaip išsirinkti.
+- [Renginio idėjos pagal progą: šventės, įmonės, vestuvės](https://33bots.lt/renginio-idejos.html) — Renginio idėjos pagal progą: įmonių šventės, vestuvės, gimtadieniai, jubiliejai, mokyklų ir miesto šventės — idėjos, gidai su kainomis ir kaip išsirinkti.
+- [Šou programa renginiui: idėjos ir kainos 2026](https://33bots.lt/sou-programa-renginiams.html) — Šou programa renginiui: ugnies šou, iliuzionistas, šokėjai, burbulų, barmenų, šviesų ir dronų šou — kam tinka, kiek kainuoja ir kaip įterpti į programą.
+- [Pramogų nuoma šventei: batutai, karaoke, VR ir kt.](https://33bots.lt/pramogu-nuoma.html) — Pramogų ir atrakcionų nuoma šventei: batutai, karaoke, VR, cukraus vata, šokolado fontanas, 360 platforma, kazino ir mobilus baras — kainos ir patarimai.
 - [Renginių vedėjas: kaina ir kaip išsirinkti](https://33bots.lt/renginiu-vedejas.html) — Renginių vedėjas įmonės šventei, konferencijai ar jubiliejui: kiek kainuoja, ką daro, kaip išsirinkti ir kada vietoj jo verta rinktis robotą vedėją.
 - [Vestuvių vedėjas: kaina 2026 ir kaip išsirinkti](https://33bots.lt/vestuviu-vedejas.html) — Kiek kainuoja vestuvių vedėjas, ką jis daro, kaip išsirinkti ir ką paklausti prieš pasirašant sutartį. Vedėjas su DJ, planas B ir robotas vestuvėse.
+- [Vestuvių programa ir scenarijus: planas valandomis](https://33bots.lt/vestuviu-programa.html) — Vestuvių programa nuo ceremonijos iki vidurnakčio: scenarijaus pavyzdys valandomis, papročiai, šou programa, kada pjauti tortą ir ką suderinti su vedėju.
 - [Fotobūdelės nuoma: kainos ir rūšys 2026](https://33bots.lt/fotobudeles-nuoma.html) — Kiek kainuoja fotobūdelės nuoma, kuo skiriasi klasikinė, veidrodinė, AI ir 360 fotobūdelė, ką paklausti tiekėjo ir kokių alternatyvų verta pasidomėti.
-- [Pramogos vestuvėms: 35 idėjos su kainomis](https://33bots.lt/pramogos-vestuvems.html) — Pramogos vestuvėms: 35 idėjos svečiams nuo pasitikimo iki ryto — muzika, šou, fotozonos, žaidimai, vaikų kampelis ir robotas. Su orientacinėmis kainomis.
+- [Gimtadienio idėjos suaugusiems: 30 idėjų šventei](https://33bots.lt/gimtadienio-idejos-suaugusiems.html) — Gimtadienio idėjos suaugusiems: 30 idėjų namuose, sodyboje, restorane ir lauke — pramogos, vedėjas, programa valandomis ir orientacinės kainos.
 - [Kalėdinio vakarėlio idėjos įmonei: temos ir programa](https://33bots.lt/kaledinio-vakarelio-idejos.html) — Kalėdinio vakarėlio idėjos 2026: 12 temų, programa valandomis, pramogos su kainomis, kvietimo tekstai ir planas, ką užsakyti iš anksto.
-- [Komandos formavimo idėjos: 30 veiklų įmonei](https://33bots.lt/komandos-formavimo-idejos.html) — Komandos formavimo idėjos: 30 veiklų biure, lauke ir vakare, žaidimai, etapai, orientacinės kainos ir patarimai, kaip suplanuoti renginį, kuris tikrai suartina.
-- [Renginio idėjos — ką pasiūlyti svečiams](https://33bots.lt/renginio-idejos.html) — Idėjos įmonės renginiui ir šventei: programos struktūra, akcentas, kurį prisimena, ir klaidos, kurių verta vengti. Praktinis vadovas organizatoriams.
+- [Įmonės renginio organizavimas: planas ir biudžetas](https://33bots.lt/imones-renginio-organizavimas.html) — Kaip organizuoti įmonės renginį: tikslas, biudžeto paskirstymas, vieta, programa ir pramogos, laiko planas nuo 3 mėnesių iki renginio ir dažniausios klaidos.
 - [Renginių gidas: pramogos, vedėjai ir idėjos](https://33bots.lt/blog.html) — Praktiniai gidai organizatoriams: pramogos renginiams ir jų kainos, vedėjai, fotobūdelės, vestuvių, kalėdinių vakarėlių ir komandos renginių idėjos.
 
 ## Apie 33bots
@@ -69,16 +72,28 @@
 - [Kaip išsinuomoti humanoidinį robotą — pilnas vadovas 2026](https://33bots.lt/blog-kaip-issinuomoti-robota.html) — Žingsnis po žingsnio: nuo užklausos iki renginio dienos. Ką patikrinti renkantis nuomos įmonę, kokius klausimus užduoti ir kaip pasiruošti renginiui.
 - [Roboto sauga renginyje — ką turi žinoti organizatorius](https://33bots.lt/blog-roboto-sauga-renginyje.html) — Jutikliai, saugos zona, draudimas ir operatoriaus vaidmuo. Praktinis saugos vadovas renginių organizatoriams, planuojantiems humanoidinį robotą.
 - [Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams](https://33bots.lt/blog-unitree-g1-specifikacija.html) — Unitree G1 techninė specifikacija: 132 cm, 35 kg, 23 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose.
-- [Kaip pritraukti lankytojus į parodos stendą — 9 būdai](https://33bots.lt/blog-kaip-pritraukti-lankytojus-i-stenda.html) — Devyni patikrinti būdai pritraukti lankytojus prie parodos stendo: vietos parinkimas, traukos objektas, mainų mechanika ir dažniausios klaidos.
+- [Parodos stendas: 15 idėjų, kaip pritraukti lankytojus](https://33bots.lt/parodos-stendo-idejos.html) — Parodos stendo idėjos: vieta, žinutė, traukos objektas, pasirodymų grafikas ir kontaktų rinkimas — 15 būdų pritraukti lankytojus ir paversti dėmesį kontaktais.
+- [Konferencijos organizavimas: planas, programa, kainos](https://33bots.lt/konferencijos-organizavimas.html) — Kaip organizuoti konferenciją: tikslas, vieta, programa ir pranešėjai, moderatorius, pertraukų idėjos, technika, laiko planas ir orientacinės kainos Lietuvoje.
 
-## Straipsniai apie robotą renginyje
+## Kiti renginių gido puslapiai
 
+- [Miesto šventės organizavimas: programa ir pramogos](https://33bots.lt/miesto-sventes-organizavimas.html) — Kaip organizuoti miesto, bendruomenės ar kultūros centro šventę: programa, scena ir technika, pramogos visoms kartoms, saugumas, logistika ir kainos.
+- [Mergvakario ir bernvakario idėjos: 30 idėjų](https://33bots.lt/mergvakario-idejos.html) — Mergvakario ir bernvakario idėjos: 30 idėjų nuo SPA, dirbtuvių ir pirties iki aktyvių pramogų, plaukimo laivu ir kelionės — su planu ir patarimais.
+- [Muzika vestuvėms: DJ ar muzikantai? Kainos 2026](https://33bots.lt/muzika-vestuvems.html) — DJ ar gyva muzika vestuvėms? Palyginimas, viešos kainos, vedėjas ir DJ viename, ką paklausti prieš pasirašant sutartį ir kaip sudaryti grojaraštį.
+- [Pramogos vestuvėms: 35 idėjos su kainomis](https://33bots.lt/pramogos-vestuvems.html) — Pramogos vestuvėms: 35 idėjos svečiams nuo pasitikimo iki ryto — muzika, šou, fotozonos, žaidimai, vaikų kampelis ir robotas. Su orientacinėmis kainomis.
+- [Kiek kainuoja vestuvės 2026: biudžetas ir kainos](https://33bots.lt/vestuviu-kaina.html) — Kiek kainuoja vestuvės Lietuvoje: sodyba ir maitinimas, vedėjas, muzika, fotografas, pramogos — orientacinės kainos, biudžeto paskirstymas ir kaip sutaupyti.
+- [Vestuvių žaidimai: 30 žaidimų svečiams ir jauniesiems](https://33bots.lt/vestuviu-zaidimai.html) — Vestuvių žaidimai svečiams, jauniesiems ir prie stalo: 30 idėjų, tradiciniai papročiai, kada žaisti, kiek laiko skirti ir kaip neperkrauti vakaro.
+- [Įmonės vasaros šventė: idėjos, programa ir pramogos](https://33bots.lt/imones-vasaros-svente.html) — Įmonės vasaros šventės idėjos: vieta, programa valandomis, lauko veiklos ir žaidimai, pramogos šeimoms ir vaikams, planas B lietui ir orientacinės kainos.
+- [Komandos formavimo idėjos: 30 veiklų įmonei](https://33bots.lt/komandos-formavimo-idejos.html) — Komandos formavimo idėjos: 30 veiklų biure, lauke ir vakare, žaidimai, etapai, orientacinės kainos ir patarimai, kaip suplanuoti renginį, kuris tikrai suartina.
+- [Parduotuvės atidarymas: idėjos, kaip pritraukti pirkėjų](https://33bots.lt/parduotuves-atidarymas.html) — Parduotuvės ar salono atidarymo idėjos: atidarymo šventės programa, akcijos, pramogos ir dėmesys žiniasklaidoje — kaip pritraukti pirkėjų jau pirmą dieną.
+- [Išleistuvių idėjos: abiturientams, darželiui ir darbe](https://33bots.lt/isleistuviu-idejos.html) — Išleistuvių idėjos: abiturientų išleistuvių programa, darželio ir ketvirtokų išleistuvės, išleistuvės iš darbo ir į pensiją — scenarijus, pramogos ir patarimai.
+- [Jubiliejaus idėjos: kaip atšvęsti 50, 60 ar 70 metų](https://33bots.lt/jubiliejaus-idejos.html) — Jubiliejaus idėjos 50, 60, 70 metų šventei ir santuokos jubiliejui: programa valandomis, vedėjas, muzika, sveikinimų idėjos, pramogos visoms kartoms ir kainos.
+- [Šimtadienio idėjos: temos, programa ir pramogos](https://33bots.lt/simtadienio-idejos.html) — Šimtadienio idėjos abiturientams: 12 temų, programos planas, vedėjas ir pramogos, kaip pasiskirstyti darbus klasėje, biudžetas ir ką suplanuoti iš anksto.
+- [Vaikų gimtadienio idėjos: pramogos ir animatoriai](https://33bots.lt/vaiku-gimtadienio-idejos.html) — Vaikų gimtadienio idėjos pagal amžių: pramogos namuose ir lauke, animatoriai, batutai, programa valandomis, saugumas ir orientacinės kainos.
 - [Employer branding renginiai — kaip iš jų gauti daugiau](https://33bots.lt/blog-employer-branding-renginiai.html) — Kaip įmonės renginius paversti employer branding turiniu: ką filmuoti, kaip gauti darbuotojų sutikimą ir kur medžiaga realiai panaudojama.
-- [Humanoidinis ar mobilus robotas renginiui — ką rinktis?](https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html) — Humanoidas, mobilus robotas ar interaktyvus kioskas? Palyginimas pagal poveikį svečiams, logistiką, kainą ir pritaikymo scenarijus renginiuose.
-- [Įmonės renginio biudžetas — kaip jį paskirstyti protingai](https://33bots.lt/blog-imones-renginio-biudzetas.html) — Kaip paskirstyti įmonės renginio biudžetą: kokia dalis skiriama vietai, maistui, programai ir pramogai, ir kur dažniausiai išleidžiama be rezultato.
-- [5 priežastys, kodėl jūsų renginiui reikia humanoidinio roboto](https://33bots.lt/blog-kodel-robotas-renginyje.html) — Robotas renginyje nėra žaisliukas — tai rinkodaros sprendimas. Kaip humanoidas generuoja kontaktus, organinį pasiekiamumą ir lieka svečių atmintyje.
-- [Robotas parodų stende — kaip paversti dėmesį kontaktais](https://33bots.lt/blog-robotas-parodu-stende.html) — Praktinis vadovas, kaip humanoidinį robotą panaudoti parodų stende: vietos parinkimas, pasirodymų grafikas, kontaktų rinkimo mechanikos ir dažniausios klaidos.
 - [Humanoidinį robotą nuomotis ar pirkti? Skaičiai ir logika](https://33bots.lt/blog-roboto-nuoma-ar-pirkimas.html) — Kada apsimoka pirkti humanoidinį robotą, o kada nuomotis. Paslėpti nuosavybės kaštai, technologijos senėjimas ir lūžio taškas pagal renginių skaičių.
+- [Humanoidinis ar mobilus robotas renginiui — ką rinktis?](https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html) — Humanoidas, mobilus robotas ar interaktyvus kioskas? Palyginimas pagal poveikį svečiams, logistiką, kainą ir pritaikymo scenarijus renginiuose.
+- [5 priežastys, kodėl jūsų renginiui reikia humanoidinio roboto](https://33bots.lt/blog-kodel-robotas-renginyje.html) — Robotas renginyje nėra žaisliukas — tai rinkodaros sprendimas. Kaip humanoidas generuoja kontaktus, organinį pasiekiamumą ir lieka svečių atmintyje.
 
 ## Miestai
 
@@ -103,7 +118,6 @@
 
 ## Kiti puslapiai
 
-- [Atrakcijos parodoms — kaip pritraukti žmones prie stendo](https://33bots.lt/atrakcijos-parodoms.html) — Atrakcija parodų stendui, kuri sustabdo lankytojų srautą. Humanoidinis robotas su ženklinimu ir QR kodu — kelių dienų nuoma visoje Lietuvoje.
 - [Robotų nuoma Lietuvoje — visi miestai ir paslaugos](https://33bots.lt/robotu-nuoma.html) — Robotų nuoma visoje Lietuvoje: humanoidinis Unitree G1 su operatoriumi ir ženklinimu. Visi miestai ir paslaugų formatai.
 
 ## Dažni klausimai
