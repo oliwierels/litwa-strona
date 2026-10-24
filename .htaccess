@@ -24,6 +24,13 @@ Redirect 301 /robotu-nuoma-silute.html /robotu-nuoma-klaipeda.html
 Redirect 301 /robotu-nuoma-ukmerge.html /robotu-nuoma-vilnius.html
 Redirect 301 /robotu-nuoma-visaginas.html /robotu-nuoma-utena.html
 
+# Sujungti gidai: turinys perkeltas į platesnius gidus
+Redirect 301 /atrakcijos-renginiams.html /pramogos-renginiams.html
+Redirect 301 /modernios-pramogos.html /pramogos-renginiams.html
+Redirect 301 /blog-renginio-pramogos-idejos.html /pramogos-renginiams.html
+Redirect 301 /blog-robotas-ar-kitos-pramogos.html /pramogos-renginiams.html
+Redirect 301 /blog-kaledinio-renginio-planavimas.html /kaledinio-vakarelio-idejos.html
+
 # Talpyklos politika statiniam turiniui
 <IfModule mod_expires.c>
   ExpiresActive On
@@ -51,7 +58,8 @@ Redirect 301 /robotu-nuoma-visaginas.html /robotu-nuoma-utena.html
   # Išjungiame naršyklės funkcijas, kurių svetainė nenaudoja.
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
   # CSP išvardija tik tuos serverius, iš kurių svetainė realiai kažką ima:
-  # GTM (analitika), Formspree (forma), Albacross. Šriftai talpinami vietoje.
+  # GTM, Google Analytics ir Google Ads (analitika, konversijos), Formspree (forma), Albacross.
+  # Turi sutapti su <meta> CSP puslapių antraštėje — galioja abu, todėl siauresnis blokuotų analitiką.
   # 'unsafe-inline' lieka, nes skriptai ir stiliai yra puslapio viduje.
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://serve.albacross.com https://*.albacross.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.albacross.com https://serve.albacross.com; frame-src https://www.googletagmanager.com; media-src 'self'; form-action 'self' https://formspree.io; base-uri 'self'; frame-ancestors 'self'"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://serve.albacross.com https://*.albacross.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://www.google.pl https://www.google.lt https://www.google.at https://www.google.de https://*.doubleclick.net https://www.googleadservices.com https://*.albacross.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.albacross.com https://serve.albacross.com https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://www.google.pl https://www.google.lt https://www.google.at https://www.google.de https://*.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com; frame-src https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com https://gdansk.tvp.pl https://*.doubleclick.net; media-src 'self'; form-action 'self' https://formspree.io; base-uri 'self'; frame-ancestors 'self'"
 </IfModule>

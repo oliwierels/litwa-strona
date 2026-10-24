@@ -99,24 +99,29 @@ Przed pierwszym uruchomieniem warto zrobić kopię katalogu strony
 
 ## Praca na co dzień
 
-Strona jest generowana skryptami, więc po zmianie treści:
+Strony powstają we wspólnym generatorze w repozytorium `oliwierels/33bots`
+(`tresci/zagranica/`), tym samym, który buduje 33bots.de i 33bots.at. Po zmianie treści
+(`rynki.py` sekcja `LT`, `glowa-lt.html`, `podstrony/lt/*.html`):
 
 ```bash
-python3 build_all.py
-./buduj.sh
+cd 33bots/tresci/zagranica
+python3 buduj_glowna.py lt /ścieżka/do/litwa-strona
+python3 buduj_podstrony.py lt /ścieżka/do/litwa-strona
+python3 buduj_mape.py /ścieżka/do/litwa-strona 33bots.lt
+python3 buduj_llms.py lt /ścieżka/do/litwa-strona
 ```
 
-a potem zatwierdzasz **zarówno skrypty, jak i wygenerowane pliki HTML**.
-`buduj.sh` kompiluje arkusz Tailwinda dla trzech stron w nowym dizajnie (`index.html`,
-`parduotuve.html`, `roboto-diegimas.html`) i oznacza go w nich sumą kontrolną.
-Zatwierdzenie na gałęzi produkcyjnej uruchamia wdrożenie samo.
+a potem w tym repozytorium zatwierdzasz **wygenerowane pliki** (HTML, `sitemap.xml`,
+`llms.txt`, `feed.xml`). `parduotuve.html` i `roboto-diegimas.html` edytuje się ręcznie;
+po zmianie klas Tailwinda trzeba uruchomić `./buduj.sh`. Zatwierdzenie na gałęzi
+produkcyjnej uruchamia wdrożenie samo.
 
-Ostrzeżenie: wdrażany jest stan repozytorium, a nie wynik `build_all.py`.
-Jeśli zmienisz sam skrypt i zapomnisz go uruchomić, na serwer pójdzie stary HTML.
+Ostrzeżenie: wdrażany jest stan tego repozytorium, a nie wynik generatora.
+Jeśli zmienisz źródła i zapomnisz przebudować strony, na serwer pójdzie stary HTML.
 
 ## Bramka bezpieczeństwa
 
-Zanim GitHub poprosi serwer o cokolwiek, sprawdza **wszystkie 72 strony**:
+Zanim GitHub poprosi serwer o cokolwiek, sprawdza **wszystkie strony**:
 
 - czy znaczniki HTML są domknięte,
 - czy wszystkie bloki danych strukturalnych to poprawny JSON,

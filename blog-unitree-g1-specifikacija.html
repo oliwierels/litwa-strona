@@ -1,507 +1,392 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7R7CJ3');</script>
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    var started = false;
+    function loadGTM() {
+      if (started) return; started = true;
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    }
+    if (d.readyState === 'complete') loadGTM();
+    else w.addEventListener('load', loadGTM, { once: true });
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
+      w.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  })(window, document, 'script', 'dataLayer', 'GTM-MR7R7CJ3');
+</script>
 <!-- End Google Tag Manager -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams</title>
-  <meta name="description" content="Unitree G1 techninė specifikacija: 132 cm, 35 kg, 43 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose." />
-  <meta name="keywords" content="Unitree G1, Unitree G1 specifikacija, humanoidinis robotas, G1 robotas, robotas 43 DOF" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
-  <meta property="og:title" content="Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams" />
-  <meta property="og:description" content="Unitree G1 techninė specifikacija: 132 cm, 35 kg, 43 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose." />
-  <meta property="og:image" content="https://33bots.lt/og/blog-unitree-g1-specifikacija.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje" />
-  <meta property="og:locale" content="lt_LT" />
-  <meta property="og:locale:alternate" content="pl_PL" />
-  <meta property="og:locale:alternate" content="de_AT" />
-  <meta property="og:site_name" content="33bots" />
-  <meta property="article:published_time" content="2026-03-05" />
-  <meta property="article:modified_time" content="2026-07-18" />
-  <meta property="article:section" content="Technologijos · Unitree G1" />
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams" />
-  <meta name="twitter:description" content="Unitree G1 techninė specifikacija: 132 cm, 35 kg, 43 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose." />
-  <meta name="twitter:image" content="https://33bots.lt/og/blog-unitree-g1-specifikacija.jpg" />
-
-  <meta name="theme-color" content="#000000" />
-  <meta name="format-detection" content="telephone=no" />
-
-  <!-- Kalbų versijos -->
-  <link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
-  <link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
-
-  <script type="application/ld+json">
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://serve.albacross.com https://*.albacross.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://www.google.pl https://www.google.lt https://www.google.at https://www.google.de https://*.doubleclick.net https://www.googleadservices.com https://*.albacross.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.albacross.com https://serve.albacross.com https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://www.google.pl https://www.google.lt https://www.google.at https://www.google.de https://*.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com; frame-src https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com https://gdansk.tvp.pl https://*.doubleclick.net; media-src 'self'; form-action 'self' https://formspree.io; base-uri 'self'" data-sicherheit />
+<meta name="referrer" content="strict-origin-when-cross-origin" data-sicherheit />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams</title>
+<meta name="description" content="Unitree G1 techninė specifikacija: 132 cm, 35 kg, 23 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose." />
+<meta name="keywords" content="Unitree G1, Unitree G1 specifikacija, humanoidinis robotas, G1 robotas, robotas 23 DOF" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
+<link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
+<link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
+<meta name="theme-color" content="#050505" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
+<meta property="og:title" content="Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams" />
+<meta property="og:description" content="Unitree G1 techninė specifikacija: 132 cm, 35 kg, 23 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose." />
+<meta property="og:image" content="https://33bots.lt/og/blog-unitree-g1-specifikacija.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje" />
+<meta property="og:locale" content="lt_LT" />
+<meta property="og:site_name" content="33bots" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams" />
+<meta name="twitter:description" content="Unitree G1 techninė specifikacija: 132 cm, 35 kg, 23 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/space-grotesk-latin-wght-normal.woff2" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="css/site.css?v=e78d5794" />
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://33bots.lt/#organizacija",
-  "name": "33bots — humanoidinių robotų nuoma renginiams",
-  "alternateName": "33bots",
-  "url": "https://33bots.lt/",
-  "logo": "https://33bots.lt/logo.png",
-  "image": "https://33bots.lt/robot-g1.jpg",
-  "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Sertifikuotas operatorius ir ženklinimas kainoje; atvykimą vertiname pagal renginio vietą.",
-  "email": "kontakt@33bots.lt",
-  "areaServed": {"@type": "Country", "name": "Lithuania"},
-  "sameAs": [
-      "https://www.instagram.com/33bots_/",
-      "https://www.tiktok.com/@aimforum",
-      "https://www.facebook.com/33bots",
-      "https://www.linkedin.com/company/33bots"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "kontakt@33bots.lt",
-    "contactType": "sales",
-    "areaServed": "LT",
-    "availableLanguage": ["Lithuanian", "Polish", "English"]
-  },
-  "knowsAbout": [
-    "humanoidinio roboto nuoma",
-    "robotas renginiui",
-    "robotas parodoms",
-    "robotas konferencijai",
-    "Unitree G1",
-    "renginių pramogos"
-  ],
-  "priceRange": "nuo 2100 EUR už renginio dieną"
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pradžia",
+      "item": "https://33bots.lt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Renginių gidas",
+      "item": "https://33bots.lt/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Unitree G1",
+      "item": "https://33bots.lt/blog-unitree-g1-specifikacija.html"
+    }
+  ]
 }
-  </script>
-  <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Unitree G1 — specifikacija, galimybės ir kodėl tinka renginiams",
-  "description": "Unitree G1 techninė specifikacija: 132 cm, 35 kg, 43 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose.",
+  "description": "Unitree G1 techninė specifikacija: 132 cm, 35 kg, 23 laisvės laipsniai, 2 m/s. Palyginimas su kitais humanoidais ir praktinės galimybės renginiuose.",
   "image": "https://33bots.lt/og/blog-unitree-g1-specifikacija.jpg",
   "datePublished": "2026-03-05",
   "dateModified": "2026-07-18",
   "inLanguage": "lt-LT",
   "articleSection": "Technologijos · Unitree G1",
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://33bots.lt/blog-unitree-g1-specifikacija.html"},
-  "author": {"@type": "Organization", "name": "33bots", "url": "https://33bots.lt/"},
-  "publisher": {"@id": "https://33bots.lt/#organizacija"}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://33bots.lt/blog-unitree-g1-specifikacija.html"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "33bots",
+    "url": "https://33bots.lt/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "33bots",
+    "url": "https://33bots.lt/",
+    "email": "kontakt@33bots.lt"
+  }
 }
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Pradžia", "item": "https://33bots.lt/"},
-      {"@type": "ListItem", "position": 2, "name": "Blogas", "item": "https://33bots.lt/blog.html"},
-      {"@type": "ListItem", "position": 3, "name": "Technologijos · Unitree G1", "item": "https://33bots.lt/blog-unitree-g1-specifikacija.html"}
-  ]
-}
-  </script>
-  <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Ar Unitree G1 yra dirbtinio intelekto robotas?",
-        "acceptedAnswer": {"@type": "Answer", "text": "G1 naudoja kompiuterinę regą ir jutiklių duomenų apdorojimą judesiui bei orientacijai. Renginiuose jį valdo operatorius pagal iš anksto suderintą scenarijų — tai užtikrina, kad pasirodymas vyktų nuspėjamai."}
-      },
-      {
-        "@type": "Question",
-        "name": "Kiek laiko veikia baterija?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Priklausomai nuo intensyvumo, vienas ciklas trunka apie valandą aktyvaus darbo. Baterijos keičiamos per suplanuotas pertraukas, todėl robotas gali dirbti visą dieną."}
-      },
-      {
-        "@type": "Question",
-        "name": "Ar robotas gali lipti laiptais?",
-        "acceptedAnswer": {"@type": "Answer", "text": "G1 techniškai geba judėti nelygiu paviršiumi, bet renginiuose laiptų vengiame dėl saugumo. Perkėlimams tarp aukštų naudojame liftą arba nešame robotą."}
-      },
-      {
-        "@type": "Question",
-        "name": "Ar galima robotą pamatyti prieš renginį?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Taip — didesniems projektams organizuojame demonstraciją arba vaizdo skambutį su robotu, kad galėtumėte pamatyti jį veikiantį prieš pasirašydami sutartį."}
+    {
+      "@type": "Question",
+      "name": "Ar Unitree G1 yra dirbtinio intelekto robotas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "G1 naudoja kompiuterinę regą ir jutiklių duomenų apdorojimą judesiui bei orientacijai. Renginiuose jį valdo operatorius pagal iš anksto suderintą scenarijų — tai užtikrina, kad pasirodymas vyktų nuspėjamai."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Kiek laiko veikia baterija?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Priklausomai nuo intensyvumo, vienas ciklas trunka apie valandą aktyvaus darbo. Baterijos keičiamos per suplanuotas pertraukas, todėl robotas gali dirbti visą dieną."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ar robotas gali lipti laiptais?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "G1 techniškai geba judėti nelygiu paviršiumi, bet renginiuose laiptų vengiame dėl saugumo. Perkėlimams tarp aukštų naudojame liftą arba nešame robotą."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ar galima robotą pamatyti prieš renginį?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Taip — didesniems projektams organizuojame demonstraciją arba vaizdo skambutį su robotu, kad galėtumėte pamatyti jį veikiantį prieš pasirašydami sutartį."
+      }
+    }
   ]
 }
-  </script>
-
-  <script>history.scrollRestoration = 'manual';</script>
-  <link rel="alternate" type="application/rss+xml" title="33bots — blogo RSS" href="https://33bots.lt/feed.xml" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-
-  <!-- Šriftas talpinamas lokaliai — jokių blokuojančių užklausų į trečiųjų šalių serverius -->
-  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="fonts.css?v=3" />
-
-  <!-- Kritinis CSS įterptas — pirmas ekranas piešiamas nelaukiant style.css -->
-  <style>:root{--bg:#000;--surface-2:#111;--text:#fff;--text-2:#a8a8a8;--text-3:#444;--border-mid:#2c2c2c;--s4:20px;--s5:28px;--s8:64px}*{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}.nav{position:fixed;top:0;left:0;right:0;z-index:100}.nav__inner{max-width:1200px;margin:0 auto;padding:0 var(--s4);height:var(--s8);display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}.logo{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:#fff;text-decoration:none}.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1200px;margin:0 auto;padding:0 var(--s4);min-height:100svh}.hero__content{padding:var(--s8) 0}.hero__eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin:0 0 var(--s4)}.hero__title{font-size:clamp(2.2rem,8vw,6.5rem);font-weight:800;line-height:.96;letter-spacing:-.03em;margin:0 0 var(--s4)}.hero__title em{font-style:normal;color:var(--text-2)}.hero__sub{font-size:.975rem;line-height:1.7;color:var(--text-2);margin:0 0 var(--s5)}.hero__robot-img{width:100%;height:auto;display:block}@media(max-width:900px){.nav__links,.lang-switch{display:none}}@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}}</style>
-  <link rel="preload" href="style.css?v=3" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="style.css?v=3" /></noscript>
-
-  <link rel="preconnect" href="https://www.googletagmanager.com" />
+</script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR7R7CJ3"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-  <a href="#turinys" class="skip-link">Pereiti prie turinio</a>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <!-- NAVIGACIJA -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="index.html" class="logo" aria-label="33bots — pradžia">33BOTS</a>
-      <nav class="nav__links" aria-label="Pagrindinė navigacija">
-        <div class="nav__dropdown">
-          <button class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="button">Paslaugos <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="nav__dropdown-menu">
-            <a href="humanoidinio-roboto-nuoma.html">Humanoidinio roboto nuoma</a>
-            <a href="robotas-renginiui.html">Robotas renginiui</a>
-            <a href="robotas-parodoms.html">Robotas parodoms</a>
-            <a href="robotas-konferencijai.html">Konferencijos ir gala vakarai</a>
-            <a href="robotas-imones-sventei.html">Įmonės šventės</a>
-            <a href="robotas-atidarymui.html">Atidarymai ir pristatymai</a>
-            <a href="robotas-vestuvems.html">Robotas vestuvėms</a>
-            <a href="robotas-gimtadieniui.html">Robotas gimtadieniui</a>
-            <a href="robotas-komandos-formavimui.html">Komandos formavimas</a>
-            <a href="robotas-prekybos-centrui.html">Prekybos centrai</a>
-            <a href="robotas-mokyklai.html">Mokykloms ir universitetams</a>
-            <a href="robotas-sporto-renginiui.html">Sporto renginiai</a>
-            <a href="robotas-kaledinei-sventei.html">Kalėdinės šventės</a>
-            <a href="robotas-fotosesijai.html">Fotosesijos ir filmavimai</a>
-            <a href="unitree-g1-nuoma.html">Unitree G1 nuoma</a>
-            <a href="pramogos-renginiams.html">Pramogos renginiams</a>
-          </div>
-        </div>
-        <a href="robotu-nuoma.html">Miestai</a>
-        <a href="parduotuve.html">Parduotuvė</a>
-        <a href="roboto-diegimas.html">Diegimai</a>
-        <a href="galerija.html">Galerija</a>
-        <a href="kainos.html">Kainos</a>
-        <a href="blog.html" aria-current="page">Blogas</a>
-        <a href="kontaktai.html">Kontaktai</a>
-      </nav>
-      <div class="lang-switch" aria-label="Kalbos pasirinkimas">
-        <span class="lang-switch__current" aria-current="true">LT</span>
-        <a href="https://33bots.pl/" hreflang="pl" lang="pl" title="Polska wersja strony">PL</a>
-        <a href="https://33bots.at/" hreflang="de-AT" lang="de" title="Österreichische Version">AT</a>
-        <a href="https://33bots.de/" hreflang="de" lang="de" title="Deutsche Version">DE</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Atidaryti meniu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-  <main id="turinys">
+<a href="#hauptinhalt" class="skip-link">Pereiti prie turinio</a>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="mobile-menu__label">Paslaugos</span>
-    <a href="humanoidinio-roboto-nuoma.html" class="mobile-menu__sub">Humanoidinio roboto nuoma</a>
-    <a href="robotas-renginiui.html" class="mobile-menu__sub">Robotas renginiui</a>
-    <a href="robotas-parodoms.html" class="mobile-menu__sub">Robotas parodoms</a>
-    <a href="robotas-konferencijai.html" class="mobile-menu__sub">Konferencijos ir gala vakarai</a>
-    <a href="robotas-imones-sventei.html" class="mobile-menu__sub">Įmonės šventės</a>
-    <a href="robotas-atidarymui.html" class="mobile-menu__sub">Atidarymai ir pristatymai</a>
-    <a href="robotas-vestuvems.html" class="mobile-menu__sub">Robotas vestuvėms</a>
-    <a href="robotas-gimtadieniui.html" class="mobile-menu__sub">Robotas gimtadieniui</a>
-    <a href="robotas-komandos-formavimui.html" class="mobile-menu__sub">Komandos formavimas</a>
-    <a href="robotas-prekybos-centrui.html" class="mobile-menu__sub">Prekybos centrai</a>
-    <a href="robotas-mokyklai.html" class="mobile-menu__sub">Mokykloms ir universitetams</a>
-    <a href="robotas-sporto-renginiui.html" class="mobile-menu__sub">Sporto renginiai</a>
-    <a href="robotas-kaledinei-sventei.html" class="mobile-menu__sub">Kalėdinės šventės</a>
-    <a href="robotas-fotosesijai.html" class="mobile-menu__sub">Fotosesijos ir filmavimai</a>
-    <a href="unitree-g1-nuoma.html" class="mobile-menu__sub">Unitree G1 nuoma</a>
-    <a href="pramogos-renginiams.html" class="mobile-menu__sub">Pramogos renginiams</a>
-    <a href="robotu-nuoma.html">Miestai</a>
-    <a href="parduotuve.html">Parduotuvė</a>
-    <a href="roboto-diegimas.html">Diegimai</a>
-    <a href="galerija.html">Galerija</a>
-    <a href="kainos.html">Kainos</a>
-    <a href="blog.html">Blogas</a>
-    <a href="kontaktai.html">Kontaktai</a>
-    <a href="video-realizacijos.html">Vaizdo įrašai</a>
-    <a href="apie-mus.html">Apie mus</a>
-    <span class="mobile-menu__label">Kalba</span>
-    <a href="https://33bots.pl/" hreflang="pl" lang="pl">Polski — 33bots.pl</a>
-    <a href="https://33bots.at/" hreflang="de-AT" lang="de">Deutsch — 33bots.at</a>
+<!-- Erzeugt von tresci/zagranica/buduj_podstrony.py aus tresci/zagranica/podstrony/lt/blog-unitree-g1-specifikacija.html — Änderungen dort. -->
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="nav__logo" href="index.html" aria-label="33bots — pradžia">33BOTS</a>
+    <nav class="nav__menu" aria-label="Pagrindinė navigacija">
+      <a href="index.html#referenzen">Realizacijos</a>
+      <a href="index.html#auftritt">Pasirodymas</a>
+      <a href="index.html#preise">Kainos</a>
+      <a href="index.html#ablauf">Procesas</a>
+      <a class="nav__drugi" href="blog.html">Renginių gidas</a>
+    </nav>
+    <div class="nav__akcje">
+      <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="nav">kontakt@33bots.lt</a>
+      <a class="link nav__cta" href="index.html#kontakt" data-cta="nav">Patikrinti datą</a>
+      <button class="nav__przycisk" id="navPrzycisk" type="button" aria-expanded="false" aria-controls="navPanel">Meniu</button>
+    </div>
   </div>
-  <nav class="crumbs" aria-label="Naršymo kelias">
-    <a href="index.html">Pradžia</a> <span aria-hidden="true">/</span> <a href="blog.html">Blogas</a> <span aria-hidden="true">/</span> <span aria-current="page">Technologijos · Unitree G1</span>
-  </nav>
+  <div class="nav__panel" id="navPanel" hidden>
+    <ul>
+      <li><a href="index.html#referenzen">Realizacijos</a></li>
+      <li><a href="index.html#auftritt">Pasirodymas</a></li>
+      <li><a href="index.html#preise">Kainos</a></li>
+      <li><a href="index.html#ablauf">Procesas</a></li>
+      <li><a href="blog.html">Renginių gidas</a></li>
+    </ul>
+    <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="menu">kontakt@33bots.lt</a>
+    <a class="btn" href="index.html#kontakt" data-cta="nav">Patikrinti, ar data laisva <span aria-hidden="true">→</span></a>
+  </div>
+</header>
 
-  <section class="hero hero--sub">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Blogas · Technologijos · Unitree G1</p>
-      <h1 class="hero__title">Unitree G1 —<br />specifikacija ir<br />galimybės.</h1>
-      <p class="hero__sub">Unitree G1 yra vienas prieinamiausių pilnai funkcionalių humanoidinių robotų rinkoje — ir kartu vienas tinkamiausių renginiams. Štai kodėl, su skaičiais.</p>
-      <p style="font-size:0.8rem; color:var(--text-3); margin-top:var(--s3);">
-        Publikuota: <time datetime="2026-03-05">2026-03-05</time> ·
-        Atnaujinta: <time datetime="2026-07-18">2026-07-18</time>
-      </p>
-    </div>
-  </section>
+<main class="art" id="hauptinhalt" tabindex="-1">
+  <article>
+    <header class="art__glowa">
+      <ol class="okruchy" aria-label="Naršymo kelias">
+        <li><a href="index.html">Pradžia</a></li><li aria-hidden="true">/</li>
+        <li><a href="blog.html">Renginių gidas</a></li><li aria-hidden="true">/</li>
+        <li aria-current="page">Unitree G1</li>
+      </ol>
+      <div class="art__tekst">
+        <p class="label">Technologijos · Unitree G1</p>
+        <h1 class="art__h1">Unitree G1 — specifikacija ir galimybės</h1>
+        <p class="art__lead">Unitree G1 yra vienas prieinamiausių pilnai funkcionalių humanoidinių robotų rinkoje — ir kartu vienas tinkamiausių renginiams. Štai kodėl, su skaičiais.</p>
+        <p class="art__meta">Paskelbta 2026-03-05 · atnaujinta 2026-07-18</p>
+      </div>
+      <figure class="art__foto">
+        <picture><source type="image/webp" srcset="realizacja-gala-zdjecia-gosci-400.webp 400w, realizacja-gala-zdjecia-gosci.webp 900w" sizes="(max-width: 1023px) 100vw, 400px" /><img src="realizacja-gala-zdjecia-gosci.jpg" alt="Pokylio svečiai fotografuoja humanoidinį robotą prie rėmėjų sienelės" width="900" height="1200" loading="eager" decoding="async" fetchpriority="high" /></picture>
+        <figcaption class="podpis"><b>Drezdeno pilių naktis</b> · Drezdenas</figcaption>
+      </figure>
+    </header>
 
-  <section class="section">
-    <article class="article-body">
-      <nav class="toc" aria-label="Straipsnio turinys">
-        <p class="toc__label">Straipsnio turinys</p>
+    <div class="art__tresc">
+      <nav class="spis" aria-labelledby="spis-h">
+        <p class="label" id="spis-h">Šiame puslapyje</p>
         <ol>
-      <li><a href="#technine-specifikacija">Techninė specifikacija</a></li>
-      <li><a href="#ka-g1-realiai-daro-renginyje">Ką G1 realiai daro renginyje</a></li>
-      <li><a href="#kuo-g1-skiriasi-nuo-kitu-humanoidu">Kuo G1 skiriasi nuo kitų humanoidų</a></li>
-      <li><a href="#kada-g1-yra-tinkamiausias-pasirinkimas">Kada G1 yra tinkamiausias pasirinkimas</a></li>
+          <li><a href="#technine-specifikacija">Techninė specifikacija</a></li>
+          <li><a href="#ka-g1-realiai-daro-renginyje">Ką G1 realiai daro renginyje</a></li>
+          <li><a href="#kuo-g1-skiriasi-nuo-kitu">Kuo G1 skiriasi nuo kitų humanoidų</a></li>
+          <li><a href="#kada-g1-yra-tinkamiausias-pasirinkimas">Kada G1 yra tinkamiausias pasirinkimas</a></li>
         </ol>
       </nav>
 
-      <h2 id="technine-specifikacija">Techninė specifikacija</h2>
-      <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Parametras</th><th>Reikšmė</th><th>Ką tai reiškia praktikoje</th></tr></thead><tbody><tr><td>Ūgis</td><td>~132 cm</td><td>Matomas minioje, bet nekelia grėsmės pojūčio — idealus bendravimui su svečiais ir vaikais</td></tr><tr><td>Svoris</td><td>~35 kg</td><td>Transportuojamas be specialios technikos, telpa į įprastą furgoną</td></tr><tr><td>Laisvės laipsniai</td><td>iki 43 DOF</td><td>Sklandūs, natūralūs judesiai — gestai, pasisveikinimai, choreografija</td></tr><tr><td>Judėjimo greitis</td><td>iki ~2 m/s</td><td>Gali judėti kartu su žmonių srautu, vaikščioti po stendą ir salę</td></tr><tr><td>Jutikliai</td><td>LiDAR, kompiuterinė rega</td><td>Realiu laiku aptinka kliūtis ir žmones — pagrindas saugiam darbui minioje</td></tr><tr><td>Maitinimas</td><td>keičiama baterija</td><td>Darbas ciklais visą dieną, be ilgų prastovų įkrovimui</td></tr></tbody></table></div><p>Skaičiai svarbūs, bet renginiuose lemia ne jie, o <strong>judesio kokybė</strong>. 43 laisvės laipsniai reiškia, kad G1 juda ne kaip mechanizmas, o kaip kūnas — būtent dėl to žmonės reaguoja emociškai.</p>
-      <h2 id="ka-g1-realiai-daro-renginyje">Ką G1 realiai daro renginyje</h2>
-      <p>Praktinės galimybės, kurias naudojame kasdien:</p><ul><li><strong>Vaikščiojimas ir orientacija</strong> — robotas juda po stendą ar salę, apeidamas žmones ir kliūtis.</li><li><strong>Gestai ir pasisveikinimai</strong> — rankos paspaudimas, mostas, nusilenkimas, pozavimas nuotraukoms.</li><li><strong>Choreografija</strong> — įrašyti šokių sekvencijos, derinamos su renginio muzika.</li><li><strong>Balso pasisakymai</strong> — iš anksto paruošti tekstai lietuvių ar anglų kalba per garso sistemą.</li><li><strong>Ženklinimas</strong> — logotipas ir QR kodas ant krūtinės, spalviniai akcentai.</li></ul><p>Ko G1 nedaro: neveda viso renginio savarankiškai, nepriima nenumatytų sprendimų ir nepakeičia žmogaus vedėjo. Tai įrankis, kurį valdo operatorius — ir būtent todėl jis veikia patikimai.</p>
-      <h2 id="kuo-g1-skiriasi-nuo-kitu-humanoidu">Kuo G1 skiriasi nuo kitų humanoidų</h2>
-      <p>Rinkoje yra didesnių ir technologiškai sudėtingesnių humanoidų, bet renginiams svarbu kitas dalykas — <strong>patikimumas ir logistika</strong>. G1 pranašumai šioje kategorijoje:</p><ul><li><strong>Dydis</strong>: pakankamai didelis, kad būtų įspūdingas, pakankamai mažas, kad tilptų į bet kurią salę.</li><li><strong>Transportuojamumas</strong>: 35 kg galima pervežti standartiniu automobiliu be specialios įrangos.</li><li><strong>Paruošimo greitis</strong>: nuo atvykimo iki pirmo pasirodymo — apie 30–45 minutes.</li><li><strong>Judesio natūralumas</strong>: 43 DOF suteikia sklandumą, kurio neturi paprastesni modeliai.</li></ul><p>Jei svarstote tarp humanoido ir paprastesnio mobilaus roboto, palyginimą rasite straipsnyje <a href="blog-humanoidinis-ar-mobilus-robotas.html">humanoidinis ar mobilus robotas</a>.</p>
-      <h2 id="kada-g1-yra-tinkamiausias-pasirinkimas">Kada G1 yra tinkamiausias pasirinkimas</h2>
-      <p>G1 geriausiai tinka, kai renginyje reikia <strong>artimo kontakto su žmonėmis</strong>: parodų stenduose, konferencijų registracijose, įmonių šventėse, prekybos centrų atidarymuose. Ten, kur svarbu, kad žmonės galėtų prieiti, nusifotografuoti ir pabendrauti.</p><p>Mažiau tinka scenarijams, kur reikia nešti sunkius krovinius, dirbti sudėtingomis oro sąlygomis arba veikti visiškai autonomiškai be operatoriaus. Tokiems poreikiams egzistuoja kitos robotų klasės.</p>
+      <div class="prose">
+<h2 id="technine-specifikacija">Techninė specifikacija</h2>
 
-      <p><a href="#kontaktai" class="btn-primary article-cta">Gauti pasiūlymą savo renginiui →</a></p>
+<div class="tabela"><table><thead><tr><th>Parametras</th><th>Reikšmė</th><th>Ką tai reiškia praktikoje</th></tr></thead><tbody><tr><td>Ūgis</td><td>~132 cm</td><td>Matomas minioje, bet nekelia grėsmės pojūčio — idealus bendravimui su svečiais ir vaikais</td></tr><tr><td>Svoris</td><td>~35 kg</td><td>Transportuojamas be specialios technikos, telpa į įprastą furgoną</td></tr><tr><td>Laisvės laipsniai</td><td>23 DOF</td><td>Sklandūs, natūralūs judesiai — gestai, pasisveikinimai, choreografija</td></tr><tr><td>Judėjimo greitis</td><td>iki ~2 m/s</td><td>Gali judėti kartu su žmonių srautu, vaikščioti po stendą ir salę</td></tr><tr><td>Jutikliai</td><td>LiDAR, kompiuterinė rega</td><td>Realiu laiku aptinka kliūtis ir žmones — pagrindas saugiam darbui minioje</td></tr><tr><td>Maitinimas</td><td>keičiama baterija</td><td>Darbas ciklais visą dieną, be ilgų prastovų įkrovimui</td></tr></tbody></table>
+</div><p>Skaičiai svarbūs, bet renginiuose lemia ne jie, o <strong>judesio kokybė</strong>. 23 laisvės laipsniai reiškia, kad G1 juda ne kaip mechanizmas, o kaip kūnas — būtent dėl to žmonės reaguoja emociškai.</p>
 
-      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin:var(--s8) 0 var(--s3);">Susiję puslapiai</p>
-      <div class="related-links">
-        <a href="humanoidinio-roboto-nuoma.html">Nuomos sąlygos →</a>
-        <a href="blog-humanoidinis-ar-mobilus-robotas.html">Humanoidas ar mobilus robotas →</a>
-        <a href="video-realizacijos.html">Vaizdo įrašai →</a>
-      </div>
-    </article>
-  </section>
+<h2 id="ka-g1-realiai-daro-renginyje">Ką G1 realiai daro renginyje</h2>
 
-  <!-- DUK -->
-  <section class="section faq-section" id="duk">
-    <div class="section-header">
-      <span class="tag">DUK</span>
-      <h2 class="section-title">Klausimai apie<br />šią temą</h2>
-    </div>
-    <div class="faq">
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>Ar Unitree G1 yra dirbtinio intelekto robotas?</span>
-          <span class="faq-q__icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" hidden>
-          <p>G1 naudoja kompiuterinę regą ir jutiklių duomenų apdorojimą judesiui bei orientacijai. Renginiuose jį valdo operatorius pagal iš anksto suderintą scenarijų — tai užtikrina, kad pasirodymas vyktų nuspėjamai.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>Kiek laiko veikia baterija?</span>
-          <span class="faq-q__icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Priklausomai nuo intensyvumo, vienas ciklas trunka apie valandą aktyvaus darbo. Baterijos keičiamos per suplanuotas pertraukas, todėl robotas gali dirbti visą dieną.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>Ar robotas gali lipti laiptais?</span>
-          <span class="faq-q__icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" hidden>
-          <p>G1 techniškai geba judėti nelygiu paviršiumi, bet renginiuose laiptų vengiame dėl saugumo. Perkėlimams tarp aukštų naudojame liftą arba nešame robotą.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>Ar galima robotą pamatyti prieš renginį?</span>
-          <span class="faq-q__icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Taip — didesniems projektams organizuojame demonstraciją arba vaizdo skambutį su robotu, kad galėtumėte pamatyti jį veikiantį prieš pasirašydami sutartį.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- KONTAKTAI -->
-  <section class="section contact-section" id="kontaktai">
-    <div class="contact-layout">
-      <div class="contact-left">
-        <span class="tag">Kontaktai</span>
-        <h2 class="section-title">Rezervuokite robotą<br />savo renginiui.</h2>
-        <p class="body-text">Parašykite mums — atsakysime per vieną darbo dieną su kaina ir laisvomis datomis.</p>
-        <div class="contact-details">
-          <div class="contact-detail">
-            <span class="contact-detail__label">Įmonė</span>
-            <span class="contact-detail__val">33bots — humanoidinių robotų nuoma</span>
+<p>Praktinės galimybės, kurias naudojame kasdien:</p>
+<ul><li><strong>Vaikščiojimas ir orientacija</strong> — robotas juda po stendą ar salę, apeidamas žmones ir kliūtis.</li><li><strong>Gestai ir pasisveikinimai</strong> — rankos paspaudimas, mostas, nusilenkimas, pozavimas nuotraukoms.</li><li><strong>Choreografija</strong> — įrašyti šokių sekvencijos, derinamos su renginio muzika.</li><li><strong>Balso pasisakymai</strong> — iš anksto paruošti tekstai lietuvių ar anglų kalba per garso sistemą.</li><li><strong>Ženklinimas</strong> — logotipas ir QR kodas ant krūtinės, spalviniai akcentai.</li></ul>
+<p>Ko G1 nedaro: neveda viso renginio savarankiškai, nepriima nenumatytų sprendimų ir nepakeičia žmogaus vedėjo. Tai įrankis, kurį valdo operatorius — ir būtent todėl jis veikia patikimai.</p>
+
+<h2 id="kuo-g1-skiriasi-nuo-kitu">Kuo G1 skiriasi nuo kitų humanoidų</h2>
+
+<p>Rinkoje yra didesnių ir technologiškai sudėtingesnių humanoidų, bet renginiams svarbu kitas dalykas — <strong>patikimumas ir logistika</strong>. G1 pranašumai šioje kategorijoje:</p>
+<ul><li><strong>Dydis</strong>: pakankamai didelis, kad būtų įspūdingas, pakankamai mažas, kad tilptų į bet kurią salę.</li><li><strong>Transportuojamumas</strong>: 35 kg galima pervežti standartiniu automobiliu be specialios įrangos.</li><li><strong>Paruošimo greitis</strong>: nuo atvykimo iki pirmo pasirodymo — apie 30–45 minutes.</li><li><strong>Judesio natūralumas</strong>: 23 DOF suteikia sklandumą, kurio neturi paprastesni modeliai.</li></ul>
+<p>Jei svarstote tarp humanoido ir paprastesnio mobilaus roboto, palyginimą rasite straipsnyje <a href="blog-humanoidinis-ar-mobilus-robotas.html">humanoidinis ar mobilus robotas</a>.</p>
+
+<h2 id="kada-g1-yra-tinkamiausias-pasirinkimas">Kada G1 yra tinkamiausias pasirinkimas</h2>
+
+<p>G1 geriausiai tinka, kai renginyje reikia <strong>artimo kontakto su žmonėmis</strong>: parodų stenduose, konferencijų registracijose, įmonių šventėse, prekybos centrų atidarymuose. Ten, kur svarbu, kad žmonės galėtų prieiti, nusifotografuoti ir pabendrauti.</p>
+<p>Mažiau tinka scenarijams, kur reikia nešti sunkius krovinius, dirbti sudėtingomis oro sąlygomis arba veikti visiškai autonomiškai be operatoriaus. Tokiems poreikiams egzistuoja kitos robotų klasės.</p>
+
+        <section class="art__faq" aria-labelledby="faq-h">
+          <h2 class="h2" id="faq-h">Dažniausi klausimai</h2>
+          <div class="faq">
+          <div class="faq__item">
+            <h3 class="faq__h"><button class="faq__q" type="button" id="faq-1-q" aria-expanded="false" aria-controls="faq-1" data-faq="Ar Unitree G1 yra dirbtinio intelekto robotas?">Ar Unitree G1 yra dirbtinio intelekto robotas?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
+            <div class="faq__a" id="faq-1" role="region" aria-labelledby="faq-1-q" hidden><p>G1 naudoja kompiuterinę regą ir jutiklių duomenų apdorojimą judesiui bei orientacijai. Renginiuose jį valdo operatorius pagal iš anksto suderintą scenarijų — tai užtikrina, kad pasirodymas vyktų nuspėjamai.</p></div>
           </div>
-          <a href="mailto:kontakt@33bots.lt" class="contact-detail">
-            <span class="contact-detail__label">El. paštas</span>
-            <span class="contact-detail__val">kontakt@33bots.lt</span>
-          </a>
-          <div class="contact-detail">
-            <span class="contact-detail__label">Aptarnaujame</span>
-            <span class="contact-detail__val">Visą Lietuvą</span>
+          <div class="faq__item">
+            <h3 class="faq__h"><button class="faq__q" type="button" id="faq-2-q" aria-expanded="false" aria-controls="faq-2" data-faq="Kiek laiko veikia baterija?">Kiek laiko veikia baterija?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
+            <div class="faq__a" id="faq-2" role="region" aria-labelledby="faq-2-q" hidden><p>Priklausomai nuo intensyvumo, vienas ciklas trunka apie valandą aktyvaus darbo. Baterijos keičiamos per suplanuotas pertraukas, todėl robotas gali dirbti visą dieną.</p></div>
           </div>
-        </div>
+          <div class="faq__item">
+            <h3 class="faq__h"><button class="faq__q" type="button" id="faq-3-q" aria-expanded="false" aria-controls="faq-3" data-faq="Ar robotas gali lipti laiptais?">Ar robotas gali lipti laiptais?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
+            <div class="faq__a" id="faq-3" role="region" aria-labelledby="faq-3-q" hidden><p>G1 techniškai geba judėti nelygiu paviršiumi, bet renginiuose laiptų vengiame dėl saugumo. Perkėlimams tarp aukštų naudojame liftą arba nešame robotą.</p></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__h"><button class="faq__q" type="button" id="faq-4-q" aria-expanded="false" aria-controls="faq-4" data-faq="Ar galima robotą pamatyti prieš renginį?">Ar galima robotą pamatyti prieš renginį?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
+            <div class="faq__a" id="faq-4" role="region" aria-labelledby="faq-4-q" hidden><p>Taip — didesniems projektams organizuojame demonstraciją arba vaizdo skambutį su robotu, kad galėtumėte pamatyti jį veikiantį prieš pasirašydami sutartį.</p></div>
+          </div>
+          </div>
+        </section>
 
-        <nav class="coverage" aria-label="Miestai, kuriuose nuomojame robotą">
-          <p class="coverage__label">Atvažiuojame be papildomo mokesčio į:</p>
-          <ul class="coverage__cities">
-            <li><a href="robotu-nuoma-vilnius.html">Vilnius</a></li>
-            <li><a href="robotu-nuoma-kaunas.html">Kaunas</a></li>
-            <li><a href="robotu-nuoma-klaipeda.html">Klaipėda</a></li>
-            <li><a href="robotu-nuoma-siauliai.html">Šiauliai</a></li>
-            <li><a href="robotu-nuoma-panevezys.html">Panevėžys</a></li>
-            <li><a href="robotu-nuoma-alytus.html">Alytus</a></li>
-            <li><a href="robotu-nuoma-marijampole.html">Marijampolė</a></li>
-            <li><a href="robotu-nuoma-mazeikiai.html">Mažeikiai</a></li>
-            <li><a href="robotu-nuoma-jonava.html">Jonava</a></li>
-            <li><a href="robotu-nuoma-utena.html">Utena</a></li>
-            <li><a href="robotu-nuoma-kedainiai.html">Kėdainiai</a></li>
-            <li><a href="robotu-nuoma-telsiai.html">Telšiai</a></li>
-            <li><a href="robotu-nuoma-taurage.html">Tauragė</a></li>
-            <li><a href="robotu-nuoma-palanga.html">Palanga</a></li>
-            <li><a href="robotu-nuoma-druskininkai.html">Druskininkai</a></li>
-            <li><a href="robotu-nuoma-trakai.html">Trakai</a></li>
-            <li><a href="robotu-nuoma-birstonas.html">Birštonas</a></li>
-            <li><a href="robotu-nuoma-anyksciai.html">Anykščiai</a></li>
+        <aside class="art__cta" aria-labelledby="cta-h">
+          <h2 class="h2" id="cta-h">Patikrinkite, ar jūsų data laisva</h2>
+          <p class="body">Keliais sakiniais aprašykite savo renginį. Pasiūlymą atsiųsime per 24 darbo valandas.</p>
+          <div class="art__cta-akcje">
+            <a class="btn" href="index.html#kontakt" data-cta="seite">Patikrinti datą <span aria-hidden="true">→</span></a>
+            <a class="link" href="mailto:kontakt@33bots.lt" data-mail="seite">kontakt@33bots.lt</a>
+          </div>
+        </aside>
+
+        <nav class="czytaj" aria-labelledby="czytaj-h">
+          <p class="label" id="czytaj-h">Skaitykite toliau</p>
+          <ul>
+            <li><a href="humanoidinio-roboto-nuoma.html">Nuomos sąlygos</a></li>
+            <li><a href="blog-humanoidinis-ar-mobilus-robotas.html">Humanoidas ar mobilus robotas</a></li>
+            <li><a href="video-realizacijos.html">Vaizdo įrašai</a></li>
           </ul>
-          <p class="coverage__note">ir bet kurią kitą Lietuvos vietą — atvykimo kainą nurodome pasiūlyme</p>
         </nav>
       </div>
-      <div class="contact-right">
-        <form id="contactForm" class="form" novalidate>
-          <div class="form-steps-header">
-            <span class="form-step-ind active" id="stepInd1">01 — Kontaktiniai duomenys</span>
-            <span class="form-step-sep">/</span>
-            <span class="form-step-ind" id="stepInd2">02 — Jūsų renginys</span>
-          </div>
+    </div>
+  </article>
+</main>
 
-          <div class="form-step" id="formStep1">
-            <div class="form-row">
-              <div class="form-field">
-                <label for="f-name">Vardas ir pavardė *</label>
-                <input id="f-name" type="text" name="name" placeholder="Jonas Jonaitis" autocomplete="name" required />
-                <span class="form-field__err" aria-live="polite"></span>
-              </div>
-              <div class="form-field">
-                <label for="f-company">Įmonė</label>
-                <input id="f-company" type="text" name="company" placeholder="Įmonės pavadinimas" autocomplete="organization" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="f-email">El. paštas *</label>
-                <input id="f-email" type="email" name="email" placeholder="info@imone.lt" autocomplete="email" required />
-                <span class="form-field__err" aria-live="polite"></span>
-              </div>
-              <div class="form-field">
-                <label for="f-phone">Telefonas</label>
-                <input id="f-phone" type="tel" name="phone" placeholder="+370 600 00000" autocomplete="tel" />
-              </div>
-            </div>
-            <button type="button" id="btnNext" class="btn-submit">Toliau — papasakokite apie renginį →</button>
-          </div>
-
-          <div class="form-step form-step--hidden" id="formStep2" aria-hidden="true">
-            <div class="form-row">
-              <div class="form-field">
-                <label for="f-date">Planuojama renginio data</label>
-                <input id="f-date" type="date" name="date" />
-              </div>
-              <div class="form-field">
-                <label for="f-location">Miestas / vieta</label>
-                <input id="f-location" type="text" name="location" placeholder="pvz. Vilnius, LITEXPO" autocomplete="address-level2" />
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="f-message">Papasakokite apie renginį *</label>
-              <textarea id="f-message" name="message" rows="6"
-                placeholder="Renginio tipas (paroda, konferencija, gala vakaras...), apytikslis svečių skaičius, kiek laiko norite roboto ir viskas, kas jums atrodo svarbu." required></textarea>
-              <div class="form-field__footer">
-                <span class="form-field__err" aria-live="polite"></span>
-                <span class="char-counter"><span id="charCount">0</span> / 600</span>
-              </div>
-            </div>
-            <div class="form-step__nav">
-              <button type="button" id="btnBack" class="btn-back">← Atgal</button>
-              <button type="submit" class="btn-submit">Siųsti užklausą →</button>
-            </div>
-          </div>
-        </form>
+<footer class="stopka">
+  <div class="wrap grid12">
+    <div class="stopka__marka">
+      <p class="stopka__logo">33BOTS</p>
+      <p>Humanoidinių robotų nuoma · visa Lietuva</p>
+      <p><a href="mailto:kontakt@33bots.lt" data-mail="stopka">kontakt@33bots.lt</a></p>
+      <p><a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.facebook.com/33bots" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p data-jezyki><a href="https://33bots.pl/" hreflang="pl" lang="pl">Polski — 33bots.pl</a> · <a href="https://33bots.de/" hreflang="de" lang="de">Deutschland — 33bots.de</a> · <a href="https://33bots.at/" hreflang="de-AT" lang="de-AT">Österreich — 33bots.at</a></p>
+    </div>
+    <ul class="stopka__kol" aria-label="Paslaugos">
+      <li><a href="humanoidinio-roboto-nuoma.html">Humanoidinio roboto nuoma</a></li>
+      <li><a href="unitree-g1-nuoma.html">Unitree G1 nuoma</a></li>
+      <li><a href="kainos.html">Kainos</a></li>
+      <li><a href="robotas-renginiui.html">Robotas renginiui</a></li>
+      <li><a href="robotas-parodoms.html">Parodoms</a></li>
+      <li><a href="robotas-konferencijai.html">Konferencijoms ir gala vakarams</a></li>
+      <li><a href="robotas-atidarymui.html">Atidarymams</a></li>
+      <li><a href="robotas-prekybos-centrui.html">Prekybos centrams</a></li>
+      <li><a href="robotas-fotosesijai.html">Fotosesijoms ir filmavimui</a></li>
+      <li><a href="robotas-vedejas.html">Robotas vedėjas</a></li>
+      <li><a href="parduotuve.html">Roboto pirkimas</a></li>
+      <li><a href="roboto-diegimas.html">Diegimas įmonėje</a></li>
+    </ul>
+    <ul class="stopka__kol" aria-label="Progos">
+      <li><a href="robotas-vestuvems.html">Vestuvėms</a></li>
+      <li><a href="robotas-gimtadieniui.html">Gimtadieniams</a></li>
+      <li><a href="robotas-imones-sventei.html">Įmonės šventėms</a></li>
+      <li><a href="robotas-kaledinei-sventei.html">Kalėdinėms šventėms</a></li>
+      <li><a href="robotas-komandos-formavimui.html">Komandos formavimui</a></li>
+      <li><a href="robotas-mokyklai.html">Mokykloms ir universitetams</a></li>
+      <li><a href="robotas-sporto-renginiui.html">Sporto renginiams</a></li>
+    </ul>
+    <ul class="stopka__kol" aria-label="Renginių gidas">
+      <li><a href="pramogos-renginiams.html">Pramogos renginiams</a></li>
+      <li><a href="renginiu-vedejas.html">Renginių vedėjas</a></li>
+      <li><a href="vestuviu-vedejas.html">Vestuvių vedėjas</a></li>
+      <li><a href="fotobudeles-nuoma.html">Fotobūdelės nuoma</a></li>
+      <li><a href="pramogos-vestuvems.html">Pramogos vestuvėms</a></li>
+      <li><a href="kaledinio-vakarelio-idejos.html">Kalėdinio vakarėlio idėjos</a></li>
+      <li><a href="komandos-formavimo-idejos.html">Komandos formavimo idėjos</a></li>
+      <li><a href="renginio-idejos.html">Renginio idėjos</a></li>
+      <li><a href="blog.html">Visas renginių gidas</a></li>
+    </ul>
+    <ul class="stopka__kol" aria-label="Apie 33bots">
+      <li><a href="apie-mus.html">Apie mus</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="video-realizacijos.html">Vaizdo įrašai</a></li>
+      <li><a href="kontaktai.html">Kontaktai</a></li>
+      <li><a href="privatumo-politika.html">Privatumo politika</a></li>
+    </ul>
+    <div class="stopka__poradnik">
+      <p>Patarimai organizatoriams</p>
+      <div>
+        <a href="blog-kiek-kainuoja-roboto-nuoma.html">Kiek kainuoja roboto nuoma?</a>
+        <a href="blog-kaip-issinuomoti-robota.html">Kaip išsinuomoti robotą</a>
+        <a href="blog-roboto-sauga-renginyje.html">Roboto sauga renginyje</a>
+        <a href="blog-unitree-g1-specifikacija.html">Unitree G1 specifikacija</a>
+        <a href="blog-kaip-pritraukti-lankytojus-i-stenda.html">Lankytojai parodos stende</a>
+        <a href="blog.html">Visas renginių gidas</a>
       </div>
     </div>
-  </section>
-  </main>
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <span class="logo">33BOTS</span>
-        <p class="footer__tagline">Humanoidinių robotų nuoma · Lietuva</p>
-        <div class="footer__nap">
-          <a href="mailto:kontakt@33bots.lt" class="footer__nap-item">kontakt@33bots.lt</a>
-        </div>
-        <p class="footer__tagline" style="margin-top:12px;">
-          <a href="https://33bots.pl/" hreflang="pl" lang="pl" style="color:inherit;">Polski</a> ·
-          <a href="https://33bots.at/" hreflang="de-AT" lang="de" style="color:inherit;">Österreich</a> ·
-          <a href="https://33bots.de/" hreflang="de" lang="de" style="color:inherit;">Deutschland</a>
-        </p>
+    <details class="stopka__miasta">
+      <summary>Roboto nuoma jūsų mieste</summary>
+      <div>
+        <a href="robotu-nuoma-vilnius.html">Vilnius</a>
+        <a href="robotu-nuoma-kaunas.html">Kaunas</a>
+        <a href="robotu-nuoma-klaipeda.html">Klaipėda</a>
+        <a href="robotu-nuoma-siauliai.html">Šiauliai</a>
+        <a href="robotu-nuoma-panevezys.html">Panevėžys</a>
+        <a href="robotu-nuoma-alytus.html">Alytus</a>
+        <a href="robotu-nuoma-marijampole.html">Marijampolė</a>
+        <a href="robotu-nuoma-mazeikiai.html">Mažeikiai</a>
+        <a href="robotu-nuoma-jonava.html">Jonava</a>
+        <a href="robotu-nuoma-utena.html">Utena</a>
+        <a href="robotu-nuoma-kedainiai.html">Kėdainiai</a>
+        <a href="robotu-nuoma-telsiai.html">Telšiai</a>
+        <a href="robotu-nuoma-taurage.html">Tauragė</a>
+        <a href="robotu-nuoma-palanga.html">Palanga</a>
+        <a href="robotu-nuoma-druskininkai.html">Druskininkai</a>
+        <a href="robotu-nuoma-trakai.html">Trakai</a>
+        <a href="robotu-nuoma-birstonas.html">Birštonas</a>
+        <a href="robotu-nuoma-anyksciai.html">Anykščiai</a>
       </div>
-      <div class="footer__links">
-        <a href="humanoidinio-roboto-nuoma.html">Humanoidinio roboto nuoma</a>
-        <a href="robotas-renginiui.html">Robotas renginiui</a>
-        <a href="robotas-parodoms.html">Robotas parodoms</a>
-        <a href="robotas-konferencijai.html">Konferencijos ir gala vakarai</a>
-        <a href="robotu-nuoma.html">Miestai</a>
-        <a href="parduotuve.html">Parduotuvė</a>
-        <a href="roboto-diegimas.html">Diegimai</a>
-        <a href="galerija.html">Galerija</a>
-        <a href="kainos.html">Kainos</a>
-        <a href="blog.html">Blogas</a>
-        <a href="kontaktai.html">Kontaktai</a>
-        <a href="video-realizacijos.html">Vaizdo įrašai</a>
-        <a href="apie-mus.html">Apie mus</a>
-        <a href="privatumo-politika.html">Privatumo politika</a>
-      </div>
-      <div class="footer__right">
-        <div class="footer__socials">
-          <a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener noreferrer" class="footer__social">↗ Instagram</a>
-          <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener noreferrer" class="footer__social">↗ TikTok</a>
-          <a href="https://www.facebook.com/33bots" target="_blank" rel="noopener noreferrer" class="footer__social">↗ Facebook</a>
-          <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener noreferrer" class="footer__social">↗ LinkedIn</a>
-        </div>
-        <span class="footer__copy">© 2026 33bots. Visos teisės saugomos.</span>
-      </div>
-    </div>
-  </footer>
-
-  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
-    <p class="cookie-banner__text">
-      Ši svetainė naudoja slapukus analizės tikslais.
-      <a href="privatumo-politika.html" class="cookie-banner__link">Privatumo politika</a>
-    </p>
-    <button class="cookie-banner__btn" id="cookieAccept" type="button">Supratau</button>
+    </details>
+    <p class="stopka__prawa">© 2026 33bots. Visos teisės saugomos.</p>
   </div>
+</footer>
 
-  <div class="sticky-cta">
-    <a href="#kontaktai" class="btn-primary">Rezervuoti robotą →</a>
-  </div>
+<div class="pasek" id="pasekMobilny">
+  <a class="btn" href="index.html#kontakt" data-cta="sticky">Patikrinti datą <span aria-hidden="true">→</span></a>
+</div>
+<div class="pasek-odstep"></div>
 
-  <script src="main.js"></script>
-  <script>window._nQc="89159321";</script>
-  <script async src="https://serve.albacross.com/track.js"></script>
+<!-- Baner cookie -->
+<div class="cookies" id="cookies" aria-live="polite">
+  <p class="cookies__text">
+    Naudojame slapukus analizės tikslais.
+  </p>
+  <button id="cookiesOk" class="btn btn--sm">
+    Supratau
+  </button>
+</div>
+
+<script src="js/strona.js?v=476b4e88" defer></script>
+<!-- Albacross -->
+<script>window._nQc="89159321";</script>
+<script async src="https://serve.albacross.com/track.js"></script>
 </body>
 </html>

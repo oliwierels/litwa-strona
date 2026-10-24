@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./index.html', './parduotuve.html', './roboto-diegimas.html'],
+  content: ['./parduotuve.html', './roboto-diegimas.html'],
   theme: {
     extend: {
       colors: {

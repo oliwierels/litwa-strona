@@ -1,255 +1,325 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7R7CJ3');</script>
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    var started = false;
+    function loadGTM() {
+      if (started) return; started = true;
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    }
+    if (d.readyState === 'complete') loadGTM();
+    else w.addEventListener('load', loadGTM, { once: true });
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) {
+      w.addEventListener(e, loadGTM, { once: true, passive: true });
+    });
+  })(window, document, 'script', 'dataLayer', 'GTM-MR7R7CJ3');
+</script>
 <!-- End Google Tag Manager -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontaktai — humanoidinio roboto nuoma Lietuvoje | 33bots</title>
-  <meta name="description" content="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą." />
-  <meta name="keywords" content="33bots kontaktai, roboto nuoma kontaktai, susisiekti robotų nuoma" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://33bots.lt/kontaktai.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://33bots.lt/kontaktai.html" />
-  <meta property="og:title" content="Kontaktai — humanoidinio roboto nuoma Lietuvoje | 33bots" />
-  <meta property="og:description" content="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą." />
-  <meta property="og:image" content="https://33bots.lt/og/kontaktai.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje" />
-  <meta property="og:locale" content="lt_LT" />
-  <meta property="og:locale:alternate" content="pl_PL" />
-  <meta property="og:locale:alternate" content="de_AT" />
-  <meta property="og:site_name" content="33bots" />
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kontaktai — humanoidinio roboto nuoma Lietuvoje | 33bots" />
-  <meta name="twitter:description" content="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą." />
-  <meta name="twitter:image" content="https://33bots.lt/og/kontaktai.jpg" />
-
-  <meta name="theme-color" content="#000000" />
-  <meta name="format-detection" content="telephone=no" />
-
-  <!-- Kalbų versijos -->
-  <link rel="alternate" hreflang="lt" href="https://33bots.lt/kontaktai.html" />
-  <link rel="alternate" hreflang="de-AT" href="https://33bots.at/kontakt.html" />
-  <link rel="alternate" hreflang="x-default" href="https://33bots.lt/kontaktai.html" />
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://33bots.lt/#organizacija",
-  "name": "33bots — humanoidinių robotų nuoma renginiams",
-  "alternateName": "33bots",
-  "url": "https://33bots.lt/",
-  "logo": "https://33bots.lt/logo.png",
-  "image": "https://33bots.lt/robot-g1.jpg",
-  "description": "Humanoidinių robotų Unitree G1 nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje. Sertifikuotas operatorius ir ženklinimas kainoje; atvykimą vertiname pagal renginio vietą.",
-  "email": "kontakt@33bots.lt",
-  "areaServed": {"@type": "Country", "name": "Lithuania"},
-  "sameAs": [
-      "https://www.instagram.com/33bots_/",
-      "https://www.tiktok.com/@aimforum",
-      "https://www.facebook.com/33bots",
-      "https://www.linkedin.com/company/33bots"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "kontakt@33bots.lt",
-    "contactType": "sales",
-    "areaServed": "LT",
-    "availableLanguage": ["Lithuanian", "Polish", "English"]
-  },
-  "knowsAbout": [
-    "humanoidinio roboto nuoma",
-    "robotas renginiui",
-    "robotas parodoms",
-    "robotas konferencijai",
-    "Unitree G1",
-    "renginių pramogos"
-  ],
-  "priceRange": "nuo 2100 EUR už renginio dieną"
-}
-  </script>
-  <script type="application/ld+json">
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://serve.albacross.com https://*.albacross.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://www.google.pl https://www.google.lt https://www.google.at https://www.google.de https://*.doubleclick.net https://www.googleadservices.com https://*.albacross.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.albacross.com https://serve.albacross.com https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://www.google.pl https://www.google.lt https://www.google.at https://www.google.de https://*.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com; frame-src https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com https://gdansk.tvp.pl https://*.doubleclick.net; media-src 'self'; form-action 'self' https://formspree.io; base-uri 'self'" data-sicherheit />
+<meta name="referrer" content="strict-origin-when-cross-origin" data-sicherheit />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kontaktai — humanoidinio roboto nuoma Lietuvoje | 33bots</title>
+<meta name="description" content="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą." />
+<meta name="keywords" content="33bots kontaktai, roboto nuoma kontaktai, susisiekti robotų nuoma" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://33bots.lt/kontaktai.html" />
+<link rel="alternate" hreflang="lt" href="https://33bots.lt/kontaktai.html" />
+<link rel="alternate" hreflang="de-AT" href="https://33bots.at/kontakt.html" />
+<link rel="alternate" hreflang="x-default" href="https://33bots.lt/kontaktai.html" />
+<meta name="theme-color" content="#050505" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://33bots.lt/kontaktai.html" />
+<meta property="og:title" content="Kontaktai — humanoidinio roboto nuoma Lietuvoje | 33bots" />
+<meta property="og:description" content="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą." />
+<meta property="og:image" content="https://33bots.lt/og/kontaktai.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje" />
+<meta property="og:locale" content="lt_LT" />
+<meta property="og:site_name" content="33bots" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kontaktai — humanoidinio roboto nuoma Lietuvoje | 33bots" />
+<meta name="twitter:description" content="Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/space-grotesk-latin-wght-normal.woff2" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="css/site.css?v=e78d5794" />
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Pradžia", "item": "https://33bots.lt/"},
-      {"@type": "ListItem", "position": 2, "name": "Kontaktai", "item": "https://33bots.lt/kontaktai.html"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Pradžia",
+      "item": "https://33bots.lt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Susisiekime",
+      "item": "https://33bots.lt/kontaktai.html"
+    }
   ]
 }
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "33bots kontaktai",
-  "url": "https://33bots.lt/kontaktai.html",
-  "inLanguage": "lt-LT",
-  "mainEntity": {"@id": "https://33bots.lt/#organizacija"}
-}
-  </script>
-
-  <script>history.scrollRestoration = 'manual';</script>
-  <link rel="alternate" type="application/rss+xml" title="33bots — blogo RSS" href="https://33bots.lt/feed.xml" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-
-  <!-- Šriftas talpinamas lokaliai — jokių blokuojančių užklausų į trečiųjų šalių serverius -->
-  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="fonts.css?v=3" />
-
-  <!-- Kritinis CSS įterptas — pirmas ekranas piešiamas nelaukiant style.css -->
-  <style>:root{--bg:#000;--surface-2:#111;--text:#fff;--text-2:#a8a8a8;--text-3:#444;--border-mid:#2c2c2c;--s4:20px;--s5:28px;--s8:64px}*{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}.nav{position:fixed;top:0;left:0;right:0;z-index:100}.nav__inner{max-width:1200px;margin:0 auto;padding:0 var(--s4);height:var(--s8);display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}.logo{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:#fff;text-decoration:none}.hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1200px;margin:0 auto;padding:0 var(--s4);min-height:100svh}.hero__content{padding:var(--s8) 0}.hero__eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin:0 0 var(--s4)}.hero__title{font-size:clamp(2.2rem,8vw,6.5rem);font-weight:800;line-height:.96;letter-spacing:-.03em;margin:0 0 var(--s4)}.hero__title em{font-style:normal;color:var(--text-2)}.hero__sub{font-size:.975rem;line-height:1.7;color:var(--text-2);margin:0 0 var(--s5)}.hero__robot-img{width:100%;height:auto;display:block}@media(max-width:900px){.nav__links,.lang-switch{display:none}}@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto}}</style>
-  <link rel="preload" href="style.css?v=3" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="style.css?v=3" /></noscript>
-
-  <link rel="preconnect" href="https://www.googletagmanager.com" />
+</script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR7R7CJ3"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-  <a href="#turinys" class="skip-link">Pereiti prie turinio</a>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <!-- NAVIGACIJA -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="index.html" class="logo" aria-label="33bots — pradžia">33BOTS</a>
-      <nav class="nav__links" aria-label="Pagrindinė navigacija">
-        <div class="nav__dropdown">
-          <button class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false" type="button">Paslaugos <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="nav__dropdown-menu">
-            <a href="humanoidinio-roboto-nuoma.html">Humanoidinio roboto nuoma</a>
-            <a href="robotas-renginiui.html">Robotas renginiui</a>
-            <a href="robotas-parodoms.html">Robotas parodoms</a>
-            <a href="robotas-konferencijai.html">Konferencijos ir gala vakarai</a>
-            <a href="robotas-imones-sventei.html">Įmonės šventės</a>
-            <a href="robotas-atidarymui.html">Atidarymai ir pristatymai</a>
-            <a href="robotas-vestuvems.html">Robotas vestuvėms</a>
-            <a href="robotas-gimtadieniui.html">Robotas gimtadieniui</a>
-            <a href="robotas-komandos-formavimui.html">Komandos formavimas</a>
-            <a href="robotas-prekybos-centrui.html">Prekybos centrai</a>
-            <a href="robotas-mokyklai.html">Mokykloms ir universitetams</a>
-            <a href="robotas-sporto-renginiui.html">Sporto renginiai</a>
-            <a href="robotas-kaledinei-sventei.html">Kalėdinės šventės</a>
-            <a href="robotas-fotosesijai.html">Fotosesijos ir filmavimai</a>
-            <a href="unitree-g1-nuoma.html">Unitree G1 nuoma</a>
-            <a href="pramogos-renginiams.html">Pramogos renginiams</a>
-          </div>
-        </div>
-        <a href="robotu-nuoma.html">Miestai</a>
-        <a href="parduotuve.html">Parduotuvė</a>
-        <a href="roboto-diegimas.html">Diegimai</a>
-        <a href="galerija.html">Galerija</a>
-        <a href="kainos.html">Kainos</a>
-        <a href="blog.html">Blogas</a>
-        <a href="kontaktai.html" aria-current="page">Kontaktai</a>
-      </nav>
-      <div class="lang-switch" aria-label="Kalbos pasirinkimas">
-        <span class="lang-switch__current" aria-current="true">LT</span>
-        <a href="https://33bots.pl/" hreflang="pl" lang="pl" title="Polska wersja strony">PL</a>
-        <a href="https://33bots.at/" hreflang="de-AT" lang="de" title="Österreichische Version">AT</a>
-        <a href="https://33bots.de/" hreflang="de" lang="de" title="Deutsche Version">DE</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Atidaryti meniu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-  <main id="turinys">
+<a href="#hauptinhalt" class="skip-link">Pereiti prie turinio</a>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <span class="mobile-menu__label">Paslaugos</span>
-    <a href="humanoidinio-roboto-nuoma.html" class="mobile-menu__sub">Humanoidinio roboto nuoma</a>
-    <a href="robotas-renginiui.html" class="mobile-menu__sub">Robotas renginiui</a>
-    <a href="robotas-parodoms.html" class="mobile-menu__sub">Robotas parodoms</a>
-    <a href="robotas-konferencijai.html" class="mobile-menu__sub">Konferencijos ir gala vakarai</a>
-    <a href="robotas-imones-sventei.html" class="mobile-menu__sub">Įmonės šventės</a>
-    <a href="robotas-atidarymui.html" class="mobile-menu__sub">Atidarymai ir pristatymai</a>
-    <a href="robotas-vestuvems.html" class="mobile-menu__sub">Robotas vestuvėms</a>
-    <a href="robotas-gimtadieniui.html" class="mobile-menu__sub">Robotas gimtadieniui</a>
-    <a href="robotas-komandos-formavimui.html" class="mobile-menu__sub">Komandos formavimas</a>
-    <a href="robotas-prekybos-centrui.html" class="mobile-menu__sub">Prekybos centrai</a>
-    <a href="robotas-mokyklai.html" class="mobile-menu__sub">Mokykloms ir universitetams</a>
-    <a href="robotas-sporto-renginiui.html" class="mobile-menu__sub">Sporto renginiai</a>
-    <a href="robotas-kaledinei-sventei.html" class="mobile-menu__sub">Kalėdinės šventės</a>
-    <a href="robotas-fotosesijai.html" class="mobile-menu__sub">Fotosesijos ir filmavimai</a>
-    <a href="unitree-g1-nuoma.html" class="mobile-menu__sub">Unitree G1 nuoma</a>
-    <a href="pramogos-renginiams.html" class="mobile-menu__sub">Pramogos renginiams</a>
-    <a href="robotu-nuoma.html">Miestai</a>
-    <a href="parduotuve.html">Parduotuvė</a>
-    <a href="roboto-diegimas.html">Diegimai</a>
-    <a href="galerija.html">Galerija</a>
-    <a href="kainos.html">Kainos</a>
-    <a href="blog.html">Blogas</a>
-    <a href="kontaktai.html">Kontaktai</a>
-    <a href="video-realizacijos.html">Vaizdo įrašai</a>
-    <a href="apie-mus.html">Apie mus</a>
-    <span class="mobile-menu__label">Kalba</span>
-    <a href="https://33bots.pl/" hreflang="pl" lang="pl">Polski — 33bots.pl</a>
-    <a href="https://33bots.at/" hreflang="de-AT" lang="de">Deutsch — 33bots.at</a>
+<!-- Erzeugt von tresci/zagranica/buduj_podstrony.py aus tresci/zagranica/podstrony/lt/kontaktai.html — Änderungen dort. -->
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="nav__logo" href="index.html" aria-label="33bots — pradžia">33BOTS</a>
+    <nav class="nav__menu" aria-label="Pagrindinė navigacija">
+      <a href="index.html#referenzen">Realizacijos</a>
+      <a href="index.html#auftritt">Pasirodymas</a>
+      <a href="index.html#preise">Kainos</a>
+      <a href="index.html#ablauf">Procesas</a>
+      <a class="nav__drugi" href="blog.html">Renginių gidas</a>
+    </nav>
+    <div class="nav__akcje">
+      <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="nav">kontakt@33bots.lt</a>
+      <a class="link nav__cta" href="index.html#kontakt" data-cta="nav">Patikrinti datą</a>
+      <button class="nav__przycisk" id="navPrzycisk" type="button" aria-expanded="false" aria-controls="navPanel">Meniu</button>
+    </div>
   </div>
-  <nav class="crumbs" aria-label="Naršymo kelias">
-    <a href="index.html">Pradžia</a> <span aria-hidden="true">/</span> <span aria-current="page">Kontaktai</span>
-  </nav>
+  <div class="nav__panel" id="navPanel" hidden>
+    <ul>
+      <li><a href="index.html#referenzen">Realizacijos</a></li>
+      <li><a href="index.html#auftritt">Pasirodymas</a></li>
+      <li><a href="index.html#preise">Kainos</a></li>
+      <li><a href="index.html#ablauf">Procesas</a></li>
+      <li><a href="blog.html">Renginių gidas</a></li>
+    </ul>
+    <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="menu">kontakt@33bots.lt</a>
+    <a class="btn" href="index.html#kontakt" data-cta="nav">Patikrinti, ar data laisva <span aria-hidden="true">→</span></a>
+  </div>
+</header>
 
-  <section class="hero hero--sub">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Kontaktai · Atsakome per 24 val.</p>
-      <h1 class="hero__title">Susisiekime.</h1>
-      <p class="hero__sub">Parašykite renginio datą, miestą ir formatą — atsakysime per vieną darbo dieną su konkrečia kaina ir laisvomis datomis. Be įkyrių skambučių.</p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:0;">
-    <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:var(--s6);">
-      <div class="article-body" style="max-width:none;">
-        <h2>Tiesioginiai kontaktai</h2>
-        <p><strong>El. paštas:</strong> <a href="mailto:kontakt@33bots.lt">kontakt@33bots.lt</a></p>
-        <p>Rašykite el. paštu arba palikite užklausą formoje — atsakome per 24 darbo valandas, taip pat ir renginių savaitgaliais.</p>
-        <h3>Socialiniai tinklai</h3>
-        <div class="related-links">
-        <a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener noreferrer">Instagram →</a>
-        <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener noreferrer">TikTok →</a>
-        <a href="https://www.facebook.com/33bots" target="_blank" rel="noopener noreferrer">Facebook →</a>
-        <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
-        </div>
+<main class="art" id="hauptinhalt" tabindex="-1">
+  <article>
+    <header class="art__glowa">
+      <ol class="okruchy" aria-label="Naršymo kelias">
+        <li><a href="index.html">Pradžia</a></li><li aria-hidden="true">/</li>
+        <li aria-current="page">Susisiekime</li>
+      </ol>
+      <div class="art__tekst">
+        <p class="label">Kontaktai · Atsakome per 24 val.</p>
+        <h1 class="art__h1">Susisiekime</h1>
+        <p class="art__lead">Parašykite renginio datą, miestą ir formatą — atsakysime per vieną darbo dieną su konkrečia kaina ir laisvomis datomis. Be įkyrių skambučių.</p>
       </div>
-      <div class="article-body" style="max-width:none;">
-        <h2>Ką parašyti užklausoje</h2>
-        <p>Kad galėtume atsakyti tiksliai jau pirmu laišku, naudinga nurodyti:</p>
-        <ul>
+      <figure class="art__foto">
+        <picture><source type="image/webp" srcset="realizacja-gala-zdjecia-gosci-400.webp 400w, realizacja-gala-zdjecia-gosci.webp 900w" sizes="(max-width: 1023px) 100vw, 400px" /><img src="realizacja-gala-zdjecia-gosci.jpg" alt="Pokylio svečiai fotografuoja humanoidinį robotą prie rėmėjų sienelės" width="900" height="1200" loading="eager" decoding="async" fetchpriority="high" /></picture>
+        <figcaption class="podpis"><b>Drezdeno pilių naktis</b> · Drezdenas</figcaption>
+      </figure>
+    </header>
+
+    <div class="art__tresc">
+      <nav class="spis" aria-labelledby="spis-h">
+        <p class="label" id="spis-h">Šiame puslapyje</p>
+        <ol>
+          <li><a href="#tiesioginiai-kontaktai">Tiesioginiai kontaktai</a></li>
+          <li><a href="#ka-parasyti-uzklausoje">Ką parašyti užklausoje</a></li>
+        </ol>
+      </nav>
+
+      <div class="prose">
+<h2 id="tiesioginiai-kontaktai">Tiesioginiai kontaktai</h2>
+
+<p><strong>El. paštas:</strong> <a href="mailto:kontakt@33bots.lt">kontakt@33bots.lt</a></p>
+
+<p>Rašykite el. paštu arba palikite užklausą formoje — atsakome per 24 darbo valandas, taip pat ir renginių savaitgaliais.</p>
+
+<h2 id="ka-parasyti-uzklausoje">Ką parašyti užklausoje</h2>
+
+<p>Kad galėtume atsakyti tiksliai jau pirmu laišku, naudinga nurodyti:</p>
+
+<ul>
           <li>Renginio <strong>datą</strong> ir valandas</li>
           <li><strong>Miestą</strong> ir vietą (salė, stendas, lauko erdvė)</li>
           <li>Apytikslį <strong>svečių skaičių</strong></li>
           <li>Renginio <strong>tipą</strong> — paroda, konferencija, šventė, atidarymas</li>
           <li>Ko tikitės: pramogos svečiams, kontaktų rinkimo ar turinio soc. tinklams</li>
         </ul>
-        <p>Jei dar ne visko žinote — tai visiškai normalu. Parašykite, ką turite, ir likusius klausimus užduosime patys.</p>
+
+<p>Jei dar ne visko žinote — tai visiškai normalu. Parašykite, ką turite, ir likusius klausimus užduosime patys.</p>
+
+<p>Sąrašas nėra baigtinis — atvykstame į bet kurią Lietuvos vietą, ir transportas visada įskaičiuotas.</p>
+
       </div>
     </div>
-  </section>
+  </article>
 
-  <section class="section" style="padding-top:0;">
-    <div style="max-width:900px; margin:0 auto;">
-      <p style="font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:var(--s3);">Aptarnaujami miestai</p>
-      <div class="related-links">
+<section id="kontakt" class="sec sec--powierzchnia" aria-labelledby="kontakt-h">
+  <div class="wrap grid12">
+    <div class="rez__lewa">
+      <p class="label sec__meta">Rezervacija</p>
+      <h2 id="kontakt-h" class="h2">Patikrinkite, ar jūsų data laisva.</h2>
+      <ul class="osoby">
+        <li class="osoba"><p class="label">El. paštas</p>
+          <a class="link osoba__mail" href="mailto:kontakt@33bots.lt" data-mail="kontakt">kontakt@33bots.lt</a></li>
+      </ul>
+      <p class="body-sm">Atsakome per 24 darbo valandas, dažniausiai tą pačią dieną. Rezervacija be avanso, visoje Lietuvoje.</p>
+    </div>
+
+    <form class="rez__form" id="formularz" novalidate>
+      <div class="kroki-form" aria-hidden="true">
+        <span class="label" data-krok-etykieta="1" aria-current="step">01 Renginys</span>
+        <span class="label" data-krok-etykieta="2">02 Kontaktai</span>
+      </div>
+
+      <div class="krok-form" id="krok1">
+        <fieldset class="pole" id="pole-typ">
+          <legend>Renginio tipas *</legend>
+          <div class="chipy">
+            <label class="chip"><input type="radio" name="event_type" value="Gala vakaras" required /><span>Gala vakaras</span></label>
+            <label class="chip"><input type="radio" name="event_type" value="Konferencija" required /><span>Konferencija</span></label>
+            <label class="chip"><input type="radio" name="event_type" value="Paroda" required /><span>Paroda</span></label>
+            <label class="chip"><input type="radio" name="event_type" value="Lauko renginys" required /><span>Lauko renginys</span></label>
+            <label class="chip"><input type="radio" name="event_type" value="Kita" required /><span>Kita</span></label>
+          </div>
+          <p class="pole__blad" id="blad-typ" hidden>Pasirinkite renginio tipą.</p>
+        </fieldset>
+        <div class="dwa">
+          <div class="pole">
+            <label for="pole-data">Data</label>
+            <input type="date" id="pole-data" name="date" />
+            <div class="chipy"><label class="chip"><input type="checkbox" id="data-nieustalona" /><span>Data dar nežinoma</span></label></div>
+          </div>
+          <div class="pole">
+            <label for="pole-miejsce">Miestas arba vieta</label>
+            <input type="text" id="pole-miejsce" name="location" placeholder="pvz., Vilnius, LITEXPO" autocomplete="address-level2" />
+          </div>
+        </div>
+        <fieldset class="pole">
+          <legend>Svečių skaičius</legend>
+          <div class="chipy">
+            <label class="chip"><input type="radio" name="guests" value="iki 100" /><span>iki 100</span></label>
+            <label class="chip"><input type="radio" name="guests" value="100–500" /><span>100–500</span></label>
+            <label class="chip"><input type="radio" name="guests" value="500–2000" /><span>500–2000</span></label>
+            <label class="chip"><input type="radio" name="guests" value="daugiau nei 2000" /><span>daugiau nei 2000</span></label>
+          </div>
+        </fieldset>
+        <div class="form-akcje">
+          <button class="btn" type="button" id="dalej">Toliau <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <div class="krok-form" id="krok2" hidden>
+        <div class="dwa">
+          <div class="pole" id="pole-imie">
+            <label for="pole-name">Vardas ir pavardė *</label>
+            <input type="text" id="pole-name" name="name" required autocomplete="name" />
+            <p class="pole__blad" hidden>Įrašykite savo vardą ir pavardę.</p>
+          </div>
+          <div class="pole" id="pole-mail">
+            <label for="pole-email">El. paštas *</label>
+            <input type="email" id="pole-email" name="email" required autocomplete="email" />
+            <p class="pole__blad" hidden>Įrašykite teisingą el. pašto adresą.</p>
+          </div>
+          <div class="pole">
+            <label for="pole-company">Įmonė</label>
+            <input type="text" id="pole-company" name="company" autocomplete="organization" />
+          </div>
+          <div class="pole">
+            <label for="pole-phone">Telefonas</label>
+            <input type="tel" id="pole-phone" name="phone" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="pole">
+          <label for="pole-message">Renginio aprašymas</label>
+          <textarea id="pole-message" name="message" maxlength="600" rows="4" placeholder="Programa, laikas, ko tikitės iš roboto — jei jau žinote."></textarea>
+          <span class="pole__licznik"><span id="licznik">0</span> / 600</span>
+        </div>
+        <div class="form-akcje">
+          <button class="wstecz" type="button" id="wstecz">Atgal</button>
+          <button class="btn" type="submit" id="wyslij">Patikrinti, ar data laisva <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="pole__blad" id="blad-wysylki" role="alert" hidden></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap grid12">
+    <div class="stopka__marka">
+      <p class="stopka__logo">33BOTS</p>
+      <p>Humanoidinių robotų nuoma · visa Lietuva</p>
+      <p><a href="mailto:kontakt@33bots.lt" data-mail="stopka">kontakt@33bots.lt</a></p>
+      <p><a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.facebook.com/33bots" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p data-jezyki><a href="https://33bots.pl/" hreflang="pl" lang="pl">Polski — 33bots.pl</a> · <a href="https://33bots.de/" hreflang="de" lang="de">Deutschland — 33bots.de</a> · <a href="https://33bots.at/" hreflang="de-AT" lang="de-AT">Österreich — 33bots.at</a></p>
+    </div>
+    <ul class="stopka__kol" aria-label="Paslaugos">
+      <li><a href="humanoidinio-roboto-nuoma.html">Humanoidinio roboto nuoma</a></li>
+      <li><a href="unitree-g1-nuoma.html">Unitree G1 nuoma</a></li>
+      <li><a href="kainos.html">Kainos</a></li>
+      <li><a href="robotas-renginiui.html">Robotas renginiui</a></li>
+      <li><a href="robotas-parodoms.html">Parodoms</a></li>
+      <li><a href="robotas-konferencijai.html">Konferencijoms ir gala vakarams</a></li>
+      <li><a href="robotas-atidarymui.html">Atidarymams</a></li>
+      <li><a href="robotas-prekybos-centrui.html">Prekybos centrams</a></li>
+      <li><a href="robotas-fotosesijai.html">Fotosesijoms ir filmavimui</a></li>
+      <li><a href="robotas-vedejas.html">Robotas vedėjas</a></li>
+      <li><a href="parduotuve.html">Roboto pirkimas</a></li>
+      <li><a href="roboto-diegimas.html">Diegimas įmonėje</a></li>
+    </ul>
+    <ul class="stopka__kol" aria-label="Progos">
+      <li><a href="robotas-vestuvems.html">Vestuvėms</a></li>
+      <li><a href="robotas-gimtadieniui.html">Gimtadieniams</a></li>
+      <li><a href="robotas-imones-sventei.html">Įmonės šventėms</a></li>
+      <li><a href="robotas-kaledinei-sventei.html">Kalėdinėms šventėms</a></li>
+      <li><a href="robotas-komandos-formavimui.html">Komandos formavimui</a></li>
+      <li><a href="robotas-mokyklai.html">Mokykloms ir universitetams</a></li>
+      <li><a href="robotas-sporto-renginiui.html">Sporto renginiams</a></li>
+    </ul>
+    <ul class="stopka__kol" aria-label="Renginių gidas">
+      <li><a href="pramogos-renginiams.html">Pramogos renginiams</a></li>
+      <li><a href="renginiu-vedejas.html">Renginių vedėjas</a></li>
+      <li><a href="vestuviu-vedejas.html">Vestuvių vedėjas</a></li>
+      <li><a href="fotobudeles-nuoma.html">Fotobūdelės nuoma</a></li>
+      <li><a href="pramogos-vestuvems.html">Pramogos vestuvėms</a></li>
+      <li><a href="kaledinio-vakarelio-idejos.html">Kalėdinio vakarėlio idėjos</a></li>
+      <li><a href="komandos-formavimo-idejos.html">Komandos formavimo idėjos</a></li>
+      <li><a href="renginio-idejos.html">Renginio idėjos</a></li>
+      <li><a href="blog.html">Visas renginių gidas</a></li>
+    </ul>
+    <ul class="stopka__kol" aria-label="Apie 33bots">
+      <li><a href="apie-mus.html">Apie mus</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="video-realizacijos.html">Vaizdo įrašai</a></li>
+      <li><a href="kontaktai.html">Kontaktai</a></li>
+      <li><a href="privatumo-politika.html">Privatumo politika</a></li>
+    </ul>
+    <div class="stopka__poradnik">
+      <p>Patarimai organizatoriams</p>
+      <div>
+        <a href="blog-kiek-kainuoja-roboto-nuoma.html">Kiek kainuoja roboto nuoma?</a>
+        <a href="blog-kaip-issinuomoti-robota.html">Kaip išsinuomoti robotą</a>
+        <a href="blog-roboto-sauga-renginyje.html">Roboto sauga renginyje</a>
+        <a href="blog-unitree-g1-specifikacija.html">Unitree G1 specifikacija</a>
+        <a href="blog-kaip-pritraukti-lankytojus-i-stenda.html">Lankytojai parodos stende</a>
+        <a href="blog.html">Visas renginių gidas</a>
+      </div>
+    </div>
+    <details class="stopka__miasta">
+      <summary>Roboto nuoma jūsų mieste</summary>
+      <div>
         <a href="robotu-nuoma-vilnius.html">Vilnius</a>
         <a href="robotu-nuoma-kaunas.html">Kaunas</a>
         <a href="robotu-nuoma-klaipeda.html">Klaipėda</a>
@@ -269,177 +339,122 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="robotu-nuoma-birstonas.html">Birštonas</a>
         <a href="robotu-nuoma-anyksciai.html">Anykščiai</a>
       </div>
-      <p style="color:var(--text-3); font-size:0.85rem; margin-top:var(--s3);">Sąrašas nėra baigtinis — atvykstame į bet kurią Lietuvos vietą, ir transportas visada įskaičiuotas.</p>
-    </div>
-  </section>
-
-  <!-- KONTAKTAI -->
-  <section class="section contact-section" id="kontaktai">
-    <div class="contact-layout">
-      <div class="contact-left">
-        <span class="tag">Kontaktai</span>
-        <h2 class="section-title">Užklausos forma</h2>
-        <p class="body-text">Užpildykite formą — atsakysime per vieną darbo dieną su kaina ir laisvomis datomis.</p>
-        <div class="contact-details">
-          <div class="contact-detail">
-            <span class="contact-detail__label">Įmonė</span>
-            <span class="contact-detail__val">33bots — humanoidinių robotų nuoma</span>
-          </div>
-          <a href="mailto:kontakt@33bots.lt" class="contact-detail">
-            <span class="contact-detail__label">El. paštas</span>
-            <span class="contact-detail__val">kontakt@33bots.lt</span>
-          </a>
-          <div class="contact-detail">
-            <span class="contact-detail__label">Aptarnaujame</span>
-            <span class="contact-detail__val">Visą Lietuvą</span>
-          </div>
-        </div>
-
-        <nav class="coverage" aria-label="Miestai, kuriuose nuomojame robotą">
-          <p class="coverage__label">Atvažiuojame be papildomo mokesčio į:</p>
-          <ul class="coverage__cities">
-            <li><a href="robotu-nuoma-vilnius.html">Vilnius</a></li>
-            <li><a href="robotu-nuoma-kaunas.html">Kaunas</a></li>
-            <li><a href="robotu-nuoma-klaipeda.html">Klaipėda</a></li>
-            <li><a href="robotu-nuoma-siauliai.html">Šiauliai</a></li>
-            <li><a href="robotu-nuoma-panevezys.html">Panevėžys</a></li>
-            <li><a href="robotu-nuoma-alytus.html">Alytus</a></li>
-            <li><a href="robotu-nuoma-marijampole.html">Marijampolė</a></li>
-            <li><a href="robotu-nuoma-mazeikiai.html">Mažeikiai</a></li>
-            <li><a href="robotu-nuoma-jonava.html">Jonava</a></li>
-            <li><a href="robotu-nuoma-utena.html">Utena</a></li>
-            <li><a href="robotu-nuoma-kedainiai.html">Kėdainiai</a></li>
-            <li><a href="robotu-nuoma-telsiai.html">Telšiai</a></li>
-            <li><a href="robotu-nuoma-taurage.html">Tauragė</a></li>
-            <li><a href="robotu-nuoma-palanga.html">Palanga</a></li>
-            <li><a href="robotu-nuoma-druskininkai.html">Druskininkai</a></li>
-            <li><a href="robotu-nuoma-trakai.html">Trakai</a></li>
-            <li><a href="robotu-nuoma-birstonas.html">Birštonas</a></li>
-            <li><a href="robotu-nuoma-anyksciai.html">Anykščiai</a></li>
-          </ul>
-          <p class="coverage__note">ir bet kurią kitą Lietuvos vietą — atvykimo kainą nurodome pasiūlyme</p>
-        </nav>
-      </div>
-      <div class="contact-right">
-        <form id="contactForm" class="form" novalidate>
-          <div class="form-steps-header">
-            <span class="form-step-ind active" id="stepInd1">01 — Kontaktiniai duomenys</span>
-            <span class="form-step-sep">/</span>
-            <span class="form-step-ind" id="stepInd2">02 — Jūsų renginys</span>
-          </div>
-
-          <div class="form-step" id="formStep1">
-            <div class="form-row">
-              <div class="form-field">
-                <label for="f-name">Vardas ir pavardė *</label>
-                <input id="f-name" type="text" name="name" placeholder="Jonas Jonaitis" autocomplete="name" required />
-                <span class="form-field__err" aria-live="polite"></span>
-              </div>
-              <div class="form-field">
-                <label for="f-company">Įmonė</label>
-                <input id="f-company" type="text" name="company" placeholder="Įmonės pavadinimas" autocomplete="organization" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="f-email">El. paštas *</label>
-                <input id="f-email" type="email" name="email" placeholder="info@imone.lt" autocomplete="email" required />
-                <span class="form-field__err" aria-live="polite"></span>
-              </div>
-              <div class="form-field">
-                <label for="f-phone">Telefonas</label>
-                <input id="f-phone" type="tel" name="phone" placeholder="+370 600 00000" autocomplete="tel" />
-              </div>
-            </div>
-            <button type="button" id="btnNext" class="btn-submit">Toliau — papasakokite apie renginį →</button>
-          </div>
-
-          <div class="form-step form-step--hidden" id="formStep2" aria-hidden="true">
-            <div class="form-row">
-              <div class="form-field">
-                <label for="f-date">Planuojama renginio data</label>
-                <input id="f-date" type="date" name="date" />
-              </div>
-              <div class="form-field">
-                <label for="f-location">Miestas / vieta</label>
-                <input id="f-location" type="text" name="location" placeholder="pvz. Vilnius, LITEXPO" autocomplete="address-level2" />
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="f-message">Papasakokite apie renginį *</label>
-              <textarea id="f-message" name="message" rows="6"
-                placeholder="Renginio tipas (paroda, konferencija, gala vakaras...), apytikslis svečių skaičius, kiek laiko norite roboto ir viskas, kas jums atrodo svarbu." required></textarea>
-              <div class="form-field__footer">
-                <span class="form-field__err" aria-live="polite"></span>
-                <span class="char-counter"><span id="charCount">0</span> / 600</span>
-              </div>
-            </div>
-            <div class="form-step__nav">
-              <button type="button" id="btnBack" class="btn-back">← Atgal</button>
-              <button type="submit" class="btn-submit">Siųsti užklausą →</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-  </main>
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <span class="logo">33BOTS</span>
-        <p class="footer__tagline">Humanoidinių robotų nuoma · Lietuva</p>
-        <div class="footer__nap">
-          <a href="mailto:kontakt@33bots.lt" class="footer__nap-item">kontakt@33bots.lt</a>
-        </div>
-        <p class="footer__tagline" style="margin-top:12px;">
-          <a href="https://33bots.pl/" hreflang="pl" lang="pl" style="color:inherit;">Polski</a> ·
-          <a href="https://33bots.at/" hreflang="de-AT" lang="de" style="color:inherit;">Österreich</a> ·
-          <a href="https://33bots.de/" hreflang="de" lang="de" style="color:inherit;">Deutschland</a>
-        </p>
-      </div>
-      <div class="footer__links">
-        <a href="humanoidinio-roboto-nuoma.html">Humanoidinio roboto nuoma</a>
-        <a href="robotas-renginiui.html">Robotas renginiui</a>
-        <a href="robotas-parodoms.html">Robotas parodoms</a>
-        <a href="robotas-konferencijai.html">Konferencijos ir gala vakarai</a>
-        <a href="robotu-nuoma.html">Miestai</a>
-        <a href="parduotuve.html">Parduotuvė</a>
-        <a href="roboto-diegimas.html">Diegimai</a>
-        <a href="galerija.html">Galerija</a>
-        <a href="kainos.html">Kainos</a>
-        <a href="blog.html">Blogas</a>
-        <a href="kontaktai.html">Kontaktai</a>
-        <a href="video-realizacijos.html">Vaizdo įrašai</a>
-        <a href="apie-mus.html">Apie mus</a>
-        <a href="privatumo-politika.html">Privatumo politika</a>
-      </div>
-      <div class="footer__right">
-        <div class="footer__socials">
-          <a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener noreferrer" class="footer__social">↗ Instagram</a>
-          <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener noreferrer" class="footer__social">↗ TikTok</a>
-          <a href="https://www.facebook.com/33bots" target="_blank" rel="noopener noreferrer" class="footer__social">↗ Facebook</a>
-          <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener noreferrer" class="footer__social">↗ LinkedIn</a>
-        </div>
-        <span class="footer__copy">© 2026 33bots. Visos teisės saugomos.</span>
-      </div>
-    </div>
-  </footer>
-
-  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
-    <p class="cookie-banner__text">
-      Ši svetainė naudoja slapukus analizės tikslais.
-      <a href="privatumo-politika.html" class="cookie-banner__link">Privatumo politika</a>
-    </p>
-    <button class="cookie-banner__btn" id="cookieAccept" type="button">Supratau</button>
+    </details>
+    <p class="stopka__prawa">© 2026 33bots. Visos teisės saugomos.</p>
   </div>
+</footer>
 
-  <div class="sticky-cta">
-    <a href="#kontaktai" class="btn-primary">Rezervuoti robotą →</a>
-  </div>
+<div class="pasek" id="pasekMobilny">
+  <a class="btn" href="#kontakt" data-cta="sticky">Patikrinti datą <span aria-hidden="true">→</span></a>
+</div>
+<div class="pasek-odstep"></div>
 
-  <script src="main.js"></script>
-  <script>window._nQc="89159321";</script>
-  <script async src="https://serve.albacross.com/track.js"></script>
+<!-- Baner cookie -->
+<div class="cookies" id="cookies" aria-live="polite">
+  <p class="cookies__text">
+    Naudojame slapukus analizės tikslais.
+  </p>
+  <button id="cookiesOk" class="btn btn--sm">
+    Supratau
+  </button>
+</div>
+
+<script src="js/strona.js?v=476b4e88" defer></script>
+<script>
+(() => {
+  const el = (id) => document.getElementById(id);
+  /* ——— Formularz: krok 1 wydarzenie, krok 2 kontakt, wysyłka na Formspree ——— */
+  const form = document.getElementById('formularz');
+  const krok1 = el('krok1'), krok2 = el('krok2');
+  const etykiety = form.querySelectorAll('[data-krok-etykieta]');
+  const pokazKrok = (n) => {
+    krok1.hidden = n !== 1; krok2.hidden = n !== 2;
+    etykiety.forEach((e) => { if (e.dataset.krokEtykieta === String(n)) e.setAttribute('aria-current', 'step'); else e.removeAttribute('aria-current'); });
+    (n === 2 ? el('pole-name') : form.querySelector('input[name=event_type]')).focus();
+  };
+  const dataPole = el('pole-data'), nieustalona = el('data-nieustalona');
+  nieustalona.addEventListener('change', () => { dataPole.disabled = nieustalona.checked; if (nieustalona.checked) dataPole.value = ''; });
+
+  const poleTyp = el('pole-typ'), bladTyp = el('blad-typ');
+  form.querySelectorAll('input[name=event_type]').forEach((r) => r.addEventListener('change', () => {
+    bladTyp.hidden = true; poleTyp.removeAttribute('data-blad');
+  }));
+  el('dalej').addEventListener('click', () => {
+    const typ = form.querySelector('input[name=event_type]:checked');
+    bladTyp.hidden = !!typ;
+    poleTyp.toggleAttribute('data-blad', !typ);
+    if (!typ) { form.querySelector('input[name=event_type]').focus(); return; }
+    pokazKrok(2);
+  });
+  el('wstecz').addEventListener('click', () => pokazKrok(1));
+
+  const opis = el('pole-message'), licznik = el('licznik');
+  opis.addEventListener('input', () => { licznik.textContent = opis.value.length; });
+
+  const sprawdz = (pole, ok) => {
+    const box = pole.closest('.pole');
+    box.toggleAttribute('data-blad', !ok);
+    box.querySelector('.pole__blad').hidden = ok;
+    pole.setAttribute('aria-invalid', String(!ok));
+    return ok;
+  };
+  const imie = el('pole-name'), mail = el('pole-email');
+  imie.addEventListener('input', () => { if (imie.hasAttribute('aria-invalid')) sprawdz(imie, imie.value.trim().length > 1); });
+  mail.addEventListener('input', () => { if (mail.hasAttribute('aria-invalid')) sprawdz(mail, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim())); });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const okImie = sprawdz(imie, imie.value.trim().length > 1);
+    const okMail = sprawdz(mail, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim()));
+    if (!okImie || !okMail) { (okImie ? mail : imie).focus(); return; }
+
+    const d = new FormData(form);
+    const payload = {
+      name:       d.get('name').trim(),
+      company:    d.get('company')    || '—',
+      email:      d.get('email').trim(),
+      phone:      d.get('phone')      || '—',
+      date:       nieustalona.checked ? "nežinoma" : (d.get('date') || '—'),
+      location:   d.get('location')   || '—',
+      message:    d.get('message')    || '—',
+      event_type: d.get('event_type') || '—',
+      guests:     d.get('guests')     || '—',
+    };
+
+    const btn = el('wyslij');
+    const pierwotny = btn.innerHTML;
+    btn.disabled = true; btn.textContent = "Siunčiama…";
+    const blad = el('blad-wysylki');
+    blad.hidden = true;
+    try {
+      const res = await fetch("https://formspree.io/f/mnjwvray", {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', { event_category: 'contact', event_label: 'Kontaktinė forma' });
+      }
+      const sukces = document.createElement('div');
+      sukces.className = 'form-sukces';
+      sukces.setAttribute('role', 'status');
+      const t = document.createElement('p'); t.className = 'h3'; t.textContent = "Jūsų užklausą gavome.";
+      const p = document.createElement('p'); p.className = 'body';
+      p.append("Atsakysime adresu ", Object.assign(document.createElement('strong'), { textContent: payload.email }),
+        ". Atsakome per 24 darbo valandas, dažniausiai tą pačią dieną.");
+      sukces.append(t, p);
+      form.replaceChildren(sukces);
+    } catch (err) {
+      blad.textContent = "Nepavyko išsiųsti. Parašykite mums adresu kontakt@33bots.lt.";
+      blad.hidden = false;
+      btn.disabled = false; btn.innerHTML = pierwotny;
+    }
+  });
+})();
+</script>
+<!-- Albacross -->
+<script>window._nQc="89159321";</script>
+<script async src="https://serve.albacross.com/track.js"></script>
 </body>
 </html>

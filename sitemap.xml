@@ -5,439 +5,731 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://33bots.lt/</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-24</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/" />
     <xhtml:link rel="alternate" hreflang="de-AT" href="https://33bots.at/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/" />
     <image:image>
-      <image:loc>https://33bots.lt/robot-g1.jpg</image:loc>
-      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+      <image:loc>https://33bots.lt/og/index.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams visoje Lietuvoje</image:title>
     </image:image>
     <video:video>
       <video:thumbnail_loc>https://33bots.lt/video/33bots-robot-event-poster.jpg</video:thumbnail_loc>
-      <video:title>Humanoidinis robotas Unitree G1 renginyje — nuoma Lietuvoje</video:title>
-      <video:description>Robotas Unitree G1 gyvai: vaikšto, gestikuliuoja, pasitinka svečius ir šoka.</video:description>
+      <video:title>Humanoidinis robotas Unitree G1 renginyje — nuoma Lietuvoje | 33bots</video:title>
+      <video:description>Humanoidinis robotas Unitree G1 gyvai: vaikšto, gestikuliuoja, pasitinka svečius ir šoka. Ženklinimas su prekės ženklo logotipu ir QR kodu įskaičiuotas į kainą. Nuoma renginiams, parodoms ir konferencijoms visoje Lietuvoje.</video:description>
       <video:content_loc>https://33bots.lt/video/33bots-robot-event.mp4</video:content_loc>
       <video:duration>35</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
   <url>
-    <loc>https://33bots.lt/robotu-nuoma.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/humanoidinio-roboto-nuoma.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-renginiui.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-parodoms.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-konferencijai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-imones-sventei.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-atidarymui.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-vestuvems.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/unitree-g1-nuoma.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/pramogos-renginiams.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-gimtadieniui.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-prekybos-centrui.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-mokyklai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-kaledinei-sventei.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-fotosesijai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-komandos-formavimui.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotas-sporto-renginiui.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/atrakcijos-renginiams.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://33bots.lt/apie-mus.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/apie-mus.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/apie-mus.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/apie-mus.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://33bots.lt/atrakcijos-parodoms.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/atrakcijos-parodoms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/atrakcijos-parodoms.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/atrakcijos-parodoms.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/modernios-pramogos.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://33bots.lt/blog-employer-branding-renginiai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-employer-branding-renginiai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-employer-branding-renginiai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-employer-branding-renginiai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/renginio-idejos.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-humanoidinis-ar-mobilus-robotas.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-imones-renginio-biudzetas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-imones-renginio-biudzetas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-imones-renginio-biudzetas.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-imones-renginio-biudzetas.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-kaip-issinuomoti-robota.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-kaip-issinuomoti-robota.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-kaip-issinuomoti-robota.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-kaip-issinuomoti-robota.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-kaip-pritraukti-lankytojus-i-stenda.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-kaip-pritraukti-lankytojus-i-stenda.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-kaip-pritraukti-lankytojus-i-stenda.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-kaip-pritraukti-lankytojus-i-stenda.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-kiek-kainuoja-roboto-nuoma.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-kiek-kainuoja-roboto-nuoma.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-kiek-kainuoja-roboto-nuoma.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-kiek-kainuoja-roboto-nuoma.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-kodel-robotas-renginyje.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-kodel-robotas-renginyje.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-kodel-robotas-renginyje.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-kodel-robotas-renginyje.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-robotas-parodu-stende.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-robotas-parodu-stende.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-robotas-parodu-stende.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-robotas-parodu-stende.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-roboto-nuoma-ar-pirkimas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-roboto-nuoma-ar-pirkimas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-roboto-nuoma-ar-pirkimas.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-roboto-nuoma-ar-pirkimas.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-roboto-sauga-renginyje.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-roboto-sauga-renginyje.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-roboto-sauga-renginyje.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-roboto-sauga-renginyje.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog-unitree-g1-specifikacija.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/blog-unitree-g1-specifikacija.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog-unitree-g1-specifikacija.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/blog.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/blog.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/blog.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/blog.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/blog.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/blog.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/fotobudeles-nuoma.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/fotobudeles-nuoma.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/fotobudeles-nuoma.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-gala-zdjecia-gosci.jpg</image:loc>
+      <image:title>Pokylio svečiai fotografuoja humanoidinį robotą prie rėmėjų sienelės</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/galerija.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/galerija.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/galerija.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/galerija.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/humanoidinio-roboto-nuoma.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/humanoidinio-roboto-nuoma.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/wypozyczenie-robota.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/humanoiden-roboter-mieten.html" />
+    <xhtml:link rel="alternate" hreflang="de-AT" href="https://33bots.at/humanoider-roboter-mieten.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/wypozyczenie-robota.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/humanoidinio-roboto-nuoma.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/kainos.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/kainos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/kainos.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/kainos.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/kaledinio-vakarelio-idejos.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/kaledinio-vakarelio-idejos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/kaledinio-vakarelio-idejos.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-gala-palac.jpg</image:loc>
+      <image:title>Humanoidinis robotas su smokingu rūmų pokylių salėje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/komandos-formavimo-idejos.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/komandos-formavimo-idejos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/komandos-formavimo-idejos.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-spotkanie-biznesowe.jpg</image:loc>
+      <image:title>Humanoidinis robotas su Verslininkų ložės marškinėliais terasoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/kontaktai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/kontaktai.html" />
+    <xhtml:link rel="alternate" hreflang="de-AT" href="https://33bots.at/kontakt.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/kontaktai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/kontaktai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://33bots.lt/parduotuve.html</loc>
     <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/parduotuve.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/sklep.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/sklep.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/parduotuve.jpg</image:loc>
+      <image:title>Parduotuvė — humanoidinis robotas Unitree G1 | 33bots</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/pramogos-renginiams.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/pramogos-renginiams.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/pramogos-renginiams.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-tet-trung-thu-tlum.jpg</image:loc>
+      <image:title>Šventės svečiai aplink humanoidinį robotą</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/pramogos-vestuvems.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/pramogos-vestuvems.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/pramogos-vestuvems.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-wesele-konfetti.jpg</image:loc>
+      <image:title>Humanoidinis robotas dūmuose ant vestuvių šokių aikštelės</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/privatumo-politika.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/privatumo-politika.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/privatumo-politika.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og-image.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/renginio-idejos.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/renginio-idejos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/renginio-idejos.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/renginio-idejos.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/renginiu-vedejas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/renginiu-vedejas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/renginiu-vedejas.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-women-in-tech-tlum.jpg</image:loc>
+      <image:title>Women in Tech Summit dalyvės filmuoja humanoidinį robotą telefonais</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-atidarymui.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-atidarymui.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-atidarymui.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-atidarymui.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-fotosesijai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-fotosesijai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-fotosesijai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-fotosesijai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-gimtadieniui.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-gimtadieniui.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-gimtadieniui.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-gimtadieniui.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-imones-sventei.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-imones-sventei.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-imones-sventei.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-imones-sventei.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-kaledinei-sventei.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-kaledinei-sventei.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-kaledinei-sventei.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-kaledinei-sventei.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-komandos-formavimui.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-komandos-formavimui.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-komandos-formavimui.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-komandos-formavimui.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-konferencijai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-konferencijai.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/oferta-konferencje.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/angebot-konferenzen-galas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/oferta-konferencje.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-konferencijai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-mokyklai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-mokyklai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-mokyklai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-mokyklai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-parodoms.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-parodoms.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/oferta-targi.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/angebot-messen.html" />
+    <xhtml:link rel="alternate" hreflang="de-AT" href="https://33bots.at/messe-roboter-mieten.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/oferta-targi.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-parodoms.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-prekybos-centrui.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-prekybos-centrui.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-prekybos-centrui.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-prekybos-centrui.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-renginiui.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-renginiui.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/robot-na-event.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/robot-na-event.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-renginiui.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-sporto-renginiui.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-sporto-renginiui.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-sporto-renginiui.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-sporto-renginiui.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-vedejas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-vedejas.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/roboter-eventmoderation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.de/roboter-eventmoderation.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-eco-studio-scena.jpg</image:loc>
+      <image:title>Humanoidinis robotas Eco Studio finalo scenoje raudonoje šviesoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotas-vestuvems.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-vestuvems.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/robot-na-wesele.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/roboter-hochzeit.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/robot-na-wesele.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotas-vestuvems.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://33bots.lt/roboto-diegimas.html</loc>
     <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/roboto-diegimas.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/wdrozenia.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/wdrozenia.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/roboto-diegimas.jpg</image:loc>
+      <image:title>Humanoidinio roboto diegimas įmonėje | 33bots</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/kainos.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://33bots.lt/robotu-nuoma-alytus.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-alytus.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-alytus.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-alytus.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/galerija.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://33bots.lt/robotu-nuoma-anyksciai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-anyksciai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-anyksciai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-anyksciai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/apie-mus.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://33bots.lt/robotu-nuoma-birstonas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-birstonas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-birstonas.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-birstonas.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/kontaktai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://33bots.lt/robotu-nuoma-druskininkai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-druskininkai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-druskininkai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-druskininkai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/blog.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://33bots.lt/robotu-nuoma-jonava.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-jonava.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-jonava.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-jonava.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://33bots.lt/privatumo-politika.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <loc>https://33bots.lt/robotu-nuoma-kaunas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-kaunas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-kaunas.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-kaunas.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-kedainiai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-kedainiai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-kedainiai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-kedainiai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-klaipeda.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-klaipeda.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-klaipeda.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-klaipeda.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-marijampole.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-marijampole.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-marijampole.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-marijampole.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-mazeikiai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-mazeikiai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-mazeikiai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-mazeikiai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-palanga.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-palanga.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-palanga.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-palanga.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-panevezys.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-panevezys.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-panevezys.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-panevezys.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-siauliai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-siauliai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-siauliai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-siauliai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-taurage.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-taurage.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-taurage.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-taurage.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-telsiai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-telsiai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-telsiai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-telsiai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-trakai.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-trakai.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-trakai.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-trakai.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-utena.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-utena.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-utena.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-utena.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma-vilnius.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma-vilnius.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma-vilnius.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma-vilnius.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/robotu-nuoma.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/robotu-nuoma.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/unitree-g1-nuoma.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/unitree-g1-nuoma.html" />
+    <xhtml:link rel="alternate" hreflang="de-AT" href="https://33bots.at/unitree-g1-mieten.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/unitree-g1-nuoma.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/unitree-g1-nuoma.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://33bots.lt/vestuviu-vedejas.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/vestuviu-vedejas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/vestuviu-vedejas.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/realizacja-wesele-konfetti.jpg</image:loc>
+      <image:title>Humanoidinis robotas dūmuose ant vestuvių šokių aikštelės</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://33bots.lt/video-realizacijos.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/video-realizacijos.html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/realizacje-wideo.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/referenzen-videos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/realizacje-wideo.html" />
+    <image:image>
+      <image:loc>https://33bots.lt/og/video-realizacijos.jpg</image:loc>
+      <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
+    </image:image>
     <video:video>
       <video:thumbnail_loc>https://33bots.lt/video/33bots-robot-event-poster.jpg</video:thumbnail_loc>
-      <video:title>Robotas renginyje — pilnas pasirodymas</video:title>
+      <video:title>Robotas renginyje — pilnas pasirodymas — humanoidinis robotas Unitree G1 | 33bots</video:title>
       <video:description>Humanoidinis robotas Unitree G1 renginyje: vaikšto tarp svečių, gestikuliuoja, pozuoja nuotraukoms ir atlieka choreografiją. Ant krūtinės — kliento logotipas ir QR kodas.</video:description>
       <video:content_loc>https://33bots.lt/video/33bots-robot-event.mp4</video:content_loc>
+      <video:duration>35</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://33bots.lt/video/robot-powitanie-poster.jpg</video:thumbnail_loc>
-      <video:title>Svečių pasitikimas</video:title>
+      <video:title>Svečių pasitikimas — humanoidinis robotas Unitree G1 | 33bots</video:title>
       <video:description>Robotas pasitinka atvykstančius svečius prie įėjimo — mostas, nusilenkimas ir pozavimas nuotraukoms. Populiariausias renginio pradžios scenarijus.</video:description>
       <video:content_loc>https://33bots.lt/video/robot-powitanie.mp4</video:content_loc>
+      <video:duration>15</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://33bots.lt/video/robot-taniec-poster.jpg</video:thumbnail_loc>
-      <video:title>Šokio choreografija</video:title>
+      <video:title>Šokio choreografija — humanoidinis robotas Unitree G1 | 33bots</video:title>
       <video:description>Unitree G1 atlieka šokio choreografiją. Toks pasirodymas dažniausiai tampa gala vakaro ar įmonės šventės kulminacija.</video:description>
       <video:content_loc>https://33bots.lt/video/robot-taniec.mp4</video:content_loc>
+      <video:duration>20</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://33bots.lt/video/robot-gesty-poster.jpg</video:thumbnail_loc>
-      <video:title>Gestai ir bendravimas</video:title>
-      <video:description>Roboto gestai iš arti: rankos paspaudimas, mostai ir judesiai, kuriais robotas bendrauja su svečiais. 43 laisvės laipsniai judesio sklandumui.</video:description>
+      <video:title>Gestai ir bendravimas — humanoidinis robotas Unitree G1 | 33bots</video:title>
+      <video:description>Roboto gestai iš arti: rankos paspaudimas, mostai ir judesiai, kuriais robotas bendrauja su svečiais. 23 laisvės laipsniai judesio sklandumui.</video:description>
       <video:content_loc>https://33bots.lt/video/robot-gesty.mp4</video:content_loc>
+      <video:duration>12</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://33bots.lt/video/robot-spacer-poster.jpg</video:thumbnail_loc>
-      <video:title>Judėjimas erdvėje</video:title>
+      <video:title>Judėjimas erdvėje — humanoidinis robotas Unitree G1 | 33bots</video:title>
       <video:description>Robotas juda po renginio erdvę tarp žmonių, apeidamas kliūtis. LiDAR jutikliai ir operatoriaus priežiūra užtikrina saugų darbą minioje.</video:description>
       <video:content_loc>https://33bots.lt/video/robot-spacer.mp4</video:content_loc>
+      <video:duration>14</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://33bots.lt/video/robot-branding-poster.jpg</video:thumbnail_loc>
-      <video:title>Ženklinimas prekės ženklu</video:title>
+      <video:title>Ženklinimas prekės ženklu — humanoidinis robotas Unitree G1 | 33bots</video:title>
       <video:description>Roboto ženklinimas kliento logotipu ir QR kodu ant krūtinės. Įskaičiuota į nuomos kainą — kiekvienas svečio įrašas dirba jūsų prekės ženklui.</video:description>
       <video:content_loc>https://33bots.lt/video/robot-branding.mp4</video:content_loc>
+      <video:duration>10</video:duration>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-kiek-kainuoja-roboto-nuoma.html</loc>
-    <lastmod>2026-07-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-kodel-robotas-renginyje.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-unitree-g1-specifikacija.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-robotas-parodu-stende.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-kaip-issinuomoti-robota.html</loc>
-    <lastmod>2026-07-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-robotas-ar-kitos-pramogos.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-humanoidinis-ar-mobilus-robotas.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-roboto-sauga-renginyje.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-renginio-pramogos-idejos.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-kaip-pritraukti-lankytojus-i-stenda.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-roboto-nuoma-ar-pirkimas.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-imones-renginio-biudzetas.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-employer-branding-renginiai.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/blog-kaledinio-renginio-planavimas.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-vilnius.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-kaunas.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-klaipeda.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-siauliai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-panevezys.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-alytus.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-marijampole.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-mazeikiai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-jonava.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-utena.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-kedainiai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-telsiai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-taurage.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-palanga.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-druskininkai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-trakai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-birstonas.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://33bots.lt/robotu-nuoma-anyksciai.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

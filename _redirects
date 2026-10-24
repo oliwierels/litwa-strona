@@ -16,3 +16,9 @@ http://33bots.lt/* https://33bots.lt/:splat 301!
 /robotu-nuoma-silute.html /robotu-nuoma-klaipeda.html 301
 /robotu-nuoma-ukmerge.html /robotu-nuoma-vilnius.html 301
 /robotu-nuoma-visaginas.html /robotu-nuoma-utena.html 301
+
+/atrakcijos-renginiams.html /pramogos-renginiams.html 301
+/modernios-pramogos.html /pramogos-renginiams.html 301
+/blog-renginio-pramogos-idejos.html /pramogos-renginiams.html 301
+/blog-robotas-ar-kitos-pramogos.html /pramogos-renginiams.html 301
+/blog-kaledinio-renginio-planavimas.html /kaledinio-vakarelio-idejos.html 301

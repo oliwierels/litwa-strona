@@ -2,13 +2,13 @@
 #
 # Tailwind arkuso kompiliavimas 33bots.lt.
 #
-# Perdarytu dizainu paremti puslapiai (pagrindinis, parduotuvė, diegimai) naudoja
+# Parduotuvės ir diegimų puslapiai (parduotuve.html, roboto-diegimas.html) naudoja
 # assets-redesign.css. Šis skriptas jį sukompiluoja ir kiekviename puslapyje pažymi
 # paties arkuso turinio kontroline suma — versijos numeris pasikeičia lygiai tada,
 # kai pasikeičia išvaizda, todėl naršyklė niekada nepateikia seno arkuso iš talpyklos.
 #
 # NAUDOJIMAS
-#     python3 build_all.py && ./buduj.sh
+#     ./buduj.sh   (pakeitus klases parduotuve.html arba roboto-diegimas.html)
 #
 # Pridėjus naują perdaryto dizaino puslapį, įrašykite jį į tailwind.config.js —
 # kitaip jo klasės nepateks į arkušą ir puslapis liks be stilių.
