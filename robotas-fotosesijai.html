@@ -162,7 +162,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="nav__drugi" href="blog.html">Renginių gidas</a>
     </nav>
     <div class="nav__akcje">
-      <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="nav">kontakt@33bots.lt</a>
+      <a class="nav__tel" href="tel:+48531408004" data-tel="nav">+48 531 408 004</a>
       <a class="link nav__cta link--akcja" href="index.html#kontakt" data-cta="nav">Patikrinti datą</a>
       <button class="nav__przycisk" id="navPrzycisk" type="button" aria-expanded="false" aria-controls="navPanel">Meniu</button>
     </div>
@@ -175,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="index.html#ablauf">Procesas</a></li>
       <li><a href="blog.html">Renginių gidas</a></li>
     </ul>
-    <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="menu">kontakt@33bots.lt</a>
+    <a class="nav__tel" href="tel:+48531408004" data-tel="menu">+48 531 408 004</a>
     <a class="btn btn--akcja" href="index.html#kontakt" data-cta="nav">Patikrinti datą ir kainą <span aria-hidden="true">→</span></a>
   </div>
 </header>
@@ -384,10 +384,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="rez__kontakty">
       <ul class="osoby">
+        <li class="osoba"><div><p class="osoba__imie">Oliwier Latek</p><p class="label">Atsiliepia asmeniškai</p></div>
+          <a class="osoba__tel" href="tel:+48531408004" data-tel="kontakt">+48 531 408 004</a></li>
+        <li class="osoba"><div><p class="osoba__imie">Bartosz Wysocki</p><p class="label">Atsiliepia asmeniškai</p></div>
+          <a class="osoba__tel" href="tel:+48601499947" data-tel="kontakt">+48 601 499 947</a></li>
         <li class="osoba"><p class="label">El. paštas</p>
           <a class="link osoba__mail" href="mailto:kontakt@33bots.lt" data-mail="kontakt">kontakt@33bots.lt</a></li>
       </ul>
-      <p class="body-sm">Atsakome per 24 darbo valandas, dažniausiai tą pačią dieną. Rezervacija be avanso, visoje Lietuvoje.</p>
+      <p class="body-sm">Dažniausiai atsakome per 30&nbsp;minučių. Kainą telefonu pasakysime iš karto. Rezervacija be avanso, visoje Lietuvoje.</p>
     </div>
   </div>
 </section>
@@ -398,7 +402,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="stopka__marka">
       <p class="stopka__logo">33BOTS</p>
       <p>Humanoidinių robotų nuoma · visa Lietuva</p>
-      <p><a href="mailto:kontakt@33bots.lt" data-mail="stopka">kontakt@33bots.lt</a></p>
+      <p><a href="tel:+48531408004" data-tel="stopka">+48 531 408 004</a> · <a href="mailto:kontakt@33bots.lt" data-mail="stopka">kontakt@33bots.lt</a></p>
       <p><a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.facebook.com/33bots" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener">LinkedIn</a></p>
       <p data-jezyki><a href="https://33bots.pl/" hreflang="pl" lang="pl">Polski — 33bots.pl</a> · <a href="https://33bots.de/" hreflang="de" lang="de">Deutschland — 33bots.de</a> · <a href="https://33bots.at/" hreflang="de-AT" lang="de-AT">Österreich — 33bots.at</a></p>
     </div>
@@ -500,7 +504,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </button>
 </div>
 
-<script src="js/strona.js?v=1e6f9a81" defer></script>
+<script src="js/strona.js?v=42e4ddbc" defer></script>
 <script>
 (() => {
   const el = (id) => document.getElementById(id);
@@ -584,11 +588,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const t = document.createElement('p'); t.className = 'h3'; t.textContent = "Jūsų užklausą gavome.";
       const p = document.createElement('p'); p.className = 'body';
       p.append("Atsakysime adresu ", Object.assign(document.createElement('strong'), { textContent: payload.email }),
-        ". Atsakome per 24 darbo valandas, dažniausiai tą pačią dieną.");
+        ". Dažniausiai atsakome per 30 minučių. Kainą iš karto pasakysime telefonu: +48 531 408 004.");
       sukces.append(t, p);
       form.replaceChildren(sukces);
     } catch (err) {
-      blad.textContent = "Nepavyko išsiųsti. Parašykite mums adresu kontakt@33bots.lt.";
+      blad.textContent = "Nepavyko išsiųsti. Skambinkite: +48 531 408 004 arba parašykite adresu kontakt@33bots.lt.";
       blad.hidden = false;
       btn.disabled = false; btn.innerHTML = pierwotny;
     }

@@ -56,6 +56,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/space-grotesk-latin-wght-normal.woff2" />
 <script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="css/site.css?v=aafa00f5" />
+<link rel="stylesheet" href="css/glowna.css?v=908e219a" />
 
 <script type="application/ld+json">
 {
@@ -262,14 +263,6 @@
     },
     {
       "@type": "Question",
-      "name": "Ar galima ant roboto pateikti savo logotipą?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Taip. Jūsų logotipas ir QR kodas atsiduria ant roboto krūtinės, o visa išvaizda derinama prie renginio pobūdžio. Ženklinimas įskaičiuotas į kainą."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "Ar atvažiuojate į mano miestą?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -309,7 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="nav__drugi" href="blog.html">Renginių gidas</a>
     </nav>
     <div class="nav__akcje">
-      <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="nav">kontakt@33bots.lt</a>
+      <a class="nav__tel" href="tel:+48531408004" data-tel="nav">+48 531 408 004</a>
       <a class="link nav__cta link--akcja" href="#kontakt" data-cta="nav">Patikrinti datą</a>
       <button class="nav__przycisk" id="navPrzycisk" type="button" aria-expanded="false" aria-controls="navPanel">Meniu</button>
     </div>
@@ -322,7 +315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="#ablauf">Procesas</a></li>
       <li><a href="blog.html">Renginių gidas</a></li>
     </ul>
-    <a class="nav__tel" href="mailto:kontakt@33bots.lt" data-mail="menu">kontakt@33bots.lt</a>
+    <a class="nav__tel" href="tel:+48531408004" data-tel="menu">+48 531 408 004</a>
     <a class="btn btn--akcja" href="#kontakt" data-cta="nav">Patikrinti datą ir kainą <span aria-hidden="true">→</span></a>
   </div>
 </header>
@@ -342,7 +335,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input class="termin__data" type="date" id="heroData" />
           <a class="btn btn--akcja" href="#kontakt" data-cta="hero">Patikrinti datą ir kainą <span aria-hidden="true">→</span></a>
         </div>
-        <p class="termin__obietnica"><strong>Be avanso, mokate po renginio.</strong> Atsakome dažniausiai tą pačią dieną.</p>
+        <p class="termin__obietnica"><strong>Be avanso, mokate po renginio.</strong> Atsakome maždaug per 30&nbsp;minučių.</p>
+        <p class="termin__telefon">Kainos reikia iš karto? Skambinkite: <a href="tel:+48531408004" data-tel="hero">+48 531 408 004</a></p>
       </div>
       <a class="link" href="video-realizacijos.html">Žiūrėti realizacijas</a>
     </div>
@@ -357,7 +351,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </figure>
 </section>
 
-<section class="proof" aria-label="Mus rodė">
+<section class="proof" aria-label="Mastas ir žiniasklaida">
+  <div class="skala">
+    <div class="skala__liczba">
+      <p class="skala__cyfry"><span data-licz="100">100</span>+</p>
+      <p class="skala__opis">renginių penkiose šalyse — gala vakarai, parodos, konferencijos, įmonių ir lauko renginiai</p>
+    </div>
+    <dl class="skala__fakty">
+      <div class="fakt"><dt class="fakt__liczba"><span data-licz="5">5</span></dt><dd class="fakt__opis">šalys: Lenkija, Lietuva, Vokietija, Čekija, Rumunija</dd></div>
+      <div class="fakt"><dt class="fakt__liczba"><span data-licz="3">3</span>&nbsp;×&nbsp;TVP</dt><dd class="fakt__opis">TVP2 rytinė laida, Teleexpress ir TVP Gdanskas</dd></div>
+      <div class="fakt"><dt class="fakt__liczba"><span data-licz="0">0</span>&nbsp;€</dt><dd class="fakt__opis">avanso — sąskaitą išrašome po renginio</dd></div>
+      <div class="fakt"><dt class="fakt__liczba"><span data-licz="30">30</span>&nbsp;min</dt><dd class="fakt__opis">iki atsakymo su kaina — telefonu iš karto</dd></div>
+    </dl>
+  </div>
   <p class="label proof__label">Mus rodė</p>
   <ul class="proof__list">
     <li><a href="https://vod.tvp.pl/programy,88/pytanie-na-sniadanie-odcinki,2542729/odcinek-1287,S03E1287,3348151" target="_blank" rel="noopener">TVP2 rytinė laida <span class="proof__note">0:35–1:00</span></a></li>
@@ -367,14 +373,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ul>
 </section>
 
+<section id="robot" class="sec robot" aria-labelledby="robot-h" data-czesc="glowa">
+  <div class="robot__scena">
+    <div class="wrap robot__uklad">
+      <div class="robot__tekst">
+        <p class="label sec__meta">04 / 13 · Robotas iš arti</p>
+        <h2 id="robot-h" class="h2">Susipažinkite su juo dar prieš jam atvykstant.</h2>
+        <ol class="robot__czesci">
+          <li data-czesc="glowa"><span class="label">01 · Galva</span><span class="robot__opis">LiDAR ir kamera — mato aplink esančius svečius</span></li>
+          <li data-czesc="twarz"><span class="label">02 · Veidas</span><span class="robot__opis">Kalba bet kuria kalba, natūraliu balsu</span></li>
+          <li data-czesc="piers"><span class="label">03 · Krūtinė</span><span class="robot__opis">Jūsų logotipas ir QR kodas — kiekvienoje svečių nuotraukoje</span></li>
+          <li data-czesc="rece"><span class="label">04 · Rankos</span><span class="robot__opis">Pasisveikina, paspaudžia ranką, pozuoja nuotraukoms</span></li>
+          <li data-czesc="nogi"><span class="label">05 · Kojos</span><span class="robot__opis">Vaikšto tarp svečių ir apeina kliūtis</span></li>
+          <li data-czesc="stopy"><span class="label">06 · Pėdos</span><span class="robot__opis">Jam užtenka kelių kvadratinių metrų</span></li>
+        </ol>
+        <div class="polecenia" role="group" aria-labelledby="poleceniaTytul">
+          <p class="label" id="poleceniaTytul">Duokite robotui komandą</p>
+          <div class="polecenia__lista">
+            <button class="polecenie" type="button" data-robot-gest="macha">Pamojuok</button>
+            <button class="polecenie" type="button" data-robot-gest="tanczy">Pašok</button>
+            <button class="polecenie" type="button" data-robot-gest="buziak">Pasiųsk bučinį</button>
+            <button class="polecenie" type="button" data-robot-gest="zdjecie">Rankas aukštyn</button>
+            <button class="polecenie" type="button" data-robot-gest="mowi">Pasakyk ką nors</button>
+          </div>
+          <button class="polecenia__pauza" id="robotPauza" type="button" aria-pressed="false" data-ruch-przelacz>Sustabdyti judėjimą</button>
+        </div>
+      </div>
+      <div class="robot__pole" data-scena="robot" aria-hidden="true">
+        <p class="robot__chwyc label">Vilkite ir sukite</p>
+        <p class="hud" data-hud="glowa"><span class="hud__kreska"></span><span class="hud__tekst">LiDAR ir kamera</span></p>
+        <p class="hud" data-hud="twarz"><span class="hud__kreska"></span><span class="hud__tekst">Balsas bet kuria kalba</span></p>
+        <p class="hud" data-hud="piers"><span class="hud__kreska"></span><span class="hud__tekst">Jūsų logotipas</span></p>
+        <p class="hud" data-hud="dlon"><span class="hud__kreska"></span><span class="hud__tekst">Paspaudžia ranką</span></p>
+        <p class="hud" data-hud="kolano"><span class="hud__kreska"></span><span class="hud__tekst">Apeina kliūtis</span></p>
+        <p class="hud" data-hud="stopa"><span class="hud__kreska"></span><span class="hud__tekst">Keli m²</span></p>
+      </div>
+    </div>
+  </div>
+  <p class="dymek" id="robotDymek" role="status" aria-live="polite"></p>
+</section>
+
+<section id="zasady" class="sec" aria-labelledby="zasady-h">
+  <div class="wrap">
+    <div class="zasady__glowa wejscie">
+      <p class="label sec__meta">05 / 13 · Principai</p>
+      <h2 id="zasady-h" class="h2">Pirmiausia — svečių saugumas. Tada — efektas.</h2>
+      <p class="body">Ką ir kada daro robotas, visada sprendžia operatorius. Sudėtingesnius judesius rodome tik ten, kur jiems yra vietos — operatorius įvertina salę, prižiūri atstumus ir suvaldo minią. Todėl niekam nieko nenutinka, o su robotu pasikalba kuo daugiau žmonių.</p>
+      <button class="pasy__pauza zasady__pauza" type="button" aria-pressed="false" data-ruch-przelacz hidden>Sustabdyti judėjimą</button>
+    </div>
+
+    <h3 class="label zasady__grupa">Saugumas</h3>
+    <ul class="zasady wejscie">
+      <li class="zasada">
+        <div class="zasada__anim" data-animacja="operator" aria-hidden="true">
+          <svg viewBox="0 0 240 120"><g class="a-tlum"><circle cx="70" cy="34" r="5" class="a-gosc a-t1" /><circle cx="64" cy="82" r="5" class="a-gosc a-t2" /><circle cx="168" cy="30" r="5" class="a-gosc a-t3" /><circle cx="176" cy="86" r="5" class="a-gosc a-t4" /><circle cx="120" cy="104" r="5" class="a-gosc a-t5" /></g><rect x="114" y="54" width="12" height="12" class="a-pelny" /><g class="a-operator"><circle cx="0" cy="0" r="6" class="a-obrys" /></g><text x="120" y="12" class="a-napis a-gesto">ANKŠTA — OPERATORIUS ŠALIA</text><text x="120" y="12" class="a-napis a-luzno">ERDVU — OPERATORIUS NUOŠALIAI</text></svg>
+        </div>
+        <h4 class="h3">Operatorius: arti, bet nepastebimai</h4>
+        <p class="body">Sertifikuotas operatorius būna prie roboto viso renginio metu. Kai aplink susidaro spūstis, jis stovi šalia ir prižiūri saugumą. Kai erdviau, pasitraukia į šešėlį — svečiai mato robotą, o ne šalia jo esantį žmogų. Kiekvienai realizacijai taikomas civilinės atsakomybės draudimas.</p>
+      </li>
+      <li class="zasada">
+        <div class="zasada__anim" data-animacja="radar" aria-hidden="true">
+          <svg viewBox="0 0 240 120"><circle cx="120" cy="60" r="18" class="a-obrys a-slabo" /><circle cx="120" cy="60" r="36" class="a-obrys a-slabo" /><circle cx="120" cy="60" r="54" class="a-obrys a-slabo" /><circle cx="120" cy="60" r="54" class="a-obrys a-ping" /><g class="a-wiazka"><line x1="120" y1="60" x2="120" y2="4" class="a-linia" /></g><rect x="116" y="56" width="8" height="8" class="a-pelny" /><circle cx="92" cy="30" r="4" class="a-gosc a-g1" /><circle cx="160" cy="44" r="4" class="a-gosc a-g2" /><circle cx="150" cy="96" r="4" class="a-gosc a-g3" /><circle cx="80" cy="84" r="4" class="a-gosc a-g4" /></svg>
+        </div>
+        <h4 class="h3">Mato aplink esančius žmones</h4>
+        <p class="body">LiDAR ir kompiuterinė rega leidžia realiu laiku apeiti žmones ir kliūtis. Robotas ramiai juda tarp svečių, o kiekvieną jo žingsnį prižiūri operatorius.</p>
+      </li>
+      <li class="zasada">
+        <div class="zasada__anim" data-animacja="bateria" aria-hidden="true">
+          <svg viewBox="0 0 240 120"><rect x="60" y="38" width="108" height="44" class="a-obrys" /><rect x="168" y="52" width="8" height="16" class="a-pelny" /><rect x="66" y="44" width="96" height="32" class="a-ogniwo" /><text x="120" y="108" class="a-napis a-wymiana">KEITIMAS — ŠOU TĘSIASI</text></svg>
+        </div>
+        <h4 class="h3">Baterijos be pertraukos pasirodyme</h4>
+        <p class="body">Robotas dirba su keičiamomis baterijomis. Operatorius turi atsarginį komplektą ir keičia baterijas renginio metu — pasirodymas nesustoja dėl įkrovimo.</p>
+      </li>
+    </ul>
+
+    <h3 class="label zasady__grupa">Bendravimas su svečiais</h3>
+    <ul class="zasady wejscie">
+      <li class="zasada">
+        <div class="zasada__anim" data-animacja="goscie" aria-hidden="true">
+          <svg viewBox="0 0 240 120"><circle cx="40" cy="30" r="5" class="a-gosc a-w1" /><circle cx="96" cy="92" r="5" class="a-gosc a-w2" /><circle cx="150" cy="24" r="5" class="a-gosc a-w3" /><circle cx="206" cy="84" r="5" class="a-gosc a-w4" /><circle cx="24" cy="96" r="5" class="a-gosc a-slabo" /><circle cx="222" cy="22" r="5" class="a-gosc a-slabo" /><g class="a-robot"><circle cx="0" cy="0" r="16" class="a-obrys a-ping2" /><rect x="-6" y="-6" width="12" height="12" class="a-pelny" /></g></svg>
+        </div>
+        <h4 class="h3">Einame pas žmones</h4>
+        <p class="body">Robotas nelaukia kampe, kol kas nors prieis. Jis pats prieina prie svečių, užkalbina ir kviečia pasikalbėti — kad su robotu pasikalbėtų kuo daugiau žmonių, o ne tik drąsiausieji.</p>
+      </li>
+      <li class="zasada">
+        <div class="zasada__anim" data-animacja="mowa" aria-hidden="true">
+          <svg viewBox="0 0 240 120"><g class="a-fala"><rect x="44" y="40" width="6" height="40" /><rect x="56" y="40" width="6" height="40" /><rect x="68" y="40" width="6" height="40" /><rect x="80" y="40" width="6" height="40" /><rect x="92" y="40" width="6" height="40" /><rect x="104" y="40" width="6" height="40" /><rect x="116" y="40" width="6" height="40" /><rect x="128" y="40" width="6" height="40" /><rect x="140" y="40" width="6" height="40" /><rect x="152" y="40" width="6" height="40" /><rect x="164" y="40" width="6" height="40" /><rect x="176" y="40" width="6" height="40" /><rect x="188" y="40" width="6" height="40" /></g><g class="a-slowa"><text x="120" y="112">Laba diena</text><text x="120" y="112">Hello</text><text x="120" y="112">Guten Tag</text><text x="120" y="112">Dzień dobry</text><text x="120" y="112">Bună ziua</text><text x="120" y="112">Dobrý den</text><text x="120" y="112">Bonjour</text><text x="120" y="112">Hola</text></g></svg>
+        </div>
+        <h4 class="h3">Kalba bet kuria kalba</h4>
+        <p class="body">Kalba lietuviškai ir bet kuria kita kalba, natūraliu balsu, ir renginio metu perjungia kalbas — net tada, kai svečiai atvyko iš kelių šalių.</p>
+      </li>
+      <li class="zasada">
+        <div class="zasada__anim" data-animacja="wiedza" aria-hidden="true">
+          <svg viewBox="0 0 240 120"><rect x="40" y="24" width="150" height="6" class="a-wiersz a-r1" /><rect x="40" y="44" width="120" height="6" class="a-wiersz a-r2" /><rect x="40" y="64" width="160" height="6" class="a-wiersz a-r3" /><rect x="40" y="84" width="90" height="6" class="a-wiersz a-r4" /><rect x="40" y="100" width="8" height="12" class="a-pelny a-kursor" /></svg>
+        </div>
+        <h4 class="h3">Žino jūsų renginį</h4>
+        <p class="body">Prieš renginį įkeliame žinias: programą, pranešėjus, paslaugas ir dažniausius klausimus. Robotas svečiams atsako konkrečiai ir reaguoja į tai, kas vyksta salėje.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <!-- ══════════ 04 IM EINSATZ ══════════ -->
 <section id="referenzen" class="sec" aria-labelledby="referenzen-h">
   <span class="kotwica" id="realizacje"></span><span class="kotwica" id="zaufanie"></span>
   <div class="wrap">
     <div class="sec__glowa wejscie">
-      <p class="label sec__meta">04 / 11 · Realizacijos</p>
+      <p class="label sec__meta">06 / 13 · Realizacijos</p>
       <h2 id="referenzen-h" class="h2">Realizacijos</h2>
-      <p class="body">Nuo pokylio Drezdeno rūmuose ir MSPO parodos iki valsčiaus parado ir vestuvių — daugiau nei 40 renginių penkiose šalyse. Spustelėkite kadrą ir pamatysite, ką darė robotas.</p>
+      <p class="body">Nuo pokylio Drezdeno rūmuose ir MSPO parodos iki valsčiaus parado ir vestuvių — daugiau nei 100 renginių penkiose šalyse. Spustelėkite kadrą ir pamatysite, ką darė robotas.</p>
     </div>
     <div class="nasali wejscie">
       <div class="nasali__duzy">
@@ -421,16 +528,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><button class="realizacja" type="button" data-cs="gonia-auto"><picture><source type="image/webp" srcset="realizacja-robot-w-deszczu-400.webp 400w, realizacja-robot-w-deszczu.webp 900w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-robot-w-deszczu.jpg" alt="Humanoidinis robotas raudonais marškinėliais su skėčiu prie automobilių salono" width="900" height="1200" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">Automobilių salonas „Gonia“</span><span class="realizacja__opis">Automobilių salonas</span></button></li>
         <li><button class="realizacja" type="button" data-cs="dream-med"><picture><source type="image/webp" srcset="realizacja-dream-med-expo-400.webp 400w, realizacja-dream-med-expo.webp 810w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-dream-med-expo.jpg" alt="Humanoidinis robotas Dream-Med stende Warsaw Medical Expo parodoje" width="810" height="1080" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">Dream-Med</span><span class="realizacja__opis">Warsaw Medical Expo · 2026</span></button></li>
         <li><button class="realizacja" type="button" data-cs="lexai"><picture><source type="image/webp" srcset="realizacja-lexai-ulica-400.webp 400w, realizacja-lexai-ulica.webp 900w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-lexai-ulica.jpg" alt="Humanoidinis robotas LEX AI su portfeliu eina senamiesčio gatve" width="900" height="1186" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">LEX AI</span><span class="realizacja__opis">Ilgasis turgus · Gdanskas</span></button></li>
-      </ul>
-    </div>
-    <div class="pas" data-predkosc="23" data-kierunek="-1">
-      <ul class="pas__tor">
         <li><button class="realizacja" type="button" data-cs="matys"><picture><source type="image/webp" srcset="realizacja-matys-stoisko-400.webp 400w, realizacja-matys-stoisko.webp 810w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-matys-stoisko.jpg" alt="Humanoidinis robotas Matys marškinėliais nekilnojamojo turto vystytojo stende" width="810" height="1080" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">Matys Development</span><span class="realizacja__opis">Nekilnojamojo turto paroda · Ščecinas</span></button></li>
-        <li><button class="realizacja" type="button" data-cs="jednorozec"><picture><source type="image/webp" srcset="realizacja-jednorozec-zachod-400.webp 400w, realizacja-jednorozec-zachod.webp 810w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-jednorozec-zachod.jpg" alt="Humanoidinis robotas lauko parade saulei leidžiantis" width="810" height="1080" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">Jednorozec valsčius</span><span class="realizacja__opis">Vienaragių paradas</span></button></li>
-        <li><button class="realizacja" type="button" data-cs="loza"><picture><source type="image/webp" srcset="realizacja-spotkanie-biznesowe-400.webp 400w, realizacja-spotkanie-biznesowe.webp 900w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-spotkanie-biznesowe.jpg" alt="Humanoidinis robotas su Verslininkų ložės marškinėliais terasoje" width="900" height="1200" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">Verslininkų ložė</span><span class="realizacja__opis">Mikolaikai</span></button></li>
         <li><button class="realizacja" type="button" data-cs="szkola-kosmos"><picture><source type="image/webp" srcset="realizacja-szkola-kosmos-scena-400.webp 400w, realizacja-szkola-kosmos-scena.webp 810w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-szkola-kosmos-scena.jpg" alt="Humanoidinis robotas mokyklos „Kosmos“ scenoje prieš mokinius" width="810" height="1080" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">Mokykla „Kosmos“</span><span class="realizacja__opis">Mokslo metų pradžia · Majaland</span></button></li>
-        <li><button class="realizacja" type="button" data-cs="yeah-gym"><picture><source type="image/webp" srcset="realizacja-yeah-gym-trening-400.webp 400w, realizacja-yeah-gym-trening.webp 810w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-yeah-gym-trening.jpg" alt="Humanoidinis robotas šalia trenerės sporto klube" width="810" height="1080" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">YEAH GYM</span><span class="realizacja__opis">Sporto klubas · Vroclavas</span></button></li>
-        <li><button class="realizacja" type="button" data-cs="tet-trung-thu"><picture><source type="image/webp" srcset="realizacja-tet-trung-thu-400.webp 400w, realizacja-tet-trung-thu.webp 810w" sizes="(max-width: 767px) 168px, 248px" /><img src="realizacja-tet-trung-thu.jpg" alt="Humanoidinis robotas su šventiniu ženklinimu Rudens vidurio šventėje" width="810" height="1080" loading="lazy" decoding="async" draggable="false" /></picture><span class="realizacja__klient">Tết Trung Thu</span><span class="realizacja__opis">Rudens vidurio šventė</span></button></li>
       </ul>
     </div>
   </div>
@@ -506,43 +605,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ══════════ 05 AUFTRITT ══════════ -->
-<section id="auftritt" class="sec" aria-labelledby="auftritt-h">
-  <span class="kotwica" id="mozliwosci"></span>
-  <div class="wrap grid12">
-    <div class="wystep__glowa wejscie">
-      <p class="label sec__meta">05 / 11 · Pasirodymas</p>
-      <h2 id="auftritt-h" class="h2">Kaip kuriame pasirodymą</h2>
-      <p class="body">Tas pats roboto modelis gali stovėti kampe kaip dekoracija arba vesti gala vakarą. Skirtumą lemia pasiruošimas: charakteris, pokalbis ir reakcijos į salę, kuriuos ištobulinome per daugiau nei 40 renginių — nuo korporatyvinių konferencijų iki piknikų.</p>
+<section id="wystep" class="sec" aria-labelledby="wystep-h" data-poza="wita">
+  <span class="kotwica" id="auftritt"></span><span class="kotwica" id="mozliwosci"></span>
+  <div class="wrap grid12 wystep">
+    <div class="wystep__lewa">
+      <div class="wystep__glowa wejscie">
+        <p class="label sec__meta">07 / 13 · Pasirodymas</p>
+        <h2 id="wystep-h" class="h2">Kaip kuriame pasirodymą</h2>
+      </div>
+      <div class="wystep__scena" data-scena="wystep" aria-hidden="true">
+        <p class="wystep__krok label"><span id="wystepNr">01</span> / 05 · <span id="wystepNazwa">Charakteris</span></p>
+        <p class="wystep__jezyk" id="wystepJezyk">Laba diena</p>
+        <p class="wystep__rec label"><span class="wystep__kropka"></span>REC <span id="wystepCzas">00:00:00</span></p>
+        <span class="wystep__rog wystep__rog--1"></span><span class="wystep__rog wystep__rog--2"></span><span class="wystep__rog wystep__rog--3"></span><span class="wystep__rog wystep__rog--4"></span>
+        <p class="hud hud--scena" data-hud="piers" data-hud-poza="branding"><span class="hud__kreska"></span><span class="hud__tekst">Jūsų logotipas</span></p>
+      </div>
     </div>
+    <div class="wystep__prawa">
+      <p class="body wystep__wstep wejscie">Tas pats roboto modelis gali stovėti kampe kaip dekoracija arba vesti gala vakarą. Skirtumą lemia pasiruošimas: charakteris, pokalbis ir reakcijos į salę, kuriuos ištobulinome per daugiau nei 100 renginių — nuo korporatyvinių konferencijų iki piknikų.</p>
     <ol class="wiersze wejscie">
-      <li class="wiersz">
+      <li class="wiersz" data-poza="wita">
         <span class="label wiersz__nr">01</span>
         <div><h3 class="h3">Charakteris</h3>
           <p class="body">Nustatome, kaip robotas turi elgtis: elegantiškas vedėjas, laisvas ir linksmas ar dalykiškas ekspertas. Didžiausią įspūdį paprastai palieka akimirka, kai jis sureaguoja į tai, kas ką tik įvyko salėje.</p></div>
       </li>
-      <li class="wiersz">
+      <li class="wiersz" data-poza="mowi">
         <span class="label wiersz__nr">02</span>
         <div><h3 class="h3">Balsas ir žinios</h3>
           <p class="body">Kalba lietuviškai ir bet kuria kita kalba — natūraliai, be dirbtinio robotiško skambesio, o vieno renginio metu perjungia kalbas. Esame dirbę renginiuose Lenkijoje, Lietuvoje, Vokietijoje, Čekijoje ir Rumunijoje. Pasitinka svečius, atsako į klausimus ir pristato programos punktus. Įkeliame jam žinias apie renginį: kas pasirodo, kas numatyta programoje ir kokia proga susirenkate.</p></div>
       </li>
-      <li class="wiersz">
+      <li class="wiersz" data-poza="tanczy">
         <span class="label wiersz__nr">03</span>
         <div><h3 class="h3">Scenarijus</h3>
           <p class="body">Svečių pasitikimas, pranešėjo pristatymas, atgalinis skaičiavimas iki vidurnakčio, apdovanojimo įteikimas. Robotas moka kelias choreografijas — nuo ramių iki dinamiškų. Jis tampa programos dalimi, o ne tik stovi salėje.</p></div>
       </li>
-      <li class="wiersz">
+      <li class="wiersz" data-poza="branding">
         <span class="label wiersz__nr">04</span>
         <div><h3 class="h3">Ženklinimas</h3>
           <p class="body">Logotipas ir QR kodas ant krūtinės, o visa išvaizda derinama prie renginio pobūdžio — nuo firminių marškinėlių iki blizgučiais siuvinėto smokingo ir karūnos. Ženklinimas įskaičiuotas į kainą.</p>
           <figure class="wiersz__foto"><picture><source type="image/webp" srcset="realizacja-gala-detal-400.webp 400w, realizacja-gala-detal.webp 900w" sizes="240px" /><img src="realizacja-gala-detal.jpg" alt="Humanoidinio roboto su karūna ir blizgučiais siuvinėtu smokingu stambus planas" width="900" height="1200" loading="lazy" decoding="async" /></picture><figcaption class="podpis">Drezdeno pilių naktis</figcaption></figure></div>
       </li>
-      <li class="wiersz">
+      <li class="wiersz" data-poza="zdjecie">
         <span class="label wiersz__nr">05</span>
         <div><h3 class="h3">Nuotraukos ir vaizdo įrašai</h3>
           <p class="body">Robotas — svečias, kurį visi filmuoja telefonais. Planuojame akimirkas kadrams — pasitikimą prie foto sienelės, įžengimą į sceną, šokį, — o ženklinimas pasirūpina, kad kiekviename įraše matytųsi jūsų prekės ženklas.</p></div>
       </li>
     </ol>
+    </div>
   </div>
 </section>
 
@@ -550,7 +659,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="case-study" class="sec sec--jasna" aria-labelledby="cs-h">
   <div class="wrap grid12">
     <div class="cs__tekst wejscie">
-      <p class="label sec__meta">06 / 11 · Atvejo analizė</p>
+      <p class="label sec__meta">08 / 13 · Atvejo analizė</p>
       <h2 id="cs-h" class="h2">Eco Studio ELECTRO-SYSTEM didysis finalas</h2>
       <dl class="cs__opis">
         <div><dt class="label">Renginys</dt>
@@ -560,6 +669,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><dt class="label">Rezultatas</dt>
           <dd class="body">Organizatorius suteikė 33&nbsp;Bots Eko Partnerio 2026 vardą, o finalą nušvietė TVP2 rytinės laidos komanda.</dd></div>
       </dl>
+      <p><a class="link" href="video-realizacijos.html">Visos realizacijos ir vaizdo įrašai <span aria-hidden="true">→</span></a></p>
     </div>
     <figure class="cs__foto wejscie">
       <picture><source type="image/webp" srcset="realizacja-eco-studio-eko-partner-400.webp 400w, realizacja-eco-studio-eko-partner.webp 1200w" sizes="(max-width: 1023px) 100vw, 45vw" /><img src="realizacja-eco-studio-eko-partner.jpg" alt="Eko Partnerio diplomo įteikimas Eco Studio finalo scenoje, ekrane — 33bots logotipas" width="1200" height="800" loading="lazy" decoding="async" /></picture>
@@ -577,54 +687,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ══════════ 07 FORMATE UND PREISE ══════════ -->
-<section id="preise" class="sec" aria-labelledby="preise-h">
-  <span class="kotwica" id="cennik"></span>
+<section id="formaty" class="sec" aria-labelledby="formaty-h">
+  <span class="kotwica" id="preise"></span><span class="kotwica" id="cennik"></span>
   <div class="wrap">
     <div class="sec__glowa wejscie">
-      <p class="label sec__meta">07 / 11 · Formatai</p>
-      <h2 id="preise-h" class="h2">Formatai ir kaina</h2>
+      <p class="label sec__meta">09 / 13 · Formatai</p>
+      <h2 id="formaty-h" class="h2">Formatai ir kaina</h2>
       <p class="body">Įkainojame pasirodymą, o ne įrangos nuomą. Kiekvienu formatu robotas atvyksta su operatoriumi, scenarijumi ir žiniomis apie jūsų renginį.</p>
     </div>
-    <ul class="formaty wejscie">
-      <li class="format">
-        <h3 class="h3">Kelios valandos</h3>
-        <p class="body">Kelios valandos renginio programoje — atidarymas, blokas scenoje, piko valandos parodos stende.</p>
-        <p class="num">Individuali kaina</p>
-        <p class="label format__cena-opis">visada pigiau nei visa diena</p>
-      </li>
-      <li class="format">
-        <h3 class="h3">Visa diena</h3>
-        <p class="body">Robotas jūsų dispozicijoje visą renginio dieną, su operatoriumi ir atsarginėmis baterijomis.</p>
-        <p class="num">nuo 2&nbsp;100&nbsp;€</p>
-        <p class="label format__cena-opis">be PVM</p>
-      </li>
-      <li class="format">
-        <h3 class="h3">Parodos</h3>
-        <p class="body">Dvi dienos ir daugiau — parodos, festivaliai, roadshow.</p>
-        <p class="num">−15&nbsp;%</p>
-        <p class="label format__cena-opis">kiekvienai dienai</p>
-      </li>
-    </ul>
+    <div class="kalk wejscie" id="kalkulator">
+      <fieldset class="kalk__formaty">
+        <legend class="label">Pasirinkite formatą</legend>
+        <label class="format"><input type="radio" name="kalk_format" value="wejscie" />
+          <span class="format__glowa"><span class="h3">Kelios valandos</span><span class="format__znak" aria-hidden="true"></span></span>
+          <span class="body">Kelios valandos renginio programoje — atidarymas, blokas scenoje, piko valandos parodos stende.</span>
+          <span class="label format__cena-opis">Individuali kaina · visada pigiau nei visa diena</span></label>
+        <label class="format"><input type="radio" name="kalk_format" value="dzien" checked />
+          <span class="format__glowa"><span class="h3">Visa diena</span><span class="format__znak" aria-hidden="true"></span></span>
+          <span class="body">Robotas jūsų dispozicijoje visą renginio dieną, su operatoriumi ir atsarginėmis baterijomis.</span>
+          <span class="label format__cena-opis">nuo 2&nbsp;100&nbsp;€ be PVM</span></label>
+        <label class="format"><input type="radio" name="kalk_format" value="dni" />
+          <span class="format__glowa"><span class="h3">Parodos</span><span class="format__znak" aria-hidden="true"></span></span>
+          <span class="body">Dvi dienos ir daugiau — parodos, festivaliai, roadshow.</span>
+          <span class="label format__cena-opis">−15&nbsp;% kiekvienai dienai</span></label>
+      </fieldset>
+      <div class="kalk__wynik">
+        <div class="kalk__dni" id="kalkDni" hidden>
+          <span class="label" id="kalkDniEtykieta">Dienų skaičius</span>
+          <div class="kalk__licznik" role="group" aria-labelledby="kalkDniEtykieta">
+            <button class="kalk__krok" type="button" data-dni="-1" aria-label="Viena diena mažiau">−</button>
+            <output class="kalk__ile" id="kalkIle" aria-live="polite">2</output>
+            <button class="kalk__krok" type="button" data-dni="1" aria-label="Viena diena daugiau">+</button>
+          </div>
+        </div>
+        <p class="label" id="kalkEtykieta">Visa diena · kaina be PVM</p>
+        <p class="kalk__cena" aria-live="polite"><span class="kalk__od" id="kalkOd">nuo</span> <span id="kalkKwota">2&nbsp;100</span><span class="kalk__zl" id="kalkZl">&nbsp;€</span></p>
+        <p class="body-sm" id="kalkOpis">Galutinė suma priklauso nuo renginio vietos ir trukmės.</p>
+      </div>
+    </div>
     <p class="body formaty__wcenie">Į kainą įeina: operatorius, atvykimas, ženklinimas (logotipas, QR kodas) ir civilinės atsakomybės draudimas. <strong>Mokate po renginio.</strong> Galutinė suma priklauso nuo renginio vietos ir trukmės.</p>
-    <p class="formaty__cta"><a class="btn btn--akcja" href="#kontakt" data-cta="formaty">Patikrinti datą ir kainą <span aria-hidden="true">→</span></a></p>
+    <p class="formaty__cta"><a class="btn btn--akcja" href="#kontakt" data-cta="formaty">Patikrinti datą ir tikslią kainą <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
-<!-- ══════════ 08 ABLAUF ══════════ -->
-<section id="ablauf" class="sec" aria-labelledby="ablauf-h">
-  <span class="kotwica" id="proces"></span>
+<section id="proces" class="sec" aria-labelledby="proces-h">
+  <span class="kotwica" id="ablauf"></span>
   <div class="wrap">
     <div class="sec__glowa wejscie">
-      <p class="label sec__meta">08 / 11 · Procesas</p>
-      <h2 id="ablauf-h" class="h2">Nuo pokalbio iki sąskaitos</h2>
+      <p class="label sec__meta">10 / 13 · Procesas</p>
+      <h2 id="proces-h" class="h2">Nuo pokalbio iki sąskaitos</h2>
     </div>
     <ol class="kroki wejscie">
       <li class="krok">
         <span class="label">01</span>
         <h3 class="h3">Pokalbis</h3>
-        <p class="label krok__czas">per 24 darbo valandas</p>
-        <p class="body">Paliekate kontaktus arba parašote. Susisiekiame ir pasakome konkrečią sumą — dažniausiai tą pačią dieną.</p>
+        <p class="label krok__czas">apie 30 minučių</p>
+        <p class="body">Paliekate kontaktus arba paskambinate. Perskambiname ir pasakome konkrečią sumą, dažniausiai per 30 minučių. Telefonu — iš karto.</p>
       </li>
       <li class="krok">
         <span class="label">02</span>
@@ -653,7 +771,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="faq" class="sec" aria-labelledby="faq-h">
   <div class="wrap grid12">
     <div class="faq__glowa wejscie">
-      <p class="label sec__meta">09 / 11 · DUK</p>
+      <p class="label sec__meta">11 / 13 · DUK</p>
       <h2 id="faq-h" class="h2">Prieš paklausiant</h2>
     </div>
     <div class="faq wejscie">
@@ -690,16 +808,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="faq__a" id="faq-8" role="region" aria-labelledby="faq-8-q" hidden><p>Taip. LiDAR ir kompiuterinė rega leidžia realiu laiku apeiti žmones ir kliūtis, pasirodymą prižiūri operatorius, o veiklai taikoma civilinės atsakomybės draudimo apsauga.</p></div>
       </div>
       <div class="faq__item">
-        <h3 class="faq__h"><button class="faq__q" type="button" id="faq-9-q" aria-expanded="false" aria-controls="faq-9" data-faq="Ar galima ant roboto pateikti savo logotipą?">Ar galima ant roboto pateikti savo logotipą?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
-        <div class="faq__a" id="faq-9" role="region" aria-labelledby="faq-9-q" hidden><p>Taip. Jūsų logotipas ir QR kodas atsiduria ant roboto krūtinės, o visa išvaizda derinama prie renginio pobūdžio. Ženklinimas įskaičiuotas į kainą.</p></div>
+        <h3 class="faq__h"><button class="faq__q" type="button" id="faq-9-q" aria-expanded="false" aria-controls="faq-9" data-faq="Ar atvažiuojate į mano miestą?">Ar atvažiuojate į mano miestą?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
+        <div class="faq__a" id="faq-9" role="region" aria-labelledby="faq-9-q" hidden><p>Taip — į kiekvieną Lietuvos miestą: nuo Klaipėdos iki Visagino, nuo Palangos iki Druskininkų. Atvykimas įskaičiuotas į kainą, o pati renginio vieta turi įtakos galutinei sumai.</p></div>
       </div>
       <div class="faq__item">
-        <h3 class="faq__h"><button class="faq__q" type="button" id="faq-10-q" aria-expanded="false" aria-controls="faq-10" data-faq="Ar atvažiuojate į mano miestą?">Ar atvažiuojate į mano miestą?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
-        <div class="faq__a" id="faq-10" role="region" aria-labelledby="faq-10-q" hidden><p>Taip — į kiekvieną Lietuvos miestą: nuo Klaipėdos iki Visagino, nuo Palangos iki Druskininkų. Atvykimas įskaičiuotas į kainą, o pati renginio vieta turi įtakos galutinei sumai.</p></div>
-      </div>
-      <div class="faq__item">
-        <h3 class="faq__h"><button class="faq__q" type="button" id="faq-11-q" aria-expanded="false" aria-controls="faq-11" data-faq="Ar dirbate ir užsienyje?">Ar dirbate ir užsienyje?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
-        <div class="faq__a" id="faq-11" role="region" aria-labelledby="faq-11-q" hidden><p>Taip. Esame dirbę renginiuose Lenkijoje, Lietuvoje, Vokietijoje, Čekijoje ir Rumunijoje. Robotas kalba bet kuria kalba ir renginio metu perjungia kalbas — taip jis pasveikina svečius jų kalba ir atsako į jų klausimus.</p></div>
+        <h3 class="faq__h"><button class="faq__q" type="button" id="faq-10-q" aria-expanded="false" aria-controls="faq-10" data-faq="Ar dirbate ir užsienyje?">Ar dirbate ir užsienyje?<span class="faq__znak" aria-hidden="true"><span></span><span></span></span></button></h3>
+        <div class="faq__a" id="faq-10" role="region" aria-labelledby="faq-10-q" hidden><p>Taip. Esame dirbę renginiuose Lenkijoje, Lietuvoje, Vokietijoje, Čekijoje ir Rumunijoje. Robotas kalba bet kuria kalba ir renginio metu perjungia kalbas — taip jis pasveikina svečius jų kalba ir atsako į jų klausimus.</p></div>
       </div>
     </div>
   </div>
@@ -711,7 +825,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="kontakt" class="sec sec--powierzchnia" aria-labelledby="kontakt-h">
   <div class="wrap grid12 rez">
     <div class="rez__glowa wejscie">
-      <p class="label sec__meta">10 / 11 · Rezervacija</p>
+      <p class="label sec__meta">12 / 13 · Rezervacija</p>
       <h2 id="kontakt-h" class="h2">Patikrinkite, ar jūsų data laisva.</h2>
     </div>
 
@@ -794,10 +908,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="rez__kontakty wejscie">
       <ul class="osoby">
+        <li class="osoba"><div><p class="osoba__imie">Oliwier Latek</p><p class="label">Atsiliepia asmeniškai</p></div>
+          <a class="osoba__tel" href="tel:+48531408004" data-tel="kontakt">+48 531 408 004</a></li>
+        <li class="osoba"><div><p class="osoba__imie">Bartosz Wysocki</p><p class="label">Atsiliepia asmeniškai</p></div>
+          <a class="osoba__tel" href="tel:+48601499947" data-tel="kontakt">+48 601 499 947</a></li>
         <li class="osoba"><p class="label">El. paštas</p>
           <a class="link osoba__mail" href="mailto:kontakt@33bots.lt" data-mail="kontakt">kontakt@33bots.lt</a></li>
       </ul>
-      <p class="body-sm">Atsakome per 24 darbo valandas, dažniausiai tą pačią dieną. Rezervacija be avanso, visoje Lietuvoje.</p>
+      <p class="body-sm">Dažniausiai atsakome per 30&nbsp;minučių. Kainą telefonu pasakysime iš karto. Rezervacija be avanso, visoje Lietuvoje.</p>
     </div>
   </div>
 </section>
@@ -810,7 +928,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="stopka__marka">
       <p class="stopka__logo">33BOTS</p>
       <p>Humanoidinių robotų nuoma · visa Lietuva</p>
-      <p><a href="mailto:kontakt@33bots.lt" data-mail="stopka">kontakt@33bots.lt</a></p>
+      <p><a href="tel:+48531408004" data-tel="stopka">+48 531 408 004</a> · <a href="mailto:kontakt@33bots.lt" data-mail="stopka">kontakt@33bots.lt</a></p>
       <p><a href="https://www.instagram.com/33bots_/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aimforum" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.facebook.com/33bots" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.linkedin.com/company/33bots" target="_blank" rel="noopener">LinkedIn</a></p>
       <p data-jezyki><a href="https://33bots.pl/" hreflang="pl" lang="pl">Polski — 33bots.pl</a> · <a href="https://33bots.de/" hreflang="de" lang="de">Deutschland — 33bots.de</a> · <a href="https://33bots.at/" hreflang="de-AT" lang="de-AT">Österreich — 33bots.at</a></p>
     </div>
@@ -899,6 +1017,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="pasek" id="pasekMobilny">
   <a class="btn btn--akcja" href="#kontakt" data-cta="sticky">Patikrinti datą <span aria-hidden="true">→</span></a>
+  <a class="pasek__tel" href="tel:+48531408004" data-tel="pasek">Skambinti</a>
 </div>
 <div class="pasek-odstep"></div>
 
@@ -941,6 +1060,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     { src: "realizacja-szkola-kosmos-majaland.jpg", alt: "Humanoidinis robotas su mokyklos „Kosmos“ prijuoste mokslo metų pradžios šventėje", klient: "Mokykla „Kosmos“", gdzie: "Majaland" },
   ];
   const heroMedia = document.getElementById('heroMedia');
+  if (heroMedia) {
   const heroImg = heroMedia.querySelector('img');
   const heroLicznik = document.getElementById('heroLicznik');
   const heroOpis = document.getElementById('heroOpis');
@@ -988,6 +1108,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     heroMedia.addEventListener('focusout', () => wstrzymaj(false));
     document.addEventListener('visibilitychange', planuj);
     if (document.readyState === 'complete') planuj(); else addEventListener('load', planuj);
+  }
   }
 
 
@@ -1449,10 +1570,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById(q.getAttribute('aria-controls')).hidden = otwarte;
   }));
 
-  /* ——— Baner cookie (logika bez zmian) ——— */
+
   const ciasteczka = document.getElementById('cookies');
-  if (!localStorage.getItem('33bots-cookies')) {
-    setTimeout(() => ciasteczka.classList.add('show'), 1400);
+  const pokazBaner = () => { if (!localStorage.getItem('33bots-cookies')) ciasteczka.classList.add('show'); };
+  const skryptCmp = (n) => n.nodeName === 'SCRIPT' && /^https:\/\/([^/]+\.)?consentboard\.[a-z]+\//i.test(n.src);
+  const cmpJest = () => Array.from(document.scripts).some(skryptCmp);
+  const cmpZastepuje = () => { localStorage.setItem('33bots-cmp', '1'); ciasteczka.remove(); };
+  if (cmpJest()) cmpZastepuje();
+  else {
+    new MutationObserver((zmiany, obs) => {
+      if (zmiany.some((z) => Array.from(z.addedNodes).some(skryptCmp))) { obs.disconnect(); cmpZastepuje(); }
+    }).observe(document.documentElement, { childList: true, subtree: true });
+    if (localStorage.getItem('33bots-cmp')) {
+      setTimeout(() => { if (!cmpJest()) { localStorage.removeItem('33bots-cmp'); pokazBaner(); } }, 8000);
+    } else {
+      setTimeout(pokazBaner, 1400);
+    }
   }
   document.getElementById('cookiesOk').addEventListener('click', () => {
     localStorage.setItem('33bots-cookies', '1');
@@ -1540,17 +1673,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const t = document.createElement('p'); t.className = 'h3'; t.textContent = "Jūsų užklausą gavome.";
       const p = document.createElement('p'); p.className = 'body';
       p.append("Atsakysime adresu ", Object.assign(document.createElement('strong'), { textContent: payload.email }),
-        ". Atsakome per 24 darbo valandas, dažniausiai tą pačią dieną.");
+        ". Dažniausiai atsakome per 30 minučių. Kainą iš karto pasakysime telefonu: +48 531 408 004.");
       sukces.append(t, p);
       form.replaceChildren(sukces);
     } catch (err) {
-      blad.textContent = "Nepavyko išsiųsti. Parašykite mums adresu kontakt@33bots.lt.";
+      blad.textContent = "Nepavyko išsiųsti. Skambinkite: +48 531 408 004 arba parašykite adresu kontakt@33bots.lt.";
       blad.hidden = false;
       btn.disabled = false; btn.innerHTML = pierwotny;
     }
   });
 })();
 </script>
+<script src="js/glowna.js?v=a0f1dec1" defer></script>
+<script src="js/robot3d.js?v=676dedd6" defer></script>
 <!-- Albacross -->
 <script>window._nQc="89159321";</script>
 <script async src="https://serve.albacross.com/track.js"></script>

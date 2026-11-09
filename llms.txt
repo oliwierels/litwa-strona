@@ -1,6 +1,6 @@
 # 33bots — humanoidinių robotų nuoma renginiams Lietuvoje
 
-> 33bots nuomoja humanoidinį robotą Unitree G1 renginiams, parodoms, konferencijoms, įmonių šventėms ir vestuvėms visoje Lietuvoje — visada su sertifikuotu operatoriumi, scenarijumi ir ženklinimu. Robotas gali pasitikti svečius, vesti programos dalį kaip robotas vedėjas, šokti ir būti renginio fotozona. Daugiau nei 40 renginių penkiose šalyse: Lenkijoje, Lietuvoje, Vokietijoje, Čekijoje ir Rumunijoje.
+> 33bots nuomoja humanoidinį robotą Unitree G1 renginiams, parodoms, konferencijoms, įmonių šventėms ir vestuvėms visoje Lietuvoje — visada su sertifikuotu operatoriumi, scenarijumi ir ženklinimu. Robotas gali pasitikti svečius, vesti programos dalį kaip robotas vedėjas, šokti ir būti renginio fotozona. Daugiau nei 100 renginių penkiose šalyse: Lenkijoje, Lietuvoje, Vokietijoje, Čekijoje ir Rumunijoje.
 
 ## Pagrindiniai faktai
 
@@ -12,8 +12,8 @@
 - Robotas: Unitree G1 — 132 cm, 35 kg, 23 laisvės laipsniai, iki 2 m/s, LiDAR ir kompiuterinė rega
 - Kalba lietuviškai ir bet kuria kita kalba, renginio metu perjungia kalbas
 - Vietoje reikia: maždaug 2×2 m laisvos vietos ir 230 V lizdo; operatorius pasiruošia per 30–45 min.
-- Atsakymas į užklausą per 24 darbo valandas, dažniausiai tą pačią dieną
-- Kontaktai: kontakt@33bots.lt
+- Atsakymas į užklausą dažniausiai per 30 minučių; kainą iš karto pasakome telefonu
+- Kontaktai: +48 531 408 004, kontakt@33bots.lt
 - Kalbų versijos: lietuvių (https://33bots.lt), lenkų (https://33bots.pl), vokiečių (https://33bots.de), austriška (https://33bots.at)
 
 - [Humanoidinių robotų nuoma renginiams Lietuvoje](https://33bots.lt/)
@@ -130,6 +130,5 @@
 - Ar reikia mokėti avansą? Ne. Datą rezervuojame be avanso. Sąskaitą išrašome tik po įvykusio renginio, o prireikus suderiname ilgesnį mokėjimo terminą.
 - Ar reikia mokėti valdyti robotą? Ne. Visą renginį dalyvauja mūsų sertifikuotas operatorius — jis atsako už konfigūraciją, valdymą ir pasirodymo saugumą.
 - Ar robotas saugus svečiams? Taip. LiDAR ir kompiuterinė rega leidžia realiu laiku apeiti žmones ir kliūtis, pasirodymą prižiūri operatorius, o veiklai taikoma civilinės atsakomybės draudimo apsauga.
-- Ar galima ant roboto pateikti savo logotipą? Taip. Jūsų logotipas ir QR kodas atsiduria ant roboto krūtinės, o visa išvaizda derinama prie renginio pobūdžio. Ženklinimas įskaičiuotas į kainą.
 - Ar atvažiuojate į mano miestą? Taip — į kiekvieną Lietuvos miestą: nuo Klaipėdos iki Visagino, nuo Palangos iki Druskininkų. Atvykimas įskaičiuotas į kainą, o pati renginio vieta turi įtakos galutinei sumai.
 - Ar dirbate ir užsienyje? Taip. Esame dirbę renginiuose Lenkijoje, Lietuvoje, Vokietijoje, Čekijoje ir Rumunijoje. Robotas kalba bet kuria kalba ir renginio metu perjungia kalbas — taip jis pasveikina svečius jų kalba ir atsako į jų klausimus.
