@@ -5,7 +5,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://33bots.lt/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/" />
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/apie-mus.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/apie-mus.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/apie-mus.html" />
     <image:image>
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/galerija.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/galerija.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/galerija.html" />
     <image:image>
@@ -158,7 +158,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/humanoidinio-roboto-nuoma.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/humanoidinio-roboto-nuoma.html" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/wypozyczenie-robota.html" />
     <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/humanoiden-roboter-mieten.html" />
@@ -251,7 +251,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/kontaktai.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/kontaktai.html" />
     <xhtml:link rel="alternate" hreflang="de-AT" href="https://33bots.at/kontakt.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/kontaktai.html" />
@@ -292,7 +292,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/parduotuve.html</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/parduotuve.html" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/sklep.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/sklep.html" />
@@ -393,7 +393,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/robotas-fotosesijai.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotas-fotosesijai.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotas-fotosesijai.html" />
     <image:image>
@@ -532,7 +532,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/roboto-diegimas.html</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/roboto-diegimas.html" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://33bots.pl/wdrozenia.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.pl/wdrozenia.html" />
@@ -723,7 +723,7 @@
   </url>
   <url>
     <loc>https://33bots.lt/robotu-nuoma.html</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/robotu-nuoma.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/robotu-nuoma.html" />
     <image:image>
@@ -755,8 +755,9 @@
     <loc>https://33bots.lt/unitree-g1-nuoma.html</loc>
     <lastmod>2026-10-24</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://33bots.lt/unitree-g1-nuoma.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://33bots.de/unitree-g1-mieten.html" />
     <xhtml:link rel="alternate" hreflang="de-AT" href="https://33bots.at/unitree-g1-mieten.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.lt/unitree-g1-nuoma.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://33bots.de/unitree-g1-mieten.html" />
     <image:image>
       <image:loc>https://33bots.lt/og/unitree-g1-nuoma.jpg</image:loc>
       <image:title>Humanoidinis robotas Unitree G1 — nuoma renginiams Lietuvoje</image:title>
