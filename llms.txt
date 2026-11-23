@@ -11,7 +11,7 @@
 - Rezervacija be avanso, sąskaita tik po renginio
 - Robotas: Unitree G1 — 132 cm, 35 kg, 23 laisvės laipsniai, iki 2 m/s, LiDAR ir kompiuterinė rega
 - Kalba lietuviškai ir bet kuria kita kalba, renginio metu perjungia kalbas
-- Vietoje reikia: maždaug 2×2 m laisvos vietos ir 230 V lizdo; operatorius pasiruošia per 30–45 min.
+- Vietoje reikia: maždaug 2×2 m laisvos vietos ir 230 V lizdo
 - Atsakymas į užklausą dažniausiai per 30 minučių; kainą iš karto pasakome telefonu
 - Kontaktai: +48 531 408 004, kontakt@33bots.lt
 - Kalbų versijos: lietuvių (https://33bots.lt), lenkų (https://33bots.pl), vokiečių (https://33bots.de), austriška (https://33bots.at)
@@ -20,7 +20,7 @@
 
 ## Paslaugos
 
-- [Humanoidinio roboto nuoma — Unitree G1 visoje Lietuvoje](https://33bots.lt/humanoidinio-roboto-nuoma.html) — Humanoidinio roboto Unitree G1 nuoma visoje Lietuvoje. Operatorius, transportas ir ženklinimas įskaičiuoti į kainą. Pasiūlymas per 24 val.
+- [Humanoidinio roboto nuoma — Unitree G1 visoje Lietuvoje](https://33bots.lt/humanoidinio-roboto-nuoma.html) — Humanoidinio roboto Unitree G1 nuoma visoje Lietuvoje. Operatorius, transportas ir ženklinimas įskaičiuoti į kainą. Atsakome dažniausiai per 30 min.
 - [Unitree G1 nuoma Lietuvoje — humanoidinis robotas](https://33bots.lt/unitree-g1-nuoma.html) — Unitree G1 nuoma Lietuvoje: 132 cm, 23 laisvės laipsniai, LiDAR. Robotas su operatoriumi renginiams ir parodoms. Operatorius ir ženklinimas kainoje.
 - [Roboto nuomos kainos: nuo 2 100 € už dieną](https://33bots.lt/kainos.html) — Humanoidinio roboto nuomos kainos Lietuvoje: visa diena nuo 2 100 € be PVM, −15 % nuo dviejų dienų, kas įeina į kainą ir nuo ko priklauso galutinė suma.
 - [Robotas renginiui — humanoidas, kuris sustabdo minią](https://33bots.lt/robotas-renginiui.html) — Robotas renginiui visoje Lietuvoje: Unitree G1 pasitinka svečius, veda pasirodymą ir šoka. Operatorius ir ženklinimas kainoje.
@@ -63,7 +63,7 @@
 - [Apie 33bots — humanoidinių robotų nuoma renginiams Lietuvoje](https://33bots.lt/apie-mus.html) — Kas yra 33bots: viena specializacija — humanoidinių robotų nuoma renginiams. Sava įranga, savi operatoriai, patirtis tarptautiniuose renginiuose.
 - [Roboto nuotraukos iš renginių — 33bots galerija](https://33bots.lt/galerija.html) — Nuotraukos iš tikrų 33bots realizacijų: Women in Tech Summit, gala vakarai, LEX AI, parodos, vestuvės ir naktiniai pasirodymai.
 - [Robotas renginyje — vaizdo įrašai iš pasirodymų](https://33bots.lt/video-realizacijos.html) — Vaizdo įrašai su humanoidiniu robotu Unitree G1: svečių pasitikimas, šokio choreografija, gestai ir ženklinimas. Pamatykite robotą gyvai.
-- [Kontaktai — humanoidinio roboto nuoma Lietuvoje](https://33bots.lt/kontaktai.html) — Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome per 24 darbo valandas. Aptarnaujame visą Lietuvą.
+- [Kontaktai — humanoidinio roboto nuoma Lietuvoje](https://33bots.lt/kontaktai.html) — Susisiekite dėl humanoidinio roboto nuomos renginiui: el. paštas ir užklausos forma. Atsakome dažniausiai per 30 minučių. Aptarnaujame visą Lietuvą.
 - [Privatumo politika ir slapukai](https://33bots.lt/privatumo-politika.html) — Kaip 33bots tvarko asmens duomenis, gautus per kontaktinę formą, ir kokius slapukus naudoja svetainė 33bots.lt.
 
 ## Patarimai organizatoriams
@@ -125,7 +125,7 @@
 - Kiek tiksliai kainuoja nuoma? Visa renginio diena — nuo 2 100 € be PVM. Galutinė suma priklauso nuo renginio vietos ir trukmės; ją nurodome pasiūlyme. Robotą galima išsinuomoti ir trumpesniam pasirodymui, pavyzdžiui, kelioms valandoms per konferencijos pertrauką — tada kainą skaičiuojame individualiai, ir ji visada mažesnė nei visos dienos. Dviejų ir daugiau dienų realizacijoms taikoma 15 % nuolaida kiekvienai dienai. Į kainą įeina atvykimas, operatorius, ženklinimas ir civilinės atsakomybės draudimas.
 - Ar kainos nurodytos su PVM? Ne. Visos sumos šiame puslapyje nurodytos be PVM. Pasiūlyme aiškiai pateikiame sumą be PVM ir su PVM.
 - Kaip robotas dirba visą dieną, jei baterija išsikrauna greičiau? Robotas dirba su keičiamomis baterijomis. Operatorius turi atsarginį komplektą ir keičia baterijas renginio metu, todėl pasirodymas nesustoja dėl įkrovimo.
-- Kiek vietos ir kokios technikos reikia robotui? Užtenka maždaug 2×2 m laisvos vietos ir įprasto 230 V elektros lizdo. Robotas dirba parodos stende, scenoje ir praėjime tarp svečių. Interneto ar specialaus apšvietimo nereikia — operatorius atsiveža visą įrangą ir per 30–45 minutes būna pasiruošęs.
+- Kiek vietos ir kokios technikos reikia robotui? Užtenka maždaug 2×2 m laisvos vietos ir įprasto 230 V elektros lizdo. Robotas dirba parodos stende, scenoje ir praėjime tarp svečių. Interneto ar specialaus apšvietimo nereikia — operatorius atsiveža visą įrangą.
 - Ar robotas kalba ir bendrauja su svečiais? Taip. Robotas kalba lietuviškai ir bet kuria kita kalba natūralia kalbos sinteze — pasitinka svečius, atsako į klausimus ir pristato programos punktus. Prieš renginį suderiname jo charakterį ir įkeliame žinias apie jūsų įmonę: paslaugas, produktų pavadinimus, dažniausius klientų klausimus ir renginio darbotvarkę. Konfigūracija įskaičiuota į nuomos kainą.
 - Ar reikia mokėti avansą? Ne. Datą rezervuojame be avanso. Sąskaitą išrašome tik po įvykusio renginio, o prireikus suderiname ilgesnį mokėjimo terminą.
 - Ar reikia mokėti valdyti robotą? Ne. Visą renginį dalyvauja mūsų sertifikuotas operatorius — jis atsako už konfigūraciją, valdymą ir pasirodymo saugumą.
